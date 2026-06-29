@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>株式会社上田｜首都圏フィールドサービス・メンテナンスパートナー</title>
+    <title>株式会社上田｜首都圏のフィールドサービス・保守メンテナンスパートナー</title>
+    <meta name="description" content="株式会社上田は東京23区・埼玉・千葉・神奈川を中心に、宅配BOX、EV充電器、コインランドリー、消防設備、電気設備の保守・点検・メンテナンスを提供するフィールドサービス企業です。">
     <style>
         :root {
             --bg-dark: #0a1128;
@@ -72,7 +73,7 @@
         .page-header { background: linear-gradient(135deg, var(--bg-dark) 0%, #162447 100%); color: #fff; padding: 50px 5%; text-align: center; }
         .page-header h1 { font-size: 2.2rem; font-weight: bold; margin-bottom: 10px; }
 
-        /* HEROセクション（C-2: 洗練されたモダンオフィス建築を背景に設定） */
+        /* HEROセクション */
         .hero { 
             background: linear-gradient(135deg, rgba(10, 17, 40, 0.88) 0%, rgba(22, 36, 71, 0.65) 100%), 
             url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover; 
@@ -149,6 +150,15 @@
         /* CTA */
         .cta-section { background: var(--bg-dark); color: #fff; text-align: center; padding: 60px 5%; margin-top: 40px; border-radius: 8px; }
 
+        /* LINE関連 */
+        .line-contact{background:#fff;padding:40px;border-radius:16px;border:1px solid #e5e7eb;margin-bottom:40px;text-align:center;box-shadow:0 5px 20px rgba(0,0,0,.05);}
+        .line-contact h2{font-size:28px;margin-bottom:15px;}
+        .line-contact p{max-width:650px;margin:auto;line-height:1.8;color:#475569;margin-bottom:25px;}
+        .line-btn{display:inline-block;background:#06C755;color:#fff;padding:15px 35px;border-radius:10px;font-weight:bold;text-decoration:none;}
+        .line-qr{margin-top:25px;}
+        .line-qr img{width:180px;border-radius:12px;}
+        .floating-line{position:fixed;right:30px;bottom:30px;background:#06C755;color:#fff;padding:16px 28px;border-radius:50px;font-weight:bold;text-decoration:none;z-index:9999;box-shadow:0 10px 30px rgba(0,0,0,.2);}
+
         footer { background: var(--bg-dark); color: rgba(255,255,255,0.5); text-align: center; padding: 30px; font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.1); }
 
         @media (max-width: 992px) {
@@ -166,7 +176,6 @@
 </head>
 <body>
 
-    <!-- ヘッダー -->
     <header>
         <div class="logo" onclick="switchPage('top')">
             <div class="logo-svg-container">
@@ -190,14 +199,13 @@
         </ul>
     </header>
 
-    <!-- PAGE 1: トップページ -->
     <div id="page-top" class="page-content active-page">
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <p class="hero-tagline">東京・埼玉・千葉・神奈川対応</p>
-                    <h1 class="hero-title">首都圏のフィールドサービスを、一社で。</h1>
-                    <p class="hero-desc">宅配ボックス・EV充電器・IoT設備・ランドリー設備・住宅設備。<br>マルチベンダー対応の保守体制を仕組みで解決。迅速に、確実に。</p>
+                    <p class="hero-tagline">東京23区中心・埼玉・千葉・神奈川対応</p>
+                    <h1 class="hero-title">首都圏のフィールドサービスを、1社で。</h1>
+                    <p class="hero-desc">宅配BOX・EV充電器・ランドリー設備・電気工事や消防設備の点検・工事の応援まで。<br>マルチベンダー対応の保守体制を構築し、運用課題を解決します。迅速に、確実に。</p>
                     <div class="hero-btns">
                         <button onclick="switchPage('contact')" class="btn btn-primary">保守委託について相談する</button>
                         <button onclick="switchPage('contact')" class="btn btn-outline">協力会社登録・募集</button>
@@ -206,7 +214,6 @@
             </div>
         </section>
 
-        <!-- お困りごと解決 -->
         <section class="section-padding container">
             <h2 class="section-title">こんなお困りごとはありませんか？</h2>
             <p class="section-subtitle">メーカー様、管理会社様、スタートアップ企業様が抱える足回り課題</p>
@@ -236,14 +243,13 @@
             </div>
         </section>
 
-        <!-- 選ばれる理由 -->
         <section class="section-padding bg-gray">
             <div class="container">
                 <h2 class="section-title">株式会社上田が選ばれる理由</h2>
                 <div class="grid-3col">
                     <div class="card" style="border-top: 4px solid var(--primary);">
                         <h4>① 迅速対応＆窓口一本化</h4>
-                        <p>最短当日対応の機動力。首都圏一円の保守業務を弊社に集約することで、管理コストを劇的に削減します。</p>
+                        <p>最短当日対応の機動力。首都圏一円の保守業務を弊社に集約することで、管理コストの削減に貢献します。</p>
                     </div>
                     <div class="card" style="border-top: 4px solid var(--primary);">
                         <h4>② 少数精鋭による高速決断</h4>
@@ -257,7 +263,6 @@
             </div>
         </section>
 
-        <!-- 導入メリット -->
         <section class="section-padding container">
             <h2 class="section-title">導入メリット</h2>
             <div class="table-container">
@@ -274,7 +279,6 @@
             </div>
         </section>
 
-        <!-- CTA -->
         <section class="container" style="margin-bottom: 60px;">
             <div class="cta-section">
                 <h2>首都圏のフィールドサービスを、もっとスマートに。</h2>
@@ -284,14 +288,12 @@
         </section>
     </div>
 
-    <!-- PAGE 2: 事業内容ページ -->
     <div id="page-services" class="page-content">
         <div class="page-header">
             <h1>事業内容・サービス体制</h1>
             <p>先進IoT設備から社会インフラ・ライフサポート対応まで、首都圏の保守運営をワンストップで代行</p>
         </div>
         <div class="container section-padding">
-            
             <div class="service-detail-box">
                 <span class="service-num">SERVICE 01</span>
                 <h2 class="service-h3">EVステーション充電器メンテナンス</h2>
@@ -301,7 +303,7 @@
                         <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ 主な対応・作業内容</h4>
                         <ul class="detail-list">
                             <li>充電コネクタおよびケーブルの摩耗・破損チェック</li>
-                            <li>通電・給電テストおよび筐体内部フィルターの清鎖・交換</li>
+                            <li>通電・給電テストおよび筐体内部フィルターの清掃・交換</li>
                             <li>外観破損の有無、液晶セグメントの視認性確認</li>
                         </ul>
                     </div>
@@ -355,7 +357,7 @@
                         <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ ご提供価値</h4>
                         <ul class="detail-list">
                             <li>ホットスポット現象などによる売電機会の大きな損失を未然に予防</li>
-                            <li>ドローン空撮や専用機器を組み合わせた高付加価値な報告書の作成も可能</li>
+                            <li>ドローン空撮や専用機器を活用した高付加価値な点検報告書の作成も可能</li>
                         </ul>
                     </div>
                 </div>
@@ -369,9 +371,9 @@
                     <div>
                         <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ 主な対応・作業内容</h4>
                         <ul class="detail-list">
-                            <li>乾燥機・洗濯機のフィルター清鎖および目詰まり除去</li>
-                            <li>ドラム内の異物確認・取り出し、洗剤自動投入口の固着清鎖</li>
-                            <li>店舗内外の外観・衛生状態の巡回チェックおよび集金代行</li>
+                            <li>乾燥機・洗濯機のフィルター清掃および目詰まり除去</li>
+                            <li>ドラム内の異物確認・取り出し、洗剤自動投入口の固着清掃</li>
+                            <li>店舗内外の外観・衛生状態の巡回チェック</li>
                         </ul>
                     </div>
                     <div>
@@ -415,8 +417,8 @@
                     <div>
                         <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ 主な対応・作業内容</h4>
                         <ul class="detail-list">
-                            <li>墓石の手作業による丁寧な洗浄・清錯</li>
-                            <li>墓所周辺の敷地内の雑草除去、落ち葉の清鎖</li>
+                            <li>墓石の手作業による丁寧な洗浄・清掃</li>
+                            <li>墓所周辺の敷地内の雑草除去、落ち葉の清掃</li>
                             <li>お花・お供え物の配置、心を込めた合掌礼拝</li>
                         </ul>
                     </div>
@@ -442,7 +444,6 @@
         </div>
     </div>
 
-    <!-- PAGE 3: 施工実績ページ -->
     <div id="page-case" class="page-content">
         <div class="page-header">
             <h1>施工実績・対応事例</h1>
@@ -457,9 +458,9 @@
                         <span class="case-tag">宅配BOX・機器保守</span>
                         <h3 class="case-h3">集合住宅向けスマート宅配ボックス設置・設定工事</h3>
                         <div class="case-meta">
-                            <p><strong>対象エリア：</strong>東京都23区、神奈川県東部</p>
+                            <p><strong>対象エリア：</strong>東京都23区、神奈川県東部、埼玉県南部</p>
                         </div>
-                        <p class="case-text">ベンダー様からの委託を受け、アンカー施工、設置に加え、専用アプリやネットワークの通信疎通確認テストまでを一貫して代行しました。</p>
+                        <p class="case-text">ベンダー様からの委託を受け、専用アプリ設定や通信疎通確認まで一貫して対応</p>
                     </div>
                 </div>
 
@@ -495,14 +496,13 @@
                         <div class="case-meta">
                             <p><strong>対象エリア：</strong>東京都城東エリア・埼玉県三郷周辺</p>
                         </div>
-                        <p class="case-text">同一オーナー様が経営する複数店舗を1日の巡回コースに組み込み、フィルター清掃、テスト稼働、集金までをパッケージにて代行しました。</p>
+                        <p class="case-text">同一オーナー様が経営する複数店舗を1日の巡回コースに組み込み、フィルター清掃、テスト稼働までをパッケージにて代行</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- PAGE 4: 会社概要ページ -->
     <div id="page-company" class="page-content">
         <div class="page-header">
             <h1>会社概要</h1>
@@ -514,20 +514,22 @@
                 <tr><th>サービス名</th><td>UEDA Field Services</td></tr>
                 <tr><th>事業内容</th><td>電気工事、空調設備工事、EVインフラ保守、太陽光発電点検、店舗・住宅設備巡回、ライフサポート代行</td></tr>
                 <tr><th>対応エリア</th><td>東京都23区、埼玉県南部、千葉県西部、神奈川県東部</td></tr>
-                <tr><th>保有資格（一部）</th><td>第一種電気工事士、第二種電気工事士、消防設備士、低圧電気取扱者</td></tr>
+                <tr><th>保有資格（一部）</th><td>第一種電気工事士、第二種電気工事士、消防設備士、低圧電気取扱者、第一種衛生管理者、安全管理者、有機溶剤作業主任者</td></tr>
             </table>
         </div>
     </div>
 
-    <!-- PAGE 5: お問い合わせページ -->
     <div id="page-contact" class="page-content">
         <div class="page-header">
             <h1>お問い合わせ・アライアンス相談</h1>
-            <p style="color: #cbd5e1;">御社のフィールドサービス課題を仕組みで解決します。お気軽にご相談ください。</p>
+            <p style="color: #cbd5e1;">御社のフィールドサービス運営を、仕組み化によって支援します。お気軽にご相談ください。</p>
         </div>
         <div class="container section-padding">
             <div class="form-box">
-                <form action="#" method="POST">
+                <div id="form-success" style="display:none; background:#d1fae5; color:#065f46; padding:24px; border-radius:8px; text-align:center; font-size:1.1rem; font-weight:bold; margin-bottom:24px;">
+                    ✅ お問い合わせを受け付けました。担当者より折り返しご連絡いたします。
+                </div>
+                <form id="contact-form" action="https://formspree.io/f/xqevlkop" method="POST">
                     <div class="form-group">
                         <label class="form-label">お問い合わせ種別 <span class="required">必須</span></label>
                         <div class="radio-group">
@@ -560,10 +562,10 @@
                     </div>
                 </form>
             </div>
-        <div class="line-qr"><img src="ﾗｲﾝQR.png" alt="株式会社上田｜フィールドサービス窓口"></div>
+        </div>
     </div>
 
-  <section class="line-contact">
+    <section class="line-contact">
         <h2>LINE公式からもお問い合わせいただけます</h2>
         <p><strong>株式会社上田｜フィールドサービス窓口</strong><br><br>
         保守契約のご相談、消防設備点検、電気設備保守、協力会社登録など、お気軽にお問い合わせください。</p>
