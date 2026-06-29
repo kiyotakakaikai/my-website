@@ -563,13 +563,56 @@
         <div class="line-qr"><img src="ﾗｲﾝQR.png" alt="株式会社上田｜フィールドサービス窓口"></div>
     </div>
 
-    <!-- フッター -->
+  <section class="line-contact">
+        <h2>LINE公式からもお問い合わせいただけます</h2>
+        <p><strong>株式会社上田｜フィールドサービス窓口</strong><br><br>
+        保守契約のご相談、消防設備点検、電気設備保守、協力会社登録など、お気軽にお問い合わせください。</p>
+        <a href="https://page.line.me/ovt4298c" target="_blank" class="line-btn">LINE公式で相談する</a>
+        <div class="line-qr"><img src="ﾗｲﾝQR.png" alt="株式会社上田｜フィールドサービス窓口"></div>
+    </section>
+
     <footer>
         <p>&copy; 2026 株式会社上田 UEDA Field Services. All Rights Reserved.</p>
     </footer>
 
-    <!-- タブ切り替えスクリプト -->
+    <a class="floating-line" href="https://page.line.me/ovt4298c" target="_blank">LINE相談</a>
+
     <script>
+        // Formspree 送信処理
+        window.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    const submitBtn = contactForm.querySelector('button[type="submit"]');
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = '送信中...';
+                    const data = new FormData(contactForm);
+                    try {
+                        const res = await fetch('https://formspree.io/f/xqevlkop', {
+                            method: 'POST',
+                            body: data,
+                            headers: { 'Accept': 'application/json' }
+                        });
+                        if (res.ok) {
+                            document.getElementById('form-success').style.display = 'block';
+                            contactForm.style.display = 'none';
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        } else {
+                            const json = await res.json();
+                            alert('送信エラー：' + (json.error || '時間をおいて再度お試しください。'));
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = '入力内容を送信する';
+                        }
+                    } catch (err) {
+                        alert('通信エラーが発生しました。インターネット接続をご確認ください。');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = '入力内容を送信する';
+                    }
+                });
+            }
+        });
+
         function switchPage(pageId) {
             const pages = document.querySelectorAll('.page-content');
             pages.forEach(page => {
@@ -590,6 +633,5 @@
             window.scrollTo(0, 0);
         }
     </script>
-
 </body>
 </html>
