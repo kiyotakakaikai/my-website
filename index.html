@@ -4,180 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>株式会社上田｜首都圏のフィールドサービス・保守メンテナンスパートナー</title>
-    <meta name="description" content="株式会社上田は東京23区・埼玉・千葉・神奈川を中心に、宅配BOX、EV充電器、コインランドリー、消防設備、電気設備の保守・点検・メンテナンスを提供するフィールドサービス企業です。">
-    <style>
-        :root {
-            --bg-dark: #0a1128;
-            --bg-light: #f8fafc;
-            --primary: #0076fe;
-            --primary-hover: #0056b3;
-            --accent: #ff3b30;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --text-white: #ffffff;
-            --border-color: #e2e8f0;
-            --form-border: #cbd5e1;
-        }
-
-        /* 共通スタイル */
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif; }
-        body { color: var(--text-main); line-height: 1.7; background-color: #ffffff; }
-        .section-padding { padding: 60px 5%; }
-        .bg-gray { background-color: var(--bg-light); }
-        .container { max-width: 1200px; margin: 0 auto; }
-        
-        .section-title { text-align: center; font-size: 2.2rem; font-weight: bold; margin-bottom: 15px; letter-spacing: 0.05em; }
-        .section-subtitle { text-align: center; color: var(--text-muted); font-size: 1rem; margin-bottom: 40px; }
-        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--primary); margin: 15px auto 0; }
-
-        /* ボタン */
-        .btn { display: inline-block; text-align: center; padding: 14px 28px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; transition: all 0.3s ease; border: none; cursor: pointer; }
-        .btn-primary { background: var(--primary); color: var(--text-white); box-shadow: 0 4px 14px rgba(0, 118, 254, 0.3); }
-        .btn-primary:hover { background: var(--primary-hover); transform: translateY(-2px); }
-        .btn-outline { border: 2px solid var(--text-white); color: var(--text-white); }
-        .btn-outline:hover { background: rgba(255,255,255,0.1); transform: translateY(-2px); }
-        .btn-accent { background: var(--accent); color: var(--text-white); box-shadow: 0 4px 14px rgba(255, 59, 48, 0.3); }
-        .btn-accent:hover { background: #e03126; transform: translateY(-2px); }
-
-        /* ヘッダー・ナビゲーション */
-        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: #ffffff; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 1000; }
-        .logo { display: flex; align-items: center; gap: 12px; color: var(--bg-dark); text-decoration: none; cursor: pointer; }
-        .logo-text-wrapper { display: flex; flex-direction: column; justify-content: center; }
-        .logo-title { font-weight: bold; font-size: 1.3rem; line-height: 1.2; letter-spacing: 0.05em; }
-        .logo-sub { font-size: 0.75rem; color: var(--text-muted); font-weight: normal; margin-top: 2px; }
-        
-        /* 保護サークル（丸い切り抜き） */
-        .logo-svg-container { 
-            width: 44px; 
-            height: 44px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-            background: rgba(241, 245, 249, 0.6); 
-            border-radius: 50%;
-            padding: 5px;
-        }
-        
-        .nav-menu { display: flex; align-items: center; gap: 20px; list-style: none; }
-        .nav-menu li { cursor: pointer; padding: 8px 12px; font-weight: 600; font-size: 0.95rem; color: var(--text-main); transition: color 0.2s; border-bottom: 2px solid transparent; }
-        .nav-menu li:hover { color: var(--primary); }
-        .nav-menu li.active-tab { color: var(--primary); border-bottom: 2px solid var(--primary); }
-        .nav-menu li.nav-btn-accent { background: var(--accent); color: var(--text-white) !important; border-radius: 6px; padding: 8px 16px; border-bottom: none; }
-        .nav-menu li.nav-btn-accent:hover { background: #e03126; }
-
-        /* 画面切り替え制御 */
-        .page-content { display: none; }
-        .page-content.active-page { display: block; }
-
-        /* 下層ページ用ヘッダー */
-        .page-header { background: linear-gradient(135deg, var(--bg-dark) 0%, #162447 100%); color: #fff; padding: 50px 5%; text-align: center; }
-        .page-header h1 { font-size: 2.2rem; font-weight: bold; margin-bottom: 10px; }
-
-        /* HEROセクション */
-        .hero { 
-            background: linear-gradient(135deg, rgba(10, 17, 40, 0.88) 0%, rgba(22, 36, 71, 0.65) 100%), 
-            url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover; 
-            color: var(--text-white); 
-            padding: 100px 5%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            min-height: 55vh; 
-        }
-        .hero .container { width: 100%; max-width: 900px; margin: 0 auto; text-align: left; }
-        .hero-content { width: 100%; }
-        .hero-tagline { color: #38bdf8; font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; letter-spacing: 0.1em; }
-        .hero-title { font-size: 3rem; font-weight: bold; line-height: 1.3; margin-bottom: 25px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
-        .hero-desc { font-size: 1.2rem; color: #cbd5e1; margin-bottom: 40px; text-shadow: 0 1px 5px rgba(0,0,0,0.5); line-height: 1.8; }
-        .hero-btns { display: flex; gap: 15px; }
-
-        /* 各種コンテンツパーツ */
-        .grid-3col { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: var(--text-white); padding: 40px 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border: 1px solid var(--border-color); }
-        .pain-list { list-style: none; margin-top: 15px; }
-        .pain-list li { position: relative; padding-left: 25px; margin-bottom: 12px; color: #475569; }
-        .pain-list li::before { content: '×'; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
-
-        /* 業務フロー */
-        .flow-container { background: var(--bg-dark); color: #fff; padding: 40px; border-radius: 12px; text-align: center; margin-bottom: 40px; }
-        .flow-title { font-size: 1.2rem; font-weight: bold; margin-bottom: 25px; }
-        .flow-steps { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-        .flow-step { background: rgba(255,255,255,0.1); padding: 15px; border-radius: 6px; font-weight: bold; font-size: 0.9rem; text-align: center; flex: 1; min-width: 130px; border: 1px solid rgba(255,255,255,0.2); }
-        .flow-arrow { color: var(--primary); font-weight: bold; }
-
-        /* 事業内容内パーツ */
-        .service-detail-box { background: #fff; padding: 40px; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .service-num { color: var(--primary); font-size: 1.2rem; font-weight: bold; margin-bottom: 5px; display: block; }
-        .service-h3 { font-size: 1.8rem; font-weight: bold; margin-bottom: 20px; color: var(--bg-dark); border-left: 5px solid var(--primary); padding-left: 15px; }
-        .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 25px; }
-        .detail-list { list-style: none; }
-        .detail-list li { position: relative; padding-left: 20px; margin-bottom: 10px; }
-        .detail-list li::before { content: '✓'; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
-
-        /* 実績グリッド */
-        .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 20px; }
-        .case-card { background: #fff; border-radius: 8px; border: 1px solid var(--border-color); overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; flex-direction: column; }
-        .case-img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid var(--border-color); }
-        .case-body { padding: 25px; flex: 1; }
-        .case-tag { display: inline-block; background: rgba(0, 118, 254, 0.08); color: var(--primary); padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 12px; }
-        .case-h3 { font-size: 1.25rem; font-weight: bold; margin-bottom: 15px; color: var(--bg-dark); }
-        .case-meta { font-size: 0.9rem; color: #475569; margin-bottom: 15px; background: var(--bg-light); padding: 12px; border-radius: 6px; }
-
-        /* 会社概要テーブル */
-        .profile-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--border-color); }
-        .profile-table th, .profile-table td { padding: 18px 20px; border-bottom: 1px solid var(--border-color); text-align: left; }
-        .profile-table th { width: 25%; background: var(--bg-light); font-weight: bold; }
-
-        /* メリットテーブル */
-        .table-container { width: 100%; overflow-x: auto; background: var(--text-white); border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.04); border: 1px solid var(--border-color); }
-        table.benefit-table { width: 100%; border-collapse: collapse; text-align: left; min-width: 700px; }
-        table.benefit-table th, table.benefit-table td { padding: 20px 25px; border-bottom: 1px solid var(--border-color); }
-        table.benefit-table th { background-color: #f1f5f9; font-weight: bold; }
-        table.benefit-table td:first-child { font-weight: bold; background: #f8fafc; }
-        table.benefit-table td:nth-child(3) { background-color: rgba(0, 118, 254, 0.02); font-weight: bold; color: var(--primary); }
-
-        /* お問い合わせフォーム */
-        .form-box { background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid var(--border-color); max-width: 800px; margin: 0 auto; }
-        .form-group { margin-bottom: 22px; display: flex; flex-direction: column; text-align: left; }
-        .form-label { font-weight: bold; margin-bottom: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
-        .required { background: var(--accent); color: #fff; font-size: 0.75rem; padding: 2px 6px; border-radius: 3px; }
-        input[type="text"], input[type="email"], input[type="tel"], select, textarea { width: 100%; padding: 12px; border: 1px solid var(--form-border); border-radius: 6px; font-size: 1rem; }
-        textarea { resize: vertical; min-height: 140px; }
-        .radio-group { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 5px; }
-        .radio-label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
-        .privacy-box { text-align: center; margin: 30px 0 20px; font-size: 0.9rem; }
-
-        /* CTA */
-        .cta-section { background: var(--bg-dark); color: #fff; text-align: center; padding: 60px 5%; margin-top: 40px; border-radius: 8px; }
-
-        /* LINE関連 */
-        .line-contact{background:#fff;padding:40px;border-radius:16px;border:1px solid #e5e7eb;margin-bottom:40px;text-align:center;box-shadow:0 5px 20px rgba(0,0,0,.05);}
-        .line-contact h2{font-size:28px;margin-bottom:15px;}
-        .line-contact p{max-width:650px;margin:auto;line-height:1.8;color:#475569;margin-bottom:25px;}
-        .line-btn{display:inline-block;background:#06C755;color:#fff;padding:15px 35px;border-radius:10px;font-weight:bold;text-decoration:none;}
-        .line-qr{margin-top:25px;}
-        .line-qr img{width:180px;border-radius:12px;}
-        .floating-line{position:fixed;right:30px;bottom:30px;background:#06C755;color:#fff;padding:16px 28px;border-radius:50px;font-weight:bold;text-decoration:none;z-index:9999;box-shadow:0 10px 30px rgba(0,0,0,.2);}
-
-        footer { background: var(--bg-dark); color: rgba(255,255,255,0.5); text-align: center; padding: 30px; font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.1); }
-
-        @media (max-width: 992px) {
-            header { flex-direction: column; gap: 15px; }
-            .nav-menu { width: 100%; justify-content: center; flex-wrap: wrap; }
-            .hero { text-align: center; padding: 60px 5%; }
-            .hero .container { text-align: center; }
-            .hero-title { font-size: 2.2rem; }
-            .hero-btns { justify-content: center; flex-wrap: wrap; }
-            .grid-2col { grid-template-columns: 1fr; gap: 20px; }
-            .flow-steps { flex-direction: column; }
-            .flow-arrow { transform: rotate(90deg); margin: 5px 0; }
-        }
-    </style>
+    <meta name="description" content="株式会社上田は東京23区・埼玉・千葉・神奈川を中心に、宅配BOX、EV充電器、コインランドリー、消防設備、電気設備の保守・点検・メンテナンスを提供するフィールドサービス企業です。年間500件以上、満足度98%の実績。">
+    <link rel="canonical" href="https://www.ueda-fs.com/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="株式会社上田｜首都圏のフィールドサービス・保守メンテナンスパートナー">
+    <meta property="og:description" content="株式会社上田は東京23区・埼玉・千葉・神奈川を中心に、宅配BOX、EV充電器、コインランドリー、消防設備、電気設備の保守・点検・メンテナンスを提供するフィールドサービス企業です。年間500件以上、満足度98%の実績。">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1757970326337-95d7cca56fa1?auto=format&fit=crop&q=80&w=1200">
+    <meta property="og:url" content="https://www.ueda-fs.com/index.html">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo" onclick="switchPage('top')">
+        <a class="logo" href="index.html" style="text-decoration:none;">
             <div class="logo-svg-container">
                 <svg viewBox="0 0 120 90" width="100%" height="100%">
                     <path d="M10,65 C40,63 80,45 110,15 C95,42 60,63 25,72 Z" fill="#0a1128"/>
@@ -189,17 +30,19 @@
                 <span class="logo-title">株式会社上田</span>
                 <span class="logo-sub">UEDA Field Services</span>
             </div>
-        </div>
+        </a>
         <ul class="nav-menu">
-            <li id="tab-top" class="active-tab" onclick="switchPage('top')">トップページ</li>
-            <li id="tab-services" onclick="switchPage('services')">事業内容</li>
-            <li id="tab-case" onclick="switchPage('case')">施工実績</li>
-            <li id="tab-company" onclick="switchPage('company')">会社概要</li>
-            <li id="tab-contact" class="nav-btn-accent" onclick="switchPage('contact')">お問い合わせ</li>
+            <li class="active-tab"><a href="index.html" style="color:inherit; text-decoration:none;">トップページ</a></li>
+            <li><a href="services.html" style="color:inherit; text-decoration:none;">事業内容</a></li>
+            <li><a href="case.html" style="color:inherit; text-decoration:none;">施工実績</a></li>
+            <li><a href="area.html" style="color:inherit; text-decoration:none;">対応エリア</a></li>
+            <li><a href="faq.html" style="color:inherit; text-decoration:none;">よくある質問</a></li>
+            <li><a href="company.html" style="color:inherit; text-decoration:none;">会社概要</a></li>
+            <li class="nav-btn-accent"><a href="contact.html" style="color:inherit; text-decoration:none;">お問い合わせ</a></li>
         </ul>
     </header>
 
-    <div id="page-top" class="page-content active-page">
+    <div id="page-top">
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
@@ -207,9 +50,26 @@
                     <h1 class="hero-title">首都圏のフィールドサービスを、1社で。</h1>
                     <p class="hero-desc">宅配BOX・EV充電器・ランドリー設備・電気工事や消防設備の点検・工事の応援まで。<br>マルチベンダー対応の保守体制を構築し、運用課題を解決します。迅速に、確実に。</p>
                     <div class="hero-btns">
-                        <button onclick="switchPage('contact')" class="btn btn-primary">保守委託について相談する</button>
-                        <button onclick="switchPage('contact')" class="btn btn-outline">協力会社登録・募集</button>
+                        <a href="contact.html" class="btn btn-primary" style="display:inline-block;text-decoration:none;">保守委託について相談する</a>
+                        <a href="contact.html" class="btn btn-outline" style="display:inline-block;text-decoration:none;">協力会社登録・募集</a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 40px 5% 0;">
+            <div class="grid-3col" style="text-align:center;">
+                <div class="card" style="border-top: 4px solid var(--primary);">
+                    <p style="font-size:2.4rem; font-weight:bold; color:var(--primary); margin-bottom:5px;">年間500件<span style="font-size:1.2rem;">以上</span></p>
+                    <p style="color:var(--text-muted); font-size:0.9rem;">保守・点検・工事の対応実績</p>
+                </div>
+                <div class="card" style="border-top: 4px solid var(--primary);">
+                    <p style="font-size:2.4rem; font-weight:bold; color:var(--primary); margin-bottom:5px;">満足度98<span style="font-size:1.2rem;">%</span></p>
+                    <p style="color:var(--text-muted); font-size:0.9rem;">ご依頼企業様からの評価</p>
+                </div>
+                <div class="card" style="border-top: 4px solid var(--primary);">
+                    <p style="font-size:2.4rem; font-weight:bold; color:var(--primary); margin-bottom:5px;">1都3県</p>
+                    <p style="color:var(--text-muted); font-size:0.9rem;">東京23区・埼玉・千葉・神奈川に対応</p>
                 </div>
             </div>
         </section>
@@ -264,6 +124,16 @@
         </section>
 
         <section class="section-padding container">
+            <div class="split-media">
+                <img src="https://images.unsplash.com/photo-1668687106962-94abc2f5b02e?auto=format&fit=crop&q=80&w=1200" alt="東京都内の街並み">
+                <div>
+                    <h3 style="font-size:1.4rem; margin-bottom:15px; color:var(--bg-dark);">首都圏の現場を、機動力でカバー</h3>
+                    <p style="color:#475569;">建物が密集する都心部から、複数拠点が点在する郊外エリアまで。株式会社上田は東京23区を拠点に、埼玉・千葉・神奈川の現場へ機動的に駆けつけます。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding container">
             <h2 class="section-title">導入メリット</h2>
             <div class="table-container">
                 <table class="benefit-table">
@@ -283,357 +153,39 @@
             <div class="cta-section">
                 <h2>首都圏のフィールドサービスを、もっとスマートに。</h2>
                 <p style="margin: 15px 0 25px; color: #cbd5e1;">アライアンスのご相談、協業、案件受託に関するお問い合わせはこちら</p>
-                <button onclick="switchPage('contact')" class="btn btn-accent" style="font-size: 1.1rem; padding: 14px 40px;">お問い合わせフォームを開く</button>
+                <a href="contact.html" class="btn btn-accent" style="font-size: 1.1rem; padding: 14px 40px; display:inline-block;text-decoration:none;">お問い合わせフォームを開く</a>
             </div>
         </section>
-    </div>
-
-    <div id="page-services" class="page-content">
-        <div class="page-header">
-            <h1>事業内容・サービス体制</h1>
-            <p>先進IoT設備から社会インフラ・ライフサポート対応まで、首都圏の保守運営をワンストップで代行</p>
-        </div>
-        <div class="container section-padding">
-            <div class="service-detail-box">
-                <span class="service-num">SERVICE 01</span>
-                <h2 class="service-h3">EVステーション充電器メンテナンス</h2>
-                <p>急速充電器や複数台設置された普通充電器を対象に、普及が加速するEVインフラの安定稼働を維持するための高度な定期点検・メンテナンスを行います。</p>
-                <div class="grid-2col">
-                    <div>
-                        <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ 主な対応・作業内容</h4>
-                        <ul class="detail-list">
-                            <li>充電コネクタおよびケーブルの摩耗・破損チェック</li>
-                            <li>通電・給電テストおよび筐体内部フィルターの清掃・交換</li>
-                            <li>外観破損の有無、液晶セグメントの視認性確認</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ ご提供価値</h4>
-                        <ul class="detail-list">
-                            <li>商業施設やコインパーキング運営会社様の充電インフラトラブルを防ぎます</li>
-                            <li>稼働停止による機会損失を最小化し、利用者の満足度を担保します</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service-detail-box">
-                <span class="service-num">SERVICE 02</span>
-                <h2 class="service-h3">エアコン設置・取り外し（空調工事）</h2>
-                <p>第一種・第二種電気工事士などの国家資格保持者が在籍。家庭用から業務用空調機まで、移設・更新（入替）に伴う確実な施工サービスを提供します。</p>
-                <div class="grid-2col">
-                    <div>
-                        <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ 主な対応・作業内容</h4>
-                        <ul class="detail-list">
-                            <li>冷媒ガスの適正回収および規定量の確実な充填</li>
-                            <li>冷媒配管施工およびドレン排水管の適切な勾配設定</li>
-                            <li>電源・内外接続配線の安全接続および動作確認テスト</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ ご提供価値</h4>
-                        <ul class="detail-list">
-                            <li>施工不備による冷媒ガス漏れや、ドレン水漏れトラブルを徹底防止</li>
-                            <li>夏冬のピーク需要期にも、オフィスや店舗の快適な環境を支えます</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service-detail-box">
-                <span class="service-num">SERVICE 03</span>
-                <h2 class="service-h3">太陽光発電設備 外観点検</h2>
-                <p>個人宅の屋根型から野立ての小規模産業用太陽光まで対応。発電効率の低下や予期せぬ事故を防ぐための巡回外観点検サービスです。</p>
-                <div class="grid-2col">
-                    <div>
-                        <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ 主な対応・作業内容</h4>
-                        <ul class="detail-list">
-                            <li>太陽光パネルの割れ、鳥糞や落葉などによる部分汚れの目視点検</li>
-                            <li>架台ボルトの緩み、接合部の錆・腐食の有無チェック</li>
-                            <li>パワーコンディショナ（PCS）の外観・異常ランプの確認</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ ご提供価値</h4>
-                        <ul class="detail-list">
-                            <li>ホットスポット現象などによる売電機会の大きな損失を未然に予防</li>
-                            <li>ドローン空撮や専用機器を活用した高付加価値な点検報告書の作成も可能</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service-detail-box">
-                <span class="service-num">SERVICE 04</span>
-                <h2 class="service-h3">コインランドリー巡回メンテナンス</h2>
-                <p>複数店舗を展開するオーナー様やフランチャイズ運営会社様向けに、効率的な巡回路線を構築。無人店舗のクオリティを均一に保ちます。</p>
-                <div class="grid-2col">
-                    <div>
-                        <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ 主な対応・作業内容</h4>
-                        <ul class="detail-list">
-                            <li>乾燥機・洗濯機のフィルター清掃および目詰まり除去</li>
-                            <li>ドラム内の異物確認・取り出し、洗剤自動投入口の固着清掃</li>
-                            <li>店舗内外の外観・衛生状態の巡回チェック</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ ご提供価値</h4>
-                        <ul class="detail-list">
-                            <li>無人店舗におけるマシンのダウンタイム（稼働停止）を最小化</li>
-                            <li>利用者が常に安心して快適に利用できる清潔な店舗環境を維持します</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service-detail-box">
-                <span class="service-num">SERVICE 05</span>
-                <h2 class="service-h3">宅配BOX巡回メンテナンス</h2>
-                <p>マンション管理会社様や不動産オーナー様、分譲地管理組合様を対象としたエリア一括巡回プラン。入居者の日常インフラを正常に維持します。</p>
-                <div class="grid-2col">
-                    <div>
-                        <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ 主な対応・作業内容</h4>
-                        <ul class="detail-list">
-                            <li>各ボックス扉の開閉スムーズさの確認（ヒンジ・ラッチの調整）</li>
-                            <li>電子錠の動作テスト、操作パネルの液晶エラーチェック</li>
-                            <li>外装の定期清掃、イタズラなどによる破損・汚れの確認</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ ご提供価値</h4>
-                        <ul class="detail-list">
-                            <li>物流のラストワンマイルに欠かせないインフラの稼働低下を防止</li>
-                            <li>居住者からの解錠不良などのクレームやトラブルを未然に防ぎます</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service-detail-box">
-                <span class="service-num">SERVICE 06</span>
-                <h2 class="service-h3">お墓参り・管理代行（ライフサポート）</h2>
-                <p>当社の持つ「確実な巡回ネットワーク」と「写真付き詳細報告ノウハウ」を活かし、遠方の遺族様に代わってお墓の維持管理を敬意を持って行います。</p>
-                <div class="grid-2col">
-                    <div>
-                        <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ 主な対応・作業内容</h4>
-                        <ul class="detail-list">
-                            <li>墓石の手作業による丁寧な洗浄・清掃</li>
-                            <li>墓所周辺の敷地内の雑草除去、落ち葉の清掃</li>
-                            <li>お花・お供え物の配置、心を込めた合掌礼拝</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 style="font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ ご提供価値</h4>
-                        <ul class="detail-list">
-                            <li>ご高齢や遠方在住などの理由でお墓の管理に悩む方の負担を解消</li>
-                            <li>作業実施前後の明瞭な現場写真報告により、確かな安心をお届けします</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flow-container">
-                <p class="flow-title">【標準フィールドサービス運用フロー】</p>
-                <div class="flow-steps">
-                    <div class="flow-step">1. 案件受付・要件確認</div><div class="flow-arrow">➔</div>
-                    <div class="flow-step">2. 技術者の選定・手配</div><div class="flow-arrow">➔</div>
-                    <div class="flow-step">3. 現地施工・データ回収</div><div class="flow-arrow">➔</div>
-                    <div class="flow-step">4. 報告書作成・一括提出</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="page-case" class="page-content">
-        <div class="page-header">
-            <h1>施工実績・対応事例</h1>
-            <p>首都圏エリアでの迅速なアプローチと現場品質管理の実績</p>
-        </div>
-        <div class="container section-padding">
-            <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">※守秘義務の関係上、具体的なエンドユーザー・企業名は伏せて掲載しております。</p>
-            <div class="case-grid">
-                <div class="case-card">
-                    <img class="case-img" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=600" alt="スマートマンション・住宅設備イメージ">
-                    <div class="case-body">
-                        <span class="case-tag">宅配BOX・機器保守</span>
-                        <h3 class="case-h3">集合住宅向けスマート宅配ボックス設置・設定工事</h3>
-                        <div class="case-meta">
-                            <p><strong>対象エリア：</strong>東京都23区、神奈川県東部、埼玉県南部</p>
-                        </div>
-                        <p class="case-text">ベンダー様からの委託を受け、専用アプリ設定や通信疎通確認まで一貫して対応</p>
-                    </div>
-                </div>
-
-                <div class="case-card">
-                    <img class="case-img" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=600" alt="電気配線・ITインフラ設備イメージ">
-                    <div class="case-body">
-                        <span class="case-tag">電気工事・空調</span>
-                        <h3 class="case-h3">駐車場および商業施設へのEV普通充電器の配線・設置工事</h3>
-                        <div class="case-meta">
-                            <p><strong>対象エリア：</strong>埼玉県南部、千葉県西部</p>
-                        </div>
-                        <p class="case-text">有資格者によるEV充電器の設置プロセスを網羅。既存の受電設備からの容量計算に基づく安全な分岐配線、屋外配管工事を実施しました。</p>
-                    </div>
-                </div>
-
-                <div class="case-card">
-                    <img class="case-img" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=600" alt="太陽光パネルイメージ">
-                    <div class="case-body">
-                        <span class="case-tag">産業用太陽光点検</span>
-                        <h3 class="case-h3">野立て太陽光発電設備の大規模外観定期点検</h3>
-                        <div class="case-meta">
-                            <p><strong>対象エリア：</strong>千葉県北部・茨城県南部</p>
-                        </div>
-                        <p class="case-text">敷地内全パネルの割れ・鳥糞汚れのチェック、及び架台ボルトの全数打検を効率巡回ルートで実施。詳細な写真付き不具合報告書を提出しました。</p>
-                    </div>
-                </div>
-
-                <div class="case-card">
-                    <img class="case-img" src="https://images.unsplash.com/photo-1521566652839-697aa473761a?auto=format&fit=crop&q=80&w=600" alt="コインランドリー設備イメージ">
-                    <div class="case-body">
-                        <span class="case-tag">店舗巡回保守</span>
-                        <h3 class="case-h3">複数店舗展開コインランドリーのフィルター・駆動部一括定期巡回</h3>
-                        <div class="case-meta">
-                            <p><strong>対象エリア：</strong>東京都城東エリア・埼玉県三郷周辺</p>
-                        </div>
-                        <p class="case-text">同一オーナー様が経営する複数店舗を1日の巡回コースに組み込み、フィルター清掃、テスト稼働までをパッケージにて代行</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="page-company" class="page-content">
-        <div class="page-header">
-            <h1>会社概要</h1>
-            <p>確かな機動力と有資格ネットワークでインフラを支えるパートナー企業</p>
-        </div>
-        <div class="container section-padding" style="max-width: 800px;">
-            <table class="profile-table">
-                <tr><th>会社名</th><td>株式会社上田</td></tr>
-                <tr><th>サービス名</th><td>UEDA Field Services</td></tr>
-                <tr><th>事業内容</th><td>電気工事、空調設備工事、EVインフラ保守、太陽光発電点検、店舗・住宅設備巡回、ライフサポート代行</td></tr>
-                <tr><th>対応エリア</th><td>東京都23区、埼玉県南部、千葉県西部、神奈川県東部</td></tr>
-                <tr><th>保有資格（一部）</th><td>第一種電気工事士、第二種電気工事士、消防設備士、低圧電気取扱者、第一種衛生管理者、安全管理者、有機溶剤作業主任者</td></tr>
-            </table>
-        </div>
-    </div>
-
-    <div id="page-contact" class="page-content">
-        <div class="page-header">
-            <h1>お問い合わせ・アライアンス相談</h1>
-            <p style="color: #cbd5e1;">御社のフィールドサービス運営を、仕組み化によって支援します。お気軽にご相談ください。</p>
-        </div>
-        <div class="container section-padding">
-            <div class="form-box">
-                <div id="form-success" style="display:none; background:#d1fae5; color:#065f46; padding:24px; border-radius:8px; text-align:center; font-size:1.1rem; font-weight:bold; margin-bottom:24px;">
-                    ✅ お問い合わせを受け付けました。担当者より折り返しご連絡いたします。
-                </div>
-                <form id="contact-form" action="https://formspree.io/f/xqevlkop" method="POST">
-                    <div class="form-group">
-                        <label class="form-label">お問い合わせ種別 <span class="required">必須</span></label>
-                        <div class="radio-group">
-                            <label class="radio-label"><input type="radio" name="type" value="保守委託の相談" checked> 保守委託・案件のご相談</label>
-                            <label class="radio-label"><input type="radio" name="type" value="協力会社登録"> 協力会社への応募・登録</label>
-                            <label class="radio-label"><input type="radio" name="type" value="その他"> その他</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">貴社名 <span class="required">必須</span></label>
-                        <input type="text" name="company" placeholder="例：株式会社〇〇〇〇" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">お名前 <span class="required">必須</span></label>
-                        <input type="text" name="name" placeholder="例：上田 太郎" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">メールアドレス <span class="required">必須</span></label>
-                        <input type="email" name="email" placeholder="例：example@ueda-fs.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">お問い合わせ内容 <span class="required">必須</span></label>
-                        <textarea name="message" placeholder="ご相談内容、現在の課題、対象の設備についてご記入ください。" required></textarea>
-                    </div>
-                    <div class="privacy-box">
-                        <label style="cursor: pointer;"><input type="checkbox" name="privacy" required> 個人情報保護方針に同意する</label>
-                    </div>
-                    <div style="text-align: center;">
-                        <button type="submit" class="btn btn-accent" style="width: 100%; max-width: 320px; font-size: 1.1rem; display: block; margin: 0 auto;">入力内容を送信する</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+    
     </div>
 
     <section class="line-contact">
         <h2>LINE公式からもお問い合わせいただけます</h2>
-        <p><strong>株式会社上田｜フィールドサービス窓口</strong><br><br>
-        保守契約のご相談、消防設備点検、電気設備保守、協力会社登録など、お気軽にお問い合わせください。</p>
+        <p>保守契約のご相談、消防設備点検、電気設備保守、協力会社登録など、お気軽にお問い合わせください。</p>
         <a href="https://page.line.me/ovt4298c" target="_blank" class="line-btn">LINE公式で相談する</a>
-        <div><alt="株式会社上田｜フィールドサービス窓口"></div>
+        <p style="margin-top:20px; font-size:0.95rem;">お電話でのご相談：<a href="tel:09075515324" style="color:var(--bg-dark); font-weight:bold;">090-7551-5324</a><br>
+        <span style="color:var(--accent); font-weight:bold;">※営業目的でのご連絡は一切お断りいたします。</span></p>
     </section>
 
     <footer>
+        <p style="margin-bottom:15px;">
+            <a href="services.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">事業内容</a>
+            <a href="area.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">対応エリア</a>
+            <a href="case.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">施工実績</a>
+            <a href="faq.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">よくある質問</a>
+            <a href="company.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">会社概要</a>
+        </p>
+        <p style="margin-bottom:10px; font-weight:bold;">お電話でのご相談：<a href="tel:09075515324" style="color:#fff;">090-7551-5324</a>（営業目的でのご連絡はお断りいたします）</p>
         <p>&copy; 2026 株式会社上田 UEDA Field Services. All Rights Reserved.</p>
     </footer>
 
     <a class="floating-line" href="https://page.line.me/ovt4298c" target="_blank">LINE相談</a>
 
-    <script>
-        // Formspree 送信処理
-        window.addEventListener('DOMContentLoaded', function() {
-            const contactForm = document.getElementById('contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', async function(e) {
-                    e.preventDefault();
-                    const submitBtn = contactForm.querySelector('button[type="submit"]');
-                    submitBtn.disabled = true;
-                    submitBtn.textContent = '送信中...';
-                    const data = new FormData(contactForm);
-                    try {
-                        const res = await fetch('https://formspree.io/f/xqevlkop', {
-                            method: 'POST',
-                            body: data,
-                            headers: { 'Accept': 'application/json' }
-                        });
-                        if (res.ok) {
-                            document.getElementById('form-success').style.display = 'block';
-                            contactForm.style.display = 'none';
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                        } else {
-                            const json = await res.json();
-                            alert('送信エラー：' + (json.error || '時間をおいて再度お試しください。'));
-                            submitBtn.disabled = false;
-                            submitBtn.textContent = '入力内容を送信する';
-                        }
-                    } catch (err) {
-                        alert('通信エラーが発生しました。インターネット接続をご確認ください。');
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = '入力内容を送信する';
-                    }
-                });
-            }
-        });
+    <div class="mobile-cta-bar">
+        <a class="cta-tel" href="tel:09075515324" title="営業目的でのご連絡はお断りします">電話で相談</a>
+        <a class="cta-line" href="https://page.line.me/ovt4298c" target="_blank">LINEで相談</a>
+        <a class="cta-form" href="contact.html">お問い合わせ</a>
+    </div>
 
-        function switchPage(pageId) {
-            const pages = document.querySelectorAll('.page-content');
-            pages.forEach(page => {
-                page.classList.remove('active-page');
-            });
-
-            const tabs = document.querySelectorAll('.nav-menu li');
-            tabs.forEach(tab => {
-                tab.classList.remove('active-tab');
-            });
-
-            document.getElementById('page-' + pageId).classList.add('active-page');
-            
-            if(pageId !== 'contact') {
-                document.getElementById('tab-' + pageId).classList.add('active-tab');
-            }
-
-            window.scrollTo(0, 0);
-        }
-    </script>
 </body>
 </html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ・アライアンス相談｜株式会社上田</title>
+    <meta name="description" content="保守委託のご相談、協力会社への応募・登録はこちらから。株式会社上田がフォーム・LINE・お電話でお問い合わせを承ります。">
+    <link rel="canonical" href="https://www.ueda-fs.com/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="お問い合わせ・アライアンス相談｜株式会社上田">
+    <meta property="og:description" content="保守委託のご相談、協力会社への応募・登録はこちらから。株式会社上田がフォーム・LINE・お電話でお問い合わせを承ります。">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1757970326337-95d7cca56fa1?auto=format&fit=crop&q=80&w=1200">
+    <meta property="og:url" content="https://www.ueda-fs.com/contact.html">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a class="logo" href="index.html" style="text-decoration:none;">
+            <div class="logo-svg-container">
+                <svg viewBox="0 0 120 90" width="100%" height="100%">
+                    <path d="M10,65 C40,63 80,45 110,15 C95,42 60,63 25,72 Z" fill="#0a1128"/>
+                    <path d="M22,70 C50,64 85,50 102,28 C88,48 55,64 30,73 Z" fill="#c5a059"/>
+                    <path d="M35,74 C58,68 85,57 95,42 C82,55 58,68 40,75 Z" fill="#0a1128"/>
+                </svg>
+            </div>
+            <div class="logo-text-wrapper">
+                <span class="logo-title">株式会社上田</span>
+                <span class="logo-sub">UEDA Field Services</span>
+            </div>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="index.html" style="color:inherit; text-decoration:none;">トップページ</a></li>
+            <li><a href="services.html" style="color:inherit; text-decoration:none;">事業内容</a></li>
+            <li><a href="case.html" style="color:inherit; text-decoration:none;">施工実績</a></li>
+            <li><a href="area.html" style="color:inherit; text-decoration:none;">対応エリア</a></li>
+            <li><a href="faq.html" style="color:inherit; text-decoration:none;">よくある質問</a></li>
+            <li><a href="company.html" style="color:inherit; text-decoration:none;">会社概要</a></li>
+            <li class="nav-btn-accent"><a href="contact.html" style="color:inherit; text-decoration:none;">お問い合わせ</a></li>
+        </ul>
+    </header>
+
+    <div id="page-contact">
+        <div class="page-header">
+            <h1>お問い合わせ・アライアンス相談</h1>
+            <p style="color: #cbd5e1;">御社のフィールドサービス運営を、仕組み化によって支援します。お気軽にご相談ください。</p>
+        </div>
+        <div class="container section-padding">
+            <div style="max-width:800px; margin:0 auto 30px; background:#eff6ff; border:1px solid rgba(0,118,254,0.2); border-radius:8px; padding:22px 25px; text-align:center;">
+                <p style="font-weight:bold; font-size:1.15rem; color:var(--bg-dark); margin-bottom:6px;">
+                    お電話でのご相談：<a href="tel:09075515324" style="color:var(--primary); text-decoration:none;">090-7551-5324</a>
+                </p>
+                <p style="color:var(--accent); font-weight:bold; font-size:0.95rem;">※営業目的でのご連絡は一切お断りいたします。</p>
+            </div>
+            <div class="form-box">
+                <div id="form-success" style="display:none; background:#d1fae5; color:#065f46; padding:24px; border-radius:8px; text-align:center; font-size:1.1rem; font-weight:bold; margin-bottom:24px;">
+                    ✅ お問い合わせを受け付けました。担当者より折り返しご連絡いたします。
+                </div>
+                <form id="contact-form" action="https://formspree.io/f/xqevlkop" method="POST">
+                    <div class="form-group">
+                        <label class="form-label">お問い合わせ種別 <span class="required">必須</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="type" value="保守委託の相談" checked> 保守委託・案件のご相談</label>
+                            <label class="radio-label"><input type="radio" name="type" value="協力会社登録"> 協力会社への応募・登録</label>
+                            <label class="radio-label"><input type="radio" name="type" value="その他"> その他</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">貴社名 <span class="required">必須</span></label>
+                        <input type="text" name="company" placeholder="例：株式会社〇〇〇〇" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">お名前 <span class="required">必須</span></label>
+                        <input type="text" name="name" placeholder="例：上田 太郎" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">メールアドレス <span class="required">必須</span></label>
+                        <input type="email" name="email" placeholder="例：example@ueda-fs.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">お問い合わせ内容 <span class="required">必須</span></label>
+                        <textarea name="message" placeholder="ご相談内容、現在の課題、対象の設備についてご記入ください。" required></textarea>
+                    </div>
+                    <div class="privacy-box">
+                        <label style="cursor: pointer;"><input type="checkbox" name="privacy" required> 個人情報保護方針に同意する</label>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-accent" style="width: 100%; max-width: 320px; font-size: 1.1rem; display: block; margin: 0 auto;">入力内容を送信する</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+    </div>
+
+    <section class="line-contact">
+        <h2>LINE公式からもお問い合わせいただけます</h2>
+        <p>保守契約のご相談、消防設備点検、電気設備保守、協力会社登録など、お気軽にお問い合わせください。</p>
+        <a href="https://page.line.me/ovt4298c" target="_blank" class="line-btn">LINE公式で相談する</a>
+        <p style="margin-top:20px; font-size:0.95rem;">お電話でのご相談：<a href="tel:09075515324" style="color:var(--bg-dark); font-weight:bold;">090-7551-5324</a><br>
+        <span style="color:var(--accent); font-weight:bold;">※営業目的でのご連絡は一切お断りいたします。</span></p>
+    </section>
+
+    <footer>
+        <p style="margin-bottom:15px;">
+            <a href="services.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">事業内容</a>
+            <a href="area.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">対応エリア</a>
+            <a href="case.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">施工実績</a>
+            <a href="faq.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">よくある質問</a>
+            <a href="company.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">会社概要</a>
+        </p>
+        <p style="margin-bottom:10px; font-weight:bold;">お電話でのご相談：<a href="tel:09075515324" style="color:#fff;">090-7551-5324</a>（営業目的でのご連絡はお断りいたします）</p>
+        <p>&copy; 2026 株式会社上田 UEDA Field Services. All Rights Reserved.</p>
+    </footer>
+
+    <a class="floating-line" href="https://page.line.me/ovt4298c" target="_blank">LINE相談</a>
+
+    <div class="mobile-cta-bar">
+        <a class="cta-tel" href="tel:09075515324" title="営業目的でのご連絡はお断りします">電話で相談</a>
+        <a class="cta-line" href="https://page.line.me/ovt4298c" target="_blank">LINEで相談</a>
+        <a class="cta-form" href="contact.html">お問い合わせ</a>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    const submitBtn = contactForm.querySelector('button[type="submit"]');
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = '送信中...';
+                    const data = new FormData(contactForm);
+                    try {
+                        const res = await fetch('https://formspree.io/f/xqevlkop', {
+                            method: 'POST',
+                            body: data,
+                            headers: { 'Accept': 'application/json' }
+                        });
+                        if (res.ok) {
+                            document.getElementById('form-success').style.display = 'block';
+                            contactForm.style.display = 'none';
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        } else {
+                            const json = await res.json();
+                            alert('送信エラー：' + (json.error || '時間をおいて再度お試しください。'));
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = '入力内容を送信する';
+                        }
+                    } catch (err) {
+                        alert('通信エラーが発生しました。インターネット接続をご確認ください。');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = '入力内容を送信する';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
