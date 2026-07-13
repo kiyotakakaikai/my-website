@@ -63,8 +63,7 @@
 
         /* HEROセクション */
         .hero { 
-            background: linear-gradient(135deg, rgba(10, 17, 40, 0.88) 0%, rgba(22, 36, 71, 0.65) 100%), 
-            url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover; 
+            background: linear-gradient(135deg, #0a1128 0%, #16243f 55%, #1d3054 100%); 
             color: var(--text-white); 
             padding: 100px 5%; 
             display: flex; 
@@ -165,7 +164,7 @@
         /* 対応エリア一覧 */
         .area-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 20px; }
         .area-card { background: #fff; border: 1px solid var(--border-color); border-radius: 8px; padding: 22px; }
-        .area-card h4 { color: var(--primary); font-size: 1rem; margin-bottom: 10px; border-bottom: 2px solid var(--bg-light); padding-bottom: 8px; }
+        .area-card h2 { color: var(--primary); font-size: 1rem; margin-bottom: 10px; border-bottom: 2px solid var(--bg-light); padding-bottom: 8px; }
         .area-card p { font-size: 0.9rem; color: #475569; }
 
         /* モバイル固定CTAバー */
@@ -181,12 +180,31 @@
             .split-media { grid-template-columns: 1fr; }
         }
 
+        /* ハンバーガーメニュー（デフォルト非表示・PC） */
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 6px 8px; }
+        .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
+            display: block; width: 24px; height: 2px; background: var(--bg-dark); position: relative; transition: 0.2s;
+        }
+        .nav-toggle span::before, .nav-toggle span::after { content: ''; position: absolute; left: 0; }
+        .nav-toggle span::before { top: -7px; }
+        .nav-toggle span::after { top: 7px; }
+        .nav-toggle.open span { background: transparent; }
+        .nav-toggle.open span::before { transform: rotate(45deg); top: 0; }
+        .nav-toggle.open span::after { transform: rotate(-45deg); top: 0; }
+
         /* タブレット〜スマホ横幅 */
         @media (max-width: 992px) {
-            header { flex-direction: column; gap: 12px; padding: 12px 4%; }
-            .nav-menu { width: 100%; justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 4px; gap: 4px; scrollbar-width: thin; }
-            .nav-menu li { flex-shrink: 0; padding: 10px 14px; font-size: 0.88rem; min-height: 40px; display: flex; align-items: center; }
-            .nav-menu li a { display: flex; align-items: center; height: 100%; }
+            header { flex-wrap: wrap; padding: 12px 5%; position: relative; }
+            .nav-toggle { display: block; }
+            .nav-menu {
+                width: 100%; flex-direction: column; align-items: stretch; gap: 0;
+                max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+                order: 3; margin-top: 0;
+            }
+            .nav-menu.open { max-height: 500px; margin-top: 14px; }
+            .nav-menu li { width: 100%; padding: 14px 6px; border-bottom: 1px solid var(--bg-light); }
+            .nav-menu li.nav-btn-accent { text-align: center; border-radius: 6px; margin: 10px 0 4px; }
+            .nav-menu li a { display: block; }
             .hero { text-align: center; padding: 50px 6%; min-height: auto; }
             .hero .container { text-align: center; }
             .hero-title { font-size: 2rem; }
@@ -199,6 +217,7 @@
             .section-padding { padding: 45px 5%; }
             .section-title { font-size: 1.7rem; }
         }
+
 
         /* スマホ縦向け（狭幅端末） */
         @media (max-width: 480px) {
@@ -218,6 +237,20 @@
             table.benefit-table th, table.benefit-table td { padding: 14px 15px; font-size: 0.9rem; }
             .profile-table th, .profile-table td { padding: 14px 12px; font-size: 0.92rem; }
             .profile-table th { width: 32%; }
+        }
+
+        /* スマホ縦向け（狭幅端末） */
+        @media (max-width: 640px) {
+            .table-container { overflow-x: visible; box-shadow: none; border: none; background: none; }
+            table.benefit-table { min-width: 0; }
+            table.benefit-table thead { display: none; }
+            table.benefit-table, table.benefit-table tbody, table.benefit-table tr, table.benefit-table td { display: block; width: 100%; }
+            table.benefit-table tr { margin-bottom: 16px; background: #fff; border: 1px solid var(--border-color); border-radius: 8px; padding: 4px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+            table.benefit-table td { border-bottom: 1px solid var(--bg-light); padding: 12px 18px; }
+            table.benefit-table td:last-child { border-bottom: none; }
+            table.benefit-table td::before { content: attr(data-label); display: block; font-size: 0.75rem; font-weight: bold; color: var(--text-muted); margin-bottom: 4px; }
+            table.benefit-table td:first-child { background: none; }
+            table.benefit-table td:nth-child(3) { background: rgba(0,118,254,0.04); }
         }
 
         /* タップ領域の確保（全端末共通） */
