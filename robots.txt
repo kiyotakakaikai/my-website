@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.uedakai.com/sitemap.xml
+Sitemap: https://uedakai.com/sitemap.xml

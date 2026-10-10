@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>事業内容・サービス体制｜株式会社上田</title>
-    <link rel="preconnect" href="https://images.unsplash.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="stylesheet" href="style.css">
-    <meta name="description" content="電気工事、消防設備点検・工事応援、ルームエアコン設置・取り外しを中心に、宅配ボックス・コインランドリー・EV充電器・太陽光発電設備のメーカー認定保守まで。首都圏の保守運営をワンストップで代行する株式会社上田の事業内容をご紹介します。">
+    <title>事業内容｜株式会社上田 UEDA Field Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="description" content="電気工事・消防設備点検・エアコン工事・宅配BOX/EV充電器/コインランドリー/太陽光の認定保守まで。首都圏の保守運営をワンストップで代行する株式会社上田の事業内容をご紹介します。">
     <link rel="canonical" href="https://uedakai.com/services.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="事業内容・サービス体制｜株式会社上田">
-    <meta property="og:description" content="電気工事、消防設備点検・工事応援、ルームエアコン設置・取り外しを中心に、宅配ボックス・コインランドリー・EV充電器・太陽光発電設備のメーカー認定保守まで。首都圏の保守運営をワンストップで代行する株式会社上田の事業内容をご紹介します。">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1757970326337-95d7cca56fa1?auto=format&fit=crop&q=80&w=1200">
+    <meta property="og:title" content="事業内容｜株式会社上田 UEDA Field Services">
+    <meta property="og:description" content="電気工事・消防設備点検・エアコン工事・宅配BOX/EV充電器/コインランドリー/太陽光の認定保守まで。首都圏の保守運営をワンストップで代行する株式会社上田の事業内容をご紹介します。">
     <meta property="og:url" content="https://uedakai.com/services.html">
     <meta property="og:locale" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image">
@@ -24,174 +23,620 @@
       gtag('js', new Date());
       gtag('config', 'G-BWY1S0RKH2');
     </script>
+    <style>
+/* ============================================================
+   CSS リセット & ベース
+============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #1a1a1a;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+/* ============================================================
+   デザイントークン
+============================================================ */
+:root {
+    --black:     #2a2f4a;
+    --black-dark: #1d2238;
+    --gray-900:  #0e1117;
+    --gray-700:  #4b5563;
+    --gray-500:  #9ca3af;
+    --gray-300:  #d1d5db;
+    --gray-100:  #f3f4f6;
+    --gray-50:   #f9fafb;
+    --white:     #ffffff;
+    --accent:    #c0392b;
+    --accent-hv: #a93226;
+    --border:    #e5e7eb;
+    --max-w:     1080px;
+    --r:         2px;
+}
+
+/* ============================================================
+   ユーティリティ
+============================================================ */
+.u-container { max-width: var(--max-w); margin: 0 auto; padding: 0 5%; }
+.u-section    { padding: 80px 0; }
+.u-section--sm{ padding: 56px 0; }
+.u-bg-gray    { background: var(--gray-50); }
+
+.c-heading {
+    font-size: clamp(1.4rem, 3vw, 1.75rem);
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+}
+.c-heading--sub {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--gray-500);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.c-heading::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--black);
+    margin-top: 16px;
+}
+.c-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 28px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border-radius: var(--r);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    text-decoration: none;
+    border: 2px solid transparent;
+    line-height: 1;
+}
+.c-btn--accent { background: var(--accent); color: var(--white); border-color: var(--accent); }
+.c-btn--accent:hover { background: var(--accent-hv); }
+.c-btn--outline-dark { background: transparent; color: var(--black); border-color: var(--black); }
+.c-btn--outline-dark:hover { background: var(--black); color: var(--white); }
+
+/* ============================================================
+   ヘッダー
+============================================================ */
+.l-header {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+.l-header__inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.l-header__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+.l-header__logo-img { height: 40px; width: auto; }
+.l-header__logo-text { display: flex; flex-direction: column; }
+.l-header__logo-name { font-size: 1.1rem; font-weight: 700; color: var(--black); line-height: 1.2; letter-spacing: 0.05em; }
+.l-header__logo-en { font-size: 0.65rem; color: var(--gray-500); letter-spacing: 0.1em; margin-top: 2px; }
+.l-nav__list { display: flex; align-items: center; gap: 2px; }
+.l-nav__item a { display: block; padding: 8px 12px; font-size: 0.85rem; font-weight: 500; color: var(--gray-700); letter-spacing: 0.02em; transition: color 0.15s; border-radius: var(--r); }
+.l-nav__item a:hover { color: var(--black); }
+.l-nav__item.is-active a { color: var(--black); font-weight: 700; }
+.l-nav__item--cta a { background: var(--accent); color: var(--white); padding: 8px 16px; border-radius: var(--r); }
+.l-nav__item--cta a:hover { background: var(--accent-hv); color: var(--white); }
+.l-nav__toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
+.l-nav__toggle span { display: block; width: 22px; height: 2px; background: var(--black); transition: 0.25s; transform-origin: center; }
+.l-nav__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.l-nav__toggle.is-open span:nth-child(2) { opacity: 0; }
+.l-nav__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ============================================================
+   ページヘッダー
+============================================================ */
+.p-page-header {
+    background: var(--black);
+    padding: 56px 5%;
+    position: relative;
+    overflow: hidden;
+}
+.p-page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=60&w=1400');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.18;
+    filter: grayscale(40%);
+}
+.p-page-header__inner {
+    position: relative;
+    z-index: 1;
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+.p-page-header__label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--gray-300);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    border-left: 3px solid var(--gray-300);
+    padding-left: 10px;
+}
+.p-page-header__title {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+}
+.p-page-header__desc {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.65);
+    margin-top: 12px;
+    line-height: 1.8;
+}
+
+/* ============================================================
+   サービス詳細
+============================================================ */
+.p-svc {
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+.p-svc__head {
+    background: var(--black);
+    padding: 24px 32px;
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+}
+.p-svc__num {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.5);
+    flex-shrink: 0;
+}
+.p-svc__name { font-size: 1.15rem; font-weight: 700; color: var(--white); line-height: 1.35; }
+.p-svc__body { padding: 28px 32px; }
+.p-svc__lead { font-size: 0.9rem; color: var(--gray-700); line-height: 1.8; margin-bottom: 24px; }
+.p-svc__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.p-svc__col-title { font-size: 0.78rem; font-weight: 700; color: var(--black); letter-spacing: 0.08em; margin-bottom: 10px; border-left: 3px solid var(--black); padding-left: 8px; }
+.p-svc__list li {
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 8px;
+    font-size: 0.86rem;
+    color: var(--gray-700);
+    line-height: 1.65;
+}
+.p-svc__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 5px;
+    height: 1px;
+    background: var(--gray-500);
+}
+
+/* 認定パートナー */
+.p-partner__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+}
+.p-partner__card {
+    background: var(--gray-50);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 24px;
+}
+.p-partner__name { font-size: 0.95rem; font-weight: 700; color: var(--black); margin-bottom: 8px; }
+.p-partner__desc { font-size: 0.85rem; color: var(--gray-700); line-height: 1.7; }
+.p-partner__note {
+    margin-top: 24px;
+    background: #fef3c7;
+    border: 1px solid #f59e0b;
+    border-radius: var(--r);
+    padding: 16px 20px;
+    font-size: 0.85rem;
+    color: #92400e;
+    line-height: 1.7;
+}
+
+/* フロー */
+.p-flow__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 40px;
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+}
+.p-flow__step {
+    padding: 28px 20px;
+    background: var(--white);
+    border-right: 1px solid var(--border);
+    position: relative;
+}
+.p-flow__step:last-child { border-right: none; }
+.p-flow__step::after { content: '→'; position: absolute; right: -14px; top: 50%; transform: translateY(-50%); font-size: 1rem; color: var(--gray-300); z-index: 1; }
+.p-flow__step:last-child::after { display: none; }
+.p-flow__step-num { font-size: 0.7rem; font-weight: 700; color: var(--gray-500); letter-spacing: 0.14em; margin-bottom: 10px; }
+.p-flow__step-title { font-size: 0.9rem; font-weight: 700; color: var(--black); margin-bottom: 8px; line-height: 1.4; }
+.p-flow__step-body { font-size: 0.8rem; color: var(--gray-700); line-height: 1.65; }
+
+/* CTA */
+.p-cta {
+    background: var(--black);
+    padding: 64px 5%;
+    text-align: center;
+}
+.p-cta__title { font-size: clamp(1.3rem, 3vw, 1.75rem); font-weight: 700; color: var(--white); margin-bottom: 14px; line-height: 1.4; }
+.p-cta__desc { font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-bottom: 32px; line-height: 1.8; }
+.p-cta__btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.c-btn--outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.7); border-radius: var(--r); padding: 14px 28px; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.04em; display: inline-flex; align-items: center; transition: background 0.2s; }
+.c-btn--outline:hover { background: rgba(255,255,255,0.12); }
+
+/* LINE */
+.p-line { padding: 48px 5%; background: var(--gray-50); text-align: center; border-top: 1px solid var(--border); }
+.p-line__title { font-size: 1.1rem; font-weight: 700; color: var(--black); margin-bottom: 10px; }
+.p-line__desc { font-size: 0.875rem; color: var(--gray-700); margin-bottom: 22px; line-height: 1.7; }
+.p-line__btn { display: inline-flex; align-items: center; gap: 8px; background: #06C755; color: var(--white); font-weight: 700; font-size: 0.95rem; padding: 13px 28px; border-radius: var(--r); text-decoration: none; transition: background 0.2s; }
+.p-line__btn:hover { background: #05a847; }
+.p-line__icon { width: 22px; height: 22px; }
+
+/* フッター */
+.l-footer { background: var(--black-dark); padding: 32px 5%; text-align: center; }
+.l-footer__nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px; margin-bottom: 20px; }
+.l-footer__nav a { font-size: 0.8rem; color: rgba(255,255,255,0.5); padding: 4px 10px; transition: color 0.15s; }
+.l-footer__nav a:hover { color: rgba(255,255,255,0.9); }
+.l-footer__copy { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
+
+/* フローティングLINE */
+.floating-line { position: fixed; right: 20px; bottom: 24px; background: #06C755; color: var(--white); font-size: 0.8rem; font-weight: 700; padding: 12px 18px; border-radius: 40px; z-index: 9999; box-shadow: 0 4px 16px rgba(0,0,0,0.2); transition: background 0.2s; text-decoration: none; }
+.floating-line:hover { background: #05a847; }
+
+/* モバイルCTAバー */
+.mobile-cta-bar { display: none; }
+
+/* ============================================================
+   レスポンシブ
+============================================================ */
+@media (max-width: 768px) {
+    .l-nav__toggle { display: flex; }
+    .l-nav__list { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--border); flex-direction: column; padding: 12px 0; z-index: 800; gap: 0; }
+    .l-nav__list.is-open { display: flex; }
+    .l-nav__item a { padding: 12px 5%; border-radius: 0; font-size: 0.9rem; }
+    .l-nav__item--cta { margin: 8px 5% 4px; }
+    .l-nav__item--cta a { text-align: center; border-radius: var(--r); }
+    .mobile-cta-bar { display: grid; grid-template-columns: 1fr 1fr 1fr; position: fixed; bottom: 0; left: 0; right: 0; z-index: 9000; box-shadow: 0 -2px 12px rgba(0,0,0,0.12); }
+    .mobile-cta-bar a { display: flex; align-items: center; justify-content: center; padding: 14px 8px; font-size: 0.78rem; font-weight: 700; text-decoration: none; color: var(--white); min-height: 52px; padding-bottom: env(safe-area-inset-bottom, 14px); }
+    .mobile-cta-bar .cta-tel  { background: var(--black); }
+    .mobile-cta-bar .cta-line { background: #06C755; }
+    .mobile-cta-bar .cta-form { background: var(--accent); }
+    body { padding-bottom: calc(52px + env(safe-area-inset-bottom, 0)); }
+    .floating-line { display: none; }
+    .p-svc__cols { grid-template-columns: 1fr; }
+    .p-partner__grid { grid-template-columns: 1fr; }
+    .p-flow__steps { grid-template-columns: 1fr; }
+    .p-flow__step { border-right: none; border-bottom: 1px solid var(--border); }
+    .p-flow__step:last-child { border-bottom: none; }
+    .p-flow__step::after { content: '↓'; right: auto; left: 24px; top: auto; bottom: -16px; transform: none; }
+    .p-flow__step:last-child::after { display: none; }
+    .p-cta__btns { flex-direction: column; align-items: center; }
+    .c-btn, .c-btn--outline { width: 100%; max-width: 320px; justify-content: center; }
+    .u-section { padding: 56px 0; }
+    .p-svc__head { padding: 20px 24px; }
+    .p-svc__body { padding: 24px; }
+}
+    </style>
 </head>
 <body>
 
-    <header>
-        <a class="logo" href="index.html" style="text-decoration:none;">
-            <div class="logo-svg-container" style="background:none; padding:0; width:auto; height:44px; display:flex; align-items:center;">
-                <img src="images/wing.JPEG" alt="株式会社上田 ロゴ" width="220" height="176" loading="eager" fetchpriority="high" style="height:100%; width:auto; display:block;">
-            </div>
-            <div class="logo-text-wrapper">
-                <span class="logo-title">株式会社上田</span>
-                <span class="logo-sub">UEDA Field Services</span>
+<!-- ヘッダー -->
+<header class="l-header">
+    <div class="l-header__inner">
+        <a class="l-header__logo" href="index.html">
+            <img src="images/wing.JPEG" alt="株式会社上田" class="l-header__logo-img" width="220" height="176" loading="eager" fetchpriority="high">
+            <div class="l-header__logo-text">
+                <span class="l-header__logo-name">株式会社上田</span>
+                <span class="l-header__logo-en">UEDA Field Services</span>
             </div>
         </a>
-        <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" onclick="
-            document.getElementById('navMenu').classList.toggle('open');
-            this.classList.toggle('open');
-        "><span></span></button>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html" style="color:inherit; text-decoration:none;">トップページ</a></li>
-            <li class="active-tab"><a href="services.html" style="color:inherit; text-decoration:none;">事業内容</a></li>
-            <li><a href="case.html" style="color:inherit; text-decoration:none;">施工実績</a></li>
-            <li><a href="area.html" style="color:inherit; text-decoration:none;">対応エリア</a></li>
-            <li><a href="faq.html" style="color:inherit; text-decoration:none;">よくある質問</a></li>
-            <li><a href="company.html" style="color:inherit; text-decoration:none;">会社概要</a></li>
-            <li class="nav-btn-accent"><a href="contact.html" style="color:inherit; text-decoration:none;">お問い合わせ</a></li>
-        </ul>
-    </header>
+        <nav>
+            <button class="l-nav__toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="l-nav__list" id="navMenu" role="menubar">
+                <li class="l-nav__item"><a href="index.html">トップページ</a></li>
+                <li class="l-nav__item is-active"><a href="services.html">事業内容</a></li>
+                <li class="l-nav__item"><a href="case.html">施工実績</a></li>
+                <li class="l-nav__item"><a href="area.html">対応エリア</a></li>
+                <li class="l-nav__item"><a href="faq.html">よくある質問</a></li>
+                <li class="l-nav__item"><a href="company.html">会社概要</a></li>
+                <li class="l-nav__item l-nav__item--cta"><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <main id="page-services">
-        <div class="page-header">
-            <h1>事業内容・サービス体制</h1>
-            <p>電気工事・消防設備を中心に、首都圏の保守運営をワンストップで代行</p>
-        </div>
-        <div class="container section-padding">
+<main>
 
-            <h2 class="section-title" style="text-align:left; margin-bottom:8px;">対応可能な事業</h2>
-            <p style="color:var(--text-muted); margin-bottom:30px;">下記の事業については、法人様・管理会社様からのご相談を随時受け付けております。</p>
+<!-- ページヘッダー -->
+<div class="p-page-header">
+    <div class="p-page-header__inner">
+        <p class="p-page-header__label">Services</p>
+        <h1 class="p-page-header__title">事業内容・サービス体制</h1>
+        <p class="p-page-header__desc">電気工事・消防設備を中心に、首都圏の保守運営をワンストップで代行</p>
+    </div>
+</div>
 
-            <div class="service-detail-box">
-                <span class="service-num">SERVICE 01</span>
-                <h2 class="service-h3">電気工事</h2>
-                <p>第一種・第二種電気工事士の有資格者が、住宅・店舗の小規模工事から各種配線工事まで幅広く対応します。</p>
-                <div class="grid-2col">
+<!-- ============================================================
+     ご依頼可能な事業
+============================================================ -->
+<section class="u-section">
+    <div class="u-container">
+        <h2 class="c-heading">
+            <span class="c-heading--sub">Direct Services</span>
+            ご依頼可能な事業
+        </h2>
+        <p style="margin-top: 24px; color: var(--gray-700); font-size: 0.9rem; line-height: 1.8;">
+            下記の事業については、法人様・管理会社様からのご相談を随時受け付けております。
+        </p>
+
+        <!-- SERVICE 01 -->
+        <div class="p-svc" style="margin-top: 40px;">
+            <div class="p-svc__head">
+                <span class="p-svc__num">SERVICE 01</span>
+                <h2 class="p-svc__name">電気工事</h2>
+            </div>
+            <div class="p-svc__body">
+                <p class="p-svc__lead">第一種・第二種電気工事士の有資格者が、住宅・店舗の小規模工事から各種配線工事まで幅広く対応します。</p>
+                <div class="p-svc__cols">
                     <div>
-                        <h3 style="font-size:1em; font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ 主な対応・作業内容</h3>
-                        <ul class="detail-list">
+                        <p class="p-svc__col-title">主な対応・作業内容</p>
+                        <ul class="p-svc__list">
                             <li>コンセント・スイッチの新設・増設・交換</li>
                             <li>インターホンの新設・交換</li>
                             <li>各種配線工事、分電盤まわりの点検・改修</li>
                         </ul>
                     </div>
                     <div>
-                        <h3 style="font-size:1em; font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ ご提供価値</h3>
-                        <ul class="detail-list">
-                            <li>小規模な工事から柔軟に対応、案件のボリュームを問わずご相談可能</li>
-                            <li>有資格者による安全な施工で、法令遵守と安心を両立します</li>
+                        <p class="p-svc__col-title">ご提供価値</p>
+                        <ul class="p-svc__list">
+                            <li>小規模案件から柔軟に対応、ボリュームを問わずご相談可能</li>
+                            <li>有資格者による安全な施工で、法令遵守と安心を両立</li>
                         </ul>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="service-detail-box">
-                <span class="service-num">SERVICE 02</span>
-                <h2 class="service-h3">消防設備点検・工事 応援現場サポート</h2>
-                <p>消防設備士（甲種1類・4類、乙種6類等）の有資格者が在籍。人手不足や繁忙期に悩む同業者様・ビル管理会社様向けに、確実な点検・施工の応援現場サポートを提供します。</p>
-                <div class="grid-2col">
+        <!-- SERVICE 02 -->
+        <div class="p-svc">
+            <div class="p-svc__head">
+                <span class="p-svc__num">SERVICE 02</span>
+                <h2 class="p-svc__name">消防設備点検・工事 応援現場サポート</h2>
+            </div>
+            <div class="p-svc__body">
+                <p class="p-svc__lead">消防設備士の有資格者が在籍（全類対応）。人手不足や繁忙期に悩む同業者様・ビル管理会社様向けに、確実な点検・施工の応援サポートを提供します。</p>
+                <div class="p-svc__cols">
                     <div>
-                        <h3 style="font-size:1em; font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ 主な対応・作業内容</h3>
-                        <ul class="detail-list">
-                            <li>消火栓・スプリンクラー等（甲1範囲）の水系設備の点検・施工補助</li>
-                            <li>自動火災報知設備（甲4範囲）の感知器作動試験・復旧確認サポート</li>
-                            <li>消火器（乙6範囲）の配置・外観点検および法定交換・設置作業</li>
+                        <p class="p-svc__col-title">主な対応・作業内容</p>
+                        <ul class="p-svc__list">
+                            <li>水系設備（消火栓・スプリンクラー等）の点検・施工補助</li>
+                            <li>自動火災報知設備の感知器作動試験・復旧確認サポート</li>
+                            <li>消火器の配置・外観点検および法定交換・設置作業</li>
+                            <li>その他消防設備全般の応援現場サポート</li>
                         </ul>
                     </div>
                     <div>
-                        <h3 style="font-size:1em; font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ ご提供価値</h3>
-                        <ul class="detail-list">
-                            <li>有資格者による確実な現場対応で、点検品質の維持と作業効率化に貢献します</li>
-                            <li>大型案件や工期がタイトな現場における、一時的な人員不足を機動的に解消します</li>
+                        <p class="p-svc__col-title">ご提供価値</p>
+                        <ul class="p-svc__list">
+                            <li>有資格者による確実な現場対応で、点検品質の維持と効率化に貢献</li>
+                            <li>大型案件や工期がタイトな現場の一時的な人員不足を機動的に解消</li>
                         </ul>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="service-detail-box">
-                <span class="service-num">SERVICE 03</span>
-                <h2 class="service-h3">ルームエアコン設置・取り外し（空調工事）</h2>
-                <p>第一種・第二種電気工事士などの国家資格保持者が、住宅向けルームエアコンの設置・移設・入替工事に対応します（業務用エアコンは対象外です）。</p>
-                <div class="grid-2col">
+        <!-- SERVICE 03 -->
+        <div class="p-svc">
+            <div class="p-svc__head">
+                <span class="p-svc__num">SERVICE 03</span>
+                <h2 class="p-svc__name">ルームエアコン設置・取り外し（空調工事）</h2>
+            </div>
+            <div class="p-svc__body">
+                <p class="p-svc__lead">第一種・第二種電気工事士などの国家資格保持者が、住宅向けルームエアコンの設置・移設・入替工事に対応します（業務用エアコンは対象外）。</p>
+                <div class="p-svc__cols">
                     <div>
-                        <h3 style="font-size:1em; font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ 主な対応・作業内容</h3>
-                        <ul class="detail-list">
+                        <p class="p-svc__col-title">主な対応・作業内容</p>
+                        <ul class="p-svc__list">
                             <li>冷媒ガスの適正回収および規定量の確実な充填</li>
                             <li>冷媒配管施工およびドレン排水管の適切な勾配設定</li>
                             <li>電源・内外接続配線の安全接続および動作確認テスト</li>
                         </ul>
                     </div>
                     <div>
-                        <h3 style="font-size:1em; font-weight: bold; margin-bottom: 10px; color: var(--primary);">■ ご提供価値</h3>
-                        <ul class="detail-list">
-                            <li>施工不備による冷媒ガス漏れや、ドレン水漏れトラブルを徹底防止</li>
-                            <li>夏冬のピーク需要期にも、快適な住空間を支えます</li>
+                        <p class="p-svc__col-title">ご提供価値</p>
+                        <ul class="p-svc__list">
+                            <li>冷媒ガス漏れ・ドレン水漏れトラブルを徹底防止</li>
+                            <li>夏冬ピーク需要期にも、快適な住空間を支えます</li>
                         </ul>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
 
-            <h2 class="section-title" style="text-align:left; margin: 60px 0 8px;">対応実績・認定パートナー</h2>
-            <p style="color:var(--text-muted); margin-bottom:30px;">下記は大手メーカー様の認定オペレーターとして稼働している事業です。恐れ入りますが、<strong>メーカー様経由のご依頼のみ</strong>対応しております。エンドユーザー様・管理会社様からの直接のお問い合わせには対応できかねますので、あらかじめご了承ください。</p>
-
-            <div class="grid-2col">
-                <div class="card">
-                    <h3 style="font-size:1em; color:var(--primary); margin-bottom:10px;">宅配ボックス巡回メンテナンス</h3>
-                    <p style="color:#475569; font-size:0.95rem;">国内最大手の宅配ボックスメーカー様の認定オペレーターとして、設置・設定・保守に対応しています。</p>
-                </div>
-                <div class="card">
-                    <h3 style="font-size:1em; color:var(--primary); margin-bottom:10px;">コインランドリー巡回メンテナンス</h3>
-                    <p style="color:#475569; font-size:0.95rem;">国内外大手のランドリー機器メーカー様の認定オペレーターとして、フィルター清掃・駆動部点検等に対応しています。</p>
-                </div>
-                <div class="card">
-                    <h3 style="font-size:1em; color:var(--primary); margin-bottom:10px;">EV充電器メンテナンス</h3>
-                    <p style="color:#475569; font-size:0.95rem;">国内最大手のEV充電器メーカー様の認定オペレーターとして、設置・保守に対応しています。</p>
-                </div>
-                <div class="card">
-                    <h3 style="font-size:1em; color:var(--primary); margin-bottom:10px;">太陽光発電設備 外観点検</h3>
-                    <p style="color:#475569; font-size:0.95rem;">国内大手の太陽光パネルメーカー様の認定案件として、外観点検・不具合報告に対応しています。</p>
-                </div>
+<!-- ============================================================
+     認定パートナー事業
+============================================================ -->
+<section class="u-section u-bg-gray">
+    <div class="u-container">
+        <h2 class="c-heading">
+            <span class="c-heading--sub">Authorized Partners</span>
+            対応実績・認定パートナー事業
+        </h2>
+        <div class="p-partner__note" style="margin-top: 24px;">
+            <strong>※ メーカー様経由のご依頼のみ対応しております。</strong><br>
+            恐れ入りますが、エンドユーザー様・管理会社様からの直接のお問い合わせには対応できかねますので、あらかじめご了承ください。
+        </div>
+        <div class="p-partner__grid">
+            <div class="p-partner__card">
+                <p class="p-partner__name">宅配ボックス 巡回メンテナンス</p>
+                <p class="p-partner__desc">国内最大手の宅配ボックスメーカー様の認定オペレーターとして、設置・設定・保守に対応しています。</p>
             </div>
-
-            <div class="flow-container" style="margin-top:60px;">
-                <p class="flow-title">【標準フィールドサービス運用フロー】</p>
-                <div class="flow-steps">
-                    <div class="flow-step">1. 案件受付・要件確認</div><div class="flow-arrow">➔</div>
-                    <div class="flow-step">2. 技術者の選定・手配</div><div class="flow-arrow">➔</div>
-                    <div class="flow-step">3. 現地施工・データ回収</div><div class="flow-arrow">➔</div>
-                    <div class="flow-step">4. 報告書作成・一括提出</div>
-                </div>
+            <div class="p-partner__card">
+                <p class="p-partner__name">コインランドリー 巡回メンテナンス</p>
+                <p class="p-partner__desc">国内外大手のランドリー機器メーカー様の認定オペレーターとして、フィルター清掃・駆動部点検等に対応しています。</p>
+            </div>
+            <div class="p-partner__card">
+                <p class="p-partner__name">EV充電器 メンテナンス</p>
+                <p class="p-partner__desc">国内最大手のEV充電器メーカー様の認定オペレーターとして、設置・保守に対応しています。</p>
+            </div>
+            <div class="p-partner__card">
+                <p class="p-partner__name">太陽光発電設備 外観点検</p>
+                <p class="p-partner__desc">国内大手の太陽光パネルメーカー様の認定案件として、外観点検・不具合報告に対応しています。</p>
             </div>
         </div>
-    
-    
-    </main>
-
-    <section class="line-contact">
-        <h2>LINE公式からもお問い合わせいただけます</h2>
-        <p>保守契約のご相談、消防設備点検、電気設備保守、協力会社登録など、お気軽にお問い合わせください。</p>
-        <a href="https://page.line.me/ovt4298c" target="_blank" class="line-btn">LINE公式で相談する</a>
-    </section>
-
-    <footer>
-        <p style="margin-bottom:15px;">
-            <a href="services.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">事業内容</a>
-            <a href="area.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">対応エリア</a>
-            <a href="case.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">施工実績</a>
-            <a href="faq.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">よくある質問</a>
-            <a href="company.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">会社概要</a>
-            <a href="privacy.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">プライバシーポリシー</a>
-        </p>
-        <p>&copy; 株式会社上田 UEDA Field Services. All Rights Reserved.</p>
-    </footer>
-
-    <a class="floating-line" href="https://page.line.me/ovt4298c" target="_blank">LINE相談</a>
-
-    <div class="mobile-cta-bar">
-        <a class="cta-tel" href="tel:09075515324" title="営業目的でのご連絡はお断りします">電話で相談</a>
-        <a class="cta-line" href="https://page.line.me/ovt4298c" target="_blank">LINEで相談</a>
-        <a class="cta-form" href="contact.html">お問い合わせ</a>
     </div>
+</section>
 
+<!-- ============================================================
+     標準フロー
+============================================================ -->
+<section class="u-section">
+    <div class="u-container">
+        <h2 class="c-heading">
+            <span class="c-heading--sub">Workflow</span>
+            標準フィールドサービス運用フロー
+        </h2>
+        <div class="p-flow__steps">
+            <div class="p-flow__step">
+                <p class="p-flow__step-num">STEP 01</p>
+                <p class="p-flow__step-title">案件受付・要件確認</p>
+                <p class="p-flow__step-body">設備種別・対象エリア・件数・スケジュールをヒアリングします。</p>
+            </div>
+            <div class="p-flow__step">
+                <p class="p-flow__step-num">STEP 02</p>
+                <p class="p-flow__step-title">技術者の選定・手配</p>
+                <p class="p-flow__step-body">案件に最適な有資格者を選定・スケジュール調整します。</p>
+            </div>
+            <div class="p-flow__step">
+                <p class="p-flow__step-num">STEP 03</p>
+                <p class="p-flow__step-title">現地施工・データ回収</p>
+                <p class="p-flow__step-body">現場での点検・施工を実施し、写真・データを確実に回収します。</p>
+            </div>
+            <div class="p-flow__step">
+                <p class="p-flow__step-num">STEP 04</p>
+                <p class="p-flow__step-title">報告書作成・一括提出</p>
+                <p class="p-flow__step-body">指定フォーマットで報告書を作成し、まとめて提出します。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="p-cta">
+    <p class="p-cta__title">まずは、お気軽にご相談ください。</p>
+    <p class="p-cta__desc">保守委託・協力会社登録・フィールドサービス体制の構築など、<br>ご要件に応じて個別にご案内します。</p>
+    <div class="p-cta__btns">
+        <a href="contact.html" class="c-btn c-btn--accent">お問い合わせフォームを開く</a>
+        <a href="build.html" class="c-btn--outline">フィールドサービス体制の構築</a>
+    </div>
+</section>
+
+<!-- LINE -->
+<section class="p-line">
+    <div class="p-line__title">公式LINEでもご相談いただけます</div>
+    <p class="p-line__desc">保守契約のご相談、消防設備点検、電気設備保守、協力会社登録など、<br>お気軽にメッセージください。</p>
+    <a href="https://page.line.me/ovt4298c" target="_blank" rel="noopener" class="p-line__btn">
+        <svg class="p-line__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.36 5.43 3.5 7.18V22l3.9-2.14c.83.23 1.7.36 2.6.36 5.52 0 10-4.03 10-9S17.52 2 12 2z"/></svg>
+        公式LINEで相談する
+    </a>
+</section>
+
+</main>
+
+<!-- フッター -->
+<footer class="l-footer">
+    <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+        <a href="services.html">事業内容</a>
+        <a href="area.html">対応エリア</a>
+        <a href="case.html">施工実績</a>
+        <a href="faq.html">よくある質問</a>
+        <a href="company.html">会社概要</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+    </nav>
+    <p class="l-footer__copy">&copy; 株式会社上田 UEDA Field Services. All Rights Reserved.</p>
+</footer>
+
+<a class="floating-line" href="https://page.line.me/ovt4298c" target="_blank" rel="noopener">公式LINE</a>
+
+<div class="mobile-cta-bar" role="navigation" aria-label="クイックアクセス">
+    <a class="cta-tel" href="tel:09075515324">電話で相談</a>
+    <a class="cta-line" href="https://page.line.me/ovt4298c" target="_blank" rel="noopener">公式LINE</a>
+    <a class="cta-form" href="contact.html">お問い合わせ</a>
+</div>
+
+<script>
+(function() {
+    const toggle = document.getElementById('navToggle');
+    const menu   = document.getElementById('navMenu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', function() {
+        const isOpen = menu.classList.toggle('is-open');
+        toggle.classList.toggle('is-open', isOpen);
+        toggle.setAttribute('aria-expanded', isOpen);
+    });
+    document.addEventListener('click', function(e) {
+        if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.remove('is-open');
+            toggle.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', false);
+        }
+    });
+})();
+</script>
 </body>
 </html>

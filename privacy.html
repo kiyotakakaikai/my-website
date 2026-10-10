@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー｜株式会社上田</title>
-    <link rel="preconnect" href="https://images.unsplash.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="stylesheet" href="style.css">
+    <title>プライバシーポリシー｜株式会社上田 UEDA Field Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <meta name="description" content="株式会社上田の個人情報の取り扱いに関する方針。利用目的、Cookie／アクセス解析ツールの利用、第三者提供、開示等請求への対応について説明します。">
     <link rel="canonical" href="https://uedakai.com/privacy.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="プライバシーポリシー｜株式会社上田">
+    <meta property="og:title" content="プライバシーポリシー｜株式会社上田 UEDA Field Services">
     <meta property="og:description" content="株式会社上田の個人情報の取り扱いに関する方針。利用目的、Cookie／アクセス解析ツールの利用、第三者提供、開示等請求への対応について説明します。">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1757970326337-95d7cca56fa1?auto=format&fit=crop&q=80&w=1200">
     <meta property="og:url" content="https://uedakai.com/privacy.html">
     <meta property="og:locale" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image">
@@ -24,114 +23,254 @@
       gtag('js', new Date());
       gtag('config', 'G-BWY1S0RKH2');
     </script>
+    <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; font-size: 16px; line-height: 1.75; color: #1a1a1a; background: #fff; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+:root {
+    --black: #2a2f4a; --black-dark: #1d2238;
+    --gray-700: #4b5563; --gray-500: #9ca3af;
+    --gray-50: #f9fafb; --white: #ffffff;
+    --accent: #c0392b; --accent-hv: #a93226;
+    --border: #e5e7eb; --max-w: 860px; --r: 2px;
+}
+.u-container { max-width: var(--max-w); margin: 0 auto; padding: 0 5%; }
+.u-section { padding: 80px 0; }
+
+/* ヘッダー */
+.l-header { position: sticky; top: 0; z-index: 100; background: var(--black); height: 64px; display: flex; align-items: center; padding: 0 5%; gap: 24px; }
+.l-header__logo { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
+.l-header__logo img { height: 40px; width: auto; }
+.l-header__logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+.l-header__logo-title { font-size: 0.95rem; font-weight: 700; color: var(--white); letter-spacing: 0.05em; }
+.l-header__logo-sub { font-size: 0.6rem; font-weight: 400; color: rgba(255,255,255,0.55); letter-spacing: 0.12em; }
+.l-header__nav { display: flex; align-items: center; gap: 4px; margin-left: auto; }
+.l-header__nav a { font-size: 0.78rem; font-weight: 500; color: rgba(255,255,255,0.75); padding: 6px 10px; border-radius: var(--r); transition: color .2s, background .2s; white-space: nowrap; }
+.l-header__nav a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+.l-header__cta { font-size: 0.78rem; font-weight: 700; color: var(--white); background: var(--accent); padding: 7px 14px; border-radius: var(--r); white-space: nowrap; transition: background .2s; }
+.l-header__cta:hover { background: var(--accent-hv); color: var(--white); }
+.l-header__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; margin-left: auto; }
+.l-header__toggle span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: transform .3s, opacity .3s; }
+.l-header__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.l-header__toggle.is-open span:nth-child(2) { opacity: 0; }
+.l-header__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 860px) {
+    .l-header__nav { display: none; flex-direction: column; align-items: flex-start; gap: 0; position: absolute; top: 64px; left: 0; right: 0; background: var(--black-dark); padding: 12px 5%; }
+    .l-header__nav.is-open { display: flex; }
+    .l-header__nav a { font-size: 0.9rem; padding: 10px 8px; width: 100%; border-radius: 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .l-header__cta { display: none; }
+    .l-header__toggle { display: flex; }
+}
+
+/* ページヘッダー */
+.p-page-header { background: var(--black); padding: 60px 5% 52px; position: relative; overflow: hidden; }
+.p-page-header::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=40&w=1400') center/cover no-repeat; opacity: 0.08; filter: grayscale(100%); }
+.p-page-header__inner { position: relative; max-width: 1080px; margin: 0 auto; }
+.p-page-header h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; color: var(--white); letter-spacing: 0.04em; line-height: 1.3; margin-bottom: 12px; }
+.p-page-header p { font-size: 0.9rem; color: rgba(255,255,255,0.6); }
+
+/* プライバシー本文 */
+.p-privacy-lead { font-size: 0.92rem; color: var(--gray-700); margin-bottom: 40px; line-height: 1.85; }
+.p-privacy-section { margin-bottom: 36px; }
+.p-privacy-section h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 14px;
+    padding-left: 14px;
+    border-left: 3px solid var(--black);
+    line-height: 1.5;
+}
+.p-privacy-section p { font-size: 0.92rem; color: var(--gray-700); line-height: 1.85; margin-bottom: 10px; }
+.p-privacy-section ul { padding-left: 20px; list-style: disc; }
+.p-privacy-section ul li { font-size: 0.92rem; color: var(--gray-700); line-height: 2; }
+
+/* プロフィールテーブル */
+.p-table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 0.9rem; }
+.p-table th { width: 30%; background: var(--gray-50); padding: 12px 16px; text-align: left; font-weight: 700; color: var(--black); border: 1px solid var(--border); vertical-align: top; }
+.p-table td { padding: 12px 16px; color: var(--gray-700); border: 1px solid var(--border); }
+
+/* 日付・署名 */
+.p-privacy-date { font-size: 0.82rem; color: var(--gray-500); text-align: right; margin-top: 40px; }
+
+/* CTAセクション */
+.p-cta-inner { background: var(--black); border-radius: 4px; padding: 48px 40px; text-align: center; margin-top: 56px; }
+.p-cta-inner h2 { font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 700; color: var(--white); margin-bottom: 12px; }
+.p-cta-inner p { color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-bottom: 28px; }
+.c-btn-accent { display: inline-flex; align-items: center; gap: 6px; padding: 14px 32px; font-size: 0.95rem; font-weight: 700; color: var(--white); background: var(--accent); border-radius: var(--r); transition: background .2s; }
+.c-btn-accent:hover { background: var(--accent-hv); color: var(--white); }
+
+/* LINEセクション */
+.p-line-section { background: var(--black); padding: 64px 5%; text-align: center; }
+.p-line-section h2 { font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 700; color: var(--white); margin-bottom: 14px; }
+.p-line-section p { color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-bottom: 28px; }
+.p-line-btn { display: inline-flex; align-items: center; gap: 8px; background: #00B900; color: var(--white); font-weight: 700; font-size: 0.95rem; padding: 14px 32px; border-radius: 4px; transition: background .2s; }
+.p-line-btn:hover { background: #009900; color: var(--white); }
+
+/* フッター */
+.l-footer { background: var(--black-dark); padding: 40px 5%; text-align: center; }
+.l-footer__nav { margin-bottom: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; }
+.l-footer__nav a { font-size: 0.8rem; color: rgba(255,255,255,0.55); transition: color .2s; }
+.l-footer__nav a:hover { color: var(--white); }
+.l-footer__copy { font-size: 0.78rem; color: rgba(255,255,255,0.4); }
+
+/* フローティング */
+.p-float-line { position: fixed; bottom: 80px; right: 16px; background: #00B900; color: var(--white); font-size: 0.72rem; font-weight: 700; padding: 10px 12px; border-radius: 4px; z-index: 90; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: background .2s; }
+.p-float-line:hover { background: #009900; color: var(--white); }
+.p-mobile-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 95; background: var(--black-dark); border-top: 1px solid rgba(255,255,255,0.08); height: 56px; }
+.p-mobile-bar a { flex: 1; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: var(--white); border-right: 1px solid rgba(255,255,255,0.08); }
+.p-mobile-bar a:last-child { border-right: none; }
+.p-mobile-bar__tel { background: var(--black); }
+.p-mobile-bar__line { background: #00B900; }
+.p-mobile-bar__form { background: var(--accent); }
+@media (min-width: 860px) { .p-mobile-bar { display: none !important; } .p-float-line { display: flex; } }
+@media (max-width: 859px) { .p-float-line { display: none; } .p-mobile-bar { display: flex; } body { padding-bottom: 56px; } }
+    </style>
 </head>
 <body>
 
-    <header>
-        <a class="logo" href="index.html" style="text-decoration:none;">
-            <div class="logo-svg-container" style="background:none; padding:0; width:auto; height:44px; display:flex; align-items:center;">
-                <img src="images/wing.JPEG" alt="株式会社上田 ロゴ" width="220" height="176" loading="eager" fetchpriority="high" style="height:100%; width:auto; display:block;">
-            </div>
-            <div class="logo-text-wrapper">
-                <span class="logo-title">株式会社上田</span>
-                <span class="logo-sub">UEDA Field Services</span>
-            </div>
-        </a>
-        <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" onclick="
-            document.getElementById('navMenu').classList.toggle('open');
-            this.classList.toggle('open');
-        "><span></span></button>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html" style="color:inherit; text-decoration:none;">トップページ</a></li>
-            <li><a href="services.html" style="color:inherit; text-decoration:none;">事業内容</a></li>
-            <li><a href="case.html" style="color:inherit; text-decoration:none;">施工実績</a></li>
-            <li><a href="area.html" style="color:inherit; text-decoration:none;">対応エリア</a></li>
-            <li><a href="faq.html" style="color:inherit; text-decoration:none;">よくある質問</a></li>
-            <li><a href="company.html" style="color:inherit; text-decoration:none;">会社概要</a></li>
-            <li class="nav-btn-accent"><a href="contact.html" style="color:inherit; text-decoration:none;">お問い合わせ</a></li>
-        </ul>
-    </header>
-
-    <main id="page-privacy">
-        <div class="page-header">
-            <h1>プライバシーポリシー</h1>
-            <p>個人情報の取り扱いについて</p>
+<header class="l-header">
+    <a href="index.html" class="l-header__logo">
+        <img src="images/wing.JPEG" alt="株式会社上田 ロゴ" width="220" height="176" loading="eager">
+        <div class="l-header__logo-text">
+            <span class="l-header__logo-title">株式会社上田</span>
+            <span class="l-header__logo-sub">UEDA Field Services</span>
         </div>
-        <div class="container section-padding" style="max-width: 860px;">
-            <p style="color:#475569; margin-bottom:30px;">株式会社上田（以下「当社」といいます）は、お客様および取引先様の個人情報の重要性を認識し、個人情報の保護に関する法律（個人情報保護法）その他関連法令を遵守し、以下の方針に基づき個人情報を適切に取り扱います。</p>
+    </a>
+    <button class="l-header__toggle" id="navToggle" aria-label="メニュー">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="l-header__nav" id="navMenu">
+        <a href="index.html">トップページ</a>
+        <a href="services.html">事業内容</a>
+        <a href="case.html">施工実績</a>
+        <a href="area.html">対応エリア</a>
+        <a href="faq.html">よくある質問</a>
+        <a href="company.html">会社概要</a>
+        <a href="contact.html" class="l-header__cta">お問い合わせ</a>
+    </nav>
+</header>
 
-            <h3 style="font-size:1.2rem; color:var(--bg-dark); margin:30px 0 12px; border-left:4px solid var(--primary); padding-left:12px;">1. 個人情報の利用目的</h3>
-            <p style="color:#475569; margin-bottom:10px;">当社は、取得した個人情報を以下の目的の範囲内で利用します。目的外の利用を行う場合は、あらかじめご本人の同意を得るものとします。</p>
-            <ul style="color:#475569; line-height:2; padding-left:22px;">
-                <li>お問い合わせ・お見積りへの対応、必要な連絡・資料送付のため</li>
-                <li>保守委託契約その他業務委託契約の締結・履行、契約内容のご連絡のため</li>
-                <li>協力会社への登録・採用選考、登録内容の確認・連絡のため</li>
-                <li>サイト利用状況の分析（アクセス解析ツールの利用）によるサービス改善のため</li>
-            </ul>
-
-            <h3 style="font-size:1.2rem; color:var(--bg-dark); margin:30px 0 12px; border-left:4px solid var(--primary); padding-left:12px;">2. Cookie（クッキー）およびアクセス解析ツールについて</h3>
-            <p style="color:#475569;">当社ウェブサイトでは、サイトの利用状況を分析し、サービス向上に役立てることを目的として、Googleが提供するアクセス解析ツール「Google Analytics」を利用しています。Google Analyticsはトラフィックデータの収集のためにCookieを使用しますが、この収集は匿名で行われており、個人を特定するものではありません。この機能はCookieを無効にすることで収集を拒否することが可能ですので、お使いのブラウザの設定をご確認ください。Google Analyticsの利用規約・プライバシーポリシーについては、Google社の該当ページをご参照ください。</p>
-
-            <h3 style="font-size:1.2rem; color:var(--bg-dark); margin:30px 0 12px; border-left:4px solid var(--primary); padding-left:12px;">3. 個人情報の第三者提供について</h3>
-            <p style="color:#475569;">当社は、以下のいずれかに該当する場合を除き、あらかじめご本人の同意を得ることなく、第三者に個人情報を提供することはありません。</p>
-            <ul style="color:#475569; line-height:2; padding-left:22px;">
-                <li>法令に基づく場合</li>
-                <li>人の生命、身体または財産の保護のために必要がある場合であって、ご本人の同意を得ることが困難であるとき</li>
-                <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合</li>
-            </ul>
-
-            <h3 style="font-size:1.2rem; color:var(--bg-dark); margin:30px 0 12px; border-left:4px solid var(--primary); padding-left:12px;">4. 個人情報の安全管理</h3>
-            <p style="color:#475569;">当社は、取得した個人情報の漏えい、滅失またはき損の防止その他の個人情報の安全管理のために、必要かつ適切な措置を講じます。個人情報の取扱いを外部に委託する場合は、委託先に対して必要かつ適切な監督を行います。</p>
-
-            <h3 style="font-size:1.2rem; color:var(--bg-dark); margin:30px 0 12px; border-left:4px solid var(--primary); padding-left:12px;">5. 個人情報の開示・訂正・利用停止等について</h3>
-            <p style="color:#475569;">ご本人から自己の個人情報について開示、訂正、追加、削除、利用停止等のご請求があった場合は、ご本人からのご請求であることを確認の上、法令に従い、合理的な期間内に対応いたします。ご請求は下記お問い合わせ窓口までご連絡ください。</p>
-
-            <h3 style="font-size:1.2rem; color:var(--bg-dark); margin:30px 0 12px; border-left:4px solid var(--primary); padding-left:12px;">6. お問い合わせ窓口</h3>
-            <p style="color:#475569;">個人情報の取扱いに関するお問い合わせ・苦情・ご相談は、下記窓口までご連絡ください。</p>
-            <table class="profile-table" style="margin-top:15px;">
-                <tr><th>窓口名称</th><td>株式会社上田　個人情報保護窓口</td></tr>
-                <tr><th>電話番号</th><td><a href="tel:09075515324" style="color:var(--primary);">090-7551-5324</a>（営業目的でのご連絡はお断りいたします）</td></tr>
-                <tr><th>お問い合わせフォーム</th><td><a href="contact.html" style="color:var(--primary);">お問い合わせページ</a>よりご連絡ください</td></tr>
-            </table>
-
-            <h3 style="font-size:1.2rem; color:var(--bg-dark); margin:30px 0 12px; border-left:4px solid var(--primary); padding-left:12px;">7. 本ポリシーの改定について</h3>
-            <p style="color:#475569;">当社は、法令の変更やサービス内容の変更等に応じて、本ポリシーの内容を予告なく変更することがあります。変更後のプライバシーポリシーは、本ページに掲載した時点から効力を生じるものとします。</p>
-
-            <p style="color:#94a3b8; font-size:0.85rem; margin-top:35px; text-align:right;">制定日：2026年7月6日<br>株式会社上田</p>
-
-            <div class="cta-section" style="margin-top:40px;">
-                <h2>ご不明点はお気軽にお問い合わせください</h2>
-                <p style="margin: 15px 0 25px; color: #cbd5e1;">個人情報の取扱いに関するご質問も承ります</p>
-                <a href="contact.html" class="btn btn-accent" style="font-size: 1.1rem; padding: 14px 40px; display:inline-block; text-decoration:none;">お問い合わせフォームを開く</a>
-            </div>
-        </div>
-    </main>
-
-    <section class="line-contact">
-        <h2>LINE公式からもお問い合わせいただけます</h2>
-        <p>保守契約のご相談、消防設備点検、電気設備保守、協力会社登録など、お気軽にお問い合わせください。</p>
-        <a href="https://page.line.me/ovt4298c" target="_blank" class="line-btn">LINE公式で相談する</a>
-    </section>
-
-    <footer>
-        <p style="margin-bottom:15px;">
-            <a href="services.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">事業内容</a>
-            <a href="area.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">対応エリア</a>
-            <a href="case.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">施工実績</a>
-            <a href="faq.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">よくある質問</a>
-            <a href="company.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">会社概要</a>
-            <a href="privacy.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">プライバシーポリシー</a>
-        </p>
-        <p>&copy; 株式会社上田 UEDA Field Services. All Rights Reserved.</p>
-    </footer>
-
-    <a class="floating-line" href="https://page.line.me/ovt4298c" target="_blank">LINE相談</a>
-
-    <div class="mobile-cta-bar">
-        <a class="cta-tel" href="tel:09075515324" title="営業目的でのご連絡はお断りします">電話で相談</a>
-        <a class="cta-line" href="https://page.line.me/ovt4298c" target="_blank">LINEで相談</a>
-        <a class="cta-form" href="contact.html">お問い合わせ</a>
+<div class="p-page-header">
+    <div class="p-page-header__inner">
+        <h1>プライバシーポリシー</h1>
+        <p>個人情報の取り扱いについて</p>
     </div>
+</div>
 
+<main>
+    <section class="u-section">
+        <div class="u-container">
+
+            <p class="p-privacy-lead">株式会社上田（以下「当社」といいます）は、お客様および取引先様の個人情報の重要性を認識し、個人情報の保護に関する法律（個人情報保護法）その他関連法令を遵守し、以下の方針に基づき個人情報を適切に取り扱います。</p>
+
+            <div class="p-privacy-section">
+                <h2>1. 個人情報の利用目的</h2>
+                <p>当社は、取得した個人情報を以下の目的の範囲内で利用します。目的外の利用を行う場合は、あらかじめご本人の同意を得るものとします。</p>
+                <ul>
+                    <li>お問い合わせ・お見積りへの対応、必要な連絡・資料送付のため</li>
+                    <li>保守委託契約その他業務委託契約の締結・履行、契約内容のご連絡のため</li>
+                    <li>協力会社への登録・採用選考、登録内容の確認・連絡のため</li>
+                    <li>サイト利用状況の分析（アクセス解析ツールの利用）によるサービス改善のため</li>
+                </ul>
+            </div>
+
+            <div class="p-privacy-section">
+                <h2>2. Cookie（クッキー）およびアクセス解析ツールについて</h2>
+                <p>当社ウェブサイトでは、サイトの利用状況を分析し、サービス向上に役立てることを目的として、Googleが提供するアクセス解析ツール「Google Analytics」を利用しています。Google Analyticsはトラフィックデータの収集のためにCookieを使用しますが、この収集は匿名で行われており、個人を特定するものではありません。この機能はCookieを無効にすることで収集を拒否することが可能ですので、お使いのブラウザの設定をご確認ください。</p>
+            </div>
+
+            <div class="p-privacy-section">
+                <h2>3. 個人情報の第三者提供について</h2>
+                <p>当社は、以下のいずれかに該当する場合を除き、あらかじめご本人の同意を得ることなく、第三者に個人情報を提供することはありません。</p>
+                <ul>
+                    <li>法令に基づく場合</li>
+                    <li>人の生命、身体または財産の保護のために必要がある場合であって、ご本人の同意を得ることが困難であるとき</li>
+                    <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合</li>
+                </ul>
+            </div>
+
+            <div class="p-privacy-section">
+                <h2>4. 個人情報の安全管理</h2>
+                <p>当社は、取得した個人情報の漏えい、滅失またはき損の防止その他の個人情報の安全管理のために、必要かつ適切な措置を講じます。個人情報の取扱いを外部に委託する場合は、委託先に対して必要かつ適切な監督を行います。</p>
+            </div>
+
+            <div class="p-privacy-section">
+                <h2>5. 個人情報の開示・訂正・利用停止等について</h2>
+                <p>ご本人から自己の個人情報について開示、訂正、追加、削除、利用停止等のご請求があった場合は、ご本人からのご請求であることを確認の上、法令に従い、合理的な期間内に対応いたします。ご請求は下記お問い合わせ窓口までご連絡ください。</p>
+            </div>
+
+            <div class="p-privacy-section">
+                <h2>6. お問い合わせ窓口</h2>
+                <p>個人情報の取扱いに関するお問い合わせ・苦情・ご相談は、下記窓口までご連絡ください。</p>
+                <table class="p-table">
+                    <tr>
+                        <th>窓口名称</th>
+                        <td>株式会社上田　個人情報保護窓口</td>
+                    </tr>
+                    <tr>
+                        <th>電話番号</th>
+                        <td><a href="tel:09075515324" style="color:var(--accent);">090-7551-5324</a>（営業目的でのご連絡はお断りいたします）</td>
+                    </tr>
+                    <tr>
+                        <th>お問い合わせフォーム</th>
+                        <td><a href="contact.html" style="color:var(--accent); text-decoration:underline;">お問い合わせページ</a>よりご連絡ください</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="p-privacy-section">
+                <h2>7. 本ポリシーの改定について</h2>
+                <p>当社は、法令の変更やサービス内容の変更等に応じて、本ポリシーの内容を予告なく変更することがあります。変更後のプライバシーポリシーは、本ページに掲載した時点から効力を生じるものとします。</p>
+            </div>
+
+            <p class="p-privacy-date">制定日：2026年7月6日<br>株式会社上田</p>
+
+            <div class="p-cta-inner">
+                <h2>ご不明点はお気軽にお問い合わせください</h2>
+                <p>個人情報の取扱いに関するご質問も承ります</p>
+                <a href="contact.html" class="c-btn-accent">お問い合わせフォームを開く</a>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<section class="p-line-section">
+    <h2>公式LINEからもお問い合わせいただけます</h2>
+    <p>保守契約のご相談、消防設備点検、電気設備保守、協力会社登録など、お気軽にお問い合わせください。</p>
+    <a href="https://page.line.me/ovt4298c" target="_blank" class="p-line-btn">公式LINEで相談する</a>
+</section>
+
+<footer class="l-footer">
+    <nav class="l-footer__nav">
+        <a href="services.html">事業内容</a>
+        <a href="area.html">対応エリア</a>
+        <a href="case.html">施工実績</a>
+        <a href="faq.html">よくある質問</a>
+        <a href="company.html">会社概要</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+    </nav>
+    <p class="l-footer__copy">&copy; 株式会社上田 UEDA Field Services. All Rights Reserved.</p>
+</footer>
+
+<a href="https://page.line.me/ovt4298c" target="_blank" class="p-float-line">公式LINE</a>
+
+<div class="p-mobile-bar">
+    <a href="tel:09075515324" class="p-mobile-bar__tel" title="営業目的でのご連絡はお断りします">電話で相談</a>
+    <a href="https://page.line.me/ovt4298c" target="_blank" class="p-mobile-bar__line">公式LINE</a>
+    <a href="contact.html" class="p-mobile-bar__form">お問い合わせ</a>
+</div>
+
+<script>
+document.getElementById('navToggle').addEventListener('click', function(){
+    this.classList.toggle('is-open');
+    document.getElementById('navMenu').classList.toggle('is-open');
+});
+</script>
 </body>
 </html>

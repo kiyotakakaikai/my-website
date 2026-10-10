@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>対応エリア｜株式会社上田（東京23区・埼玉・千葉・神奈川）</title>
-    <link rel="preconnect" href="https://images.unsplash.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="stylesheet" href="style.css">
+    <title>対応エリア｜株式会社上田 UEDA Field Services（東京23区・埼玉・千葉・神奈川）</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <meta name="description" content="株式会社上田の対応エリアは東京都23区全域、埼玉県南部、千葉県西部、神奈川県東部。宅配BOX・EV充電器・電気設備の保守メンテナンスをエリア別にご案内します。">
     <link rel="canonical" href="https://uedakai.com/area.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="対応エリア｜株式会社上田（東京23区・埼玉・千葉・神奈川）">
+    <meta property="og:title" content="対応エリア｜株式会社上田 UEDA Field Services（東京23区・埼玉・千葉・神奈川）">
     <meta property="og:description" content="株式会社上田の対応エリアは東京都23区全域、埼玉県南部、千葉県西部、神奈川県東部。宅配BOX・EV充電器・電気設備の保守メンテナンスをエリア別にご案内します。">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1757970326337-95d7cca56fa1?auto=format&fit=crop&q=80&w=1200">
     <meta property="og:url" content="https://uedakai.com/area.html">
     <meta property="og:locale" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image">
@@ -24,95 +23,347 @@
       gtag('js', new Date());
       gtag('config', 'G-BWY1S0RKH2');
     </script>
+    <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; font-size: 16px; line-height: 1.75; color: #1a1a1a; background: #fff; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+:root {
+    --black: #2a2f4a; --black-dark: #1d2238;
+    --gray-700: #4b5563; --gray-500: #9ca3af;
+    --gray-50: #f9fafb; --white: #ffffff;
+    --accent: #c0392b; --accent-hv: #a93226;
+    --border: #e5e7eb; --max-w: 1080px; --r: 2px;
+}
+.u-container { max-width: var(--max-w); margin: 0 auto; padding: 0 5%; }
+.u-section { padding: 80px 0; }
+
+/* ヘッダー */
+.l-header { position: sticky; top: 0; z-index: 100; background: var(--black); height: 64px; display: flex; align-items: center; padding: 0 5%; gap: 24px; }
+.l-header__logo { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
+.l-header__logo img { height: 40px; width: auto; }
+.l-header__logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+.l-header__logo-title { font-size: 0.95rem; font-weight: 700; color: var(--white); letter-spacing: 0.05em; }
+.l-header__logo-sub { font-size: 0.6rem; font-weight: 400; color: rgba(255,255,255,0.55); letter-spacing: 0.12em; }
+.l-header__nav { display: flex; align-items: center; gap: 4px; margin-left: auto; }
+.l-header__nav a { font-size: 0.78rem; font-weight: 500; color: rgba(255,255,255,0.75); padding: 6px 10px; border-radius: var(--r); transition: color .2s, background .2s; white-space: nowrap; }
+.l-header__nav a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+.l-header__nav a.is-active { color: var(--white); }
+.l-header__cta { font-size: 0.78rem; font-weight: 700; color: var(--white); background: var(--accent); padding: 7px 14px; border-radius: var(--r); white-space: nowrap; transition: background .2s; }
+.l-header__cta:hover { background: var(--accent-hv); color: var(--white); }
+.l-header__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; margin-left: auto; }
+.l-header__toggle span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: transform .3s, opacity .3s; }
+.l-header__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.l-header__toggle.is-open span:nth-child(2) { opacity: 0; }
+.l-header__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 860px) {
+    .l-header__nav { display: none; flex-direction: column; align-items: flex-start; gap: 0; position: absolute; top: 64px; left: 0; right: 0; background: var(--black-dark); padding: 12px 5%; }
+    .l-header__nav.is-open { display: flex; }
+    .l-header__nav a { font-size: 0.9rem; padding: 10px 8px; width: 100%; border-radius: 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .l-header__cta { display: none; }
+    .l-header__toggle { display: flex; }
+}
+
+/* ページヘッダー */
+.p-page-header { background: var(--black); padding: 60px 5% 52px; position: relative; overflow: hidden; }
+.p-page-header::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=40&w=1400') center/cover no-repeat; opacity: 0.08; filter: grayscale(100%); }
+.p-page-header__inner { position: relative; max-width: var(--max-w); margin: 0 auto; }
+.p-page-header h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; color: var(--white); letter-spacing: 0.04em; line-height: 1.3; margin-bottom: 12px; }
+.p-page-header p { font-size: 0.9rem; color: rgba(255,255,255,0.6); }
+
+/* 概要テキスト */
+.p-area-lead { text-align: center; color: var(--gray-700); max-width: 700px; margin: 0 auto 48px; font-size: 0.95rem; line-height: 1.85; }
+
+/* SVGマップエリア */
+.p-map-wrap {
+    background: #d6e8f4;
+    border-radius: 16px;
+    padding: 32px 24px 20px;
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 24px rgba(42,47,74,0.12);
+}
+.p-map-wrap svg { max-width: 640px; width: 100%; }
+.p-map-caption { font-size: 0.78rem; color: var(--gray-500); margin-top: 14px; text-align: center; }
+.p-map-legend { display: flex; gap: 20px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+.p-map-legend__item { display: flex; align-items: center; gap: 6px; font-size: 0.78rem; color: var(--gray-700); }
+.p-map-legend__dot { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+
+/* エリアカードグリッド */
+.p-area-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 56px;
+}
+@media (max-width: 640px) { .p-area-grid { grid-template-columns: 1fr; } }
+
+.p-area-card {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 24px;
+    background: var(--white);
+}
+.p-area-card h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.p-area-card h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 18px;
+    background: var(--black);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+.p-area-card p { font-size: 0.88rem; color: var(--gray-700); line-height: 1.8; }
+
+/* CTAセクション */
+.p-cta-inner { background: var(--black); border-radius: 4px; padding: 48px 40px; text-align: center; }
+.p-cta-inner h2 { font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 700; color: var(--white); margin-bottom: 12px; }
+.p-cta-inner p { color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-bottom: 28px; }
+.c-btn-accent { display: inline-flex; align-items: center; gap: 6px; padding: 14px 32px; font-size: 0.95rem; font-weight: 700; color: var(--white); background: var(--accent); border-radius: var(--r); transition: background .2s; }
+.c-btn-accent:hover { background: var(--accent-hv); color: var(--white); }
+
+/* LINEセクション */
+.p-line-section { background: var(--black); padding: 64px 5%; text-align: center; }
+.p-line-section h2 { font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 700; color: var(--white); margin-bottom: 14px; }
+.p-line-section p { color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-bottom: 28px; }
+.p-line-btn { display: inline-flex; align-items: center; gap: 8px; background: #00B900; color: var(--white); font-weight: 700; font-size: 0.95rem; padding: 14px 32px; border-radius: 4px; transition: background .2s; }
+.p-line-btn:hover { background: #009900; color: var(--white); }
+
+/* フッター */
+.l-footer { background: var(--black-dark); padding: 40px 5%; text-align: center; }
+.l-footer__nav { margin-bottom: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; }
+.l-footer__nav a { font-size: 0.8rem; color: rgba(255,255,255,0.55); transition: color .2s; }
+.l-footer__nav a:hover { color: var(--white); }
+.l-footer__copy { font-size: 0.78rem; color: rgba(255,255,255,0.4); }
+
+/* フローティング */
+.p-float-line { position: fixed; bottom: 80px; right: 16px; background: #00B900; color: var(--white); font-size: 0.72rem; font-weight: 700; padding: 10px 12px; border-radius: 4px; z-index: 90; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: background .2s; }
+.p-float-line:hover { background: #009900; color: var(--white); }
+.p-mobile-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 95; background: var(--black-dark); border-top: 1px solid rgba(255,255,255,0.08); height: 56px; }
+.p-mobile-bar a { flex: 1; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: var(--white); border-right: 1px solid rgba(255,255,255,0.08); }
+.p-mobile-bar a:last-child { border-right: none; }
+.p-mobile-bar__tel { background: var(--black); }
+.p-mobile-bar__line { background: #00B900; }
+.p-mobile-bar__form { background: var(--accent); }
+@media (min-width: 860px) { .p-mobile-bar { display: none !important; } .p-float-line { display: flex; } }
+@media (max-width: 859px) { .p-float-line { display: none; } .p-mobile-bar { display: flex; } body { padding-bottom: 56px; } }
+    </style>
 </head>
 <body>
 
-    <header>
-        <a class="logo" href="index.html" style="text-decoration:none;">
-            <div class="logo-svg-container" style="background:none; padding:0; width:auto; height:44px; display:flex; align-items:center;">
-                <img src="images/wing.JPEG" alt="株式会社上田 ロゴ" width="220" height="176" loading="eager" fetchpriority="high" style="height:100%; width:auto; display:block;">
-            </div>
-            <div class="logo-text-wrapper">
-                <span class="logo-title">株式会社上田</span>
-                <span class="logo-sub">UEDA Field Services</span>
-            </div>
-        </a>
-        <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" onclick="
-            document.getElementById('navMenu').classList.toggle('open');
-            this.classList.toggle('open');
-        "><span></span></button>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html" style="color:inherit; text-decoration:none;">トップページ</a></li>
-            <li><a href="services.html" style="color:inherit; text-decoration:none;">事業内容</a></li>
-            <li><a href="case.html" style="color:inherit; text-decoration:none;">施工実績</a></li>
-            <li class="active-tab"><a href="area.html" style="color:inherit; text-decoration:none;">対応エリア</a></li>
-            <li><a href="faq.html" style="color:inherit; text-decoration:none;">よくある質問</a></li>
-            <li><a href="company.html" style="color:inherit; text-decoration:none;">会社概要</a></li>
-            <li class="nav-btn-accent"><a href="contact.html" style="color:inherit; text-decoration:none;">お問い合わせ</a></li>
-        </ul>
-    </header>
-
-    <main id="page-area">
-        <div class="page-header">
-            <h1>対応エリア</h1>
-            <p>東京23区を中心に、埼玉・千葉・神奈川まで機動力でカバーします</p>
+<header class="l-header">
+    <a href="index.html" class="l-header__logo">
+        <img src="images/wing.JPEG" alt="株式会社上田 ロゴ" width="220" height="176" loading="eager">
+        <div class="l-header__logo-text">
+            <span class="l-header__logo-title">株式会社上田</span>
+            <span class="l-header__logo-sub">UEDA Field Services</span>
         </div>
-        <div class="container section-padding">
-            <img loading="lazy" decoding="async" class="photo-banner" src="https://images.unsplash.com/photo-1668687106962-94abc2f5b02e?auto=format&fit=crop&q=60&w=760" alt="東京都内の街並み・対応エリアイメージ">
-            <p class="photo-caption">対応エリアの一例：東京都内の街並み</p>
-            <p style="text-align:center; color:var(--text-muted); max-width:700px; margin:0 auto 40px;">株式会社上田は東京都北区を拠点に、東京23区・埼玉県南部・千葉県西部・神奈川県東部の1都3県を機動力でカバー。宅配BOX・EV充電器・コインランドリー・消防設備・電気設備の保守案件について、エリアをまたぐ複数拠点の一括対応も可能です。</p>
-            <div class="area-grid">
-                <div class="area-card">
+    </a>
+    <button class="l-header__toggle" id="navToggle" aria-label="メニュー">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="l-header__nav" id="navMenu">
+        <a href="index.html">トップページ</a>
+        <a href="services.html">事業内容</a>
+        <a href="case.html">施工実績</a>
+        <a href="area.html" class="is-active">対応エリア</a>
+        <a href="faq.html">よくある質問</a>
+        <a href="company.html">会社概要</a>
+        <a href="contact.html" class="l-header__cta">お問い合わせ</a>
+    </nav>
+</header>
+
+<div class="p-page-header">
+    <div class="p-page-header__inner">
+        <h1>対応エリア</h1>
+        <p>東京23区を中心に、埼玉・千葉・神奈川まで機動力でカバーします</p>
+    </div>
+</div>
+
+<main>
+    <section class="u-section">
+        <div class="u-container">
+
+            <p class="p-area-lead">株式会社上田は東京都北区を拠点に、東京23区・埼玉県南部・千葉県西部・神奈川県東部の1都3県を機動力でカバー。宅配BOX・EV充電器・コインランドリー・消防設備・電気設備の保守案件について、エリアをまたぐ複数拠点の一括対応も可能です。</p>
+
+            <!-- SVGマップ -->
+            <div class="p-map-wrap">
+                <svg viewBox="0 0 620 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="対応エリアマップ（1都3県）">
+                  <defs>
+                    <filter id="sh" x="-5%" y="-5%" width="115%" height="115%">
+                      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#1a2a4a" flood-opacity="0.13"/>
+                    </filter>
+                  </defs>
+
+                  <!-- 埼玉県 -->
+                  <path d="
+                    M 82.0,92.8
+                    L 93.8,67.2 L 127.3,51.5 L 160.8,39.7 L 194.4,32.6
+                    L 227.9,32.6 L 261.4,35.7 L 295.0,43.6 L 328.5,59.3
+                    L 362.0,79.0 L 388.9,98.7 L 412.3,114.4 L 429.1,138.0
+                    L 412.3,153.8 L 395.6,169.5 L 378.8,189.2
+                    L 362.0,208.1
+                    L 328.5,206.1 L 301.7,205.7 L 268.1,208.9 L 239.6,213.6
+                    L 217.8,208.9 L 191.0,197.8 L 127.3,185.2
+                    Z
+                  " fill="#c8d4e6" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round" filter="url(#sh)"/>
+                  <text x="230" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#4a5878" font-family="sans-serif" letter-spacing="1">埼玉県</text>
+
+                  <!-- 千葉県 -->
+                  <path d="
+                    M 362.0,208.1
+                    L 378.8,189.2 L 395.6,169.5 L 412.3,153.8 L 429.1,138.0
+                    L 412.3,114.4 L 388.9,98.7 L 362.0,79.0 L 328.5,59.3
+                    L 295.0,43.6 L 261.4,35.7 L 227.9,32.6 L 194.4,32.6
+                    L 160.8,39.7 L 127.3,51.5 L 93.8,67.2
+                    L 82.0,92.8
+                    L 113.0,71.0 L 165.0,55.0 L 230.0,48.5 L 295.0,49.0
+                    L 355.0,56.0 L 405.0,76.0 L 445.0,100.0
+                    L 495.0,128.0 L 540.0,163.0 L 575.0,205.0
+                    L 580.0,250.0 L 565.0,292.0 L 538.0,328.0
+                    L 500.0,362.0 L 456.0,397.0 L 412.0,432.0
+                    L 375.0,460.0 L 372.0,465.0
+                    L 372.0,383.0 L 372.0,315.0
+                    L 352.0,294.6
+                    L 362.0,271.0 L 364.7,249.0 L 362.0,234.4
+                    L 362.0,208.1 Z
+                  " fill="#c8d4e6" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round" filter="url(#sh)"/>
+                  <text x="470" y="195" text-anchor="middle" font-size="13" font-weight="700" fill="#4a5878" font-family="sans-serif" letter-spacing="1">千葉県</text>
+
+                  <!-- 神奈川県 -->
+                  <path d="
+                    M 45.1,223.8
+                    L 48.5,254.1 L 59.6,275.0 L 76.3,286.8
+                    L 110.5,288.3 L 144.1,291.5 L 187.7,287.5 L 214.5,288.3
+                    L 238.0,279.7 L 268.1,276.5 L 291.6,288.3 L 317.8,317.0
+                    L 331.2,311.9
+                    L 345.0,330.0 L 348.0,370.0 L 335.0,408.0
+                    L 310.0,448.0 L 278.0,470.0 L 252.0,478.0
+                    L 265.0,492.0
+                    L 200.0,498.0 L 132.0,483.0
+                    L 82.0,456.0 L 48.0,424.0 L 22.0,407.0
+                    L 20.0,338.0 L 32.0,258.0
+                    L 45.1,223.8 Z
+                  " fill="#c8d4e6" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round" filter="url(#sh)"/>
+                  <text x="195" y="390" text-anchor="middle" font-size="13" font-weight="700" fill="#4a5878" font-family="sans-serif" letter-spacing="1">神奈川県</text>
+
+                  <!-- 東京都（23区＋多摩 一体） -->
+                  <path d="
+                    M 82.0,92.8
+                    L 127.3,185.2 L 191.0,197.8 L 217.8,208.9 L 239.6,213.6
+                    L 268.1,208.9 L 301.7,205.7 L 328.5,206.1 L 362.0,208.1
+                    L 362.0,234.4 L 364.7,249.0 L 362.0,271.0 L 352.0,294.6
+                    L 331.2,311.9 L 317.8,317.0
+                    L 291.6,288.3 L 268.1,276.5 L 238.0,279.7 L 214.5,288.3
+                    L 187.7,287.5 L 144.1,291.5 L 110.5,288.3 L 76.3,286.8
+                    L 59.6,275.0 L 48.5,254.1 L 45.1,223.8
+                    Z
+                  " fill="#b8c8de" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round" filter="url(#sh)"/>
+                  <text x="92" y="258" text-anchor="middle" font-size="10" fill="#5868a0" font-family="sans-serif">多摩</text>
+                  <text x="295" y="258" text-anchor="middle" font-size="12" font-weight="700" fill="#2a3a5a" font-family="sans-serif">東京23区</text>
+
+                  <!-- 北区マーカー -->
+                  <circle cx="322" cy="228" r="13" fill="rgba(192,57,43,0.18)"/>
+                  <circle cx="322" cy="228" r="7" fill="rgba(192,57,43,0.38)"/>
+                  <circle cx="322" cy="228" r="4.5" fill="#c0392b"/>
+                  <circle cx="322" cy="228" r="1.8" fill="#ffffff"/>
+                  <rect x="334" y="213" width="116" height="24" rx="4" fill="#c0392b"/>
+                  <polygon points="334,228 327,228 334,234" fill="#c0392b"/>
+                  <text x="392" y="227" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff" font-family="sans-serif">東京都北区（拠点）</text>
+                </svg>
+
+                <div class="p-map-legend">
+                    <div class="p-map-legend__item">
+                        <div class="p-map-legend__dot" style="background:#b8c8de;"></div>
+                        <span>東京都（23区・多摩）</span>
+                    </div>
+                    <div class="p-map-legend__item">
+                        <div class="p-map-legend__dot" style="background:#c8d4e6;"></div>
+                        <span>埼玉・千葉・神奈川</span>
+                    </div>
+                    <div class="p-map-legend__item">
+                        <div class="p-map-legend__dot" style="background:#c0392b; border-radius:50%;"></div>
+                        <span>拠点（東京都北区）</span>
+                    </div>
+                </div>
+                <p class="p-map-caption">※ 都県の形状は概略です。実際の対応可否はお問い合わせください。</p>
+            </div>
+
+            <!-- エリアカード -->
+            <div class="p-area-grid">
+                <div class="p-area-card">
                     <h2>東京都23区</h2>
                     <p>千代田区・中央区・港区・新宿区・文京区・台東区・墨田区・江東区・品川区・目黒区・大田区・世田谷区・渋谷区・中野区・杉並区・豊島区・北区・荒川区・板橋区・練馬区・足立区・葛飾区・江戸川区　全域対応。都心部は最短当日対応も可能です。</p>
                 </div>
-                <div class="area-card">
+                <div class="p-area-card">
                     <h2>埼玉県南部</h2>
                     <p>さいたま市・川口市・戸田市・草加市・三郷市・越谷市など、東京都心に近い南部エリアを中心に、マンション・商業施設の設備保守に対応しています。</p>
                 </div>
-                <div class="area-card">
+                <div class="p-area-card">
                     <h2>千葉県西部</h2>
                     <p>市川市・船橋市・松戸市・浦安市など、東京湾岸エリアを中心に対応。産業用太陽光発電設備の巡回点検実績も豊富です。</p>
                 </div>
-                <div class="area-card">
+                <div class="p-area-card">
                     <h2>神奈川県東部</h2>
                     <p>横浜市・川崎市を中心とした東部エリアに対応。集合住宅向け宅配BOXやEV充電器の設置・保守案件を承っています。</p>
                 </div>
             </div>
-            <div class="cta-section" style="margin-top:50px;">
+
+            <div class="p-cta-inner">
                 <h2>対応エリア外・エリア判断に迷う場合もお気軽にご相談ください</h2>
-                <p style="margin: 15px 0 25px; color: #cbd5e1;">案件の内容やボリュームに応じて、個別に対応可否をご案内します</p>
-                <a href="contact.html" class="btn btn-accent" style="font-size: 1.1rem; padding: 14px 40px; display:inline-block;text-decoration:none;">対応可否を問い合わせる</a>
+                <p>案件の内容やボリュームに応じて、個別に対応可否をご案内します</p>
+                <a href="contact.html" class="c-btn-accent">対応可否を問い合わせる</a>
             </div>
+
         </div>
-    
-    </main>
-
-    <section class="line-contact">
-        <h2>LINE公式からもお問い合わせいただけます</h2>
-        <p>保守契約のご相談、消防設備点検、電気設備保守、協力会社登録など、お気軽にお問い合わせください。</p>
-        <a href="https://page.line.me/ovt4298c" target="_blank" class="line-btn">LINE公式で相談する</a>
     </section>
+</main>
 
-    <footer>
-        <p style="margin-bottom:15px;">
-            <a href="services.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">事業内容</a>
-            <a href="area.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">対応エリア</a>
-            <a href="case.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">施工実績</a>
-            <a href="faq.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">よくある質問</a>
-            <a href="company.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">会社概要</a>
-            <a href="privacy.html" style="color:rgba(255,255,255,0.7); margin:0 10px; text-decoration:none;">プライバシーポリシー</a>
-        </p>
-        <p>&copy; 株式会社上田 UEDA Field Services. All Rights Reserved.</p>
-    </footer>
+<section class="p-line-section">
+    <h2>公式LINEからもお問い合わせいただけます</h2>
+    <p>保守契約のご相談、消防設備点検、電気設備保守、協力会社登録など、お気軽にお問い合わせください。</p>
+    <a href="https://page.line.me/ovt4298c" target="_blank" class="p-line-btn">公式LINEで相談する</a>
+</section>
 
-    <a class="floating-line" href="https://page.line.me/ovt4298c" target="_blank">LINE相談</a>
+<footer class="l-footer">
+    <nav class="l-footer__nav">
+        <a href="services.html">事業内容</a>
+        <a href="area.html">対応エリア</a>
+        <a href="case.html">施工実績</a>
+        <a href="faq.html">よくある質問</a>
+        <a href="company.html">会社概要</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+    </nav>
+    <p class="l-footer__copy">&copy; 株式会社上田 UEDA Field Services. All Rights Reserved.</p>
+</footer>
 
-    <div class="mobile-cta-bar">
-        <a class="cta-tel" href="tel:09075515324" title="営業目的でのご連絡はお断りします">電話で相談</a>
-        <a class="cta-line" href="https://page.line.me/ovt4298c" target="_blank">LINEで相談</a>
-        <a class="cta-form" href="contact.html">お問い合わせ</a>
-    </div>
+<a href="https://page.line.me/ovt4298c" target="_blank" class="p-float-line">公式LINE</a>
 
+<div class="p-mobile-bar">
+    <a href="tel:09075515324" class="p-mobile-bar__tel" title="営業目的でのご連絡はお断りします">電話で相談</a>
+    <a href="https://page.line.me/ovt4298c" target="_blank" class="p-mobile-bar__line">公式LINE</a>
+    <a href="contact.html" class="p-mobile-bar__form">お問い合わせ</a>
+</div>
+
+<script>
+document.getElementById('navToggle').addEventListener('click', function(){
+    this.classList.toggle('is-open');
+    document.getElementById('navMenu').classList.toggle('is-open');
+});
+</script>
 </body>
 </html>

@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フィールドサービス体制の構築支援｜株式会社上田</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="description" content="首都圏でフィールドサービス体制を構築したい企業様へ。施工パートナーの確保から保守オペレーション設計、報告書体制の整備まで。株式会社上田が実行まで支援します。">
+    <link rel="canonical" href="https://uedakai.com/build.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="フィールドサービス体制の構築支援｜株式会社上田">
+    <meta property="og:description" content="首都圏でフィールドサービス体制を構築したい企業様へ。施工パートナーの確保から保守オペレーション設計まで株式会社上田が支援します。">
+    <meta property="og:url" content="https://uedakai.com/build.html">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BWY1S0RKH2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BWY1S0RKH2');
+    </script>
+    <style>
+/* ============================================================
+   リセット & ベース
+============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #1a1a1a;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+/* ============================================================
+   デザイントークン
+============================================================ */
+:root {
+    --black:     #2a2f4a;
+    --black-dark: #1d2238;
+    --gray-900:  #0e1117;
+    --gray-700:  #4b5563;
+    --gray-500:  #9ca3af;
+    --gray-300:  #d1d5db;
+    --gray-100:  #f3f4f6;
+    --gray-50:   #f9fafb;
+    --white:     #ffffff;
+    --accent:    #c0392b;
+    --accent-hv: #a93226;
+    --border:    #e5e7eb;
+    --max-w:     1080px;
+    --r:         2px;
+}
+
+/* ============================================================
+   ユーティリティ
+============================================================ */
+.u-container { max-width: var(--max-w); margin: 0 auto; padding: 0 5%; }
+.u-section    { padding: 80px 0; }
+.u-bg-gray    { background: var(--gray-50); }
+.u-text-center{ text-align: center; }
+
+/* ============================================================
+   見出し共通
+============================================================ */
+.c-heading {
+    font-size: clamp(1.4rem, 3vw, 1.75rem);
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+}
+.c-heading--sub {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--gray-500);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.c-heading::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--black);
+    margin-top: 16px;
+}
+.c-heading.is-center::after { margin-left: auto; margin-right: auto; }
+
+/* ============================================================
+   ボタン
+============================================================ */
+.c-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 28px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border-radius: var(--r);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    text-decoration: none;
+    border: 2px solid transparent;
+    line-height: 1;
+}
+.c-btn--primary {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+}
+.c-btn--primary:hover { background: var(--black-dark); border-color: var(--black-dark); }
+.c-btn--outline {
+    background: transparent;
+    color: var(--white);
+    border-color: rgba(255,255,255,0.7);
+}
+.c-btn--outline:hover { background: rgba(255,255,255,0.12); }
+.c-btn--accent {
+    background: var(--accent);
+    color: var(--white);
+    border-color: var(--accent);
+}
+.c-btn--accent:hover { background: var(--accent-hv); border-color: var(--accent-hv); }
+
+/* ============================================================
+   ヘッダー
+============================================================ */
+.l-header {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+.l-header__inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.l-header__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+.l-header__logo-img { height: 40px; width: auto; }
+.l-header__logo-text { display: flex; flex-direction: column; }
+.l-header__logo-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--black-dark);
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+}
+.l-header__logo-en {
+    font-size: 0.65rem;
+    color: var(--gray-500);
+    letter-spacing: 0.1em;
+    margin-top: 2px;
+}
+.l-nav__list {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.l-nav__item a {
+    display: block;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--black-dark);
+    letter-spacing: 0.02em;
+    transition: color 0.15s;
+    border-radius: var(--r);
+}
+.l-nav__item a:hover { color: var(--black); }
+.l-nav__item--cta a {
+    background: var(--accent);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: var(--r);
+}
+.l-nav__item--cta a:hover { background: var(--accent-hv); color: var(--white); }
+.l-nav__toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    flex-direction: column;
+    gap: 5px;
+}
+.l-nav__toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--black);
+    transition: 0.25s;
+    transform-origin: center;
+}
+.l-nav__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.l-nav__toggle.is-open span:nth-child(2) { opacity: 0; }
+.l-nav__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ============================================================
+   ページヒーロー（サービスページ用）
+============================================================ */
+.p-page-hero {
+    position: relative;
+    background: var(--gray-900);
+    overflow: hidden;
+    padding: 80px 5%;
+}
+.p-page-hero__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=60&w=1400');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    filter: grayscale(40%);
+}
+.p-page-hero__inner {
+    position: relative;
+    z-index: 1;
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+.p-page-hero__tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    border-left: 3px solid rgba(255,255,255,0.4);
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+.p-page-hero__title {
+    font-size: clamp(1.75rem, 4vw, 2.4rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+}
+.p-page-hero__desc {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.85;
+    max-width: 560px;
+}
+
+/* ============================================================
+   課題（ターゲット別）
+============================================================ */
+.p-target__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+.p-target__card {
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 32px 28px;
+    background: var(--white);
+}
+.p-target__icon {
+    width: 44px;
+    height: 44px;
+    background: var(--black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.p-target__icon svg { width: 22px; height: 22px; color: var(--white); }
+.p-target__label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+.p-target__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+.p-target__list li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    line-height: 1.6;
+}
+.p-target__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 1px;
+    background: var(--gray-500);
+}
+
+/* ============================================================
+   支援内容（4ブロック）
+============================================================ */
+.p-support__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+    margin-top: 48px;
+}
+.p-support__item {
+    background: var(--white);
+    padding: 40px 36px;
+}
+.p-support__num {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gray-100);
+    line-height: 1;
+    margin-bottom: 12px;
+    letter-spacing: -0.03em;
+}
+.p-support__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 12px;
+    line-height: 1.4;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+}
+.p-support__body {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+.p-support__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.p-support__tag {
+    font-size: 0.72rem;
+    background: var(--gray-100);
+    color: var(--gray-700);
+    padding: 4px 10px;
+    border-radius: 2px;
+}
+
+/* ============================================================
+   導入ステップ
+============================================================ */
+.p-step__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 48px;
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+}
+.p-step__item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+}
+.p-step__item:last-child { border-bottom: none; }
+.p-step__num {
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    writing-mode: unset;
+    padding: 28px 16px;
+    flex-direction: column;
+    gap: 4px;
+}
+.p-step__num-label { font-size: 0.6rem; opacity: 0.7; letter-spacing: 0.12em; }
+.p-step__body { padding: 28px 32px; }
+.p-step__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+.p-step__desc {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    line-height: 1.75;
+}
+
+/* ============================================================
+   実績・強調
+============================================================ */
+.p-proof {
+    background: var(--black);
+    padding: 56px 5%;
+}
+.p-proof__inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+.p-proof__item {
+    padding: 32px 24px;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+.p-proof__num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.p-proof__label {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.5;
+}
+
+/* ============================================================
+   FAQ
+============================================================ */
+.p-faq__list { margin-top: 48px; }
+.p-faq__item {
+    border-bottom: 1px solid var(--border);
+}
+.p-faq__q {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 22px 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.5;
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+}
+.p-faq__q-mark {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--black);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: 1px;
+}
+.p-faq__a {
+    display: none;
+    padding: 0 4px 22px 44px;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    line-height: 1.8;
+}
+.p-faq__item.is-open .p-faq__a { display: block; }
+.p-faq__icon {
+    margin-left: auto;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+    color: var(--gray-500);
+    transition: transform 0.2s;
+}
+.p-faq__item.is-open .p-faq__icon { transform: rotate(45deg); }
+
+/* ============================================================
+   CTAバナー
+============================================================ */
+.p-cta {
+    background: var(--black);
+    padding: 64px 5%;
+    text-align: center;
+}
+.p-cta__title {
+    font-size: clamp(1.3rem, 3vw, 1.75rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+.p-cta__desc {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 32px;
+    line-height: 1.8;
+}
+.p-cta__btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* ============================================================
+   LINE
+============================================================ */
+.p-line {
+    padding: 48px 5%;
+    background: var(--gray-50);
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+.p-line__title { font-size: 1.1rem; font-weight: 700; color: var(--black); margin-bottom: 10px; }
+.p-line__desc { font-size: 0.875rem; color: var(--gray-700); margin-bottom: 22px; line-height: 1.7; }
+.p-line__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #06C755;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 13px 28px;
+    border-radius: var(--r);
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.p-line__btn:hover { background: #05a847; }
+
+/* ============================================================
+   フッター
+============================================================ */
+.l-footer {
+    background: var(--black-dark);
+    padding: 32px 5%;
+    text-align: center;
+}
+.l-footer__nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+.l-footer__nav a {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    padding: 4px 10px;
+    transition: color 0.15s;
+}
+.l-footer__nav a:hover { color: rgba(255,255,255,0.9); }
+.l-footer__copy { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
+
+/* ============================================================
+   フローティングLINE
+============================================================ */
+.floating-line {
+    position: fixed;
+    right: 20px;
+    bottom: 24px;
+    background: #06C755;
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 12px 18px;
+    border-radius: 40px;
+    z-index: 9999;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    transition: background 0.2s;
+}
+.floating-line:hover { background: #05a847; }
+
+/* ============================================================
+   モバイル固定バー
+============================================================ */
+.mobile-cta-bar { display: none; }
+
+/* ============================================================
+   レスポンシブ
+============================================================ */
+@media (max-width: 900px) {
+    .p-target__grid { grid-template-columns: 1fr 1fr; }
+    .p-support__grid { grid-template-columns: 1fr; }
+    .p-proof__inner { grid-template-columns: 1fr; border-left: none; }
+    .p-proof__item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .p-proof__item:last-child { border-bottom: none; }
+}
+@media (max-width: 768px) {
+    .l-nav__toggle { display: flex; }
+    .l-nav__list {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        padding: 12px 0;
+        z-index: 800;
+        gap: 0;
+    }
+    .l-nav__list.is-open { display: flex; }
+    .l-nav__item a { padding: 12px 5%; border-radius: 0; font-size: 0.9rem; }
+    .l-nav__item--cta { margin: 8px 5% 4px; }
+    .l-nav__item--cta a { text-align: center; border-radius: var(--r); }
+
+    .mobile-cta-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        z-index: 9000;
+        box-shadow: 0 -2px 12px rgba(0,0,0,0.12);
+    }
+    .mobile-cta-bar a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 8px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--white);
+        min-height: 52px;
+        padding-bottom: env(safe-area-inset-bottom, 14px);
+    }
+    .mobile-cta-bar .cta-tel  { background: var(--black); }
+    .mobile-cta-bar .cta-line { background: #06C755; }
+    .mobile-cta-bar .cta-form { background: var(--accent); }
+    body { padding-bottom: calc(52px + env(safe-area-inset-bottom, 0)); }
+    .floating-line { display: none; }
+
+    .p-target__grid { grid-template-columns: 1fr; }
+    .p-step__item { grid-template-columns: 64px 1fr; }
+    .p-step__body { padding: 22px 20px; }
+    .p-cta__btns { flex-direction: column; align-items: center; }
+    .c-btn { width: 100%; max-width: 320px; justify-content: center; }
+    .u-section { padding: 56px 0; }
+}
+    </style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header class="l-header">
+    <div class="l-header__inner">
+        <a class="l-header__logo" href="index.html">
+            <img src="images/wing.JPEG" alt="株式会社上田" class="l-header__logo-img" width="220" height="176" loading="eager" fetchpriority="high">
+            <div class="l-header__logo-text">
+                <span class="l-header__logo-name">株式会社上田</span>
+                <span class="l-header__logo-en">UEDA Field Services</span>
+            </div>
+        </a>
+        <nav>
+            <button class="l-nav__toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="l-nav__list" id="navMenu" role="menubar">
+                <li class="l-nav__item"><a href="index.html">トップページ</a></li>
+                <li class="l-nav__item"><a href="services.html">事業内容</a></li>
+                <li class="l-nav__item"><a href="case.html">施工実績</a></li>
+                <li class="l-nav__item"><a href="area.html">対応エリア</a></li>
+                <li class="l-nav__item"><a href="faq.html">よくある質問</a></li>
+                <li class="l-nav__item"><a href="company.html">会社概要</a></li>
+                <li class="l-nav__item l-nav__item--cta"><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<!-- ページヒーロー -->
+<section class="p-page-hero">
+    <div class="p-page-hero__bg" aria-hidden="true"></div>
+    <div class="p-page-hero__inner">
+        <p class="p-page-hero__tag">Field Service Setup · Tokyo Metropolitan Area</p>
+        <h1 class="p-page-hero__title">フィールドサービス体制の<br>構築を、丸ごと支援する。</h1>
+        <p class="p-page-hero__desc">施工パートナーの確保から、保守オペレーションの設計・標準化、報告書体制の整備まで。株式会社上田が、体制づくりの実行まで一貫して担います。</p>
+    </div>
+</section>
+
+<!-- こんな企業に向けた支援 -->
+<section class="u-section">
+    <div class="u-container">
+        <h2 class="c-heading">
+            <span class="c-heading--sub">Who We Help</span>
+            こんな企業様に向けた支援です
+        </h2>
+        <div class="p-target__grid">
+            <div class="p-target__card">
+                <div class="p-target__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <div class="p-target__label">New Equipment Maker</div>
+                <div class="p-target__title">新技術・設備の展開を<br>進める事業者様</div>
+                <ul class="p-target__list">
+                    <li>EV充電器・宅配BOX等を首都圏に展開中</li>
+                    <li>保守オペレーターを確保できていない</li>
+                    <li>現場データの回収・報告体制が未整備</li>
+                </ul>
+            </div>
+            <div class="p-target__card">
+                <div class="p-target__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+                </div>
+                <div class="p-target__label">Startup / New Business</div>
+                <div class="p-target__title">実証実験から<br>本格運用へ移行する企業様</div>
+                <ul class="p-target__list">
+                    <li>PoC終了後のO&Mリソースが社内にない</li>
+                    <li>施工・保守パートナーを探す時間がない</li>
+                    <li>スケールに合わせた体制を柔軟に作りたい</li>
+                </ul>
+            </div>
+            <div class="p-target__card">
+                <div class="p-target__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+                </div>
+                <div class="p-target__label">Property / FM</div>
+                <div class="p-target__title">複数拠点の保守を<br>一元管理したい法人様</div>
+                <ul class="p-target__list">
+                    <li>拠点ごとに委託先がバラバラで管理コスト大</li>
+                    <li>品質・報告書フォーマットの統一ができない</li>
+                    <li>新設備トラブルの対応先が定まっていない</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 支援内容 -->
+<section class="u-section u-bg-gray">
+    <div class="u-container">
+        <h2 class="c-heading">
+            <span class="c-heading--sub">What We Do</span>
+            4つの支援領域
+        </h2>
+        <div class="p-support__grid">
+            <div class="p-support__item">
+                <div class="p-support__num">01</div>
+                <div class="p-support__title">施工・保守パートナーの提供</div>
+                <p class="p-support__body">電気工事士・消防設備士の有資格者と協力会社ネットワークを活用し、首都圏の現場に即時投入できる施工・保守人員を提供します。人材を自社採用せずに体制を構築できます。</p>
+                <div class="p-support__tags">
+                    <span class="p-support__tag">電気工事士</span>
+                    <span class="p-support__tag">消防設備士</span>
+                    <span class="p-support__tag">協力会社ネットワーク</span>
+                </div>
+            </div>
+            <div class="p-support__item">
+                <div class="p-support__num">02</div>
+                <div class="p-support__title">保守オペレーションの設計・標準化</div>
+                <p class="p-support__body">設備ごとの点検手順・チェックリスト・緊急対応フローを設計します。担当者が変わってもブレない品質を担保できる仕組みを、御社の要件に合わせて構築します。</p>
+                <div class="p-support__tags">
+                    <span class="p-support__tag">手順書作成</span>
+                    <span class="p-support__tag">チェックリスト</span>
+                    <span class="p-support__tag">品質基準整備</span>
+                </div>
+            </div>
+            <div class="p-support__item">
+                <div class="p-support__num">03</div>
+                <div class="p-support__title">報告書・データ管理体制の整備</div>
+                <p class="p-support__body">現場写真の回収から指定フォーマットの報告書作成・提出まで一括して代行します。御社のフォーマット・提出ルールに合わせた対応が可能で、社内の管理工数を大幅に削減します。</p>
+                <div class="p-support__tags">
+                    <span class="p-support__tag">写真管理</span>
+                    <span class="p-support__tag">報告書作成</span>
+                    <span class="p-support__tag">フォーマット対応</span>
+                </div>
+            </div>
+            <div class="p-support__item">
+                <div class="p-support__num">04</div>
+                <div class="p-support__title">窓口一本化・継続的な運用サポート</div>
+                <p class="p-support__body">問い合わせ・スケジュール管理・請求処理を株式会社上田が一括して引き受けます。メーカー・管理会社・施工者間の調整コストをゼロにし、御社はコア業務に集中できます。</p>
+                <div class="p-support__tags">
+                    <span class="p-support__tag">窓口一本化</span>
+                    <span class="p-support__tag">スケジュール管理</span>
+                    <span class="p-support__tag">請求代行</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 実績バー -->
+<div class="p-proof">
+    <div class="p-proof__inner">
+        <div class="p-proof__item">
+            <div class="p-proof__num">1,000<small style="font-size:1rem;">件+</small></div>
+            <div class="p-proof__label">年間保守・点検・工事の対応実績<br>（自社集計）</div>
+        </div>
+        <div class="p-proof__item">
+            <div class="p-proof__num" style="font-size:1.4rem; line-height:1.3;">東京・埼玉<br>千葉・神奈川</div>
+            <div class="p-proof__label">対応エリア — 首都圏1都3県</div>
+        </div>
+        <div class="p-proof__item">
+            <div class="p-proof__num">複数<small style="font-size:1rem;">社</small></div>
+            <div class="p-proof__label">大手メーカーの認定オペレーターとして<br>稼働中</div>
+        </div>
+    </div>
+</div>
+
+<!-- 導入ステップ -->
+<section class="u-section">
+    <div class="u-container">
+        <h2 class="c-heading">
+            <span class="c-heading--sub">How to Start</span>
+            体制構築までの流れ
+        </h2>
+        <div class="p-step__list">
+            <div class="p-step__item">
+                <div class="p-step__num">
+                    <span class="p-step__num-label">STEP</span>
+                    01
+                </div>
+                <div class="p-step__body">
+                    <div class="p-step__title">現状ヒアリング・課題整理</div>
+                    <p class="p-step__desc">対象設備・エリア・件数・現在の保守体制についてお聞かせください。フォーム・LINE・お電話でご相談いただけます。まずは30分程度のオンライン打合せから始めます。</p>
+                </div>
+            </div>
+            <div class="p-step__item">
+                <div class="p-step__num">
+                    <span class="p-step__num-label">STEP</span>
+                    02
+                </div>
+                <div class="p-step__body">
+                    <div class="p-step__title">対応範囲の確認・体制案の提示</div>
+                    <p class="p-step__desc">ご要件を踏まえ、投入可能なリソース・対応可能範囲・スケジュール案をご提示します。小さく始めてスケールする進め方にも柔軟に対応します。</p>
+                </div>
+            </div>
+            <div class="p-step__item">
+                <div class="p-step__num">
+                    <span class="p-step__num-label">STEP</span>
+                    03
+                </div>
+                <div class="p-step__body">
+                    <div class="p-step__title">手順書・報告書フォーマットの整備</div>
+                    <p class="p-step__desc">合意した体制をもとに、点検手順書・チェックリスト・報告書テンプレートを整備します。御社の既存フォーマットへの合わせ込みも対応します。</p>
+                </div>
+            </div>
+            <div class="p-step__item">
+                <div class="p-step__num">
+                    <span class="p-step__num-label">STEP</span>
+                    04
+                </div>
+                <div class="p-step__body">
+                    <div class="p-step__title">本格稼働・継続的な運用</div>
+                    <p class="p-step__desc">現場稼働開始後も、報告書の提出・スケジュール管理・品質チェックを継続的に実施します。体制の見直しや拡大についても随時ご相談いただけます。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- よくある質問 -->
+<section class="u-section u-bg-gray">
+    <div class="u-container">
+        <h2 class="c-heading">
+            <span class="c-heading--sub">FAQ</span>
+            よくあるご質問
+        </h2>
+        <div class="p-faq__list">
+            <div class="p-faq__item">
+                <button class="p-faq__q">
+                    <span class="p-faq__q-mark">Q</span>
+                    まだ設備の展開が始まっていない段階でも相談できますか？
+                    <span class="p-faq__icon">+</span>
+                </button>
+                <div class="p-faq__a">はい、ご相談いただけます。展開前の段階からご相談いただくことで、体制設計に余裕を持って取り組めます。まずは対象設備・エリア・スケジュール感をお聞かせください。</div>
+            </div>
+            <div class="p-faq__item">
+                <button class="p-faq__q">
+                    <span class="p-faq__q-mark">Q</span>
+                    1件・小規模な案件でも対応してもらえますか？
+                    <span class="p-faq__icon">+</span>
+                </button>
+                <div class="p-faq__a">件数・規模は問いません。「まず1拠点から試したい」「月数件から始めたい」という場合でも対応しています。小さく始めて、実績に応じて拡大していく進め方を推奨しています。</div>
+            </div>
+            <div class="p-faq__item">
+                <button class="p-faq__q">
+                    <span class="p-faq__q-mark">Q</span>
+                    報告書のフォーマットは自社のものを使えますか？
+                    <span class="p-faq__icon">+</span>
+                </button>
+                <div class="p-faq__a">はい、御社指定のフォーマット・提出ルールに合わせた対応が可能です。既存フォーマットへの入力代行から、新規フォーマットの設計支援まで対応します。</div>
+            </div>
+            <div class="p-faq__item">
+                <button class="p-faq__q">
+                    <span class="p-faq__q-mark">Q</span>
+                    対応できる設備・業種に制限はありますか？
+                    <span class="p-faq__icon">+</span>
+                </button>
+                <div class="p-faq__a">電気設備・消防設備・EV充電器・宅配BOX・コインランドリー等が主な対応領域です。記載外の設備についても、まずはご相談ください。対応可否をお伝えします。</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="p-cta">
+    <div class="p-cta__title">体制づくりの第一歩を、<br>いっしょに始めましょう。</div>
+    <p class="p-cta__desc">ご相談・ヒアリングは無料です。対象設備・エリア・件数などをお知らせください。<br>対応可否と体制案をお伝えします。</p>
+    <div class="p-cta__btns">
+        <a href="contact.html" class="c-btn c-btn--accent">相談・ヒアリングを申し込む</a>
+        <a href="services.html" class="c-btn c-btn--outline">事業内容を確認する</a>
+    </div>
+</section>
+
+<!-- LINE -->
+<section class="p-line">
+    <div class="p-line__title">LINE公式でもご相談いただけます</div>
+    <p class="p-line__desc">体制構築のご相談、施工パートナーの確保、保守オペレーションの整備など、<br>お気軽にメッセージください。</p>
+    <a href="https://page.line.me/ovt4298c" target="_blank" rel="noopener" class="p-line__btn">
+        <svg style="width:22px;height:22px;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.36 5.43 3.5 7.18V22l3.9-2.14c.83.23 1.7.36 2.6.36 5.52 0 10-4.03 10-9S17.52 2 12 2z"/></svg>
+        公式LINEで相談する
+    </a>
+</section>
+
+</main>
+
+<!-- フッター -->
+<footer class="l-footer">
+    <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+        <a href="services.html">事業内容</a>
+        <a href="area.html">対応エリア</a>
+        <a href="case.html">施工実績</a>
+        <a href="faq.html">よくある質問</a>
+        <a href="company.html">会社概要</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+    </nav>
+    <p class="l-footer__copy">&copy; 株式会社上田 UEDA Field Services. All Rights Reserved.</p>
+</footer>
+
+<a class="floating-line" href="https://page.line.me/ovt4298c" target="_blank" rel="noopener">公式LINE</a>
+
+<div class="mobile-cta-bar" role="navigation" aria-label="クイックアクセス">
+    <a class="cta-tel" href="tel:09075515324">電話で相談</a>
+    <a class="cta-line" href="https://page.line.me/ovt4298c" target="_blank" rel="noopener">公式LINE</a>
+    <a class="cta-form" href="contact.html">お問い合わせ</a>
+</div>
+
+<script>
+(function() {
+    // ナビ開閉
+    const toggle = document.getElementById('navToggle');
+    const menu   = document.getElementById('navMenu');
+    if (toggle && menu) {
+        toggle.addEventListener('click', function() {
+            const isOpen = menu.classList.toggle('is-open');
+            toggle.classList.toggle('is-open', isOpen);
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
+        document.addEventListener('click', function(e) {
+            if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                menu.classList.remove('is-open');
+                toggle.classList.remove('is-open');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+    // FAQ アコーディオン
+    document.querySelectorAll('.p-faq__q').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var item = this.closest('.p-faq__item');
+            var isOpen = item.classList.contains('is-open');
+            document.querySelectorAll('.p-faq__item').forEach(function(i) { i.classList.remove('is-open'); });
+            if (!isOpen) item.classList.add('is-open');
+        });
+    });
+})();
+</script>
+
+</body>
+</html>
