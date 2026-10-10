@@ -62,79 +62,31 @@ ul { list-style: none; }
 .u-bg-gray    { background: var(--gray-50); }
 
 /* ヘッダー */
-.l-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--black);
-    height: 64px;
-    display: flex;
-    align-items: center;
-    padding: 0 5%;
-    gap: 24px;
-}
-.l-header__logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    flex-shrink: 0;
-}
-.l-header__logo img { height: 40px; width: auto; }
-.l-header__logo-text { display: flex; flex-direction: column; line-height: 1.2; }
-.l-header__logo-title { font-size: 0.95rem; font-weight: 700; color: var(--white); letter-spacing: 0.05em; }
-.l-header__logo-sub   { font-size: 0.6rem; font-weight: 400; color: rgba(255,255,255,0.55); letter-spacing: 0.12em; }
-.l-header__nav { display: flex; align-items: center; gap: 4px; margin-left: auto; }
-.l-header__nav a {
-    font-size: 0.78rem;
-    font-weight: 500;
-    color: rgba(255,255,255,0.75);
-    padding: 6px 10px;
-    border-radius: var(--r);
-    transition: color .2s, background .2s;
-    white-space: nowrap;
-}
-.l-header__nav a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
-.l-header__nav a.is-active { color: var(--white); }
-.l-header__cta {
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: var(--white);
-    background: var(--accent);
-    padding: 7px 14px;
-    border-radius: var(--r);
-    white-space: nowrap;
-    transition: background .2s;
-}
-.l-header__cta:hover { background: var(--accent-hv); color: var(--white); }
-.l-header__toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
-    margin-left: auto;
-}
-.l-header__toggle span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: var(--white);
-    border-radius: 2px;
-    transition: transform .3s, opacity .3s;
-}
-.l-header__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.l-header__toggle.is-open span:nth-child(2) { opacity: 0; }
-.l-header__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
+.l-header { position: sticky; top: 0; z-index: 900; background: var(--white); border-bottom: 1px solid var(--border); height: 64px; display: flex; align-items: center; }
+.l-header__inner { max-width: var(--max-w); margin: 0 auto; padding: 0 5%; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+.l-header__logo { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
+.l-header__logo-img { height: 40px; width: auto; }
+.l-header__logo-text { display: flex; flex-direction: column; }
+.l-header__logo-name { font-size: 1.1rem; font-weight: 700; color: var(--black); line-height: 1.2; letter-spacing: 0.05em; }
+.l-header__logo-en { font-size: 0.65rem; color: var(--gray-500); letter-spacing: 0.1em; margin-top: 2px; }
+.l-nav__list { display: flex; align-items: center; gap: 2px; }
+.l-nav__item a { display: block; padding: 8px 12px; font-size: 0.85rem; font-weight: 500; color: var(--gray-700); letter-spacing: 0.02em; transition: color 0.15s; border-radius: var(--r); }
+.l-nav__item a:hover { color: var(--black); }
+.l-nav__item.is-active a { color: var(--black); font-weight: 700; }
+.l-nav__item--cta a { background: var(--accent); color: var(--white); padding: 8px 16px; border-radius: var(--r); }
+.l-nav__item--cta a:hover { background: var(--accent-hv); color: var(--white); }
+.l-nav__toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
+.l-nav__toggle span { display: block; width: 22px; height: 2px; background: var(--black); transition: 0.25s; transform-origin: center; }
+.l-nav__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.l-nav__toggle.is-open span:nth-child(2) { opacity: 0; }
+.l-nav__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 @media (max-width: 860px) {
-    .l-header__nav { display: none; flex-direction: column; align-items: flex-start; gap: 0; position: absolute; top: 64px; left: 0; right: 0; background: var(--black-dark); padding: 12px 5%; }
-    .l-header__nav.is-open { display: flex; }
-    .l-header__nav a { font-size: 0.9rem; padding: 10px 8px; width: 100%; border-radius: 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .l-header__cta { display: none; }
-    .l-header__toggle { display: flex; }
+    .l-nav__toggle { display: flex; }
+    .l-nav__list { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--border); flex-direction: column; padding: 12px 0; z-index: 800; gap: 0; }
+    .l-nav__list.is-open { display: flex; }
+    .l-nav__item a { padding: 12px 5%; border-radius: 0; font-size: 0.9rem; }
+    .l-nav__item--cta { margin: 8px 5% 4px; }
+    .l-nav__item--cta a { text-align: center; border-radius: var(--r); }
 }
 
 /* ページヘッダー */
@@ -431,26 +383,29 @@ ul { list-style: none; }
 <body>
 
 <header class="l-header">
-    <a href="index.html" class="l-header__logo">
-        <img src="images/wing.JPEG" alt="株式会社上田 ロゴ" width="220" height="176" loading="eager">
-        <div class="l-header__logo-text">
-            <span class="l-header__logo-title">株式会社上田</span>
-            <span class="l-header__logo-sub">UEDA Field Services</span>
-        </div>
-    </a>
-    <button class="l-header__toggle" id="navToggle" aria-label="メニュー">
-        <span></span><span></span><span></span>
-    </button>
-    <nav class="l-header__nav" id="navMenu">
-
-        <a href="services.html">設備保守</a>
-        <a href="build.html">体制構築支援</a>
-        <a href="case.html">施工実績</a>
-        <a href="area.html">対応エリア</a>
-        <a href="faq.html">よくある質問</a>
-        <a href="company.html">会社概要</a>
-        <a href="contact.html" class="l-header__cta">お問い合わせ</a>
-    </nav>
+    <div class="l-header__inner">
+        <a class="l-header__logo" href="index.html">
+            <img src="images/wing.JPEG" alt="株式会社上田" class="l-header__logo-img" width="220" height="176" loading="eager" fetchpriority="high">
+            <div class="l-header__logo-text">
+                <span class="l-header__logo-name">株式会社上田</span>
+                <span class="l-header__logo-en">UEDA Field Services</span>
+            </div>
+        </a>
+        <nav>
+            <button class="l-nav__toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="l-nav__list" id="navMenu" role="menubar">
+                <li class="l-nav__item"><a href="services.html">設備保守</a></li>
+                <li class="l-nav__item"><a href="build.html">体制構築支援</a></li>
+                <li class="l-nav__item"><a href="case.html">施工実績</a></li>
+                <li class="l-nav__item"><a href="area.html">対応エリア</a></li>
+                <li class="l-nav__item"><a href="faq.html">よくある質問</a></li>
+                <li class="l-nav__item"><a href="company.html">会社概要</a></li>
+                <li class="l-nav__item l-nav__item--cta"><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <div class="p-page-header">
@@ -590,6 +545,7 @@ ul { list-style: none; }
 document.getElementById('navToggle').addEventListener('click', function(){
     this.classList.toggle('is-open');
     document.getElementById('navMenu').classList.toggle('is-open');
+    this.setAttribute('aria-expanded', this.classList.contains('is-open'));
 });
 // URLパラメータで種別を自動選択・バナー表示
 document.addEventListener('DOMContentLoaded', function(){
