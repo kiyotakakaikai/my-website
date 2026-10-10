@@ -58,6 +58,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://uedakai.com/blog.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://uedakai.com/company.html</loc>
     <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>

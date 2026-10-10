@@ -31,6 +31,16 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"トップ","item":"https://uedakai.com/"},
+        {"@type":"ListItem","position":2,"name":"お問い合わせ","item":"https://uedakai.com/contact.html"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
       "@type": "ContactPage",
       "name": "お問い合わせ",
       "url": "https://uedakai.com/contact.html",
@@ -421,6 +431,7 @@ ul { list-style: none; }
                 <li class="l-nav__item"><a href="case.html">対応実績</a></li>
                 <li class="l-nav__item"><a href="area.html">対応エリア</a></li>
                 <li class="l-nav__item"><a href="faq.html">よくある質問</a></li>
+                <li class="l-nav__item"><a href="blog.html">コラム</a></li>
                 <li class="l-nav__item"><a href="company.html">会社概要</a></li>
                 <li class="l-nav__item l-nav__item--cta"><a href="contact.html">お問い合わせ</a></li>
             </ul>
@@ -547,6 +558,7 @@ ul { list-style: none; }
         <a href="area.html">対応エリア</a>
         <a href="case.html">対応実績</a>
         <a href="faq.html">よくある質問</a>
+        <a href="blog.html">コラム</a>
         <a href="company.html">会社概要</a>
         <a href="privacy.html">プライバシーポリシー</a>
     </nav>
@@ -597,9 +609,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 headers: { 'Accept': 'application/json' }
             });
             if(res.ok){
-                document.getElementById('formSuccess').style.display = 'block';
-                form.style.display = 'none';
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.location.href = '/thank-you.html';
             } else {
                 const j = await res.json();
                 alert('送信エラー：' + (j.error || '時間をおいて再度お試しください。'));
@@ -611,6 +621,23 @@ document.addEventListener('DOMContentLoaded', function(){
             btn.disabled = false;
             btn.textContent = '入力内容を送信する';
         }
+    });
+});
+</script>
+<script>
+// GA4 コンバージョン計測
+document.addEventListener('DOMContentLoaded', function(){
+    // 電話クリック
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(el){
+        el.addEventListener('click', function(){
+            gtag('event', 'conversion_tel', { event_category: 'contact', event_label: 'tel_click' });
+        });
+    });
+    // LINEクリック
+    document.querySelectorAll('a[href*="line.me"]').forEach(function(el){
+        el.addEventListener('click', function(){
+            gtag('event', 'conversion_line', { event_category: 'contact', event_label: 'line_click' });
+        });
     });
 });
 </script>

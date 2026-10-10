@@ -31,6 +31,16 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"トップ","item":"https://uedakai.com/"},
+        {"@type":"ListItem","position":2,"name":"体制構築支援","item":"https://uedakai.com/build.html"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
       "@type": "Service",
       "name": "フィールドサービス体制構築支援",
       "provider": {
@@ -721,6 +731,7 @@ ul { list-style: none; }
                 <li class="l-nav__item"><a href="case.html">対応実績</a></li>
                 <li class="l-nav__item"><a href="area.html">対応エリア</a></li>
                 <li class="l-nav__item"><a href="faq.html">よくある質問</a></li>
+                <li class="l-nav__item"><a href="blog.html">コラム</a></li>
                 <li class="l-nav__item"><a href="company.html">会社概要</a></li>
                 <li class="l-nav__item l-nav__item--cta"><a href="contact.html">お問い合わせ</a></li>
             </ul>
@@ -997,6 +1008,7 @@ ul { list-style: none; }
         <a href="area.html">対応エリア</a>
         <a href="case.html">対応実績</a>
         <a href="faq.html">よくある質問</a>
+        <a href="blog.html">コラム</a>
         <a href="company.html">会社概要</a>
         <a href="privacy.html">プライバシーポリシー</a>
     </nav>
@@ -1042,5 +1054,22 @@ ul { list-style: none; }
 })();
 </script>
 
+<script>
+// GA4 コンバージョン計測
+document.addEventListener('DOMContentLoaded', function(){
+    // 電話クリック
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(el){
+        el.addEventListener('click', function(){
+            gtag('event', 'conversion_tel', { event_category: 'contact', event_label: 'tel_click' });
+        });
+    });
+    // LINEクリック
+    document.querySelectorAll('a[href*="line.me"]').forEach(function(el){
+        el.addEventListener('click', function(){
+            gtag('event', 'conversion_line', { event_category: 'contact', event_label: 'line_click' });
+        });
+    });
+});
+</script>
 </body>
 </html>
