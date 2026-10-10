@@ -1,56 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://uedakai.com/index.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://uedakai.com/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1549240944-d805191e700d?auto=format&fit=crop&q=80&w=1200</image:loc>
+      <image:title>株式会社上田｜首都圏のフィールドサービス・保守メンテナンスパートナー</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://uedakai.com/services.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1200</image:loc>
+      <image:title>設備保守・メンテナンスサービス｜株式会社上田</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://uedakai.com/build.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200</image:loc>
+      <image:title>フィールドサービス体制構築支援｜株式会社上田</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://uedakai.com/case.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&q=80&w=1200</image:loc>
+      <image:title>施工実績・対応事例｜株式会社上田</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://uedakai.com/area.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80&w=1200</image:loc>
+      <image:title>対応エリア｜株式会社上田</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://uedakai.com/faq.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://uedakai.com/company.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200</image:loc>
+      <image:title>会社概要｜株式会社上田</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://uedakai.com/contact.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://uedakai.com/privacy.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
