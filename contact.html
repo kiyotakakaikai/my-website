@@ -489,6 +489,18 @@ ul { list-style: none; }
                 営業目的でのご連絡は一切お断りいたします。事業のご相談・協力会社登録・メーカー様からのご依頼のみ承ります。
             </div>
 
+            <!-- ページ案内バナー（build.html から来た場合・または体制構築に関心がある場合） -->
+            <div id="buildBanner" style="display:none;margin-bottom:24px;background:#eef3fa;border:1px solid #c0cfe8;border-radius:10px;padding:16px 20px;align-items:center;gap:14px;flex-wrap:wrap;">
+                <span style="font-size:1.4rem;">🏗️</span>
+                <div style="flex:1;min-width:200px;">
+                    <div style="font-weight:700;font-size:0.9rem;color:#2a2f4a;margin-bottom:4px;">フィールドサービス体制の構築をご検討ですか？</div>
+                    <div style="font-size:0.8rem;color:#5a6480;">体制構築の支援内容・導入ステップはこちらでご確認いただけます。</div>
+                </div>
+                <a href="build.html" style="white-space:nowrap;font-size:0.82rem;font-weight:700;color:#2a2f4a;background:#fff;border:1px solid #c0cfe8;border-radius:6px;padding:8px 14px;text-decoration:none;">
+                    📄 体制構築ページを見る →
+                </a>
+            </div>
+
             <!-- フォーム -->
             <div class="p-form-wrap">
                 <div class="p-form-card">
@@ -577,6 +589,21 @@ document.getElementById('navToggle').addEventListener('click', function(){
     this.classList.toggle('is-open');
     document.getElementById('navMenu').classList.toggle('is-open');
 });
+// URLパラメータで種別を自動選択・バナー表示
+document.addEventListener('DOMContentLoaded', function(){
+    const params = new URLSearchParams(window.location.search);
+    if(params.get('type') === 'build'){
+        // ラジオボタンを「フィールドサービス体制の構築のご相談」に自動選択
+        const radios = document.querySelectorAll('input[name="type"]');
+        radios.forEach(function(r){
+            r.checked = (r.value === 'フィールドサービス体制の構築のご相談');
+        });
+        // 案内バナーを表示
+        const banner = document.getElementById('buildBanner');
+        if(banner) banner.style.display = 'flex';
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function(){
     const form = document.getElementById('contactForm');
     if(!form) return;
