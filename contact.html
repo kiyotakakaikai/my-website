@@ -409,6 +409,8 @@ ul { list-style: none; }
     .p-contact-methods { grid-template-columns: 1fr; }
 }
     </style>
+    <!-- reCAPTCHA v3 — サイトキーを取得後 YOUR_RECAPTCHA_SITE_KEY を置き換えてください -->
+    <script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY"></script>
 </head>
 <body>
 
@@ -603,9 +605,17 @@ document.addEventListener('DOMContentLoaded', function(){
         btn.disabled = true;
         btn.textContent = '送信中...';
         try {
+            // reCAPTCHA v3 トークン取得（サイトキー設定済みの場合のみ動作）
+            let formData = new FormData(form);
+            try {
+                if(typeof grecaptcha !== 'undefined' && 'YOUR_RECAPTCHA_SITE_KEY' !== 'YOUR_RECAPTCHA_SITE_KEY'){
+                    const token = await grecaptcha.execute('YOUR_RECAPTCHA_SITE_KEY', {action: 'contact'});
+                    formData.append('g-recaptcha-response', token);
+                }
+            } catch(re){ /* reCAPTCHA未設定時はスキップ */ }
             const res = await fetch('https://formspree.io/f/xqevlkop', {
                 method: 'POST',
-                body: new FormData(form),
+                body: formData,
                 headers: { 'Accept': 'application/json' }
             });
             if(res.ok){
