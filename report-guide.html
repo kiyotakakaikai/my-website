@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点検結果報告書の提出のご案内｜株式会社上田（東京23区の消防設備点検）</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="description" content="消防用設備等点検結果報告書の提出方法を、記入例つきでご案内します。報告書の表紙1枚にご記入いただくだけで、点検票などは株式会社上田がお渡しします。報告の期限・提出先・電子申請についても解説します。">
+    <link rel="canonical" href="https://uedakai.com/report-guide.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="点検結果報告書の提出のご案内｜株式会社上田">
+    <meta property="og:description" content="消防用設備等点検結果報告書の提出方法を、記入例つきでご案内します。表紙1枚のご記入だけで、点検票などは株式会社上田がお渡しします。">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1549240944-d805191e700d?auto=format&fit=crop&q=80&w=1200">
+    <meta property="og:url" content="https://uedakai.com/report-guide.html">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BWY1S0RKH2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BWY1S0RKH2');
+    </script>
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"ホーム","item":"https://uedakai.com/"},
+        {"@type":"ListItem","position":2,"name":"点検結果報告書の提出のご案内","item":"https://uedakai.com/report-guide.html"}
+      ]
+    }
+    </script>
+    <style>
+/* ============================================================
+   CSS リセット & ベース
+============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #1a1a1a;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+/* ============================================================
+   デザイントークン
+============================================================ */
+:root {
+    --black:     #2a2f4a;      /* ネイビー */
+    --black-dark: #1d2238;     /* ホバー・ヘッダー文字 */
+    --gray-900:  #0e1117;      /* ヒーロー背景（深い黒） */
+    --gray-700:  #4b5563;
+    --gray-500:  #9ca3af;
+    --gray-300:  #d1d5db;
+    --gray-100:  #f3f4f6;
+    --gray-50:   #f9fafb;
+    --white:     #ffffff;
+    --accent:    #c0392b;      /* 深い赤 — アクションのみ */
+    --accent-hv: #a93226;
+    --border:    #e5e7eb;
+    --max-w:     1080px;
+    --r:         2px;
+}
+
+/* ============================================================
+   ユーティリティ
+============================================================ */
+.u-container { max-width: var(--max-w); margin: 0 auto; padding: 0 5%; }
+.u-section    { padding: 80px 0; }
+.u-section--sm{ padding: 56px 0; }
+.u-bg-gray    { background: var(--gray-50); }
+.u-text-center{ text-align: center; }
+
+/* ============================================================
+   見出し共通
+============================================================ */
+.c-heading {
+    font-size: clamp(1.4rem, 3vw, 1.75rem);
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+}
+.c-heading--sub {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--gray-500);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.c-heading::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--black);
+    margin-top: 16px;
+}
+/* ヘッダー文字色は濃い葵色 */
+.l-header__logo-name,
+.l-nav__item a { color: var(--black-dark); }
+.c-heading.is-center::after { margin-left: auto; margin-right: auto; }
+
+/* ============================================================
+   ボタン
+============================================================ */
+.c-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 28px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border-radius: var(--r);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    text-decoration: none;
+    border: 2px solid transparent;
+    line-height: 1;
+}
+.c-btn--primary {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+}
+.c-btn--primary:hover { background: var(--black-dark); border-color: var(--black-dark); }
+.c-btn--outline {
+    background: transparent;
+    color: var(--white);
+    border-color: rgba(255,255,255,0.7);
+}
+.c-btn--outline:hover { background: rgba(255,255,255,0.12); }
+.c-btn--accent {
+    background: var(--accent);
+    color: var(--white);
+    border-color: var(--accent);
+}
+.c-btn--accent:hover { background: var(--accent-hv); border-color: var(--accent-hv); }
+
+/* ============================================================
+   ヘッダー
+============================================================ */
+.l-header {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+.l-header__inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.l-header__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+.l-header__logo-img {
+    height: 40px;
+    width: auto;
+}
+.l-header__logo-text { display: flex; flex-direction: column; }
+.l-header__logo-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+}
+.l-header__logo-en {
+    font-size: 0.65rem;
+    color: var(--gray-500);
+    letter-spacing: 0.1em;
+    margin-top: 2px;
+}
+
+/* PC ナビ */
+.l-nav__list {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.l-nav__item a {
+    display: block;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    letter-spacing: 0.02em;
+    transition: color 0.15s;
+    border-radius: var(--r);
+}
+.l-nav__item a:hover { color: var(--black); }
+.l-nav__item.is-active a { color: var(--black); font-weight: 700; }
+.l-nav__item--cta a {
+    background: var(--accent);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: var(--r);
+}
+.l-nav__item--cta a:hover { background: var(--accent-hv); color: var(--white); }
+
+/* ハンバーガー */
+.l-nav__toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    flex-direction: column;
+    gap: 5px;
+}
+.l-nav__toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--black);
+    transition: 0.25s;
+    transform-origin: center;
+}
+.l-nav__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.l-nav__toggle.is-open span:nth-child(2) { opacity: 0; }
+.l-nav__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ============================================================
+   ヒーロー
+============================================================ */
+.p-hero {
+    position: relative;
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--gray-900);
+}
+.p-hero__bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        url('https://images.unsplash.com/photo-1549240944-d805191e700d?auto=format&fit=crop&q=60&w=1400');
+    background-size: cover;
+    background-position: center top;
+    opacity: 0.45;
+    filter: grayscale(30%);
+}
+.p-hero__inner {
+    position: relative;
+    z-index: 1;
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 80px 5%;
+    width: 100%;
+}
+.p-hero__label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--gray-300);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-left: 3px solid var(--gray-300);
+    padding-left: 10px;
+}
+.p-hero__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+}
+.p-hero__title em {
+    font-style: normal;
+    border-bottom: 3px solid var(--white);
+    padding-bottom: 2px;
+}
+.p-hero__desc {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.9;
+    max-width: 540px;
+    margin-bottom: 36px;
+}
+.p-hero__btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ============================================================
+   数字バー
+============================================================ */
+.p-kpi {
+    background: var(--black);   /* 葵色バー */
+    padding: 0;
+}
+.p-kpi__inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+.p-kpi__item {
+    padding: 32px 24px;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+.p-kpi__num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+.p-kpi__num sup { font-size: 0.9rem; vertical-align: super; }
+.p-kpi__label {
+    font-size: 0.78rem;
+    color: var(--gray-500);
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+}
+.p-kpi__note {
+    font-size: 0.65rem;
+    color: var(--gray-500);
+    margin-top: 4px;
+    display: block;
+}
+
+/* ============================================================
+   課題セクション
+============================================================ */
+.p-issue__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+    margin-top: 48px;
+}
+.p-issue__card {
+    background: var(--white);
+    padding: 32px 28px;
+}
+.p-issue__card-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+.p-issue__card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+.p-issue__list li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    line-height: 1.6;
+}
+.p-issue__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 1px;
+    background: var(--gray-500);
+}
+
+/* ============================================================
+   サービスセクション
+============================================================ */
+.p-service__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+.p-service__card {
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 32px 28px;
+    transition: box-shadow 0.2s;
+}
+.p-service__card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+.p-service__num {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--gray-500);
+    margin-bottom: 10px;
+}
+.p-service__name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 14px;
+    line-height: 1.4;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 14px;
+}
+.p-service__desc {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+.p-service__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.p-service__tag {
+    font-size: 0.72rem;
+    background: var(--gray-100);
+    color: var(--gray-700);
+    padding: 4px 10px;
+    border-radius: 2px;
+    letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   強みセクション
+============================================================ */
+.p-strength { position: relative; }
+.p-strength__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-top: 48px;
+}
+.p-strength__img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: var(--r);
+    filter: grayscale(20%);
+}
+.p-strength__list { display: flex; flex-direction: column; gap: 28px; }
+.p-strength__item { display: flex; gap: 20px; }
+.p-strength__item-num {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--gray-500);
+    letter-spacing: 0.05em;
+    border-radius: 50%;
+    margin-top: 2px;
+}
+.p-strength__item-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+.p-strength__item-body {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    line-height: 1.75;
+}
+
+/* ============================================================
+   フロー（ステップ）
+============================================================ */
+.p-flow__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 48px;
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+}
+.p-flow__step {
+    padding: 28px 24px;
+    background: var(--white);
+    border-right: 1px solid var(--border);
+    position: relative;
+}
+.p-flow__step:last-child { border-right: none; }
+.p-flow__step::after {
+    content: '→';
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: var(--gray-300);
+    z-index: 1;
+}
+.p-flow__step:last-child::after { display: none; }
+.p-flow__step-num {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--gray-500);
+    letter-spacing: 0.14em;
+    margin-bottom: 10px;
+}
+.p-flow__step-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+.p-flow__step-body {
+    font-size: 0.8rem;
+    color: var(--gray-700);
+    line-height: 1.65;
+}
+
+/* ============================================================
+   比較テーブル
+============================================================ */
+.p-compare { margin-top: 48px; }
+.p-compare table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+.p-compare thead th {
+    padding: 14px 20px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    background: var(--black);   /* 葵色テーブルヘッダー */
+    color: var(--white);
+}
+.p-compare thead th:first-child { width: 22%; }
+.p-compare tbody tr { border-bottom: 1px solid var(--border); }
+.p-compare tbody tr:last-child { border-bottom: none; }
+.p-compare tbody td {
+    padding: 18px 20px;
+    vertical-align: top;
+    line-height: 1.6;
+}
+.p-compare tbody td:first-child {
+    font-weight: 700;
+    background: var(--gray-50);
+    color: var(--black);
+    font-size: 0.85rem;
+}
+.p-compare tbody td:nth-child(2) { color: var(--gray-700); }
+.p-compare tbody td:nth-child(3) { font-weight: 700; color: var(--black); background: rgba(0,0,0,0.015); }
+.p-compare__wrap {
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+}
+
+/* ============================================================
+   エリア
+============================================================ */
+.p-area__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 48px;
+}
+.p-area__map {
+    background: var(--gray-100);
+    border-radius: var(--r);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    position: relative;
+}
+/* SVG 地図（簡易版）*/
+.p-area__svg { width: 100%; height: 100%; }
+.p-area__list { display: flex; flex-direction: column; gap: 16px; }
+.p-area__item { display: flex; gap: 16px; align-items: flex-start; }
+.p-area__badge {
+    flex-shrink: 0;
+    background: var(--black);
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+    margin-top: 2px;
+}
+.p-area__item-body { font-size: 0.875rem; color: var(--gray-700); line-height: 1.65; }
+.p-area__item-title { font-weight: 700; color: var(--black); margin-bottom: 4px; }
+
+/* ============================================================
+   CTA バナー
+============================================================ */
+.p-cta {
+    background: var(--black);
+    padding: 64px 5%;
+    text-align: center;
+}
+.p-cta__title {
+    font-size: clamp(1.3rem, 3vw, 1.75rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+.p-cta__desc {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 32px;
+    line-height: 1.8;
+}
+.p-cta__btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* ============================================================
+   LINE セクション
+============================================================ */
+.p-line {
+    padding: 48px 5%;
+    background: var(--gray-50);
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+.p-line__title { font-size: 1.1rem; font-weight: 700; color: var(--black); margin-bottom: 10px; }
+.p-line__desc { font-size: 0.875rem; color: var(--gray-700); margin-bottom: 22px; line-height: 1.7; }
+.p-line__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #06C755;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 13px 28px;
+    border-radius: var(--r);
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.p-line__btn:hover { background: #05a847; }
+.p-line__icon { width: 22px; height: 22px; }
+
+/* ============================================================
+   フッター
+============================================================ */
+.l-footer {
+    background: var(--black-dark);
+    padding: 32px 5%;
+    text-align: center;
+}
+.l-footer__nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+.l-footer__nav a {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    padding: 4px 10px;
+    transition: color 0.15s;
+}
+.l-footer__nav a:hover { color: rgba(255,255,255,0.9); }
+.l-footer__copy {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+}
+
+/* ============================================================
+   フローティング LINE
+============================================================ */
+.floating-line {
+    position: fixed;
+    right: 20px;
+    bottom: 24px;
+    background: #06C755;
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 12px 18px;
+    border-radius: 40px;
+    z-index: 9999;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    transition: background 0.2s;
+    text-decoration: none;
+}
+.floating-line:hover { background: #05a847; }
+
+/* ============================================================
+   モバイル固定 CTA バー
+============================================================ */
+.mobile-cta-bar { display: none; }
+
+/* ============================================================
+   レスポンシブ
+============================================================ */
+@media (max-width: 900px) {
+    .p-service__grid { grid-template-columns: 1fr 1fr; }
+    .p-flow__steps { grid-template-columns: 1fr 1fr; }
+    .p-flow__step:nth-child(2) { border-right: none; }
+    .p-flow__step:nth-child(2)::after { display: none; }
+    .p-flow__step:nth-child(3) { border-right: 1px solid var(--border); }
+    .p-flow__step:nth-child(3)::after { display: block; }
+    .p-strength__grid { grid-template-columns: 1fr; }
+    .p-strength__img { order: -1; }
+    .p-area__inner { grid-template-columns: 1fr; }
+    .p-issue__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    /* ナビ */
+    .l-nav__toggle { display: flex; }
+    .l-nav__list {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        padding: 12px 0;
+        z-index: 800;
+        gap: 0;
+    }
+    .l-nav__list.is-open { display: flex; }
+    .l-nav__list { align-items: stretch; }
+    .l-nav__item a { white-space: nowrap; }
+    .l-nav__item a { padding: 12px 5%; border-radius: 0; font-size: 0.9rem; }
+    .l-nav__item--cta { margin: 8px 5% 4px; }
+    .l-nav__item--cta a { text-align: center; border-radius: var(--r); }
+    .l-header { position: sticky; }
+
+    /* モバイル固定バー */
+    .mobile-cta-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9000;
+        box-shadow: 0 -2px 12px rgba(0,0,0,0.12);
+    }
+    .mobile-cta-bar a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 8px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--white);
+        min-height: 52px;
+        padding-bottom: env(safe-area-inset-bottom, 14px);
+    }
+    .mobile-cta-bar .cta-tel  { background: var(--black); }
+    .mobile-cta-bar .cta-line { background: #06C755; }
+    .mobile-cta-bar .cta-form { background: var(--accent); }
+    body { padding-bottom: calc(52px + env(safe-area-inset-bottom, 0)); }
+    .floating-line { display: none; }
+
+    /* セクション */
+    .u-section { padding: 56px 0; }
+    .p-hero { min-height: 460px; }
+    .p-hero__title { font-size: 1.75rem; }
+    .p-kpi__inner { grid-template-columns: 1fr; }
+    .p-kpi__item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .p-kpi__item:last-child { border-bottom: none; }
+    .p-service__grid { grid-template-columns: 1fr; }
+    .p-flow__steps { grid-template-columns: 1fr; }
+    .p-flow__step { border-right: none; border-bottom: 1px solid var(--border); }
+    .p-flow__step:last-child { border-bottom: none; }
+    .p-flow__step::after { content: '↓'; right: auto; left: 24px; top: auto; bottom: -16px; transform: none; }
+    .p-flow__step:last-child::after { display: none; }
+    .p-compare table thead { display: none; }
+    .p-compare table, .p-compare tbody, .p-compare tr, .p-compare td { display: block; width: 100%; }
+    .p-compare tbody tr { border: none; margin-bottom: 12px; background: var(--white); border-radius: var(--r); overflow: hidden; border: 1px solid var(--border); }
+    .p-compare tbody td { border-bottom: 1px solid var(--border); padding: 12px 16px; }
+    .p-compare tbody td:last-child { border-bottom: none; }
+    .p-compare tbody td::before { content: attr(data-label); display: block; font-size: 0.7rem; font-weight: 700; color: var(--gray-500); margin-bottom: 4px; letter-spacing: 0.05em; }
+    .p-compare tbody td:first-child { background: var(--gray-50); }
+    .p-cta__btns { flex-direction: column; align-items: center; }
+    .c-btn { width: 100%; max-width: 320px; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .p-hero__btns .c-btn { width: 100%; justify-content: center; }
+    .l-footer__nav { gap: 0; }
+    .l-footer__nav a { font-size: 0.75rem; }
+}
+
+/* ============================================================
+   消防メイン化で追加したスタイル
+============================================================ */
+.p-hero__badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.p-hero__badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 5px 12px;
+    border-radius: var(--r);
+    letter-spacing: 0.04em;
+}
+.p-kpi__num--sm { font-size: 1.4rem; letter-spacing: -0.01em; }
+
+/* 法定点検 */
+.p-law__lead { margin-top: 14px; font-size: 0.9rem; color: var(--gray-700); }
+.p-law__note { margin-top: 12px; font-size: 0.75rem; color: var(--gray-500); }
+
+/* 料金 */
+.p-price__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 48px;
+    align-items: start;
+}
+.p-price__table { width: 100%; border-collapse: collapse; font-size: 0.9rem; border: 1px solid var(--border); }
+.p-price__table th, .p-price__table td { padding: 16px 20px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; line-height: 1.6; }
+.p-price__table th { background: var(--gray-50); font-weight: 700; color: var(--black); width: 58%; font-size: 0.85rem; }
+.p-price__table td { font-weight: 700; color: var(--black); }
+.p-price__note { margin-top: 12px; font-size: 0.75rem; color: var(--gray-500); line-height: 1.7; }
+.p-check li {
+    position: relative;
+    padding: 0 0 14px 26px;
+    font-size: 0.9rem;
+    color: var(--gray-700);
+    line-height: 1.7;
+}
+.p-check li::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 7px;
+    width: 12px;
+    height: 7px;
+    border-left: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    transform: rotate(-45deg);
+}
+.p-sub-heading { font-size: 1rem; font-weight: 700; color: var(--black); margin-bottom: 16px; }
+
+/* メーカー様からのご依頼業務（サブ） */
+.p-maker {
+    margin-top: 40px;
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    background: var(--white);
+}
+.p-maker__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.p-maker__item {
+    padding: 24px 20px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+.p-maker__item:nth-child(4n) { border-right: none; }
+.p-maker__item:nth-last-child(-n+4) { border-bottom: none; }
+.p-maker__num { font-size: 0.7rem; font-weight: 700; color: var(--gray-500); letter-spacing: 0.14em; margin-bottom: 8px; }
+.p-maker__name { font-size: 0.95rem; font-weight: 700; color: var(--black); line-height: 1.4; margin-bottom: 6px; }
+.p-maker__desc { font-size: 0.78rem; color: var(--gray-700); line-height: 1.6; }
+.p-maker__notice {
+    border-top: 1px solid var(--border);
+    padding: 16px 20px;
+    font-size: 0.8rem;
+    color: var(--gray-700);
+    background: var(--gray-50);
+    line-height: 1.7;
+}
+.p-maker__notice strong { color: var(--black); }
+
+.p-flow__steps--5 { grid-template-columns: repeat(5, 1fr); }
+
+@media (max-width: 900px) {
+    .p-maker__list { grid-template-columns: 1fr 1fr; }
+    .p-maker__item { border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); }
+    .p-maker__item:nth-child(2n) { border-right: none; }
+    .p-maker__item:nth-last-child(-n+4) { border-bottom: 1px solid var(--border); }
+    .p-maker__item:nth-last-child(-n+2) { border-bottom: none; }
+    .p-price__grid { grid-template-columns: 1fr; }
+    .p-flow__steps--5 { grid-template-columns: 1fr; }
+    .p-flow__steps--5 .p-flow__step { border-right: none; border-bottom: 1px solid var(--border); }
+    .p-flow__steps--5 .p-flow__step::after { content: '↓'; display: block; right: auto; left: 24px; top: auto; bottom: -16px; transform: none; }
+    .p-flow__steps--5 .p-flow__step:last-child::after { display: none; }
+}
+@media (max-width: 768px) {
+    .p-maker__list { grid-template-columns: 1fr; }
+    .p-maker__item, .p-maker__item:nth-last-child(-n+2) { border-right: none; border-bottom: 1px solid var(--border); }
+    .p-maker__item:last-child { border-bottom: none; }
+}
+
+/* ============================================================
+   点検結果報告のご案内ページ
+============================================================ */
+.p-page-hd { background: var(--black); padding: 56px 0 48px; }
+.p-page-hd__label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; color: var(--gray-300); text-transform: uppercase; margin-bottom: 12px; }
+.p-page-hd__title { font-size: clamp(1.5rem, 4vw, 2.1rem); font-weight: 700; color: var(--white); line-height: 1.4; }
+.p-page-hd__lead { margin-top: 14px; font-size: 0.95rem; color: rgba(255,255,255,0.75); max-width: 640px; line-height: 1.9; }
+.p-crumb { font-size: 0.75rem; color: var(--gray-500); padding: 14px 0; border-bottom: 1px solid var(--border); }
+.p-crumb a { text-decoration: underline; }
+.p-guide__lead { margin-top: 14px; font-size: 0.9rem; color: var(--gray-700); line-height: 1.85; }
+.p-guide__note { margin-top: 12px; font-size: 0.78rem; color: var(--gray-500); line-height: 1.7; }
+.p-guide__note a, .p-guide__lead a, .p-faq__a a { text-decoration: underline; }
+.p-guide__table { margin-top: 28px; }
+.p-faq { margin-top: 32px; border-top: 1px solid var(--border); }
+.p-faq__item { border-bottom: 1px solid var(--border); padding: 22px 0; }
+.p-faq__q { font-weight: 700; color: var(--black); font-size: 0.98rem; line-height: 1.6; padding-left: 28px; position: relative; }
+.p-faq__q::before { content: 'Q'; position: absolute; left: 0; top: 0; color: var(--accent); font-weight: 700; }
+.p-faq__a { margin-top: 8px; font-size: 0.9rem; color: var(--gray-700); line-height: 1.85; padding-left: 28px; position: relative; }
+.p-faq__a::before { content: 'A'; position: absolute; left: 0; top: 0; color: var(--gray-500); font-weight: 700; }
+.p-sources { margin-top: 16px; }
+.p-sources li { font-size: 0.82rem; color: var(--gray-700); margin-bottom: 6px; }
+.p-sources a { text-decoration: underline; }
+.p-print-btn { margin-top: 24px; }
+@media print {
+    .l-header, .l-footer, .floating-line, .mobile-cta-bar, .p-cta, .p-line, .p-print-btn, .p-crumb { display: none !important; }
+    .p-page-hd { background: none; padding: 0 0 16px; }
+    .p-page-hd__title, .p-page-hd__lead, .p-page-hd__label { color: #000; }
+    .u-section { padding: 20px 0; }
+    body { padding-bottom: 0; }
+}
+    </style>
+</head>
+<body>
+
+<!-- ========================================================
+     ヘッダー
+======================================================== -->
+<header class="l-header">
+    <div class="l-header__inner">
+        <a class="l-header__logo" href="index.html">
+            <img src="images/wing.JPEG" alt="株式会社上田" class="l-header__logo-img" width="220" height="176" loading="eager" fetchpriority="high">
+            <div class="l-header__logo-text">
+                <span class="l-header__logo-name">株式会社上田</span>
+                <span class="l-header__logo-en">UEDA Fire Safety &amp; Field Services</span>
+            </div>
+        </a>
+        <nav>
+            <button class="l-nav__toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="l-nav__list" id="navMenu">
+                <li class="l-nav__item"><a href="index.html#services">消防設備点検</a></li>
+                <li class="l-nav__item"><a href="index.html#price">料金</a></li>
+                <li class="l-nav__item"><a href="case.html">対応実績</a></li>
+                <li class="l-nav__item"><a href="area.html">対応エリア</a></li>
+                <li class="l-nav__item"><a href="faq.html">FAQ</a></li>
+                <li class="l-nav__item"><a href="blog.html">コラム</a></li>
+                <li class="l-nav__item"><a href="company.html">会社概要</a></li>
+                <li class="l-nav__item l-nav__item--cta"><a href="contact.html">点検のご相談</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<!-- ========================================================
+     ページ見出し
+======================================================== -->
+<section class="p-page-hd">
+    <div class="u-container">
+        <p class="p-page-hd__label">Inspection Report Guide</p>
+        <h1 class="p-page-hd__title">消防用設備等点検結果報告書<br>提出のご案内</h1>
+        <p class="p-page-hd__lead">消防署への報告は簡単です。建物の関係者様にご記入いただくのは、報告書の表紙1枚だけ。点検票など残りの書類は、点検後に株式会社上田からお渡しします。</p>
+    </div>
+</section>
+
+<div class="u-container">
+    <p class="p-crumb"><a href="index.html">ホーム</a> ＞ 点検結果報告書の提出のご案内</p>
+</div>
+
+<!-- ========================================================
+     はじめに
+======================================================== -->
+<section class="u-section">
+    <div class="u-container">
+        <h2 class="c-heading">
+            <span class="c-heading--sub">Overview</span>
+            上田が行うこと・関係者様にお願いすること
+        </h2>
+        <p class="p-guide__lead">点検結果の消防署への報告は、消防法 第17条の3の3により、建物の関係者様（所有者・管理者・占有者）が行うことと定められています。そのため、報告書の表紙のご記入と提出は、関係者様にお願いしております。</p>
+        <div class="p-compare p-guide__table">
+            <div class="p-compare__wrap">
+                <table>
+                    <thead>
+                        <tr><th>作業</th><th>内容</th><th>担当</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td data-label="作業">点検</td><td data-label="内容">消防用設備等の機器点検・総合点検</td><td data-label="担当"><strong>株式会社上田</strong></td></tr>
+                        <tr><td data-label="作業">点検票の作成</td><td data-label="内容">点検票・点検結果総括表・点検者一覧表</td><td data-label="担当"><strong>株式会社上田</strong></td></tr>
+                        <tr><td data-label="作業">報告書の表紙の記入</td><td data-label="内容">消防用設備等点検結果報告書（1枚）</td><td data-label="担当"><strong>建物の関係者様</strong></td></tr>
+                        <tr><td data-label="作業">消防署への提出</td><td data-label="内容">電子申請・郵送・窓口への持参</td><td data-label="担当"><strong>建物の関係者様</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================================
+     報告の期限
+======================================================== -->
+<section class="u-section u-bg-gray">
+    <div class="u-container">
+        <h2 class="c-heading">
+            <span class="c-heading--sub">Deadline</span>
+            報告の期限
+        </h2>
+        <p class="p-guide__lead">報告の頻度は、建物の用途で決まります。報告の時期が近づいたら、上田からお知らせします。</p>
+        <div class="p-compare p-guide__table">
+            <div class="p-compare__wrap">
+                <table>
+                    <thead>
+                        <tr><th>建物の用途</th><th>例</th><th>報告の頻度</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td data-label="建物の用途">特定防火対象物</td><td data-label="例">物品販売店舗、ホテル、病院、飲食店など</td><td data-label="報告の頻度"><strong>1年に1回</strong></td></tr>
+                        <tr><td data-label="建物の用途">非特定防火対象物</td><td data-label="例">共同住宅、事務所、工場、学校、駐車場など</td><td data-label="報告の頻度"><strong>3年に1回</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="p-guide__note">出典：<a href="https://www.tfd.metro.tokyo.lg.jp/lfe/office_adv/tenken_houkoku.html" target="_blank" rel="noopener">東京消防庁「消防用設備等点検報告制度」</a></p>
+    </div>
+</section>
+
+<!-- ========================================================
+     提出するもの
+======================================================== -->
+<section class="u-section">
+    <div class="u-container">
+        <h2 class="c-heading">
+            <span class="c-heading--sub">Documents</span>
+            提出するもの
+        </h2>
+        <p class="p-guide__lead">関係者様にご用意いただくのは、報告書の表紙1枚だけです。それ以外の書類は、点検後に上田からお渡しします。</p>
+        <div class="p-compare p-guide__table">
+            <div class="p-compare__wrap">
+                <table>
+                    <thead>
+                        <tr><th>書類</th><th>備考</th><th>用意する人</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td data-label="書類">消防用設備等（特殊消防用設備等）点検結果報告書（表紙）</td><td data-label="備考">東京消防庁の申請様式ページから入手できます。押印は不要です</td><td data-label="用意する人"><strong>関係者様</strong></td></tr>
+                        <tr><td data-label="書類">点検結果総括表</td><td data-label="備考">点検票を添付する場合は省略できます</td><td data-label="用意する人"><strong>上田</strong></td></tr>
+                        <tr><td data-label="書類">点検者一覧表</td><td data-label="備考">消防設備士が点検した場合に添付します</td><td data-label="用意する人"><strong>上田</strong></td></tr>
+                        <tr><td data-label="書類">各設備の点検票</td><td data-label="備考">消火器、自動火災報知設備など、設備ごとに作成します</td><td data-label="用意する人"><strong>上田</strong></td></tr>
+                        <tr><td data-label="書類">消防用設備等点検報告改修計画書</td><td data-label="備考">不備が見つかった場合のみ。改修の内容と日程は上田がご提案します</td><td data-label="用意する人"><strong>関係者様</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="p-guide__note">※ 提出する部数や、受付印のある控えの扱いは、消防署によって異なる場合があります。控えが必要な場合は、事前に所轄の消防署へご確認ください。</p>
+    </div>
+</section>
+
+<!-- ========================================================
+     記入例
+======================================================== -->
+<section class="u-section u-bg-gray">
+    <div class="u-container">
+        <h2 class="c-heading">
+            <span class="c-heading--sub">Example</span>
+            報告書の表紙の記入例
+        </h2>
+        <p class="p-guide__lead">表紙に記入するのは、関係者様の情報と建物の情報です。点検の内容に関わる項目は、上田がお渡しする点検票の内容をそのまま書き写してください。</p>
+        <div class="p-compare p-guide__table">
+            <div class="p-compare__wrap">
+                <table>
+                    <thead>
+                        <tr><th>項目</th><th>記入例</th><th>どこを見ればよいか</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td data-label="項目">報告日</td><td data-label="記入例">令和○年○月○日</td><td data-label="どこを見ればよいか">提出する日</td></tr>
+                        <tr><td data-label="項目">宛先</td><td data-label="記入例">○○消防署長 殿</td><td data-label="どこを見ればよいか">建物を管轄する消防署</td></tr>
+                        <tr><td data-label="項目">報告者の住所</td><td data-label="記入例">東京都○○区○○ 1-2-3</td><td data-label="どこを見ればよいか">所有者・管理者様の住所</td></tr>
+                        <tr><td data-label="項目">報告者の氏名</td><td data-label="記入例">株式会社○○ 代表取締役 ○○ ○○</td><td data-label="どこを見ればよいか">法人の場合は名称と代表者名</td></tr>
+                        <tr><td data-label="項目">報告者の電話番号</td><td data-label="記入例">03-0000-0000</td><td data-label="どこを見ればよいか">日中に連絡がつく番号</td></tr>
+                        <tr><td data-label="項目">防火対象物の所在</td><td data-label="記入例">東京都○○区○○ 4-5-6</td><td data-label="どこを見ればよいか">建物の所在地</td></tr>
+                        <tr><td data-label="項目">防火対象物の名称</td><td data-label="記入例">○○マンション</td><td data-label="どこを見ればよいか">建物の名称</td></tr>
+                        <tr><td data-label="項目">用途</td><td data-label="記入例">共同住宅</td><td data-label="どこを見ればよいか">点検票に記載した用途</td></tr>
+                        <tr><td data-label="項目">規模・構造</td><td data-label="記入例">鉄筋コンクリート造 地上3階 延べ面積○○㎡</td><td data-label="どこを見ればよいか">確認済証や登記簿など</td></tr>
+                        <tr><td data-label="項目">消防用設備等の種類</td><td data-label="記入例">消火器、自動火災報知設備、誘導灯</td><td data-label="どこを見ればよいか">上田がお渡しする点検票</td></tr>
+                        <tr><td data-label="項目">点検年月日</td><td data-label="記入例">令和○年○月○日</td><td data-label="どこを見ればよいか">上田がお渡しする点検票</td></tr>
+                        <tr><td data-label="項目">受付欄・経過欄</td><td data-label="記入例">記入しない</td><td data-label="どこを見ればよいか">消防署が記入します</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="p-guide__note">※ 様式の項目は改正されることがあります。記入の前に、<a href="https://www.tfd.metro.tokyo.lg.jp/lfe/office_adv/tenken_houkoku.html" target="_blank" rel="noopener">東京消防庁の申請様式</a>で最新の様式をご確認ください。</p>
+    </div>
+</section>
+
+<!-- ========================================================
+     提出方法
+======================================================== -->
+<section class="u-section">
+    <div class="u-container">
+        <h2 class="c-heading">
+            <span class="c-heading--sub">How to Submit</span>
+            提出方法
+        </h2>
+        <p class="p-guide__lead">提出先は、建物を管轄する消防署または出張所です。提出方法は次の3つから選べます。</p>
+        <div class="p-compare p-guide__table">
+            <div class="p-compare__wrap">
+                <table>
+                    <thead>
+                        <tr><th>方法</th><th>やり方</th><th>こんな方に</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td data-label="方法">電子申請</td><td data-label="やり方">東京消防庁の電子申請システムの専用受付フォームから提出</td><td data-label="こんな方に"><strong>消防署へ行く時間が取れない方</strong></td></tr>
+                        <tr><td data-label="方法">郵送</td><td data-label="やり方">管轄の消防署へ送付</td><td data-label="こんな方に"><strong>遠方にお住まいのオーナー様</strong></td></tr>
+                        <tr><td data-label="方法">窓口へ持参</td><td data-label="やり方">管轄の消防署・出張所の窓口へ提出</td><td data-label="こんな方に"><strong>その場で不備がないか確認したい方</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="p-guide__note">※ 都内に多数の事業所をお持ちの事業者様は、条件を満たせば東京消防庁 予防部査察課へ一括で報告できる場合があります。<br>出典：<a href="https://www.tfd.metro.tokyo.lg.jp/lfe/office_adv/tenken_houkoku.html" target="_blank" rel="noopener">東京消防庁「消防用設備等点検報告制度」</a></p>
+    </div>
+</section>
+
+<!-- ========================================================
+     よくあるご質問
+======================================================== -->
+<section class="u-section u-bg-gray">
+    <div class="u-container">
+        <h2 class="c-heading">
+            <span class="c-heading--sub">FAQ</span>
+            よくあるご質問
+        </h2>
+        <div class="p-faq">
+            <div class="p-faq__item">
+                <p class="p-faq__q">報告書の作成や提出を代行してもらえませんか？</p>
+                <p class="p-faq__a">報告書の表紙は関係者様の書類です。官公署に提出する書類を他人に代わって作成することは、行政書士法により行政書士の業務と定められています（第19条）。そのため、上田では表紙の作成と提出の代行はお引き受けしておりません。</p>
+            </div>
+            <div class="p-faq__item">
+                <p class="p-faq__q">自分で消防署に行く時間がありません。</p>
+                <p class="p-faq__a">電子申請か郵送をご利用ください。関係者様がご記入済みの書類であれば、上田がお預かりして消防署へお届けすることはできます（無償）。ただし、書類の修正や消防署とのやり取りは代わりに行えません。</p>
+            </div>
+            <div class="p-faq__item">
+                <p class="p-faq__q">書類の作成から全て任せたい場合は？</p>
+                <p class="p-faq__a">消防の手続きに詳しい行政書士をご紹介します。報酬は行政書士へ直接お支払いください。</p>
+            </div>
+            <div class="p-faq__item">
+                <p class="p-faq__q">報告しないとどうなりますか？</p>
+                <p class="p-faq__a">報告をしない、または虚偽の報告をした場合、消防法により30万円以下の罰金または拘留の対象となります（第44条第11号）。法人にも30万円以下の罰金が科されます（第45条第3号）。</p>
+            </div>
+            <div class="p-faq__item">
+                <p class="p-faq__q">報告した書類は保管した方がよいですか？</p>
+                <p class="p-faq__a">はい。次回の点検や消防署の立入検査の際に確認されることがあるため、点検票とあわせて保管してください。</p>
+            </div>
+        </div>
+        <div class="p-print-btn">
+            <button type="button" class="c-btn c-btn--primary" onclick="window.print()">このページを印刷する</button>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================================
+     出典
+======================================================== -->
+<section class="u-section--sm">
+    <div class="u-container">
+        <p class="p-sub-heading">出典</p>
+        <ul class="p-sources">
+            <li><a href="https://www.tfd.metro.tokyo.lg.jp/lfe/office_adv/tenken_houkoku.html" target="_blank" rel="noopener">東京消防庁「消防用設備等点検報告制度」</a></li>
+            <li><a href="https://www.pref.niigata.lg.jp/sec/shobo/1356849504952.html" target="_blank" rel="noopener">新潟県「消防用設備等の点検報告制度」（罰則）</a></li>
+            <li><a href="https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/youkou/g21705036.htm" target="_blank" rel="noopener">衆議院「行政書士法の一部を改正する法律案 要綱」</a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- ========================================================
+     CTA
+======================================================== -->
+<section class="p-cta">
+    <div class="p-cta__title">消防設備点検のご相談は、<br>株式会社上田へ。</div>
+    <p class="p-cta__desc">点検のお見積り、報告の時期のご確認など、<br>お気軽にお問い合わせください。お見積りは無料です。</p>
+    <div class="p-cta__btns">
+        <a href="contact.html" class="c-btn c-btn--accent">お問い合わせフォームを開く</a>
+        <a href="index.html#price" class="c-btn c-btn--outline">料金の目安を見る</a>
+    </div>
+</section>
+
+</main>
+
+<!-- ========================================================
+     フッター
+======================================================== -->
+<footer class="l-footer">
+    <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+        <a href="index.html#services">消防設備点検</a>
+        <a href="area.html">対応エリア</a>
+        <a href="case.html">対応実績</a>
+        <a href="faq.html">FAQ</a>
+        <a href="blog.html">コラム</a>
+        <a href="company.html">会社概要</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+    </nav>
+    <p class="l-footer__copy">&copy; 株式会社上田 UEDA Field Services. All Rights Reserved.</p>
+</footer>
+
+<!-- フローティング LINE -->
+<a class="floating-line" href="https://page.line.me/ovt4298c" target="_blank" rel="noopener">公式LINE</a>
+
+<!-- モバイル固定 CTA バー -->
+<div class="mobile-cta-bar" role="navigation" aria-label="クイックアクセス">
+    <a class="cta-tel" href="tel:09075515324">電話で相談</a>
+    <a class="cta-line" href="https://page.line.me/ovt4298c" target="_blank" rel="noopener">公式LINE</a>
+    <a class="cta-form" href="contact.html">お問い合わせ</a>
+</div>
+
+<script>
+(function() {
+    const toggle = document.getElementById('navToggle');
+    const menu   = document.getElementById('navMenu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', function() {
+        const isOpen = menu.classList.toggle('is-open');
+        toggle.classList.toggle('is-open', isOpen);
+        toggle.setAttribute('aria-expanded', isOpen);
+    });
+    // メニュー外クリックで閉じる
+    document.addEventListener('click', function(e) {
+        if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.remove('is-open');
+            toggle.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+})();
+</script>
+
+<script>
+// GA4 コンバージョン計測
+document.addEventListener('DOMContentLoaded', function(){
+    // 電話クリック
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(el){
+        el.addEventListener('click', function(){
+            gtag('event', 'conversion_tel', { event_category: 'contact', event_label: 'tel_click' });
+        });
+    });
+    // LINEクリック
+    document.querySelectorAll('a[href*="line.me"]').forEach(function(el){
+        el.addEventListener('click', function(){
+            gtag('event', 'conversion_line', { event_category: 'contact', event_label: 'line_click' });
+        });
+    });
+});
+</script>
+<script src="/js/budoux-ja.js" defer></script>
+</body>
+</html>
