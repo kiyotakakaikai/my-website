@@ -292,6 +292,50 @@ ul { list-style: none; }
 /* ===== 消防設備点検セクション（追加） ===== */
 .p-fire { margin-top: 80px; padding-top: 64px; border-top: 1px solid var(--border); }
 .p-fire--first { margin-top: 0; padding-top: 0; border-top: none; }
+/* メーカー様からのメンテナンス事業（サブ） */
+.p-maker {
+    margin-top: 40px;
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    background: var(--white);
+}
+.p-maker__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.p-maker__item {
+    padding: 24px 20px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+.p-maker__item:nth-child(4n) { border-right: none; }
+.p-maker__item:nth-last-child(-n+4) { border-bottom: none; }
+.p-maker__num { font-size: 0.7rem; font-weight: 700; color: var(--gray-500); letter-spacing: 0.14em; margin-bottom: 8px; }
+.p-maker__name { font-size: 0.95rem; font-weight: 700; color: var(--black); line-height: 1.4; margin-bottom: 6px; }
+.p-maker__desc { font-size: 0.78rem; color: var(--gray-700); line-height: 1.6; }
+.p-maker__notice {
+    border-top: 1px solid var(--border);
+    padding: 16px 20px;
+    font-size: 0.8rem;
+    color: var(--gray-700);
+    background: var(--gray-50);
+    line-height: 1.7;
+}
+.p-maker__notice strong { color: var(--black); }
+@media (max-width: 900px) {
+    .p-maker__list { grid-template-columns: 1fr 1fr; }
+    .p-maker__item { border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); }
+    .p-maker__item:nth-child(2n) { border-right: none; }
+    .p-maker__item:nth-last-child(-n+4) { border-bottom: 1px solid var(--border); }
+    .p-maker__item:nth-last-child(-n+2) { border-bottom: none; }
+}
+@media (max-width: 768px) {
+    .p-maker__list { grid-template-columns: 1fr; }
+    .p-maker__item, .p-maker__item:nth-last-child(-n+2) { border-right: none; border-bottom: 1px solid var(--border); }
+    .p-maker__item:last-child { border-bottom: none; }
+}
+.p-maker { text-align: left; }
+.p-case-sub { font-size: 1.05rem; font-weight: 700; color: var(--black); margin: 48px 0 20px; padding-left: 12px; border-left: 3px solid var(--accent); }
 .p-fire__eyebrow { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 10px; }
 .p-fire__title { font-size: clamp(1.3rem, 3vw, 1.75rem); font-weight: 700; color: var(--black); line-height: 1.4; margin-bottom: 14px; }
 .p-fire__lead { font-size: 0.95rem; color: var(--gray-700); max-width: 760px; margin-bottom: 28px; }
@@ -446,11 +490,60 @@ ul { list-style: none; }
                 </div>
             </section>
 
-            <!-- ===== メーカー様からのご依頼によるメンテナンス ===== -->
+            <!-- ===== メーカー様からのメンテナンス事業 ===== -->
             <section class="p-fire" id="maker" aria-labelledby="maker-title">
                 <span class="p-fire__eyebrow">FOR MANUFACTURERS</span>
-                <h2 class="p-fire__title" id="maker-title">メーカー様からのご依頼によるメンテナンス</h2>
+                <h2 class="p-fire__title" id="maker-title">メーカー様からのメンテナンス事業</h2>
                 <p class="p-fire__lead"><strong>メーカー様・発注元様からのご指定がある場合のみ対応しています。</strong><br>一般のお客様・管理会社様からの、これらの設備に関するご依頼・お問い合わせは受け付けておりません。<br>不具合の際は、各メーカー様の窓口へご連絡ください。</p>
+                <div class="p-maker">
+<div class="p-maker__list">
+                <div class="p-maker__item">
+                    <div class="p-maker__num">01</div>
+                    <div class="p-maker__name">宅配ボックス</div>
+                    <p class="p-maker__desc">設置・設定・修理・保守</p>
+                </div>
+                <div class="p-maker__item">
+                    <div class="p-maker__num">02</div>
+                    <div class="p-maker__name">インターホン</div>
+                    <p class="p-maker__desc">点検・部品交換</p>
+                    <!-- 「スイッチ・コンセント」は電気工事業の登録後に追記する
+                    <p class="p-maker__desc">スイッチ・コンセントの交換</p>
+                    -->
+                </div>
+                <div class="p-maker__item">
+                    <div class="p-maker__num">03</div>
+                    <div class="p-maker__name">業務用ランドリー</div>
+                    <p class="p-maker__desc">洗濯機・乾燥機の修理・保守</p>
+                </div>
+                <div class="p-maker__item">
+                    <div class="p-maker__num">04</div>
+                    <div class="p-maker__name">EV充電器</div>
+                    <p class="p-maker__desc">保守点検</p>
+                </div>
+                <div class="p-maker__item">
+                    <div class="p-maker__num">05</div>
+                    <div class="p-maker__name">太陽光発電設備</div>
+                    <p class="p-maker__desc">竣工検査・年次点検</p>
+                </div>
+                <div class="p-maker__item">
+                    <div class="p-maker__num">06</div>
+                    <div class="p-maker__name">コーヒーサーバー</div>
+                    <p class="p-maker__desc">定期メンテナンス・保守</p>
+                </div>
+                <div class="p-maker__item">
+                    <div class="p-maker__num">07</div>
+                    <div class="p-maker__name">電柱</div>
+                    <p class="p-maker__desc">点検・調査</p>
+                </div>
+                <div class="p-maker__item">
+                    <div class="p-maker__num">08</div>
+                    <div class="p-maker__name">ロボット（清掃・配膳・介護）</div>
+                    <p class="p-maker__desc">一次対応・故障診断・メーカーへの取次</p>
+                </div>
+            </div>
+                </div>
+
+                <h3 class="p-case-sub">対応事例</h3>
                 <p class="p-note">※守秘義務の関係上、具体的なエンドユーザー・企業名は伏せて掲載しております。</p>
 
             <div class="p-case-grid">
