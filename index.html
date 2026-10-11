@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="株式会社上田｜東京23区の消防設備点検・消火器点検（北区）">
     <meta property="og:description" content="消防設備士（全類）が、点検から点検票の作成、不良箇所の改修まで一括対応。東京23区のマンション・事務所・店舗の消防設備点検は株式会社上田へ。">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1549240944-d805191e700d?auto=format&fit=crop&q=80&w=1200">
+    <meta property="og:image" content="https://uedakai.com/images/site/og-image.jpg">
     <meta property="og:url" content="https://uedakai.com/">
     <meta property="og:locale" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image">
@@ -276,7 +276,7 @@ ul { list-style: none; }
     position: absolute;
     inset: 0;
     background-image:
-        url('https://images.unsplash.com/photo-1549240944-d805191e700d?auto=format&fit=crop&q=60&w=1400');
+        url('images/site/electrical-room-extinguishers.jpg');
     background-size: cover;
     background-position: center top;
     opacity: 0.45;
@@ -942,6 +942,13 @@ ul { list-style: none; }
     .p-maker__item, .p-maker__item:nth-last-child(-n+2) { border-right: none; border-bottom: 1px solid var(--border); }
     .p-maker__item:last-child { border-bottom: none; }
 }
+
+/* 点検の現場から（写真） */
+.p-photo__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+.p-photo__item { margin: 0; }
+.p-photo__img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--r); background: var(--gray-100); }
+.p-photo__cap { margin-top: 10px; font-size: 0.82rem; color: var(--gray-700); line-height: 1.6; }
+@media (max-width: 900px) { .p-photo__grid { grid-template-columns: 1fr 1fr; } }
     </style>
 </head>
 <body>
@@ -1187,9 +1194,39 @@ ul { list-style: none; }
 </section>
 
 <!-- ========================================================
-     メーカー様からのメンテナンス事業（サブ・受付なし）
+     点検の現場から（写真）
 ======================================================== -->
 <section class="u-section u-bg-gray">
+    <div class="u-container">
+        <h2 class="c-heading">
+            <span class="c-heading--sub">Field Photos</span>
+            点検の現場から
+        </h2>
+        <div class="p-photo__grid">
+            <figure class="p-photo__item">
+                <img class="p-photo__img" src="images/site/fire-extinguisher-box.jpg" alt="屋上に設置された消火器格納箱" width="901" height="1600" loading="lazy" decoding="async">
+                <figcaption class="p-photo__cap">消火器・格納箱</figcaption>
+            </figure>
+            <figure class="p-photo__item">
+                <img class="p-photo__img" src="images/site/sprinkler-head.jpg" alt="天井に設置されたスプリンクラーヘッド" width="1067" height="1600" loading="lazy" decoding="async">
+                <figcaption class="p-photo__cap">スプリンクラー設備</figcaption>
+            </figure>
+            <figure class="p-photo__item">
+                <img class="p-photo__img" src="images/site/halogen-manual-start.jpg" alt="ハロゲン化物消火設備の手動起動装置" width="901" height="1600" loading="lazy" decoding="async">
+                <figcaption class="p-photo__cap">ハロゲン化物消火設備</figcaption>
+            </figure>
+            <figure class="p-photo__item">
+                <img class="p-photo__img" src="images/site/electrical-room-extinguishers.jpg" alt="電気室に配置された消火器" style="object-position: 8% 50%;" width="1600" height="901" loading="lazy" decoding="async">
+                <figcaption class="p-photo__cap">電気室の消火器</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================================
+     メーカー様からのメンテナンス事業（サブ・受付なし）
+======================================================== -->
+<section class="u-section">
     <div class="u-container">
         <h2 class="c-heading">
             <span class="c-heading--sub">For Manufacturers</span>
@@ -1250,7 +1287,7 @@ ul { list-style: none; }
 <!-- ========================================================
      対応エリア
 ======================================================== -->
-<section class="u-section">
+<section class="u-section u-bg-gray">
     <div class="u-container">
         <h2 class="c-heading">
             <span class="c-heading--sub">Service Area</span>
