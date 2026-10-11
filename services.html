@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>設備保守｜株式会社上田 UEDA Field Services</title>
+    <title>防災サービス｜株式会社上田（東京23区の消防設備点検）</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
@@ -11,11 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <meta name="description" content="消防設備点検・電気設備点検・エアコン工事・宅配BOX/EV充電器/コインランドリー/太陽光の認定保守まで。首都圏の保守運営をワンストップで代行する株式会社上田の事業内容をご紹介します。">
+    <meta name="description" content="消防設備士（全類）が、東京23区の消防設備点検・消火器点検・自動火災報知設備の点検から、点検票の作成、不良箇所の改修、テナント工事に伴う消防対応まで一括でお引き受けします。株式会社上田の防災サービスのご案内です。">
     <link rel="canonical" href="https://uedakai.com/services.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="設備保守｜株式会社上田 UEDA Field Services">
-    <meta property="og:description" content="消防設備点検・電気設備点検・エアコン工事・宅配BOX/EV充電器/コインランドリー/太陽光の認定保守まで。首都圏の保守運営をワンストップで代行する株式会社上田の事業内容をご紹介します。">
+    <meta property="og:title" content="防災サービス｜株式会社上田">
+    <meta property="og:description" content="消防設備士（全類）が、東京23区の消防設備点検・消火器点検・自動火災報知設備の点検から、点検票の作成、不良箇所の改修、テナント工事に伴う消防対応まで一括でお引き受けします。株式会社上田の防災サービスのご案内です。">
     <meta property="og:url" content="https://uedakai.com/services.html">
     <meta property="og:image" content="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1200">
     <meta property="og:locale" content="ja_JP">
@@ -34,7 +34,7 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         {"@type":"ListItem","position":1,"name":"トップ","item":"https://uedakai.com/"},
-        {"@type":"ListItem","position":2,"name":"設備保守","item":"https://uedakai.com/services.html"}
+        {"@type":"ListItem","position":2,"name":"防災サービス","item":"https://uedakai.com/services.html"}
       ]
     }
     </script>
@@ -42,7 +42,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "設備保守・メンテナンスサービス",
+      "name": "消防設備点検・防災サービス",
       "provider": {
         "@type": "LocalBusiness",
         "name": "株式会社上田",
@@ -55,9 +55,9 @@
           "addressCountry": "JP"
         }
       },
-      "serviceType": ["消防設備点検", "電気設備点検", "空調工事", "宅配BOX保守", "EV充電器保守", "コインランドリー保守", "太陽光発電保守"],
-      "areaServed": ["東京都", "埼玉県", "千葉県", "神奈川県"],
-      "description": "消防設備点検・電気設備点検・エアコン工事・宅配BOX/EV充電器/コインランドリー/太陽光の認定保守まで。首都圏の保守運営をワンストップで代行します。"
+      "serviceType": ["消防設備点検", "消火器点検", "自動火災報知設備点検", "消防設備の改修", "着工届"],
+      "areaServed": "東京都23区",
+      "description": "消防設備士（全類）が、東京23区の消防設備点検・消火器点検・自動火災報知設備の点検から、点検票の作成、不良箇所の改修、テナント工事に伴う消防対応まで一括でお引き受けします。株式会社上田の防災サービスのご案内です。"
     }
     </script>
     <style>
@@ -407,6 +407,14 @@ ul { list-style: none; }
     .p-svc__head { padding: 20px 24px; }
     .p-svc__body { padding: 24px; }
 }
+.p-flow__steps--5 { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 900px) {
+    .p-flow__steps--5 { grid-template-columns: 1fr; }
+    .p-flow__steps--5 .p-flow__step { border-right: none; border-bottom: 1px solid var(--border); }
+    .p-flow__steps--5 .p-flow__step::after { content: '↓'; display: block; right: auto; left: 24px; top: auto; bottom: -16px; transform: none; }
+    .p-flow__steps--5 .p-flow__step:last-child { border-bottom: none; }
+    .p-flow__steps--5 .p-flow__step:last-child::after { display: none; }
+}
     </style>
 </head>
 <body>
@@ -427,7 +435,7 @@ ul { list-style: none; }
             </button>
             <ul class="l-nav__list" id="navMenu" role="menubar">
 
-                <li class="l-nav__item is-active"><a href="services.html">設備保守</a></li>
+                <li class="l-nav__item is-active"><a href="services.html">サービス</a></li>
                 <li class="l-nav__item"><a href="case.html">対応実績</a></li>
                 <li class="l-nav__item"><a href="area.html">対応エリア</a></li>
                 <li class="l-nav__item"><a href="faq.html">FAQ</a></li>
@@ -445,46 +453,46 @@ ul { list-style: none; }
 <div class="p-page-header">
     <div class="p-page-header__inner">
         <p class="p-page-header__label">Services</p>
-        <h1 class="p-page-header__title">事業内容・サービス体制</h1>
-        <p class="p-page-header__desc">消防設備・設備保守を中心に、首都圏の保守運営をワンストップで代行</p>
+        <h1 class="p-page-header__title">防災サービス</h1>
+        <p class="p-page-header__desc">消防設備士（全類）が、東京23区の消防設備点検から点検票の作成、不良箇所の改修まで一括でお引き受けします</p>
     </div>
 </div>
 
 <!-- ============================================================
-     ご依頼可能な事業
+     防災サービス
 ============================================================ -->
 <section class="u-section">
     <div class="u-container">
         <h2 class="c-heading">
-            <span class="c-heading--sub">Direct Services</span>
-            ご依頼可能な事業
+            <span class="c-heading--sub">Fire Safety Services</span>
+            ご依頼いただける防災サービス
         </h2>
         <p style="margin-top: 24px; color: var(--gray-700); font-size: 0.9rem; line-height: 1.8;">
-            下記の事業については、法人様・管理会社様からのご相談を随時受け付けております。対応エリアは原則として東京23区内です。周辺地域は別途ご相談ください。
+            対応エリアは東京23区内です。点検は原則2名体制で伺います。料金の目安は<a href="index.html#price" style="text-decoration:underline;">トップページ</a>をご覧ください。
         </p>
 
         <!-- SERVICE 01 -->
         <div class="p-svc" style="margin-top: 40px;">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 01</span>
-                <h2 class="p-svc__name">電気設備 点検・一次対応</h2>
+                <h2 class="p-svc__name">消防設備点検（機器点検・総合点検）</h2>
             </div>
             <div class="p-svc__body">
-                <p class="p-svc__lead">電気工事の有資格者が対応します。電気設備の点検・不具合の一次確認を行います。</p>
+                <p class="p-svc__lead">マンション・事務所・店舗などの消防用設備等を、法令に基づいて点検します。点検票の作成は料金に含まれます。</p>
                 <div class="p-svc__cols">
                     <div>
                         <p class="p-svc__col-title">主な対応・作業内容</p>
                         <ul class="p-svc__list">
-                            <li>照明・コンセント・スイッチまわりの点検、不具合箇所の調査と報告</li>
-                            <li>ランプ（電球・蛍光灯・LEDランプ）の交換</li>
-                            <li>分電盤まわりの目視点検</li>
+                            <li>機器点検（6か月に1回）・総合点検（1年に1回）</li>
+                            <li>点検票（点検結果総括表・点検者一覧表を含む）の作成</li>
+                            <li>消防署への報告期限のお知らせ</li>
                         </ul>
                     </div>
                     <div>
                         <p class="p-svc__col-title">ご提供価値</p>
                         <ul class="p-svc__list">
-                            <li>小規模案件から柔軟に対応、ボリュームを問わずご相談可能</li>
-                            <li>有資格者による確実な点検で、安全と安心を両立</li>
+                            <li>年2回の定期点検の窓口を1社にまとめられます</li>
+                            <li>報告書の提出方法は「<a href="report-guide.html" style="text-decoration:underline;">提出のご案内</a>」でご説明します</li>
                         </ul>
                     </div>
                 </div>
@@ -495,25 +503,24 @@ ul { list-style: none; }
         <div class="p-svc">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 02</span>
-                <h2 class="p-svc__name">消防設備点検・工事 応援現場サポート</h2>
+                <h2 class="p-svc__name">消火器の点検・交換</h2>
             </div>
             <div class="p-svc__body">
-                <p class="p-svc__lead">消防設備士の有資格者が在籍（全類対応）。人手不足や繁忙期に悩む同業者様・ビル管理会社様向けに、確実な点検・施工の応援サポートを提供します。</p>
+                <p class="p-svc__lead">消火器1本から伺います。製造年・使用期限を1本ずつ確認し、期限切れや不良の消火器は交換・回収までご提案します。</p>
                 <div class="p-svc__cols">
                     <div>
                         <p class="p-svc__col-title">主な対応・作業内容</p>
                         <ul class="p-svc__list">
-                            <li>水系設備（消火栓・スプリンクラー等）の点検・施工補助</li>
-                            <li>自動火災報知設備の感知器作動試験・復旧確認サポート</li>
-                            <li>消火器の配置・外観点検および法定交換・設置作業</li>
-                            <li>その他消防設備全般の応援現場サポート</li>
+                            <li>外観・設置状況・製造年・使用期限の確認</li>
+                            <li>期限切れ・不良の消火器の交換</li>
+                            <li>古い消火器の回収</li>
                         </ul>
                     </div>
                     <div>
                         <p class="p-svc__col-title">ご提供価値</p>
                         <ul class="p-svc__list">
-                            <li>有資格者による確実な現場対応で、点検品質の維持と効率化に貢献</li>
-                            <li>大型案件や工期がタイトな現場の一時的な人員不足を機動的に解消</li>
+                            <li>1本から対応します</li>
+                            <li>写真付きで結果をご報告します</li>
                         </ul>
                     </div>
                 </div>
@@ -524,24 +531,107 @@ ul { list-style: none; }
         <div class="p-svc">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 03</span>
-                <h2 class="p-svc__name">ルームエアコン設置・取り外し（空調工事）</h2>
+                <h2 class="p-svc__name">自動火災報知設備の点検</h2>
             </div>
             <div class="p-svc__body">
-                <p class="p-svc__lead">第二種電気工事士の資格保持者が、住宅向けルームエアコンの設置・移設・入替工事に対応します（業務用エアコンは対象外）。</p>
+                <p class="p-svc__lead">受信機・感知器・発信機・音響装置を点検します。住戸内の感知器点検は、管理会社様と事前に日程を調整して実施します。</p>
                 <div class="p-svc__cols">
                     <div>
                         <p class="p-svc__col-title">主な対応・作業内容</p>
                         <ul class="p-svc__list">
-                            <li>冷媒ガスの適正回収および規定量の確実な充填</li>
-                            <li>冷媒配管施工およびドレン排水管の適切な勾配設定</li>
-                            <li>電源・内外接続配線の安全接続および動作確認テスト</li>
+                            <li>受信機・感知器・発信機・音響装置の作動確認</li>
+                            <li>住戸内の感知器点検（事前告知・日程調整）</li>
+                            <li>誘導灯の点検</li>
                         </ul>
                     </div>
                     <div>
                         <p class="p-svc__col-title">ご提供価値</p>
                         <ul class="p-svc__list">
-                            <li>冷媒ガス漏れ・ドレン水漏れトラブルを徹底防止</li>
-                            <li>夏冬ピーク需要期にも、快適な住空間を支えます</li>
+                            <li>入居者様への告知から日程調整まで、管理会社様と連携して進めます</li>
+                            <li>不良箇所は写真で記録し、改修までご提案します</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SERVICE 04 -->
+        <div class="p-svc">
+            <div class="p-svc__head">
+                <span class="p-svc__num">SERVICE 04</span>
+                <h2 class="p-svc__name">不良箇所の改修・整備</h2>
+            </div>
+            <div class="p-svc__body">
+                <p class="p-svc__lead">点検や消防署の立入検査で指摘された不備を、甲種消防設備士が改修します。写真と根拠を添えてお見積りします。</p>
+                <div class="p-svc__cols">
+                    <div>
+                        <p class="p-svc__col-title">主な対応・作業内容</p>
+                        <ul class="p-svc__list">
+                            <li>指摘事項の是正</li>
+                            <li>感知器の交換</li>
+                            <li>誘導灯のバッテリー交換</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="p-svc__col-title">ご提供価値</p>
+                        <ul class="p-svc__list">
+                            <li>点検から改修まで同じ会社で完結します</li>
+                            <li>写真と根拠付きのお見積りで、改修の必要性が分かります</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SERVICE 05 -->
+        <div class="p-svc">
+            <div class="p-svc__head">
+                <span class="p-svc__num">SERVICE 05</span>
+                <h2 class="p-svc__name">テナント工事に伴う消防対応</h2>
+            </div>
+            <div class="p-svc__body">
+                <p class="p-svc__lead">内装工事に合わせた感知器の移設・増設と、甲種消防設備士による着工届の提出をまとめてお引き受けします。着工の2週間前までにご相談ください。</p>
+                <div class="p-svc__cols">
+                    <div>
+                        <p class="p-svc__col-title">主な対応・作業内容</p>
+                        <ul class="p-svc__list">
+                            <li>感知器の移設・増設</li>
+                            <li>甲種消防設備士による着工届の提出</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="p-svc__col-title">ご提供価値</p>
+                        <ul class="p-svc__list">
+                            <li>内装会社様の工程に合わせて対応します</li>
+                            <li>消防対応の窓口を1社にまとめられます</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SERVICE 06 -->
+        <div class="p-svc">
+            <div class="p-svc__head">
+                <span class="p-svc__num">SERVICE 06</span>
+                <h2 class="p-svc__name">点検会社様への応援</h2>
+            </div>
+            <div class="p-svc__body">
+                <p class="p-svc__lead">繁忙期の応援や、有資格者が不足している現場に1日単位で伺います。土曜日も対応可能です。</p>
+                <div class="p-svc__cols">
+                    <div>
+                        <p class="p-svc__col-title">主な対応・作業内容</p>
+                        <ul class="p-svc__list">
+                            <li>水系設備（消火栓・スプリンクラー等）の点検補助</li>
+                            <li>自動火災報知設備の感知器作動試験・復旧確認</li>
+                            <li>消火器の点検・交換作業</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="p-svc__col-title">ご提供価値</p>
+                        <ul class="p-svc__list">
+                            <li>消防設備士（全類）が対応します</li>
+                            <li>1日単位・土曜日でも伺えます</li>
                         </ul>
                     </div>
                 </div>
@@ -551,68 +641,89 @@ ul { list-style: none; }
 </section>
 
 <!-- ============================================================
-     認定パートナー事業
+     メーカー様からのご依頼業務
 ============================================================ -->
 <section class="u-section u-bg-gray">
     <div class="u-container">
         <h2 class="c-heading">
-            <span class="c-heading--sub">Authorized Partners</span>
-            対応実績・認定パートナー事業
+            <span class="c-heading--sub">For Manufacturers</span>
+            メーカー様からのご依頼業務
         </h2>
+        <p style="margin-top: 24px; color: var(--gray-700); font-size: 0.9rem; line-height: 1.8;">防災サービスのほかに、設備メーカー様からの指定に基づき、以下の保守・点検にも対応しています。</p>
         <div class="p-partner__note" style="margin-top: 24px;">
-            <strong>※ メーカー様経由のご依頼のみ対応しております。</strong><br>
-            恐れ入りますが、エンドユーザー様・管理会社様からの直接のお問い合わせには対応できかねますので、あらかじめご了承ください。
+            <strong>メーカー様・発注元様からのご指定がある場合のみ対応しています。</strong><br>一般のお客様・管理会社様からの、これらの設備に関するご依頼・お問い合わせは受け付けておりません。<br>不具合の際は、各メーカー様の窓口へご連絡ください。
         </div>
         <div class="p-partner__grid">
             <div class="p-partner__card">
-                <p class="p-partner__name">宅配ボックス 巡回メンテナンス</p>
-                <p class="p-partner__desc">国内最大手の宅配ボックスメーカー様の認定オペレーターとして、設置・設定・保守に対応しています。</p>
+                <p class="p-partner__name">01 宅配ボックス</p>
+                <p class="p-partner__desc">設置・設定・修理・保守</p>
             </div>
             <div class="p-partner__card">
-                <p class="p-partner__name">コインランドリー 巡回メンテナンス</p>
-                <p class="p-partner__desc">国内外大手のランドリー機器メーカー様の認定オペレーターとして、フィルター清掃・駆動部点検等に対応しています。</p>
+                <p class="p-partner__name">02 インターホン</p>
+                <p class="p-partner__desc">点検・部品交換</p>
             </div>
             <div class="p-partner__card">
-                <p class="p-partner__name">EV充電器 メンテナンス</p>
-                <p class="p-partner__desc">国内最大手のEV充電器メーカー様の認定オペレーターとして、設置・保守に対応しています。</p>
+                <p class="p-partner__name">03 業務用ランドリー</p>
+                <p class="p-partner__desc">洗濯機・乾燥機の修理・保守</p>
             </div>
             <div class="p-partner__card">
-                <p class="p-partner__name">太陽光発電設備 外観点検</p>
-                <p class="p-partner__desc">国内大手の太陽光パネルメーカー様の認定案件として、外観点検・不具合報告に対応しています。</p>
+                <p class="p-partner__name">04 EV充電器</p>
+                <p class="p-partner__desc">保守点検</p>
+            </div>
+            <div class="p-partner__card">
+                <p class="p-partner__name">05 太陽光発電設備</p>
+                <p class="p-partner__desc">竣工検査・年次点検</p>
+            </div>
+            <div class="p-partner__card">
+                <p class="p-partner__name">06 コーヒーサーバー</p>
+                <p class="p-partner__desc">定期メンテナンス・保守</p>
+            </div>
+            <div class="p-partner__card">
+                <p class="p-partner__name">07 電柱</p>
+                <p class="p-partner__desc">点検・調査</p>
+            </div>
+            <div class="p-partner__card">
+                <p class="p-partner__name">08 ロボット（清掃・配膳・介護）</p>
+                <p class="p-partner__desc">一次対応・故障診断・メーカーへの取次</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ============================================================
-     標準フロー
+     ご依頼の流れ
 ============================================================ -->
 <section class="u-section">
     <div class="u-container">
         <h2 class="c-heading">
-            <span class="c-heading--sub">Workflow</span>
-            標準フィールドサービス運用フロー
+            <span class="c-heading--sub">Process</span>
+            ご依頼の流れ
         </h2>
-        <div class="p-flow__steps">
+        <div class="p-flow__steps p-flow__steps--5">
             <div class="p-flow__step">
                 <p class="p-flow__step-num">STEP 01</p>
-                <p class="p-flow__step-title">案件受付・要件確認</p>
-                <p class="p-flow__step-body">設備種別・対象エリア・件数・スケジュールをヒアリングします。</p>
+                <p class="p-flow__step-title">お問い合わせ</p>
+                <p class="p-flow__step-body">建物の所在地・用途・規模をお知らせください。フォーム・LINE・お電話で承ります。</p>
             </div>
             <div class="p-flow__step">
                 <p class="p-flow__step-num">STEP 02</p>
-                <p class="p-flow__step-title">技術者の選定・手配</p>
-                <p class="p-flow__step-body">案件に最適な有資格者を選定・スケジュール調整します。</p>
+                <p class="p-flow__step-title">お見積り</p>
+                <p class="p-flow__step-body">設備の内容を確認し、お見積りをご提示します。必要に応じて現地を確認します。</p>
             </div>
             <div class="p-flow__step">
                 <p class="p-flow__step-num">STEP 03</p>
-                <p class="p-flow__step-title">現地施工・データ回収</p>
-                <p class="p-flow__step-body">現場での点検・施工を実施し、写真・データを確実に回収します。</p>
+                <p class="p-flow__step-title">点検の実施</p>
+                <p class="p-flow__step-body">事前に日程を告知し、2名体制で点検します。結果は写真で記録します。</p>
             </div>
             <div class="p-flow__step">
                 <p class="p-flow__step-num">STEP 04</p>
-                <p class="p-flow__step-title">報告書作成・一括提出</p>
-                <p class="p-flow__step-body">指定フォーマットで報告書を作成し、まとめて提出します。</p>
+                <p class="p-flow__step-title">点検票のお渡し</p>
+                <p class="p-flow__step-body">点検票をお渡しします。消防署への報告は建物の関係者様から行っていただきます（<a href="report-guide.html" style="text-decoration:underline;">提出のご案内</a>）。</p>
+            </div>
+            <div class="p-flow__step">
+                <p class="p-flow__step-num">STEP 05</p>
+                <p class="p-flow__step-title">改修のご提案</p>
+                <p class="p-flow__step-body">不良箇所があれば、写真と根拠を添えて改修をご提案します。</p>
             </div>
         </div>
     </div>
@@ -620,17 +731,17 @@ ul { list-style: none; }
 
 <!-- CTA -->
 <section class="p-cta">
-    <p class="p-cta__title">まずは、お気軽にご相談ください。</p>
-    <p class="p-cta__desc">保守委託・協力会社登録・フィールドサービス体制の構築など、<br>ご要件に応じて個別にご案内します。</p>
+    <p class="p-cta__title">消防設備点検のご相談は、<br>株式会社上田へ。</p>
+    <p class="p-cta__desc">点検のお見積り、指摘事項の改修、テナント工事に伴う消防対応、点検会社様の応援など、<br>お気軽にお問い合わせください。お見積りは無料です。</p>
     <div class="p-cta__btns">
-        <a href="contact.html" class="c-btn c-btn--accent">お問い合わせフォームを開く</a>
+        <a href="contact.html" class="c-btn c-btn--accent">点検の見積りを依頼する</a>
     </div>
 </section>
 
 <!-- LINE -->
 <section class="p-line">
     <div class="p-line__title">公式LINEでもご相談いただけます</div>
-    <p class="p-line__desc">保守契約のご相談、消防設備点検、電気設備保守、協力会社登録など、<br>お気軽にメッセージください。</p>
+    <p class="p-line__desc">消防設備点検のお見積り、改修のご相談、点検会社様の応援依頼など、<br>お気軽にメッセージください。</p>
     <a href="https://page.line.me/ovt4298c" target="_blank" rel="noopener" class="p-line__btn">
         <svg class="p-line__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.36 5.43 3.5 7.18V22l3.9-2.14c.83.23 1.7.36 2.6.36 5.52 0 10-4.03 10-9S17.52 2 12 2z"/></svg>
         公式LINEで相談する
@@ -639,10 +750,11 @@ ul { list-style: none; }
 
 </main>
 
+
 <!-- フッター -->
 <footer class="l-footer">
     <nav class="l-footer__nav" aria-label="フッターナビゲーション">
-        <a href="services.html">設備保守</a>
+        <a href="services.html">サービス</a>
         <a href="area.html">対応エリア</a>
         <a href="case.html">対応実績</a>
         <a href="faq.html">FAQ</a>
