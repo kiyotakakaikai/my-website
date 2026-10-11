@@ -11,11 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <meta name="description" content="東京23区・埼玉・千葉・神奈川での宅配BOX設置、EV充電器工事、太陽光発電設備点検、コインランドリー巡回保守など、株式会社上田の対応実績・対応事例をご紹介します。">
+    <meta name="description" content="東京23区・埼玉・千葉・神奈川での宅配BOX設置、EV充電器点検、太陽光発電設備点検、コインランドリー巡回保守、消火器をはじめとする消防設備点検など、株式会社上田の対応実績・対応事例をご紹介します。">
     <link rel="canonical" href="https://uedakai.com/case.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="対応実績・対応事例｜株式会社上田 UEDA Field Services">
-    <meta property="og:description" content="東京23区・埼玉・千葉・神奈川での宅配BOX設置、EV充電器工事、太陽光発電設備点検、コインランドリー巡回保守など、株式会社上田の対応実績・対応事例をご紹介します。">
+    <meta property="og:description" content="東京23区・埼玉・千葉・神奈川での宅配BOX設置、EV充電器点検、太陽光発電設備点検、コインランドリー巡回保守、消火器をはじめとする消防設備点検など、株式会社上田の対応実績・対応事例をご紹介します。">
     <meta property="og:url" content="https://uedakai.com/case.html">
     <meta property="og:image" content="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&q=80&w=1200">
     <meta property="og:locale" content="ja_JP">
@@ -286,6 +286,34 @@ ul { list-style: none; }
 .p-mobile-bar__form { background: var(--accent); }
 @media (min-width: 860px) { .p-mobile-bar { display: none !important; } .p-float-line { display: flex; } }
 @media (max-width: 859px) { .p-float-line { display: none; } .p-mobile-bar { display: flex; } body { padding-bottom: 56px; } }
+
+/* ===== 消防設備点検セクション（追加） ===== */
+.p-fire { margin-top: 80px; padding-top: 64px; border-top: 1px solid var(--border); }
+.p-fire__eyebrow { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 10px; }
+.p-fire__title { font-size: clamp(1.3rem, 3vw, 1.75rem); font-weight: 700; color: var(--black); line-height: 1.4; margin-bottom: 14px; }
+.p-fire__lead { font-size: 0.95rem; color: var(--gray-700); max-width: 760px; margin-bottom: 28px; }
+.p-fire__badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
+.p-fire__badge { font-size: 0.78rem; font-weight: 700; color: var(--black); border: 1px solid var(--black); padding: 4px 12px; border-radius: 2px; }
+.p-fire__h3 { font-size: 1.1rem; font-weight: 700; color: var(--black); margin-bottom: 20px; padding-left: 12px; border-left: 3px solid var(--accent); line-height: 1.4; }
+.p-flow { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 56px; }
+@media (max-width: 860px) { .p-flow { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .p-flow { grid-template-columns: 1fr; } }
+.p-flow__step { border: 1px solid var(--border); border-top: 3px solid var(--black); border-radius: 2px; padding: 20px 20px 22px; background: var(--white); }
+.p-flow__step--next { border-top-color: var(--accent); background: var(--gray-50); }
+.p-flow__num { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; color: var(--gray-500); margin-bottom: 6px; }
+.p-flow__step--next .p-flow__num { color: var(--accent); }
+.p-flow__name { font-size: 1rem; font-weight: 700; color: var(--black); margin-bottom: 8px; line-height: 1.45; }
+.p-flow__text { font-size: 0.86rem; color: var(--gray-700); line-height: 1.7; }
+.p-fire__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 16px; }
+@media (max-width: 740px) { .p-fire__cols { grid-template-columns: 1fr; } }
+.p-price { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.p-price th, .p-price td { border-bottom: 1px solid var(--border); padding: 12px 8px; text-align: left; vertical-align: top; }
+.p-price th { font-weight: 500; color: var(--gray-700); width: 58%; }
+.p-price td { font-weight: 700; color: var(--black); }
+.p-price__note { font-size: 0.78rem; color: var(--gray-500); margin-top: 10px; line-height: 1.6; }
+.p-check { display: flex; flex-direction: column; gap: 10px; }
+.p-check li { position: relative; padding-left: 24px; font-size: 0.88rem; color: var(--gray-700); line-height: 1.65; }
+.p-check li::before { content: ''; position: absolute; left: 2px; top: 0.55em; width: 10px; height: 6px; border-left: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(-45deg); }
     </style>
 </head>
 <body>
@@ -360,20 +388,20 @@ ul { list-style: none; }
                     <img loading="lazy" decoding="async" class="p-case-img" src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80&w=600" alt="電気配線・ITインフラ設備イメージ">
                     <div class="p-case-body">
                         <span class="p-case-tag">EV充電器・機器保守</span>
-                        <h2 class="p-case-title">駐車場および商業施設へのEV普通充電器の配線・設置工事</h2>
+                        <h2 class="p-case-title">駐車場・商業施設に設置されたEV普通充電器の定期点検・動作確認</h2>
                         <p class="p-case-area">📍 埼玉県南部 / 千葉県西部</p>
                         <div class="p-case-rows">
                             <div class="p-case-row">
                                 <span class="p-case-pill p-case-pill--problem">課題</span>
-                                EV充電器の導入には、既存の受電設備の容量を踏まえた安全な配線設計が不可欠で、有資格者による正確な施工が求められていました。
+                                複数の拠点に分散して設置された充電器について、利用者が安心して使える状態を保つため、定期的な点検と不具合の早期発見が求められていました。
                             </div>
                             <div class="p-case-row">
                                 <span class="p-case-pill p-case-pill--action">対応</span>
-                                有資格者が既存受電設備の容量計算を行った上で、安全な分岐配線・屋外配管工事を実施。
+                                外観・充電ケーブル・表示部の点検、充電動作の確認を、拠点を巡回するルートを組んで実施。
                             </div>
                             <div class="p-case-row">
                                 <span class="p-case-pill p-case-pill--result">結果</span>
-                                法令・安全基準に沿った形で充電設備の稼働を実現しました。
+                                写真付きの点検報告により、不具合箇所と対応の優先順位をメーカー様が把握しやすい形に整理しました。
                             </div>
                         </div>
                     </div>
@@ -428,6 +456,96 @@ ul { list-style: none; }
                 </div>
 
             </div>
+
+
+            <!-- ===== 消防設備点検：ご依頼の流れ（追加） ===== -->
+            <section class="p-fire" id="fire" aria-labelledby="fire-title">
+                <span class="p-fire__eyebrow">FIRE SAFETY INSPECTION</span>
+                <h2 class="p-fire__title" id="fire-title">消防設備点検は、消火器1本から。</h2>
+                <p class="p-fire__lead">
+                    消火器の定期点検を入り口に、報告書の作成・消防署への提出、期限を迎えた消火器の交換まで一括で承ります。
+                    自動火災報知設備・スプリンクラー設備の点検や、テナント内装工事に伴う感知器の移設・着工届まで、同じ担当者が対応します。
+                </p>
+                <div class="p-fire__badges">
+                    <span class="p-fire__badge">消防設備士 全類保有</span>
+                    <span class="p-fire__badge">土曜日対応可</span>
+                    <span class="p-fire__badge">同一建物の複数テナント一括対応</span>
+                </div>
+
+                <h3 class="p-fire__h3">ご依頼の流れ</h3>
+                <ol class="p-flow">
+                    <li class="p-flow__step">
+                        <span class="p-flow__num">STEP 01</span>
+                        <p class="p-flow__name">お問い合わせ</p>
+                        <p class="p-flow__text">建物の所在地・用途・消火器のおおよその本数をお知らせください。フォーム・LINE・お電話で承ります。</p>
+                    </li>
+                    <li class="p-flow__step">
+                        <span class="p-flow__num">STEP 02</span>
+                        <p class="p-flow__name">お見積り</p>
+                        <p class="p-flow__text">建物の用途・規模・設置本数をもとに、無料でお見積りします。同じ建物の複数テナント様をまとめてご依頼いただくと、1件あたりの費用を抑えられます。</p>
+                    </li>
+                    <li class="p-flow__step">
+                        <span class="p-flow__num">STEP 03</span>
+                        <p class="p-flow__name">点検の実施</p>
+                        <p class="p-flow__text">消火器の外観・設置状況・製造年・使用期限を1本ずつ確認し、写真で記録します。</p>
+                    </li>
+                    <li class="p-flow__step">
+                        <span class="p-flow__num">STEP 04</span>
+                        <p class="p-flow__name">報告書の作成・提出</p>
+                        <p class="p-flow__text">点検結果報告書の作成は点検料金に含まれます。ご希望に応じて、所轄消防署への提出まで代行します。</p>
+                    </li>
+                    <li class="p-flow__step">
+                        <span class="p-flow__num">STEP 05</span>
+                        <p class="p-flow__name">交換のご提案</p>
+                        <p class="p-flow__text">製造から10年を超え耐圧性能点検が必要なもの、不良が見つかったものは、写真と根拠を添えて交換をご提案します。古い消火器の回収も承ります。</p>
+                    </li>
+                    <li class="p-flow__step">
+                        <span class="p-flow__num">STEP 06</span>
+                        <p class="p-flow__name">次回点検のご案内</p>
+                        <p class="p-flow__text">機器点検は6か月ごとに必要です。次回の時期が近づいたら、こちらからご連絡します。</p>
+                    </li>
+                    <li class="p-flow__step p-flow__step--next">
+                        <span class="p-flow__num">NEXT</span>
+                        <p class="p-flow__name">その他の消防設備もまとめて</p>
+                        <p class="p-flow__text">自動火災報知設備・スプリンクラー設備・避難器具などの点検、消防署の立入検査で指摘された不備の是正にも対応します。</p>
+                    </li>
+                    <li class="p-flow__step p-flow__step--next">
+                        <span class="p-flow__num">NEXT</span>
+                        <p class="p-flow__name">テナント内装工事に伴う消防対応</p>
+                        <p class="p-flow__text">内装会社様向けに、感知器の移設・増設と、甲種消防設備士による着工届の提出をまとめてお引き受けします。着工の2週間前までにご相談ください。</p>
+                    </li>
+                    <li class="p-flow__step p-flow__step--next">
+                        <span class="p-flow__num">NEXT</span>
+                        <p class="p-flow__name">点検会社様の応援</p>
+                        <p class="p-flow__text">繁忙期の応援や、資格者が不足している現場に1日単位で伺います。土曜日も対応可能です。</p>
+                    </li>
+                </ol>
+
+                <div class="p-fire__cols">
+                    <div>
+                        <h3 class="p-fire__h3">料金の目安</h3>
+                        <table class="p-price">
+                            <tbody>
+                                <tr><th scope="row">消火器点検<br>（小規模な店舗・事務所など）</th><td>14,000円〜</td></tr>
+                                <tr><th scope="row">消防用設備点検<br>（小規模な共同住宅など）</th><td>14,000円〜28,000円程度</td></tr>
+                                <tr><th scope="row">中・大規模の建物／自動火災報知設備・スプリンクラー設備</th><td>現地確認のうえお見積り</td></tr>
+                                <tr><th scope="row">消火器の交換・古い消火器の回収</th><td>別途お見積り</td></tr>
+                                <tr><th scope="row">お見積り</th><td>無料</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="p-price__note">※点検料金には点検結果報告書の作成を含みます。<br>※点検料金は、建物の用途・規模・点検内容によって決まります。正式な金額はお見積りにてご案内します。</p>
+                    </div>
+                    <div>
+                        <h3 class="p-fire__h3">このような方におすすめです</h3>
+                        <ul class="p-check">
+                            <li>複数の物件を管理しており、消防点検の窓口を1社にまとめたい管理会社様</li>
+                            <li>テナントごとに点検業者が異なり、日程調整に手間がかかっているビルオーナー様</li>
+                            <li>開業・改装にあわせて、消防設備の対応をまとめて任せたい店舗様・内装会社様</li>
+                            <li>繁忙期に資格者の応援が必要な点検会社様</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
             <div class="p-cta-inner">
                 <h2>同様のご相談をお持ちの企業様、ぜひご連絡ください</h2>
