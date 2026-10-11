@@ -407,6 +407,39 @@ ul { list-style: none; }
     .p-svc__head { padding: 20px 24px; }
     .p-svc__body { padding: 24px; }
 }
+/* 料金 */
+.p-price__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 48px;
+    align-items: start;
+}
+.p-price__table { width: 100%; border-collapse: collapse; font-size: 0.9rem; border: 1px solid var(--border); }
+.p-price__table th, .p-price__table td { padding: 16px 20px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; line-height: 1.6; }
+.p-price__table th { background: var(--gray-50); font-weight: 700; color: var(--black); width: 58%; font-size: 0.85rem; }
+.p-price__table td { font-weight: 700; color: var(--black); }
+.p-price__note { margin-top: 12px; font-size: 0.75rem; color: var(--gray-500); line-height: 1.7; }
+.p-check li {
+    position: relative;
+    padding: 0 0 14px 26px;
+    font-size: 0.9rem;
+    color: var(--gray-700);
+    line-height: 1.7;
+}
+.p-check li::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 7px;
+    width: 12px;
+    height: 7px;
+    border-left: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    transform: rotate(-45deg);
+}
+.p-sub-heading { font-size: 1rem; font-weight: 700; color: var(--black); margin-bottom: 16px; }
+@media (max-width: 900px) { .p-price__grid { grid-template-columns: 1fr; } }
 .p-flow__steps--5 { grid-template-columns: repeat(5, 1fr); }
 @media (max-width: 900px) {
     .p-flow__steps--5 { grid-template-columns: 1fr; }
@@ -468,7 +501,7 @@ ul { list-style: none; }
             ご依頼いただける防災サービス
         </h2>
         <p style="margin-top: 24px; color: var(--gray-700); font-size: 0.9rem; line-height: 1.8;">
-            対応エリアは東京23区内です。点検は原則2名体制で伺います。料金の目安は<a href="index.html#price" style="text-decoration:underline;">トップページ</a>をご覧ください。
+            対応エリアは東京23区内です。点検は原則2名体制で伺います。料金の目安は<a href="#price" style="text-decoration:underline;">こちら</a>をご覧ください。
         </p>
 
         <!-- SERVICE 01 -->
@@ -640,10 +673,45 @@ ul { list-style: none; }
     </div>
 </section>
 
+<!-- ========================================================
+     料金の目安（case.html 掲載の料金と同じ内容）
+======================================================== -->
+<section class="u-section u-bg-gray" id="price">
+    <div class="u-container">
+        <h2 class="c-heading">
+            <span class="c-heading--sub">Price</span>
+            料金の目安
+        </h2>
+        <div class="p-price__grid">
+            <div>
+                <table class="p-price__table">
+                    <tbody>
+                        <tr><th scope="row">消火器点検<br>（小規模な店舗・事務所など）</th><td>14,000円〜</td></tr>
+                        <tr><th scope="row">消防用設備点検<br>（小規模な共同住宅など）</th><td>14,000円〜</td></tr>
+                        <tr><th scope="row">中・大規模の建物／自動火災報知設備・スプリンクラー設備</th><td>現地確認のうえお見積り</td></tr>
+                        <tr><th scope="row">不良箇所の改修・消火器の交換</th><td>別途お見積り</td></tr>
+                        <tr><th scope="row">お見積り</th><td>無料</td></tr>
+                    </tbody>
+                </table>
+                <p class="p-price__note">※ 点検料金には、点検票（点検結果総括表・点検者一覧表を含む）の作成を含みます。<br>※ 消防署への点検結果報告書の作成・提出は、建物の関係者様にお願いしております。提出方法は「<a href="report-guide.html" style="text-decoration:underline;">点検結果報告書の提出のご案内</a>」をご覧ください。<br>※ 建物の用途・規模・点検内容により金額が決まります。正式な金額はお見積りにてご案内します。</p>
+            </div>
+            <div>
+                <p class="p-sub-heading">このような方におすすめです</p>
+                <ul class="p-check">
+                    <li>複数の物件を管理しており、消防点検の窓口を1社にまとめたい管理会社様</li>
+                    <li>テナントごとに点検業者が異なり、日程調整に手間がかかっているビルオーナー様</li>
+                    <li>開業・改装にあわせて、消防設備の対応をまとめて任せたい店舗様・内装会社様</li>
+                    <li>繁忙期に有資格者の応援が必要な点検会社様</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ============================================================
      メーカー様からのご依頼業務
 ============================================================ -->
-<section class="u-section u-bg-gray">
+<section class="u-section">
     <div class="u-container">
         <h2 class="c-heading">
             <span class="c-heading--sub">For Manufacturers</span>
@@ -693,7 +761,7 @@ ul { list-style: none; }
 <!-- ============================================================
      ご依頼の流れ
 ============================================================ -->
-<section class="u-section">
+<section class="u-section u-bg-gray">
     <div class="u-container">
         <h2 class="c-heading">
             <span class="c-heading--sub">Process</span>
