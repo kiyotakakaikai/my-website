@@ -494,10 +494,12 @@ ul { list-style: none; }
                                     <input type="radio" name="type" value="保守委託の相談" checked>
                                     保守委託・案件のご相談
                                 </label>
+                                <!-- 一旦非表示（体制構築支援を再開するときに戻す）
                                 <label class="p-radio-label">
                                     <input type="radio" name="type" value="フィールドサービス体制の構築のご相談">
                                     フィールドサービス体制の構築のご相談
                                 </label>
+                                -->
                                 <label class="p-radio-label">
                                     <input type="radio" name="type" value="協力会社登録">
                                     協力会社への応募・登録
@@ -575,10 +577,9 @@ document.addEventListener('DOMContentLoaded', function(){
     const params = new URLSearchParams(window.location.search);
     if(params.get('type') === 'build'){
         // ラジオボタンを「フィールドサービス体制の構築のご相談」に自動選択
-        const radios = document.querySelectorAll('input[name="type"]');
-        radios.forEach(function(r){
-            r.checked = (r.value === 'フィールドサービス体制の構築のご相談');
-        });
+        // 選択肢が非表示のときは何もしない（既定の選択のまま）
+        const target = document.querySelector('input[name="type"][value="フィールドサービス体制の構築のご相談"]');
+        if(target) target.checked = true;
         // 案内バナーを表示
         const banner = document.getElementById('buildBanner');
         if(banner) banner.style.display = 'flex';
