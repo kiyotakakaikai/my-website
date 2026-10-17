@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>会社概要｜東京都北区の消防設備点検 株式会社上田</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -200,17 +200,24 @@ ul { list-style: none; }
     .p-cert__item { font-size: 0.8rem; padding: 8px 12px; }
 }
     </style>
+    <style>
+/* ブランドロゴ（2026-10 採用） */
+.l-header__logo { display: flex; align-items: center; }
+.l-header__logo .l-header__brand { height: 36px; width: auto; display: block; }
+.l-footer__brand { display: inline-block; margin-bottom: 24px; }
+.l-footer__brand img { height: 32px; width: auto; display: block; }
+@media (max-width: 768px) {
+    .l-header__logo .l-header__brand { height: 26px; }
+    .l-footer__brand img { height: 26px; }
+}
+    </style>
 </head>
 <body>
 
 <header class="l-header">
     <div class="l-header__inner">
         <a class="l-header__logo" href="index.html">
-            <img src="images/wing.JPEG" alt="株式会社上田" class="l-header__logo-img" width="220" height="176" loading="eager" fetchpriority="high">
-            <div class="l-header__logo-text">
-                <span class="l-header__logo-name">株式会社上田</span>
-                <span class="l-header__logo-en">UEDA Field Services</span>
-            </div>
+            <img src="images/brand/logo-header-color.svg" alt="株式会社上田" class="l-header__brand" width="238" height="36" loading="eager" fetchpriority="high">
         </a>
         <nav>
             <button class="l-nav__toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
@@ -321,6 +328,7 @@ ul { list-style: none; }
 </main>
 
 <footer class="l-footer">
+    <a href="index.html" class="l-footer__brand"><img src="images/brand/logo-header-white.svg" alt="株式会社上田" width="212" height="32" loading="lazy"></a>
     <nav class="l-footer__nav" aria-label="フッターナビゲーション">
         <a href="services.html">事業内容</a>
         <a href="area.html">対応エリア</a>

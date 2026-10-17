@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>お問い合わせありがとうございます｜株式会社上田 UEDA Field Services</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
     <meta name="robots" content="noindex,nofollow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -125,17 +126,24 @@ a { color: inherit; text-decoration: none; }
     .p-card { padding: 40px 24px; }
 }
     </style>
+    <style>
+/* ブランドロゴ（2026-10 採用） */
+.l-header__logo { display: flex; align-items: center; }
+.l-header__logo .l-header__brand { height: 36px; width: auto; display: block; }
+.l-footer__brand { display: inline-block; margin-bottom: 24px; }
+.l-footer__brand img { height: 32px; width: auto; display: block; }
+@media (max-width: 768px) {
+    .l-header__logo .l-header__brand { height: 26px; }
+    .l-footer__brand img { height: 26px; }
+}
+    </style>
 </head>
 <body>
 
 <header class="l-header">
     <a href="index.html" class="l-header__logo">
-        <img src="images/wing.JPEG" alt="株式会社上田" width="220" height="176" loading="eager">
-        <div>
-            <div class="l-header__logo-name">株式会社上田</div>
-            <div class="l-header__logo-en">UEDA Field Services</div>
-        </div>
-    </a>
+            <img src="images/brand/logo-header-color.svg" alt="株式会社上田" class="l-header__brand" width="238" height="36" loading="eager" fetchpriority="high">
+        </a>
 </header>
 
 <main class="p-main">
@@ -154,6 +162,7 @@ a { color: inherit; text-decoration: none; }
 </main>
 
 <footer class="l-footer">
+    <a href="index.html" class="l-footer__brand"><img src="images/brand/logo-header-white.svg" alt="株式会社上田" width="212" height="32" loading="lazy"></a>
     <p>&copy; 株式会社上田 UEDA Field Services. All Rights Reserved.</p>
 </footer>
 
