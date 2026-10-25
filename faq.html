@@ -72,7 +72,7 @@
           "name": "複数の物件の点検をまとめて依頼できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "はい。管理物件の消防設備点検の窓口を株式会社上田1社にまとめることで、日程調整や報告期限の管理がしやすくなります。"
+            "text": "はい。管理物件の消防設備点検の窓口を株式会社上田1社にまとめることで、日程調整や報告期限の管理が<span class="u-ib">しやすく</span>なります。"
           }
         },
         {
@@ -105,6 +105,7 @@ body {
     background: #fff;
     -webkit-font-smoothing: antialiased;
     word-break: keep-all;
+    word-break: auto-phrase;
     overflow-wrap: anywhere;
 }
 img { max-width: 100%; height: auto; display: block; }
@@ -298,7 +299,7 @@ ul { list-style: none; }
 .p-faq-q[aria-expanded="true"] .p-faq-q__icon { transform: rotate(180deg); }
 .p-faq-a {
     display: none;
-    padding: 0 24px 20px 66px;
+    padding: 16px 24px 20px 66px;
     font-size: 0.92rem;
     color: var(--gray-700);
     line-height: 1.8;
@@ -306,6 +307,7 @@ ul { list-style: none; }
     border-top: 1px solid var(--border);
 }
 .p-faq-a.is-open { display: block; }
+@media (max-width: 767px) { .p-faq-a { padding: 16px 20px 20px; } }
 
 /* CTAセクション */
 .p-cta-inner {
@@ -352,7 +354,8 @@ ul { list-style: none; }
 .p-mobile-bar__form { background: var(--accent); }
 @media (min-width: 860px) { .p-mobile-bar { display: none !important; } .p-float-line { display: flex; } }
 @media (max-width: 859px) { .p-float-line { display: none; } .p-mobile-bar { display: flex; } body { padding-bottom: 56px; } }
-    </style>
+    .u-ib { display: inline-block; }
+</style>
     <style>
 /* ブランドロゴ（2026-10 採用） */
 .l-header__logo { display: flex; align-items: center; }
@@ -407,7 +410,7 @@ ul { list-style: none; }
                         <span class="p-faq-q__text">個人宅・小規模案件でも依頼できますか？</span>
                         <span class="p-faq-q__icon">▼</span>
                     </button>
-                    <div class="p-faq-a" id="faq1">マンション・事務所・店舗などの管理会社様・オーナー様からのご依頼を主としております。消火器1本からの点検も承ります。戸建て住宅など、個人のお住まいからのご依頼は承っておりません。</div>
+                    <div class="p-faq-a" id="faq1">マンション・事務所・店舗などの管理会社様・オーナー様からのご依頼を主としております。<br>消火器1本からの点検も承ります。<br>戸建て住宅など、個人のお住まいからのご依頼は承っておりません。</div>
                 </div>
 
                 <div class="p-faq-item">
@@ -416,7 +419,7 @@ ul { list-style: none; }
                         <span class="p-faq-q__text">対応エリア外の案件は依頼できませんか？</span>
                         <span class="p-faq-q__icon">▼</span>
                     </button>
-                    <div class="p-faq-a" id="faq2">消防設備点検などの防災事業は、東京23区内を中心に承っております。23区外も、交通費・出張費を加算することで対応可能です。メーカー様からのメンテナンス事業は、各メーカー様と取り決めたエリアで対応しています。</div>
+                    <div class="p-faq-a" id="faq2">消防設備点検などの防災事業は、東京23区内を中心に承っております。<br>23区外も、交通費・出張費を加算することで対応可能です。<br>メーカー様からのメンテナンス事業は、各メーカー様と取り決めたエリアで対応しています。</div>
                 </div>
 
                 <div class="p-faq-item">
@@ -425,16 +428,16 @@ ul { list-style: none; }
                         <span class="p-faq-q__text">見積りや相談だけでも対応してもらえますか？</span>
                         <span class="p-faq-q__icon">▼</span>
                     </button>
-                    <div class="p-faq-a" id="faq3">はい、可能です。現地の状況や設備台数、対応内容をヒアリングした上で、個別にお見積りをご案内しています。ご相談・お見積りは無料です。</div>
+                    <div class="p-faq-a" id="faq3">はい、可能です。<br>現地の状況や設備台数、対応内容をヒアリングした上で、個別にお見積りをご案内しています。<br>ご相談・お見積りは無料です。</div>
                 </div>
 
                 <div class="p-faq-item">
                     <button class="p-faq-q" aria-expanded="false" data-faq="4">
                         <span class="p-faq-q__label">Q</span>
-                        <span class="p-faq-q__text">複数の物件の点検をまとめて依頼できますか？</span>
+                        <span class="p-faq-q__text">複数の物件の点検を<span class="u-ib">まとめて</span>依頼できますか？</span>
                         <span class="p-faq-q__icon">▼</span>
                     </button>
-                    <div class="p-faq-a" id="faq4">はい。管理物件の消防設備点検の窓口を株式会社上田1社にまとめることで、日程調整や報告期限の管理がしやすくなります。詳しくは<a href="services.html" style="color:var(--accent); text-decoration:underline;">サービスページ</a>もご参照ください。</div>
+                    <div class="p-faq-a" id="faq4">はい。<br>管理物件の消防設備点検の窓口を株式会社上田1社に<span class="u-ib">まとめることで</span>、日程調整や報告期限の管理が<span class="u-ib">しやすく</span>なります。<br>詳しくは<a href="services.html" style="color:var(--accent); text-decoration:underline;">サービスページ</a>もご参照ください。</div>
                 </div>
 
                 <div class="p-faq-item">
@@ -443,7 +446,7 @@ ul { list-style: none; }
                         <span class="p-faq-q__text">夜間や緊急時の対応は可能ですか？</span>
                         <span class="p-faq-q__icon">▼</span>
                     </button>
-                    <div class="p-faq-a" id="faq5">案件内容や契約形態によって対応可否が異なります。緊急対応が必要な設備・施設については、事前のご相談時に対応体制を個別にすり合わせいたします。</div>
+                    <div class="p-faq-a" id="faq5">案件内容や契約形態によって対応可否が異なります。<br>緊急対応が必要な設備・施設については、事前のご相談時に対応体制を個別にすり合わせいたします。</div>
                 </div>
 
                 <div class="p-faq-item">
@@ -452,11 +455,11 @@ ul { list-style: none; }
                         <span class="p-faq-q__text">協力会社としての登録・応募はできますか？</span>
                         <span class="p-faq-q__icon">▼</span>
                     </button>
-                    <div class="p-faq-a" id="faq6">はい、随時募集しております。お問い合わせフォームの「お問い合わせ種別」で「協力会社への応募・登録」を選択の上、保有資格や対応可能エリアをご記入ください。</div>
+                    <div class="p-faq-a" id="faq6">はい、随時募集しております。<br>お問い合わせフォームの「お問い合わせ種別」で「協力会社への応募・登録」を選択の上、保有資格や対応可能エリアをご記入ください。</div>
                 </div>
 
                 <div class="p-cta-inner">
-                    <h2>ご不明点は直接お問い合わせください</h2>
+                    <h2>ご不明点は<span class="u-ib">直接お問い合わせください</span></h2>
                     <p>案件内容に応じて、担当者より個別にご案内いたします</p>
                     <a href="contact.html" class="c-btn-accent">お問い合わせフォームを開く</a>
                 </div>
@@ -468,7 +471,7 @@ ul { list-style: none; }
 
 <section class="p-line-section">
     <h2>公式LINEでもご相談いただけます</h2>
-    <p>消防設備点検のお見積り、改修のご相談、点検会社様の応援依頼、協力会社登録など、お気軽にお問い合わせください。</p>
+    <p>消防設備点検のお見積り、改修のご相談、点検会社様の応援依頼、協力会社登録など、<br>お気軽にお問い合わせください。</p>
     <a href="https://page.line.me/ovt4298c" target="_blank" class="p-line-btn">公式LINEで相談する</a>
 </section>
 

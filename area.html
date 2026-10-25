@@ -64,6 +64,7 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; font-size: 16px; line-height: 1.75; color: #1a1a1a; background: #fff; -webkit-font-smoothing: antialiased;
     word-break: keep-all;
+    word-break: auto-phrase;
     overflow-wrap: anywhere; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -197,6 +198,7 @@ ul { list-style: none; }
 
 /* 概要テキスト */
 .p-area-lead { text-align: center; color: var(--gray-700); max-width: 700px; margin: 0 auto 48px; font-size: 0.95rem; line-height: 1.85; }
+@media (max-width: 767px) { .p-area-lead { text-align: left; } }
 
 /* SVGマップエリア */
 .p-map-wrap {
@@ -282,7 +284,8 @@ ul { list-style: none; }
 .p-mobile-bar__form { background: var(--accent); }
 @media (min-width: 860px) { .p-mobile-bar { display: none !important; } .p-float-line { display: flex; } }
 @media (max-width: 859px) { .p-float-line { display: none; } .p-mobile-bar { display: flex; } body { padding-bottom: 56px; } }
-    </style>
+    .u-ib { display: inline-block; }
+</style>
     <style>
 /* ブランドロゴ（2026-10 採用） */
 .l-header__logo { display: flex; align-items: center; }
@@ -330,7 +333,7 @@ ul { list-style: none; }
     <section class="u-section">
         <div class="u-container">
 
-            <p class="p-area-lead">株式会社上田は東京都北区を拠点に、消防設備点検などの防災事業を東京23区内を中心に承っています。拠点から近いエリアに絞ることで、急な指摘事項や再点検にも素早く対応します。23区外も、交通費・出張費を加算することで対応可能です。メーカー様からのメンテナンス事業は、各メーカー様と取り決めたエリアで対応します。</p>
+            <p class="p-area-lead">株式会社上田は東京都北区を拠点に、消防設備点検などの防災事業を東京23区内を中心に承っています。<br>拠点から近いエリアに絞ることで、急な指摘事項や再点検にも素早く対応します。<br>23区外も、交通費・出張費を加算することで対応可能です。<br>メーカー様からのメンテナンス事業は、各メーカー様と取り決めたエリアで対応します。</p>
 
             <!-- SVGマップ -->
             <div class="p-map-wrap">
@@ -343,7 +346,7 @@ ul { list-style: none; }
                     </div>
                     <div class="p-map-legend__item">
                         <div class="p-map-legend__dot" style="background:#e8ecf2;border:1px solid #cfd6e2;"></div>
-                        <span>多摩・埼玉県・神奈川県・千葉県（メンテナンス事業／防災事業は交通費・出張費を加算して対応）</span>
+                        <span>多摩・埼玉県・神奈川県・千葉県<br>（メンテナンス事業／防災事業は交通費・出張費を加算して対応）</span>
                     </div>
                     <div class="p-map-legend__item">
                         <div class="p-map-legend__dot" style="background:#c0392b; border-radius:50%;"></div>
@@ -358,11 +361,11 @@ ul { list-style: none; }
                 <div class="p-area-card">
                     <h2>防災事業：東京23区</h2>
                     <p>千代田区・中央区・港区・新宿区・文京区・台東区・墨田区・江東区・品川区・目黒区・大田区・世田谷区・渋谷区・中野区・杉並区・豊島区・北区・荒川区・板橋区・練馬区・足立区・葛飾区・江戸川区の全域に対応します。</p>
-                    <p style="margin-top:10px;">※ 東京23区外も、交通費・出張費を加算することで対応可能です。お気軽にご相談ください。</p>
+                    <p style="margin-top:10px;">※ 東京23区外も、交通費・出張費を加算することで対応可能です。<br>お気軽にご相談ください。</p>
                 </div>
                 <div class="p-area-card">
                     <h2>メンテナンス事業：多摩・埼玉・神奈川・千葉</h2>
-                    <p>メーカー様からのメンテナンス事業は、東京23区に加えて、東京都の多摩地域・埼玉県・神奈川県・千葉県で対応しています。対応範囲は、各メーカー様と取り決めたエリアです。</p>
+                    <p>メーカー様からのメンテナンス事業は、東京23区に加えて、東京都の多摩地域・埼玉県・神奈川県・千葉県で対応しています。<br>対応範囲は、各メーカー様と取り決めたエリアです。</p>
                 </div>
             </div>
 
@@ -378,7 +381,7 @@ ul { list-style: none; }
 
 <section class="p-line-section">
     <h2>公式LINEでもご相談いただけます</h2>
-    <p>消防設備点検のお見積り、改修のご相談、点検会社様の応援依頼、協力会社登録など、お気軽にお問い合わせください。</p>
+    <p>消防設備点検のお見積り、改修のご相談、点検会社様の応援依頼、協力会社登録など、<br>お気軽にお問い合わせください。</p>
     <a href="https://page.line.me/ovt4298c" target="_blank" class="p-line-btn">公式LINEで相談する</a>
 </section>
 

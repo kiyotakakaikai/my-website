@@ -60,6 +60,7 @@ body {
     font-size: 16px; line-height: 1.75; color: #1a1a1a; background: #fff;
     -webkit-font-smoothing: antialiased;
     word-break: keep-all;
+    word-break: auto-phrase;
     overflow-wrap: anywhere;
 }
 img { max-width: 100%; height: auto; display: block; }
@@ -361,7 +362,8 @@ ul { list-style: none; }
 .p-check { display: flex; flex-direction: column; gap: 10px; }
 .p-check li { position: relative; padding-left: 24px; font-size: 0.88rem; color: var(--gray-700); line-height: 1.65; }
 .p-check li::before { content: ''; position: absolute; left: 2px; top: 0.55em; width: 10px; height: 6px; border-left: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(-45deg); }
-    </style>
+    .u-ib { display: inline-block; }
+</style>
     <style>
 /* ブランドロゴ（2026-10 採用） */
 .l-header__logo { display: flex; align-items: center; }
@@ -401,7 +403,7 @@ ul { list-style: none; }
 <div class="p-page-header">
     <div class="p-page-header__inner">
         <h1>対応実績・対応事例</h1>
-        <p>消防設備点検と、メーカー様からのメンテナンス事業の実績</p>
+        <p>消防設備点検と、メーカー様からの<span class="u-ib">メンテナンス事業</span>の実績</p>
     </div>
 </div>
 
@@ -413,7 +415,7 @@ ul { list-style: none; }
                 <span class="p-fire__eyebrow">FIRE SAFETY INSPECTION</span>
                 <h2 class="p-fire__title" id="fire-title">消防設備点検は、消火器1本から。</h2>
                 <p class="p-fire__lead">
-                    消火器の定期点検を入り口に、点検票の作成、期限を迎えた消火器の交換まで一括で承ります。
+                    消火器の定期点検を入り口に、点検票の作成、期限を迎えた消火器の交換まで一括で承ります。<br>
                     自動火災報知設備・スプリンクラー設備の点検や、テナント内装工事に伴う感知器の移設・着工届まで、同じ担当者が対応します。
                 </p>
                 <div class="p-fire__badges">
@@ -427,12 +429,12 @@ ul { list-style: none; }
                     <li class="p-flow__step">
                         <span class="p-flow__num">STEP 01</span>
                         <p class="p-flow__name">お問い合わせ</p>
-                        <p class="p-flow__text">建物の所在地・用途・消火器のおおよその本数をお知らせください。フォーム・LINE・お電話で承ります。</p>
+                        <p class="p-flow__text">建物の所在地・用途・消火器のおおよその本数をお知らせください。<br>フォーム・LINE・お電話で承ります。</p>
                     </li>
                     <li class="p-flow__step">
                         <span class="p-flow__num">STEP 02</span>
                         <p class="p-flow__name">お見積り</p>
-                        <p class="p-flow__text">建物の用途・規模・設置本数をもとに、無料でお見積りします。同じ建物の複数テナント様をまとめてご依頼いただくと、1件あたりの費用を抑えられます。</p>
+                        <p class="p-flow__text">建物の用途・規模・設置本数をもとに、無料でお見積りします。<br>同じ建物の複数テナント様を<span class="u-ib">まとめてご</span>依頼いただくと、1件あたりの費用を抑えられます。</p>
                     </li>
                     <li class="p-flow__step">
                         <span class="p-flow__num">STEP 03</span>
@@ -442,32 +444,32 @@ ul { list-style: none; }
                     <li class="p-flow__step">
                         <span class="p-flow__num">STEP 04</span>
                         <p class="p-flow__name">点検票のお渡し</p>
-                        <p class="p-flow__text">点検票の作成は点検料金に含まれます。消防署への報告は建物の関係者様から行っていただきます（<a href="report-guide.html" style="text-decoration:underline;">提出のご案内</a>）。</p>
+                        <p class="p-flow__text">点検票の作成は点検料金に含まれます。<br>消防署への報告は建物の<span class="u-ib">関係者様</span>から行っていただきます（<a href="report-guide.html" style="text-decoration:underline;">提出のご案内</a>）。</p>
                     </li>
                     <li class="p-flow__step">
                         <span class="p-flow__num">STEP 05</span>
                         <p class="p-flow__name">交換のご提案</p>
-                        <p class="p-flow__text">製造から10年を超え耐圧性能点検が必要なもの、不良が見つかったものは、写真と根拠を添えて交換をご提案します。古い消火器の回収も承ります。</p>
+                        <p class="p-flow__text">製造から10年を超え耐圧性能点検が必要なもの、不良が見つかったものは、写真と根拠を添えて交換をご提案します。<br>古い消火器の回収も承ります。</p>
                     </li>
                     <li class="p-flow__step">
                         <span class="p-flow__num">STEP 06</span>
                         <p class="p-flow__name">次回点検のご案内</p>
-                        <p class="p-flow__text">機器点検は6か月ごとに必要です。次回の時期が近づいたら、こちらからご連絡します。</p>
+                        <p class="p-flow__text">機器点検は6か月ごとに必要です。<br>次回の時期が近づいたら、こちらからご連絡します。</p>
                     </li>
                     <li class="p-flow__step p-flow__step--next">
                         <span class="p-flow__num">NEXT</span>
-                        <p class="p-flow__name">その他の消防設備もまとめて</p>
+                        <p class="p-flow__name">その他の消防設備も<span class="u-ib">まとめて</span></p>
                         <p class="p-flow__text">自動火災報知設備・スプリンクラー設備・避難器具などの点検、消防署の立入検査で指摘された不備の是正にも対応します。</p>
                     </li>
                     <li class="p-flow__step p-flow__step--next">
                         <span class="p-flow__num">NEXT</span>
                         <p class="p-flow__name">テナント内装工事に伴う消防対応</p>
-                        <p class="p-flow__text">内装会社様向けに、感知器の移設・増設と、甲種消防設備士による着工届の提出をまとめてお引き受けします。着工の3週間前までにご相談ください。</p>
+                        <p class="p-flow__text">内装会社様向けに、感知器の移設・増設と、甲種消防設備士による着工届の提出を<span class="u-ib">まとめて</span>お引き受けします。<br>着工の3週間前までにご相談ください。</p>
                     </li>
                     <li class="p-flow__step p-flow__step--next">
                         <span class="p-flow__num">NEXT</span>
                         <p class="p-flow__name">点検会社様の応援</p>
-                        <p class="p-flow__text">繁忙期の応援や、資格者が不足している現場に1日単位で伺います。土曜日も対応可能です。</p>
+                        <p class="p-flow__text">繁忙期の応援や、資格者が不足している現場に1日単位で伺います。<br>土曜日も対応可能です。</p>
                     </li>
                 </ol>
 
@@ -485,14 +487,14 @@ ul { list-style: none; }
                                 <tr><th scope="row">お見積り</th><td>無料</td></tr>
                             </tbody>
                         </table>
-                        <p class="p-price__note">※消火器点検の料金例：15本の場合　<span style="white-space:nowrap">16,500円＋1,000円×5本</span><span style="white-space:nowrap">＝21,500円〜（スポット1回）</span><br>※点検料金には、点検票（点検結果総括表・点検者一覧表を含む）の作成を含みます。<br>※消防署への点検結果報告書の作成・提出は、建物の関係者様にお願いしております。提出方法は「<a href="report-guide.html" style="text-decoration:underline;">点検結果報告書の提出のご案内</a>」をご覧ください。<br>※点検料金は、建物の用途・規模・点検内容によって決まります。正式な金額はお見積りにてご案内します。</p>
+                        <p class="p-price__note">※消火器点検の料金例：15本の場合　<span style="white-space:nowrap">16,500円＋1,000円×5本</span><span style="white-space:nowrap">＝21,500円〜（スポット1回）</span><br>※点検料金には、点検票（点検結果総括表・点検者一覧表を含む）の作成を含みます。<br>※消防署への点検結果報告書の作成・提出は、建物の<span class="u-ib">関係者様</span>にお願いしております。<br>提出方法は「<a href="report-guide.html" style="text-decoration:underline;">点検結果報告書の提出のご案内</a>」をご覧ください。<br>※点検料金は、建物の用途・規模・点検内容によって決まります。<br>正式な金額はお見積りにてご案内します。</p>
                     </div>
                     <div>
                         <h3 class="p-fire__h3">このような方におすすめです</h3>
                         <ul class="p-check">
-                            <li>複数の物件を管理しており、消防点検の窓口を1社にまとめたい管理会社様</li>
+                            <li>複数の物件を管理しており、消防点検の窓口を1社に<span class="u-ib">まとめたい</span>管理会社様</li>
                             <li>テナントごとに点検業者が異なり、日程調整に手間がかかっているビルオーナー様</li>
-                            <li>開業・改装にあわせて、消防設備の対応をまとめて任せたい店舗様・内装会社様</li>
+                            <li>開業・改装にあわせて、消防設備の対応を<span class="u-ib">まとめて</span>任せたい店舗様・内装会社様</li>
                             <li>繁忙期に有資格者の応援が必要な点検会社様</li>
                         </ul>
                     </div>
@@ -502,7 +504,7 @@ ul { list-style: none; }
             <!-- ===== メーカー様からのメンテナンス事業 ===== -->
             <section class="p-fire" id="maker" aria-labelledby="maker-title">
                 <span class="p-fire__eyebrow">FOR MANUFACTURERS</span>
-                <h2 class="p-fire__title" id="maker-title">メーカー様からのメンテナンス事業</h2>
+                <h2 class="p-fire__title" id="maker-title">メーカー様からの<span class="u-ib">メンテナンス事業</span></h2>
                 <p class="p-fire__lead"><strong>メーカー様・発注元様からのご指定がある場合のみ対応しています。</strong><br>一般のお客様・管理会社様からの、これらの設備に関するご依頼・お問い合わせは受け付けておりません。<br>不具合の際は、各メーカー様の窓口へご連絡ください。</p>
                 <div class="p-maker">
 <div class="p-maker__list">
@@ -643,7 +645,7 @@ ul { list-style: none; }
                             </div>
                             <div class="p-case-row">
                                 <span class="p-case-pill p-case-pill--action">対応</span>
-                                同一オーナー様の複数店舗を1日の巡回コースにまとめ、フィルター清掃・駆動部点検・テスト稼働までをパッケージで代行。
+                                同一オーナー様の複数店舗を1日の巡回コースに<span class="u-ib">まとめ</span>、フィルター清掃・駆動部点検・テスト稼働までをパッケージで代行。
                             </div>
                             <div class="p-case-row">
                                 <span class="p-case-pill p-case-pill--result">結果</span>
@@ -668,7 +670,7 @@ ul { list-style: none; }
 
 <section class="p-line-section">
     <h2>公式LINEでもご相談いただけます</h2>
-    <p>消防設備点検のお見積り、改修のご相談、点検会社様の応援依頼、協力会社登録など、お気軽にお問い合わせください。</p>
+    <p>消防設備点検のお見積り、改修のご相談、点検会社様の応援依頼、協力会社登録など、<br>お気軽にお問い合わせください。</p>
     <a href="https://page.line.me/ovt4298c" target="_blank" class="p-line-btn">公式LINEで相談する</a>
 </section>
 

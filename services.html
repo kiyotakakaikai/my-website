@@ -74,6 +74,7 @@ body {
     background: #fff;
     -webkit-font-smoothing: antialiased;
     word-break: keep-all;
+    word-break: auto-phrase;
     overflow-wrap: anywhere;
 }
 img { max-width: 100%; height: auto; display: block; }
@@ -406,7 +407,7 @@ ul { list-style: none; }
     .p-cta__btns { flex-direction: column; align-items: center; }
     .c-btn, .c-btn--outline { width: 100%; max-width: 320px; justify-content: center; }
     .u-section { padding: 56px 0; }
-    .p-svc__head { padding: 20px 24px; }
+    .p-svc__head { padding: 18px 24px; flex-direction: column; align-items: flex-start; gap: 6px; }
     .p-svc__body { padding: 24px; }
 }
 /* 料金 */
@@ -450,7 +451,8 @@ ul { list-style: none; }
     .p-flow__steps--5 .p-flow__step:last-child { border-bottom: none; }
     .p-flow__steps--5 .p-flow__step:last-child::after { display: none; }
 }
-    </style>
+    .u-ib { display: inline-block; }
+</style>
     <style>
 /* ブランドロゴ（2026-10 採用） */
 .l-header__logo { display: flex; align-items: center; }
@@ -495,7 +497,7 @@ ul { list-style: none; }
 <div class="p-page-header">
     <div class="p-page-header__inner">
         <p class="p-page-header__label">Services</p>
-        <h1 class="p-page-header__title">防災事業　メンテナンス事業</h1>
+        <h1 class="p-page-header__title">防災事業　<span class="u-ib">メンテナンス事業</span></h1>
         <p class="p-page-header__desc">消防設備士（全類）が、東京23区の消防設備点検から点検票の作成、不良箇所の改修まで一括でお引き受けします</p>
     </div>
 </div>
@@ -510,7 +512,7 @@ ul { list-style: none; }
             防災事業
         </h2>
         <p style="margin-top: 24px; color: var(--gray-700); font-size: 0.9rem; line-height: 1.8;">
-            対応エリアは東京23区内が中心です（23区外は交通費・出張費を加算して対応）。点検は原則2名体制で伺います。料金の目安は<a href="#price" style="text-decoration:underline;">こちら</a>をご覧ください。
+            対応エリアは東京23区内が中心です（23区外は交通費・出張費を加算して対応）。<br>点検は原則2名体制で伺います。<br>料金の目安は<a href="#price" style="text-decoration:underline;">こちら</a>をご覧ください。
         </p>
 
         <!-- SERVICE 01 -->
@@ -521,7 +523,7 @@ ul { list-style: none; }
             </div>
             <div class="p-svc__body">
                 <img class="p-svc__photo" src="images/site/sprinkler-alarm-valve.jpg" alt="スプリンクラー設備の流水検知装置" loading="lazy" decoding="async">
-                <p class="p-svc__lead">マンション・事務所・店舗などの消防用設備等を、法令に基づいて点検します。スプリンクラー設備や、<span style="white-space:nowrap">避難はしご</span>・救助袋<br>などの避難器具の点検にも対応します。点検票の作成は料金に含まれます。</p>
+                <p class="p-svc__lead">マンション・事務所・店舗などの消防用設備等を、法令に基づいて点検します。<br>スプリンクラー設備や、<span style="white-space:nowrap">避難はしご</span>・救助袋<br>などの避難器具の点検にも対応します。<br>点検票の作成は料金に含まれます。</p>
                 <div class="p-svc__cols">
                     <div>
                         <p class="p-svc__col-title">主な対応・作業内容</p>
@@ -535,7 +537,7 @@ ul { list-style: none; }
                     <div>
                         <p class="p-svc__col-title">ご提供価値</p>
                         <ul class="p-svc__list">
-                            <li>年2回の定期点検の窓口を1社にまとめられます</li>
+                            <li>年2回の定期点検の窓口を1社に<span class="u-ib">まとめられます</span></li>
                             <li>報告書の提出方法は「<a href="report-guide.html" style="text-decoration:underline;">提出のご案内</a>」でご説明します</li>
                         </ul>
                     </div>
@@ -551,7 +553,7 @@ ul { list-style: none; }
             </div>
             <div class="p-svc__body">
                 <img class="p-svc__photo" src="images/site/fire-extinguisher-box.jpg" style="object-position: 50% 62%;" alt="屋上の消火器格納箱" loading="lazy" decoding="async">
-                <p class="p-svc__lead">消火器1本から伺います。製造年・使用期限を1本ずつ確認し、期限切れや不良の消火器は交換・回収までご提案します。</p>
+                <p class="p-svc__lead">消火器1本から伺います。<br>製造年・使用期限を1本ずつ確認し、期限切れや不良の消火器は交換・回収までご提案します。</p>
                 <div class="p-svc__cols">
                     <div>
                         <p class="p-svc__col-title">主な対応・作業内容</p>
@@ -580,7 +582,7 @@ ul { list-style: none; }
             </div>
             <div class="p-svc__body">
                 <img class="p-svc__photo" src="images/site/disaster-monitor-panel.jpg" alt="自動火災報知設備の防災監視盤（受信機）" style="object-position: 50% 30%;" loading="lazy" decoding="async">
-                <p class="p-svc__lead">受信機・感知器・発信機・音響装置を点検します。住戸内の感知器点検は、管理会社様と事前に日程を調整して実施します。</p>
+                <p class="p-svc__lead">受信機・感知器・発信機・音響装置を点検します。<br>住戸内の感知器点検は、管理会社様と事前に日程を調整して実施します。</p>
                 <div class="p-svc__cols">
                     <div>
                         <p class="p-svc__col-title">主な対応・作業内容</p>
@@ -609,7 +611,7 @@ ul { list-style: none; }
             </div>
             <div class="p-svc__body">
                 <img class="p-svc__photo" src="images/site/screwdriver-work.jpg" style="object-position: 50% 18%;" alt="改修作業に使う工具" loading="lazy" decoding="async">
-                <p class="p-svc__lead">点検や消防署の立入検査で指摘された不備を、甲種消防設備士が改修します。写真と根拠を添えてお見積りします。</p>
+                <p class="p-svc__lead">点検や消防署の立入検査で指摘された不備を、甲種消防設備士が改修します。<br>写真と根拠を添えてお見積りします。</p>
                 <div class="p-svc__cols">
                     <div>
                         <p class="p-svc__col-title">主な対応・作業内容</p>
@@ -638,7 +640,7 @@ ul { list-style: none; }
             </div>
             <div class="p-svc__body">
                 <img class="p-svc__photo" src="images/site/tokyo-office-towers.jpg" alt="都内のテナントビル" loading="lazy" decoding="async">
-                <p class="p-svc__lead">内装工事に合わせた感知器の移設・増設と、甲種消防設備士による着工届の提出をまとめてお引き受けします。着工の3週間前までにご相談ください。</p>
+                <p class="p-svc__lead">内装工事に合わせた感知器の移設・増設と、甲種消防設備士による着工届の提出を<span class="u-ib">まとめて</span>お引き受けします。<br>着工の3週間前までにご相談ください。</p>
                 <div class="p-svc__cols">
                     <div>
                         <p class="p-svc__col-title">主な対応・作業内容</p>
@@ -651,7 +653,7 @@ ul { list-style: none; }
                         <p class="p-svc__col-title">ご提供価値</p>
                         <ul class="p-svc__list">
                             <li>内装会社様の工程に合わせて対応します</li>
-                            <li>消防対応の窓口を1社にまとめられます</li>
+                            <li>消防対応の窓口を1社に<span class="u-ib">まとめられます</span></li>
                         </ul>
                     </div>
                 </div>
@@ -666,7 +668,7 @@ ul { list-style: none; }
             </div>
             <div class="p-svc__body">
                 <img class="p-svc__photo" src="images/site/halogen-manual-start.jpg" style="object-position: 50% 35%;" alt="ハロゲン化物消火設備の手動起動装置" loading="lazy" decoding="async">
-                <p class="p-svc__lead">繁忙期の応援や、有資格者が不足している現場に1日単位で伺います。土曜日も対応可能です。</p>
+                <p class="p-svc__lead">繁忙期の応援や、有資格者が不足している現場に1日単位で伺います。<br>土曜日も対応可能です。</p>
                 <div class="p-svc__cols">
                     <div>
                         <p class="p-svc__col-title">主な対応・作業内容</p>
@@ -711,14 +713,14 @@ ul { list-style: none; }
                         <tr><th scope="row">お見積り</th><td>無料</td></tr>
                     </tbody>
                 </table>
-                <p class="p-price__note">※ 消火器点検の料金例：15本の場合　<span style="white-space:nowrap">16,500円＋1,000円×5本</span><span style="white-space:nowrap">＝21,500円〜（スポット1回）</span><br>※ 点検料金には、点検票（点検結果総括表・点検者一覧表を含む）の作成を含みます。<br>※ 消防署への点検結果報告書の作成・提出は、建物の関係者様にお願いしております。提出方法は「<a href="report-guide.html" style="text-decoration:underline;">点検結果報告書の提出のご案内</a>」をご覧ください。<br>※ 建物の用途・規模・点検内容により金額が決まります。正式な金額はお見積りにてご案内します。</p>
+                <p class="p-price__note">※ 消火器点検の料金例：15本の場合　<span style="white-space:nowrap">16,500円＋1,000円×5本</span><span style="white-space:nowrap">＝21,500円〜（スポット1回）</span><br>※ 点検料金には、点検票（点検結果総括表・点検者一覧表を含む）の作成を含みます。<br>※ 消防署への点検結果報告書の作成・提出は、建物の<span class="u-ib">関係者様</span>にお願いしております。<br>提出方法は「<a href="report-guide.html" style="text-decoration:underline;">点検結果報告書の提出のご案内</a>」をご覧ください。<br>※ 建物の用途・規模・点検内容により金額が決まります。<br>正式な金額はお見積りにてご案内します。</p>
             </div>
             <div>
                 <p class="p-sub-heading">このような方におすすめです</p>
                 <ul class="p-check">
-                    <li>複数の物件を管理しており、消防点検の窓口を1社にまとめたい管理会社様</li>
+                    <li>複数の物件を管理しており、消防点検の窓口を1社に<span class="u-ib">まとめたい</span>管理会社様</li>
                     <li>テナントごとに点検業者が異なり、日程調整に手間がかかっているビルオーナー様</li>
-                    <li>開業・改装にあわせて、消防設備の対応をまとめて任せたい店舗様・内装会社様</li>
+                    <li>開業・改装にあわせて、消防設備の対応を<span class="u-ib">まとめて</span>任せたい店舗様・内装会社様</li>
                     <li>繁忙期に有資格者の応援が必要な点検会社様</li>
                 </ul>
             </div>
@@ -789,7 +791,7 @@ ul { list-style: none; }
             <div class="p-flow__step">
                 <p class="p-flow__step-num">STEP 01</p>
                 <p class="p-flow__step-title">お問い合わせ</p>
-                <p class="p-flow__step-body">建物の所在地・用途・規模をお知らせください。フォーム・LINE・お電話で承ります。</p>
+                <p class="p-flow__step-body">建物の所在地・用途・規模をお知らせください。<br>フォーム・LINE・お電話で承ります。</p>
             </div>
             <div class="p-flow__step">
                 <p class="p-flow__step-num">STEP 02</p>
@@ -804,7 +806,7 @@ ul { list-style: none; }
             <div class="p-flow__step">
                 <p class="p-flow__step-num">STEP 04</p>
                 <p class="p-flow__step-title">点検票のお渡し</p>
-                <p class="p-flow__step-body">点検票をお渡しします。消防署への報告は建物の関係者様から行っていただきます（<a href="report-guide.html" style="text-decoration:underline;">提出のご案内</a>）。</p>
+                <p class="p-flow__step-body">点検票をお渡しします。<br>消防署への報告は建物の<span class="u-ib">関係者様</span>から行っていただきます（<a href="report-guide.html" style="text-decoration:underline;">提出のご案内</a>）。</p>
             </div>
             <div class="p-flow__step">
                 <p class="p-flow__step-num">STEP 05</p>
@@ -818,7 +820,7 @@ ul { list-style: none; }
 <!-- CTA -->
 <section class="p-cta">
     <p class="p-cta__title">消防設備点検のご相談は、<br>株式会社上田へ。</p>
-    <p class="p-cta__desc">点検のお見積り、指摘事項の改修、テナント工事に伴う消防対応、点検会社様の応援など、<br>お気軽にお問い合わせください。お見積りは無料です。</p>
+    <p class="p-cta__desc">点検のお見積り、指摘事項の改修、テナント工事に伴う消防対応、点検会社様の応援など、<br>お気軽にお問い合わせください。<br>お見積りは無料です。</p>
     <div class="p-cta__btns">
         <a href="contact.html" class="c-btn c-btn--accent">点検の見積りを依頼する</a>
     </div>

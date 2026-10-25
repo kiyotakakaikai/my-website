@@ -61,6 +61,7 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; font-size: 16px; line-height: 1.75; color: #1a1a1a; background: #fff; -webkit-font-smoothing: antialiased;
     word-break: keep-all;
+    word-break: auto-phrase;
     overflow-wrap: anywhere; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -193,13 +194,16 @@ ul { list-style: none; }
     .floating-line { display: none; }
     .p-company-catch { grid-template-columns: 1fr; }
     .p-cert__grid { gap: 8px; }
-    .p-profile-table th { width: 36%; }
+    .p-profile-table th, .p-profile-table td { display: block; width: 100%; }
+    .p-profile-table th { padding: 12px 16px 4px; border-bottom: none; }
+    .p-profile-table td { padding: 4px 16px 14px; background: var(--gray-50); }
     .u-section { padding: 56px 0; }
 }
 @media (max-width: 480px) {
     .p-cert__item { font-size: 0.8rem; padding: 8px 12px; }
 }
-    </style>
+    .u-ib { display: inline-block; }
+</style>
     <style>
 /* ブランドロゴ（2026-10 採用） */
 .l-header__logo { display: flex; align-items: center; }
@@ -256,7 +260,7 @@ ul { list-style: none; }
         <div class="p-company-catch">
             <div>
                 <p class="p-company-catch__title">現場を知る人間が、<br>誠実に動く。</p>
-                <p class="p-company-catch__body">東京都北区を拠点に、消防設備士（全類）が東京23区のマンション・事務所・店舗の消防設備点検と改修を手がけています。宅配ボックスや業務用ランドリーなど、メーカー様からのメンテナンス事業で培った現場経験も生かしています。<br><br>点検票の作成から改修のご提案、問い合わせ窓口の一本化まで、「任せてよかった」と言っていただける体制を整えています。</p>
+                <p class="p-company-catch__body">東京都北区を拠点に、消防設備士（全類）が東京23区のマンション・事務所・店舗の消防設備点検と改修を手がけています。<br>宅配ボックスや業務用ランドリーなど、メーカー様からのメンテナンス事業で培った現場経験も生かしています。<br><br>点検票の作成から改修のご提案、問い合わせ窓口の一本化まで、「任せてよかった」と言っていただける体制を整えています。</p>
             </div>
             <img class="p-company-catch__img" src="images/site/inspection-tools.jpg" alt="点検に使用する測定器（クランプメーター・絶縁抵抗計など）" loading="lazy" decoding="async">
         </div>
@@ -274,8 +278,8 @@ ul { list-style: none; }
                 <tr><th>会社名</th><td>株式会社上田</td></tr>
                 <tr><th>サービス名</th><td>UEDA Field Services</td></tr>
                 <tr><th>所在地</th><td>東京都北区</td></tr>
-                <tr><th>事業内容</th><td>消防設備点検・改修（防災事業）／メーカー様からのメンテナンス事業<br>（宅配ボックス・インターホン・業務用ランドリー・EV充電器・太陽光発電設備・<br>コーヒーサーバー・電柱・ロボット）</td></tr>
-                <tr><th>対応エリア</th><td>防災事業：東京都23区内（23区外は交通費・出張費を加算して対応）<br>メーカー様からのメンテナンス事業：各メーカー様と取り決めたエリア</td></tr>
+                <tr><th>事業内容</th><td>防災事業：消防設備点検・改修<br>メンテナンス事業（メーカー様から）：<br>宅配ボックス・インターホン・業務用ランドリー・EV充電器・太陽光発電設備・コーヒーサーバー・電柱・ロボット</td></tr>
+                <tr><th>対応エリア</th><td>防災事業：東京23区<br>（23区外は交通費・出張費を加算して対応）<br>メンテナンス事業：東京23区・多摩・埼玉県・神奈川県・千葉県<br>（各メーカー様と取り決めたエリア）</td></tr>
             </tbody>
         </table>
     </div>
@@ -309,7 +313,7 @@ ul { list-style: none; }
 
 <section class="p-cta">
     <p class="p-cta__title">消防設備点検のご相談はお気軽に。</p>
-    <p class="p-cta__desc">建物の用途・規模に応じて、個別にお見積りいたします。お見積りは無料です。</p>
+    <p class="p-cta__desc">建物の用途・規模に応じて、個別にお見積りいたします。<br>お見積りは無料です。</p>
     <div class="p-cta__btns">
         <a href="contact.html" class="c-btn--accent">お問い合わせフォームを開く</a>
         <a href="services.html" class="c-btn--outline">事業内容を詳しく見る</a>
@@ -318,7 +322,7 @@ ul { list-style: none; }
 
 <section class="p-line">
     <div class="p-line__title">公式LINEでもご相談いただけます</div>
-    <p class="p-line__desc">消防設備点検のお見積り・協力会社登録など、お気軽にメッセージください。</p>
+    <p class="p-line__desc">消防設備点検のお見積り・協力会社登録など、<br>お気軽にメッセージください。</p>
     <a href="https://page.line.me/ovt4298c" target="_blank" rel="noopener" class="p-line__btn">
         <svg class="p-line__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.36 5.43 3.5 7.18V22l3.9-2.14c.83.23 1.7.36 2.6.36 5.52 0 10-4.03 10-9S17.52 2 12 2z"/></svg>
         公式LINEで相談する

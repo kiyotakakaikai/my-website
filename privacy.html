@@ -33,6 +33,7 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; font-size: 16px; line-height: 1.75; color: #1a1a1a; background: #fff; -webkit-font-smoothing: antialiased;
     word-break: keep-all;
+    word-break: auto-phrase;
     overflow-wrap: anywhere; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -136,7 +137,8 @@ ul { list-style: none; }
 .p-mobile-bar__form { background: var(--accent); }
 @media (min-width: 860px) { .p-mobile-bar { display: none !important; } .p-float-line { display: flex; } }
 @media (max-width: 859px) { .p-float-line { display: none; } .p-mobile-bar { display: flex; } body { padding-bottom: 56px; } }
-    </style>
+    .u-ib { display: inline-block; }
+</style>
     <style>
 /* ブランドロゴ（2026-10 採用） */
 .l-header__logo { display: flex; align-items: center; }
@@ -185,7 +187,7 @@ ul { list-style: none; }
 
             <div class="p-privacy-section">
                 <h2>1. 個人情報の利用目的</h2>
-                <p>当社は、取得した個人情報を以下の目的の範囲内で利用します。目的外の利用を行う場合は、あらかじめご本人の同意を得るものとします。</p>
+                <p>当社は、取得した個人情報を以下の目的の範囲内で利用します。<br>目的外の利用を行う場合は、あらかじめご本人の同意を得るものとします。</p>
                 <ul>
                     <li>お問い合わせ・お見積りへの対応、必要な連絡・資料送付のため</li>
                     <li>保守委託契約その他業務委託契約の締結・履行、契約内容のご連絡のため</li>
@@ -196,13 +198,13 @@ ul { list-style: none; }
 
             <div class="p-privacy-section">
                 <h2>2. Cookie（クッキー）およびアクセス解析ツールについて</h2>
-                <p>当社ウェブサイトでは、サイトの利用状況を分析し、サービス向上に役立てることを目的として、Googleが提供するアクセス解析ツール「Google Analytics 4」を利用しています。Google Analyticsはトラフィックデータの収集のためにCookieを使用しますが、この収集は匿名で行われており、個人を特定するものではありません。この機能はCookieを無効にすることで収集を拒否することが可能ですので、お使いのブラウザの設定をご確認ください。Google Analyticsの利用規約およびプライバシーポリシーについては、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleのプライバシーポリシー</a>をご参照ください。</p>
+                <p>当社ウェブサイトでは、サイトの利用状況を分析し、サービス向上に役立てることを目的として、Googleが提供するアクセス解析ツール「Google Analytics 4」を利用しています。<br>Google Analyticsはトラフィックデータの収集のためにCookieを使用しますが、この収集は匿名で行われており、個人を特定するものではありません。<br>この機能はCookieを無効にすることで収集を拒否することが可能ですので、お使いのブラウザの設定をご確認ください。<br>Google Analyticsの利用規約およびプライバシーポリシーについては、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleのプライバシーポリシー</a>をご参照ください。</p>
             </div>
 
             <div class="p-privacy-section">
                 <h2>3. お問い合わせフォームの外部サービス利用について</h2>
-                <p>当社ウェブサイトのお問い合わせフォームは、米国Formspree, Inc.が提供するフォーム送信サービス「Formspree」を利用しています。フォームに入力された情報（お名前・メールアドレス・お問い合わせ内容等）はFormspreeのサーバーを経由して当社に送信されます。Formspreeのプライバシーポリシーについては<a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener">Formspree Privacy Policy</a>をご参照ください。</p>
-                <p>また、スパム防止を目的として、Googleが提供する「reCAPTCHA v3」を利用しています。reCAPTCHA v3はCookieおよびブラウザの動作情報を収集・分析しますが、個人を特定するものではありません。詳細は<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">GoogleのプライバシーポリシーおよびreCAPTCHA利用規約</a>をご参照ください。</p>
+                <p>当社ウェブサイトのお問い合わせフォームは、米国Formspree, Inc.が提供するフォーム送信サービス「Formspree」を利用しています。<br>フォームに入力された情報（お名前・メールアドレス・お問い合わせ内容等）はFormspreeのサーバーを経由して当社に送信されます。<br>Formspreeのプライバシーポリシーについては<a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener">Formspree Privacy Policy</a>をご参照ください。</p>
+                <p>また、スパム防止を目的として、Googleが提供する「reCAPTCHA v3」を利用しています。<br>reCAPTCHA v3はCookieおよびブラウザの動作情報を収集・分析しますが、個人を特定するものではありません。<br>詳細は<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">GoogleのプライバシーポリシーおよびreCAPTCHA利用規約</a>をご参照ください。</p>
             </div>
 
             <div class="p-privacy-section">
@@ -217,12 +219,12 @@ ul { list-style: none; }
 
             <div class="p-privacy-section">
                 <h2>5. 個人情報の安全管理</h2>
-                <p>当社は、取得した個人情報の漏えい、滅失またはき損の防止その他の個人情報の安全管理のために、必要かつ適切な措置を講じます。個人情報の取扱いを外部に委託する場合は、委託先に対して必要かつ適切な監督を行います。</p>
+                <p>当社は、取得した個人情報の漏えい、滅失またはき損の防止その他の個人情報の安全管理のために、必要かつ適切な措置を講じます。<br>個人情報の取扱いを外部に委託する場合は、委託先に対して必要かつ適切な監督を行います。</p>
             </div>
 
             <div class="p-privacy-section">
                 <h2>6. 個人情報の開示・訂正・利用停止等について</h2>
-                <p>ご本人から自己の個人情報について開示、訂正、追加、削除、利用停止等のご請求があった場合は、ご本人からのご請求であることを確認の上、法令に従い、合理的な期間内に対応いたします。ご請求は下記お問い合わせ窓口までご連絡ください。</p>
+                <p>ご本人から自己の個人情報について開示、訂正、追加、削除、利用停止等のご請求があった場合は、ご本人からのご請求であることを確認の上、法令に従い、合理的な期間内に対応いたします。<br>ご請求は下記お問い合わせ窓口までご連絡ください。</p>
             </div>
 
             <div class="p-privacy-section">
@@ -246,7 +248,7 @@ ul { list-style: none; }
 
             <div class="p-privacy-section">
                 <h2>8. 本ポリシーの改定について</h2>
-                <p>当社は、法令の変更やサービス内容の変更等に応じて、本ポリシーの内容を予告なく変更することがあります。変更後のプライバシーポリシーは、本ページに掲載した時点から効力を生じるものとします。</p>
+                <p>当社は、法令の変更やサービス内容の変更等に応じて、本ポリシーの内容を予告なく変更することがあります。<br>変更後のプライバシーポリシーは、本ページに掲載した時点から効力を生じるものとします。</p>
             </div>
 
             <p class="p-privacy-date">制定日：2026年7月6日<br>株式会社上田</p>
@@ -263,7 +265,7 @@ ul { list-style: none; }
 
 <section class="p-line-section">
     <h2>公式LINEでもご相談いただけます</h2>
-    <p>消防設備点検のお見積り、改修のご相談、点検会社様の応援依頼、協力会社登録など、お気軽にお問い合わせください。</p>
+    <p>消防設備点検のお見積り、改修のご相談、点検会社様の応援依頼、協力会社登録など、<br>お気軽にお問い合わせください。</p>
     <a href="https://page.line.me/ovt4298c" target="_blank" class="p-line-btn">公式LINEで相談する</a>
 </section>
 

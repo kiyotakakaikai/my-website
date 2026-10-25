@@ -53,6 +53,7 @@ body {
     background: #fff;
     -webkit-font-smoothing: antialiased;
     word-break: keep-all;
+    word-break: auto-phrase;
     overflow-wrap: anywhere;
 }
 img { max-width: 100%; height: auto; display: block; }
@@ -965,7 +966,8 @@ ul { list-style: none; }
     .u-section { padding: 20px 0; }
     body { padding-bottom: 0; }
 }
-    </style>
+    .u-ib { display: inline-block; }
+</style>
     <style>
 /* ブランドロゴ（2026-10 採用） */
 .l-header__logo { display: flex; align-items: center; }
@@ -1014,7 +1016,7 @@ ul { list-style: none; }
     <div class="u-container">
         <p class="p-page-hd__label">Inspection Report Guide</p>
         <h1 class="p-page-hd__title">消防用設備等点検結果報告書<br>提出のご案内</h1>
-        <p class="p-page-hd__lead">消防署への報告は簡単です。建物の関係者様にご記入いただくのは、報告書の表紙1枚だけ。点検票など残りの書類は、点検後に株式会社上田からお渡しします。</p>
+        <p class="p-page-hd__lead">消防署への報告は簡単です。<br>建物の<span class="u-ib">関係者様</span>にご記入いただくのは、報告書の<span class="u-ib">表紙1枚</span>だけ。<br>点検票など残りの書類は、点検後に株式会社上田からお渡しします。</p>
     </div>
 </section>
 
@@ -1029,9 +1031,9 @@ ul { list-style: none; }
     <div class="u-container">
         <h2 class="c-heading">
             <span class="c-heading--sub">Overview</span>
-            上田が行うこと・関係者様にお願いすること
+            上田が行うこと・<span class="u-ib">関係者様</span>にお願いすること
         </h2>
-        <p class="p-guide__lead">点検結果の消防署への報告は、消防法 第17条の3の3により、建物の関係者様（所有者・管理者・占有者）が行うことと定められています。そのため、報告書の表紙のご記入と提出は、関係者様にお願いしております。</p>
+        <p class="p-guide__lead">点検結果の消防署への報告は、消防法 <span class="u-ib">第17条の3の3</span>により、建物の<span class="u-ib">関係者様</span>（所有者・管理者・占有者）が行うことと定められています。<br>そのため、報告書の表紙のご記入と提出は、<span class="u-ib">関係者様</span>にお願いしております。</p>
         <div class="p-compare p-guide__table">
             <div class="p-compare__wrap">
                 <table>
@@ -1041,8 +1043,8 @@ ul { list-style: none; }
                     <tbody>
                         <tr><td data-label="作業">点検</td><td data-label="内容">消防用設備等の機器点検・総合点検</td><td data-label="担当"><strong>株式会社上田</strong></td></tr>
                         <tr><td data-label="作業">点検票の作成</td><td data-label="内容">点検票・点検結果総括表・点検者一覧表</td><td data-label="担当"><strong>株式会社上田</strong></td></tr>
-                        <tr><td data-label="作業">報告書の表紙の記入</td><td data-label="内容">消防用設備等点検結果報告書（1枚）</td><td data-label="担当"><strong>建物の関係者様</strong></td></tr>
-                        <tr><td data-label="作業">消防署への提出</td><td data-label="内容">電子申請・郵送・窓口への持参</td><td data-label="担当"><strong>建物の関係者様</strong></td></tr>
+                        <tr><td data-label="作業">報告書の表紙の記入</td><td data-label="内容">消防用設備等点検結果報告書（1枚）</td><td data-label="担当"><strong>建物の<span class="u-ib">関係者様</span></strong></td></tr>
+                        <tr><td data-label="作業">消防署への提出</td><td data-label="内容">電子申請・郵送・窓口への持参</td><td data-label="担当"><strong>建物の<span class="u-ib">関係者様</span></strong></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -1059,7 +1061,7 @@ ul { list-style: none; }
             <span class="c-heading--sub">Deadline</span>
             報告の期限
         </h2>
-        <p class="p-guide__lead">報告の頻度は、建物の用途で決まります。報告の時期が近づいたら、上田からお知らせします。</p>
+        <p class="p-guide__lead">報告の頻度は、建物の用途で決まります。<br>報告の時期が近づいたら、上田からお知らせします。</p>
         <div class="p-compare p-guide__table">
             <div class="p-compare__wrap">
                 <table>
@@ -1086,7 +1088,7 @@ ul { list-style: none; }
             <span class="c-heading--sub">Documents</span>
             提出するもの
         </h2>
-        <p class="p-guide__lead">関係者様にご用意いただくのは、報告書の表紙1枚だけです。それ以外の書類は、点検後に上田からお渡しします。</p>
+        <p class="p-guide__lead"><span class="u-ib">関係者様</span>にご用意いただくのは、報告書の<span class="u-ib">表紙1枚</span>だけです。<br>それ以外の書類は、点検後に上田からお渡しします。</p>
         <div class="p-compare p-guide__table">
             <div class="p-compare__wrap">
                 <table>
@@ -1094,16 +1096,16 @@ ul { list-style: none; }
                         <tr><th>書類</th><th>備考</th><th>用意する人</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td data-label="書類">消防用設備等（特殊消防用設備等）点検結果報告書（表紙）</td><td data-label="備考">東京消防庁の申請様式ページから入手できます。押印は不要です</td><td data-label="用意する人"><strong>関係者様</strong></td></tr>
+                        <tr><td data-label="書類">消防用設備等（特殊消防用設備等）点検結果報告書（表紙）</td><td data-label="備考">東京消防庁の申請様式ページから入手できます。押印は不要です</td><td data-label="用意する人"><strong><span class="u-ib">関係者様</span></strong></td></tr>
                         <tr><td data-label="書類">点検結果総括表</td><td data-label="備考">点検票を添付する場合は省略できます</td><td data-label="用意する人"><strong>上田</strong></td></tr>
                         <tr><td data-label="書類">点検者一覧表</td><td data-label="備考">消防設備士が点検した場合に添付します</td><td data-label="用意する人"><strong>上田</strong></td></tr>
                         <tr><td data-label="書類">各設備の点検票</td><td data-label="備考">消火器、自動火災報知設備など、設備ごとに作成します</td><td data-label="用意する人"><strong>上田</strong></td></tr>
-                        <tr><td data-label="書類">消防用設備等点検報告改修計画書</td><td data-label="備考">不備が見つかった場合のみ。改修の内容と日程は上田がご提案します</td><td data-label="用意する人"><strong>関係者様</strong></td></tr>
+                        <tr><td data-label="書類">消防用設備等点検報告改修計画書</td><td data-label="備考">不備が見つかった場合のみ。改修の内容と日程は上田がご提案します</td><td data-label="用意する人"><strong><span class="u-ib">関係者様</span></strong></td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        <p class="p-guide__note">※ 提出する部数や、受付印のある控えの扱いは、消防署によって異なる場合があります。控えが必要な場合は、事前に所轄の消防署へご確認ください。</p>
+        <p class="p-guide__note">※ 提出する部数や、受付印のある控えの扱いは、消防署によって異なる場合があります。<br>控えが必要な場合は、事前に所轄の消防署へご確認ください。</p>
     </div>
 </section>
 
@@ -1116,7 +1118,7 @@ ul { list-style: none; }
             <span class="c-heading--sub">Example</span>
             報告書の表紙の記入例
         </h2>
-        <p class="p-guide__lead">表紙に記入するのは、関係者様の情報と建物の情報です。点検の内容に関わる項目は、上田がお渡しする点検票の内容をそのまま書き写してください。</p>
+        <p class="p-guide__lead">表紙に記入するのは、<span class="u-ib">関係者様</span>の情報と建物の情報です。<br>点検の内容に関わる項目は、上田がお渡しする点検票の内容をそのまま書き写してください。</p>
         <div class="p-compare p-guide__table">
             <div class="p-compare__wrap">
                 <table>
@@ -1140,7 +1142,7 @@ ul { list-style: none; }
                 </table>
             </div>
         </div>
-        <p class="p-guide__note">※ 様式の項目は改正されることがあります。記入の前に、<a href="https://www.tfd.metro.tokyo.lg.jp/lfe/office_adv/tenken_houkoku.html" target="_blank" rel="noopener">東京消防庁の申請様式</a>で最新の様式をご確認ください。</p>
+        <p class="p-guide__note">※ 様式の項目は改正されることがあります。<br>記入の前に、<a href="https://www.tfd.metro.tokyo.lg.jp/lfe/office_adv/tenken_houkoku.html" target="_blank" rel="noopener">東京消防庁の申請様式</a>で最新の様式をご確認ください。</p>
     </div>
 </section>
 
@@ -1153,7 +1155,7 @@ ul { list-style: none; }
             <span class="c-heading--sub">How to Submit</span>
             提出方法
         </h2>
-        <p class="p-guide__lead">提出先は、建物を管轄する消防署または出張所です。提出方法は次の3つから選べます。</p>
+        <p class="p-guide__lead">提出先は、建物を管轄する消防署または出張所です。<br>提出方法は次の3つから選べます。</p>
         <div class="p-compare p-guide__table">
             <div class="p-compare__wrap">
                 <table>
@@ -1184,23 +1186,23 @@ ul { list-style: none; }
         <div class="p-faq">
             <div class="p-faq__item">
                 <p class="p-faq__q">報告書の作成や提出を代行してもらえませんか？</p>
-                <p class="p-faq__a">報告書の表紙は関係者様の書類です。官公署に提出する書類を他人に代わって作成することは、行政書士法により行政書士の業務と定められています（第19条）。そのため、上田では表紙の作成と提出の代行はお引き受けしておりません。</p>
+                <p class="p-faq__a">報告書の表紙は<span class="u-ib">関係者様</span>の書類です。<br>官公署に提出する書類を他人に代わって作成することは、行政書士法により行政書士の業務と定められています<span class="u-ib">（第19条）</span>。<br>そのため、上田では表紙の作成と提出の代行はお引き受けしておりません。</p>
             </div>
             <div class="p-faq__item">
                 <p class="p-faq__q">自分で消防署に行く時間がありません。</p>
-                <p class="p-faq__a">電子申請か郵送をご利用ください。関係者様がご記入済みの書類であれば、上田がお預かりして消防署へお届けすることはできます（無償）。ただし、書類の修正や消防署とのやり取りは代わりに行えません。</p>
+                <p class="p-faq__a">電子申請か郵送をご利用ください。<br><span class="u-ib">関係者様</span>がご記入済みの書類であれば、上田がお預かりして消防署へお届けすることはできます（無償）。<br>ただし、書類の修正や消防署とのやり取りは代わりに行えません。</p>
             </div>
             <div class="p-faq__item">
                 <p class="p-faq__q">書類の作成から全て任せたい場合は？</p>
-                <p class="p-faq__a">消防の手続きに詳しい行政書士をご紹介します。報酬は行政書士へ直接お支払いください。</p>
+                <p class="p-faq__a">消防の手続きに詳しい行政書士をご紹介します。<br>報酬は行政書士へ直接お支払いください。</p>
             </div>
             <div class="p-faq__item">
                 <p class="p-faq__q">報告しないとどうなりますか？</p>
-                <p class="p-faq__a">報告をしない、または虚偽の報告をした場合、消防法により30万円以下の罰金または拘留の対象となります（第44条第11号）。法人にも30万円以下の罰金が科されます（第45条第3号）。</p>
+                <p class="p-faq__a">報告をしない、または虚偽の報告をした場合、消防法により30万円以下の罰金または拘留の対象となります<span class="u-ib">（第44条第11号）</span>。<br>法人にも30万円以下の罰金が科されます<span class="u-ib">（第45条第3号）</span>。</p>
             </div>
             <div class="p-faq__item">
                 <p class="p-faq__q">報告した書類は保管した方がよいですか？</p>
-                <p class="p-faq__a">はい。次回の点検や消防署の立入検査の際に確認されることがあるため、点検票とあわせて保管してください。</p>
+                <p class="p-faq__a">はい。<br>次回の点検や消防署の立入検査の際に確認されることがあるため、点検票とあわせて保管してください。</p>
             </div>
         </div>
         <div class="p-print-btn">
@@ -1228,7 +1230,7 @@ ul { list-style: none; }
 ======================================================== -->
 <section class="p-cta">
     <div class="p-cta__title">消防設備点検のご相談は、<br>株式会社上田へ。</div>
-    <p class="p-cta__desc">点検のお見積り、報告の時期のご確認など、<br>お気軽にお問い合わせください。お見積りは無料です。</p>
+    <p class="p-cta__desc">点検のお見積り、報告の時期のご確認など、<br>お気軽にお問い合わせください。<br>お見積りは無料です。</p>
     <div class="p-cta__btns">
         <a href="contact.html" class="c-btn c-btn--accent">お問い合わせフォームを開く</a>
         <a href="services.html#price" class="c-btn c-btn--outline">料金の目安を見る</a>
