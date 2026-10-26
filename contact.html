@@ -507,6 +507,10 @@ ul { list-style: none; }
                                     <input type="radio" name="type" value="消防設備点検・案件のご相談" checked>
                                     消防設備点検・案件のご相談
                                 </label>
+                                <label class="p-radio-label">
+                                    <input type="radio" name="type" value="メーカー様からのメンテナンス事業のご依頼">
+                                    メーカー様からのメンテナンス事業のご依頼
+                                </label>
                                 <!-- 一旦非表示（体制構築支援を再開するときに戻す）
                                 <label class="p-radio-label">
                                     <input type="radio" name="type" value="フィールドサービス体制の構築のご相談">
@@ -593,6 +597,10 @@ document.getElementById('navToggle').addEventListener('click', function(){
 // URLパラメータで種別を自動選択・バナー表示
 document.addEventListener('DOMContentLoaded', function(){
     const params = new URLSearchParams(window.location.search);
+    if(params.get('type') === 'maker'){
+        const m = document.querySelector('input[name="type"][value="メーカー様からのメンテナンス事業のご依頼"]');
+        if(m) m.checked = true;
+    }
     if(params.get('type') === 'build'){
         // ラジオボタンを「フィールドサービス体制の構築のご相談」に自動選択
         // 選択肢が非表示のときは何もしない（既定の選択のまま）
