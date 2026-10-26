@@ -951,6 +951,20 @@ ul { list-style: none; }
 .p-photo__cap { margin-top: 10px; font-size: 0.82rem; color: var(--gray-700); line-height: 1.6; }
 @media (max-width: 900px) { .p-photo__grid { grid-template-columns: 1fr 1fr; } }
     .u-ib { display: inline-block; }
+
+/* メーカー様向けセクションの区切り */
+.p-for-maker { background: #eef1f5; border-top: 4px solid #8a93a6; }
+.p-fire.p-for-maker { padding: 40px 24px; border-radius: 8px; }
+.p-maker-chip { display: inline-block; font-size: 0.75rem; font-weight: 700; color: #fff; background: #5b6478; padding: 4px 10px; border-radius: 3px; margin-bottom: 14px; letter-spacing: 0.05em; }
+.p-maker-guide { margin-top: 14px; font-size: 0.82rem; color: var(--gray-700); line-height: 1.7; }
+.p-maker-guide a { text-decoration: underline; }
+
+.p-hero__tel { margin-top: 18px; font-size: 0.9rem; color: rgba(255,255,255,0.85); }
+.p-hero__tel a { color: #fff; font-weight: 700; font-size: 1.15rem; letter-spacing: 0.04em; text-decoration: underline; text-underline-offset: 3px; }
+.p-hero__tel-note { display: block; margin-top: 4px; font-size: 0.72rem; color: rgba(255,255,255,0.6); }
+
+.l-footer__info { margin: 20px auto 16px; max-width: 640px; padding: 0 16px; text-align: center; font-size: 0.75rem; line-height: 1.8; color: rgba(255,255,255,0.6); }
+.l-footer__info p + p { margin-top: 4px; }
 </style>
     <style>
 /* ブランドロゴ（2026-10 採用） */
@@ -1005,7 +1019,7 @@ ul { list-style: none; }
         <p class="p-hero__desc">東京23区の消防設備点検は、株式会社上田へ。<br>消防設備士（全類）が、消火器1本の点検から、自動火災報知設備・スプリンクラー設備・避難器具の点検、点検票の作成、不良箇所の改修まで一括でお引き受けします。</p>
         <div class="p-hero__badges">
             <span class="p-hero__badge">消防設備士 全類保有</span>
-            <span class="p-hero__badge">点検票作成 込み</span>
+            <span class="p-hero__badge">点検票の作成込み</span>
             <span class="p-hero__badge">お見積り無料</span>
             <span class="p-hero__badge">土曜対応可</span>
         </div>
@@ -1013,6 +1027,7 @@ ul { list-style: none; }
             <a href="contact.html" class="c-btn c-btn--accent">点検の見積りを依頼する</a>
             <a href="services.html#price" class="c-btn c-btn--outline">料金の目安を見る</a>
         </div>
+        <p class="p-hero__tel">お電話でのご相談：<a href="tel:09075515324">090-7551-5324</a><span class="p-hero__tel-note">※ 営業目的のご連絡はお断りします</span></p>
     </div>
 </section>
 
@@ -1145,6 +1160,7 @@ ul { list-style: none; }
                     <span class="p-service__tag">年2回の定期点検</span>
                     <span class="p-service__tag">スプリンクラー設備</span>
                     <span class="p-service__tag">避難はしご・救助袋</span>
+                    <span class="p-service__tag">誘導灯の点検</span>
                     <span class="p-service__tag">点検票作成</span>
                     <span class="p-service__tag">報告期限のお知らせ</span>
                 </div>
@@ -1166,7 +1182,6 @@ ul { list-style: none; }
                 <div class="p-service__tags">
                     <span class="p-service__tag">感知器</span>
                     <span class="p-service__tag">受信機</span>
-                    <span class="p-service__tag">誘導灯</span>
                 </div>
             </div>
             <div class="p-service__card">
@@ -1176,13 +1191,13 @@ ul { list-style: none; }
                 <div class="p-service__tags">
                     <span class="p-service__tag">指摘事項の是正</span>
                     <span class="p-service__tag">感知器交換</span>
-                    <span class="p-service__tag">誘導灯バッテリー</span>
+                    <span class="p-service__tag">誘導灯のバッテリー交換</span>
                 </div>
             </div>
             <div class="p-service__card">
                 <div class="p-service__num">SERVICE 05</div>
                 <div class="p-service__name">テナント工事に伴う消防対応</div>
-                <p class="p-service__desc">内装工事に合わせた感知器の移設・増設と、甲種消防設備士による着工届の提出を<span class="u-ib">まとめて</span>お引き受けします。<br>着工の3週間前までにご相談ください。</p>
+                <p class="p-service__desc">内装工事に合わせた感知器の移設・増設と、甲種消防設備士による着工届の提出を<span class="u-ib">まとめて</span>お引き受けします。<br>着工届は、工事に着手する日の10日前までの提出が必要です。<br>手続きを円滑に進めるため、3週間前までのご相談をお願いしています。</p>
                 <div class="p-service__tags">
                     <span class="p-service__tag">感知器の移設・増設</span>
                     <span class="p-service__tag">着工届</span>
@@ -1192,7 +1207,7 @@ ul { list-style: none; }
             <div class="p-service__card">
                 <div class="p-service__num">SERVICE 06</div>
                 <div class="p-service__name">点検会社様への応援</div>
-                <p class="p-service__desc">繁忙期の応援や、有資格者が不足している現場に1日単位で伺います。<br>土曜日も対応可能です。</p>
+                <p class="p-service__desc">繁忙期の応援や、有資格者が不足している現場に1日単位で伺います。<br>応援の場合は、先方の体制に入る形で1名から対応します。<br>土曜日も対応可能です。</p>
                 <div class="p-service__tags">
                     <span class="p-service__tag">1日単位</span>
                     <span class="p-service__tag">全類対応</span>
@@ -1284,8 +1299,9 @@ ul { list-style: none; }
 <!-- ========================================================
      メーカー様からのメンテナンス事業（サブ・受付なし）
 ======================================================== -->
-<section class="u-section">
+<section class="u-section p-for-maker">
     <div class="u-container">
+        <p class="p-maker-chip">メーカー様・発注元様向けのご案内</p>
         <h2 class="c-heading">
             <span class="c-heading--sub">For Manufacturers</span>
             メーカー様からの<span class="u-ib">メンテナンス事業</span>
@@ -1339,6 +1355,7 @@ ul { list-style: none; }
             </div>
             <p class="p-maker__notice"><strong>メーカー様・発注元様からのご指定がある場合のみ対応しています。</strong><br>一般のお客様・管理会社様からの、これらの設備に関するご依頼・お問い合わせは受け付けておりません。<br>不具合の際は、各メーカー様の窓口へご連絡ください。</p>
         </div>
+        <p class="p-maker-guide">※ 消防設備点検（防災事業）のご依頼は、管理会社様・オーナー様からも承っております。<br>点検のご相談は<a href="contact.html">お問い合わせ</a>からどうぞ。</p>
     </div>
 </section>
 
@@ -1418,6 +1435,10 @@ ul { list-style: none; }
         <a href="company.html">会社概要</a>
         <a href="privacy.html">プライバシーポリシー</a>
     </nav>
+    <div class="l-footer__info">
+        <p>株式会社上田　所在地：東京都北区</p>
+        <p>事業内容：消防設備点検・消火器点検・自動火災報知設備の点検・不良箇所の改修（防災事業）<br>メーカー様からのメンテナンス事業</p>
+    </div>
     <p class="l-footer__copy">&copy; 株式会社上田</p>
 </footer>
 

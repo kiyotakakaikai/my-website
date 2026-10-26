@@ -363,6 +363,16 @@ ul { list-style: none; }
 .p-check li { position: relative; padding-left: 24px; font-size: 0.88rem; color: var(--gray-700); line-height: 1.65; }
 .p-check li::before { content: ''; position: absolute; left: 2px; top: 0.55em; width: 10px; height: 6px; border-left: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(-45deg); }
     .u-ib { display: inline-block; }
+
+/* メーカー様向けセクションの区切り */
+.p-for-maker { background: #eef1f5; border-top: 4px solid #8a93a6; }
+.p-fire.p-for-maker { padding: 40px 24px; border-radius: 8px; }
+.p-maker-chip { display: inline-block; font-size: 0.75rem; font-weight: 700; color: #fff; background: #5b6478; padding: 4px 10px; border-radius: 3px; margin-bottom: 14px; letter-spacing: 0.05em; }
+.p-maker-guide { margin-top: 14px; font-size: 0.82rem; color: var(--gray-700); line-height: 1.7; }
+.p-maker-guide a { text-decoration: underline; }
+
+.l-footer__info { margin: 20px auto 16px; max-width: 640px; padding: 0 16px; text-align: center; font-size: 0.75rem; line-height: 1.8; color: rgba(255,255,255,0.6); }
+.l-footer__info p + p { margin-top: 4px; }
 </style>
     <style>
 /* ブランドロゴ（2026-10 採用） */
@@ -465,12 +475,12 @@ ul { list-style: none; }
                     <li class="p-flow__step p-flow__step--next">
                         <span class="p-flow__num">NEXT</span>
                         <p class="p-flow__name">テナント内装工事に伴う消防対応</p>
-                        <p class="p-flow__text">内装会社様向けに、感知器の移設・増設と、甲種消防設備士による着工届の提出を<span class="u-ib">まとめて</span>お引き受けします。<br>着工の3週間前までにご相談ください。</p>
+                        <p class="p-flow__text">内装会社様向けに、感知器の移設・増設と、甲種消防設備士による着工届の提出を<span class="u-ib">まとめて</span>お引き受けします。<br>着工届は、工事に着手する日の10日前までの提出が必要です。<br>手続きを円滑に進めるため、3週間前までのご相談をお願いしています。</p>
                     </li>
                     <li class="p-flow__step p-flow__step--next">
                         <span class="p-flow__num">NEXT</span>
                         <p class="p-flow__name">点検会社様の応援</p>
-                        <p class="p-flow__text">繁忙期の応援や、資格者が不足している現場に1日単位で伺います。<br>土曜日も対応可能です。</p>
+                        <p class="p-flow__text">繁忙期の応援や、資格者が不足している現場に1日単位で伺います。<br>応援の場合は、先方の体制に入る形で1名から対応します。<br>土曜日も対応可能です。</p>
                     </li>
                 </ol>
 
@@ -503,10 +513,12 @@ ul { list-style: none; }
             </section>
 
             <!-- ===== メーカー様からのメンテナンス事業 ===== -->
-            <section class="p-fire" id="maker" aria-labelledby="maker-title">
+            <section class="p-fire p-for-maker" id="maker" aria-labelledby="maker-title">
+                <p class="p-maker-chip">メーカー様・発注元様向けのご案内</p>
                 <span class="p-fire__eyebrow">FOR MANUFACTURERS</span>
                 <h2 class="p-fire__title" id="maker-title">メーカー様からの<span class="u-ib">メンテナンス事業</span></h2>
                 <p class="p-fire__lead"><strong>メーカー様・発注元様からのご指定がある場合のみ対応しています。</strong><br>一般のお客様・管理会社様からの、これらの設備に関するご依頼・お問い合わせは受け付けておりません。<br>不具合の際は、各メーカー様の窓口へご連絡ください。</p>
+                <p class="p-maker-guide">※ 消防設備点検（防災事業）のご依頼は、管理会社様・オーナー様からも承っております。<br>点検のご相談は<a href="contact.html">お問い合わせ</a>からどうぞ。</p>
                 <div class="p-maker">
 <div class="p-maker__list">
                 <div class="p-maker__item">
@@ -686,6 +698,10 @@ ul { list-style: none; }
         <a href="company.html">会社概要</a>
         <a href="privacy.html">プライバシーポリシー</a>
     </nav>
+    <div class="l-footer__info">
+        <p>株式会社上田　所在地：東京都北区</p>
+        <p>事業内容：消防設備点検・消火器点検・自動火災報知設備の点検・不良箇所の改修（防災事業）<br>メーカー様からのメンテナンス事業</p>
+    </div>
     <p class="l-footer__copy">&copy; 株式会社上田</p>
 </footer>
 
