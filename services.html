@@ -462,6 +462,17 @@ ul { list-style: none; }
 .l-footer__info { margin: 20px auto 16px; max-width: 640px; padding: 0 16px; text-align: center; font-size: 0.75rem; line-height: 1.8; color: rgba(255,255,255,0.6); }
 .l-footer__info p + p { margin-top: 4px; }
 .p-arch-note { margin-top: 32px; padding: 18px 20px; border-left: 4px solid var(--black); background: var(--gray-50, #f6f7f9); font-size: 0.9rem; line-height: 1.85; color: var(--gray-700); }
+
+/* サービス目次 */
+.p-toc { margin: 8px 0 56px; }
+.p-toc__title { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; color: var(--gray-500); margin-bottom: 14px; }
+.p-toc__list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; list-style: none; margin: 0; padding: 0; }
+.p-toc__list a { display: flex; align-items: baseline; gap: 8px; height: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: var(--r); background: #fff; color: var(--black); font-size: 0.85rem; font-weight: 700; line-height: 1.45; text-decoration: none; transition: border-color 0.2s, box-shadow 0.2s; }
+.p-toc__list a:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+.p-toc__num { font-family: 'Archivo', sans-serif; font-size: 0.75rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; flex-shrink: 0; }
+.p-svc { scroll-margin-top: 110px; }
+@media (max-width: 1024px) { .p-toc__list { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .p-toc__list { grid-template-columns: 1fr; } }
 </style>
     <style>
 /* ============================================================
@@ -582,8 +593,30 @@ h1, h2, h3,
             対応エリアは東京23区内が中心です（23区外は交通費・出張費を加算して対応）。<br>点検は原則2名体制で伺います。<br>料金の目安は<a href="#price" style="text-decoration:underline;">こちら</a>をご覧ください。
         </p>
 
+        <nav class="p-toc" aria-label="サービス目次">
+            <p class="p-toc__title">サービス一覧 ― 選ぶと各サービスの説明へ移動します</p>
+            <ol class="p-toc__list">
+                <li><a href="#service-01"><span class="p-toc__num">01</span>消防設備点検（機器点検・総合点検）</a></li>
+                <li><a href="#service-02"><span class="p-toc__num">02</span>消火器の点検・交換</a></li>
+                <li><a href="#service-03"><span class="p-toc__num">03</span>自動火災報知設備の点検</a></li>
+                <li><a href="#service-04"><span class="p-toc__num">04</span>不良箇所の改修・整備</a></li>
+                <li><a href="#service-05"><span class="p-toc__num">05</span>テナント工事に伴う消防対応</a></li>
+                <li><a href="#service-06"><span class="p-toc__num">06</span>点検会社様への応援</a></li>
+                <li><a href="#service-07"><span class="p-toc__num">07</span>改装・入居前の消防設備チェック</a></li>
+                <li><a href="#service-08"><span class="p-toc__num">08</span>住宅用火災警報器の一括交換</a></li>
+                <li><a href="#service-09"><span class="p-toc__num">09</span>スプリンクラー設備の点検・整備</a></li>
+                <li><a href="#service-10"><span class="p-toc__num">10</span>避難設備・避難器具の点検・整備</a></li>
+                <li><a href="#service-11"><span class="p-toc__num">11</span>民泊（住宅宿泊事業）の消防設備点検・整備</a></li>
+                <li><a href="#service-12"><span class="p-toc__num">12</span>ガス系消火設備の点検</a></li>
+                <li><a href="#service-13"><span class="p-toc__num">13</span>消防署の立入検査の立会い・是正対応</a></li>
+                <li><a href="#service-14"><span class="p-toc__num">14</span>消防訓練・防火管理の実務サポート</a></li>
+                <li><a href="#service-15"><span class="p-toc__num">15</span>福祉施設向けの消防設備点検・整備</a></li>
+                <li><a href="#service-16"><span class="p-toc__num">16</span>飲食店・厨房向けの消防設備点検</a></li>
+            </ol>
+        </nav>
+
         <!-- SERVICE 01 -->
-        <div class="p-svc" style="margin-top: 40px;">
+        <div class="p-svc" id="service-01" style="margin-top: 40px;">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 01</span>
                 <h2 class="p-svc__name">消防設備点検（機器点検・総合点検）</h2>
@@ -614,7 +647,7 @@ h1, h2, h3,
         </div>
 
         <!-- SERVICE 02 -->
-        <div class="p-svc">
+        <div class="p-svc" id="service-02">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 02</span>
                 <h2 class="p-svc__name">消火器の点検・交換</h2>
@@ -643,7 +676,7 @@ h1, h2, h3,
         </div>
 
         <!-- SERVICE 03 -->
-        <div class="p-svc">
+        <div class="p-svc" id="service-03">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 03</span>
                 <h2 class="p-svc__name">自動火災報知設備の点検</h2>
@@ -671,7 +704,7 @@ h1, h2, h3,
         </div>
 
         <!-- SERVICE 04 -->
-        <div class="p-svc">
+        <div class="p-svc" id="service-04">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 04</span>
                 <h2 class="p-svc__name">不良箇所の改修・整備</h2>
@@ -700,7 +733,7 @@ h1, h2, h3,
         </div>
 
         <!-- SERVICE 05 -->
-        <div class="p-svc">
+        <div class="p-svc" id="service-05">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 05</span>
                 <h2 class="p-svc__name">テナント工事に伴う消防対応</h2>
@@ -728,7 +761,7 @@ h1, h2, h3,
         </div>
 
         <!-- SERVICE 06 -->
-        <div class="p-svc">
+        <div class="p-svc" id="service-06">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 06</span>
                 <h2 class="p-svc__name">点検会社様への応援</h2>
@@ -757,7 +790,7 @@ h1, h2, h3,
         </div>
 
         <!-- SERVICE 07 -->
-        <div class="p-svc">
+        <div class="p-svc" id="service-07">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 07</span>
                 <h2 class="p-svc__name">改装・入居前の消防設備チェック</h2>
@@ -786,7 +819,7 @@ h1, h2, h3,
         </div>
 
         <!-- SERVICE 08 -->
-        <div class="p-svc">
+        <div class="p-svc" id="service-08">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 08</span>
                 <h2 class="p-svc__name">住宅用火災警報器の一括交換</h2>
@@ -815,7 +848,7 @@ h1, h2, h3,
         </div>
 
         <!-- SERVICE 09 -->
-        <div class="p-svc">
+        <div class="p-svc" id="service-09">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 09</span>
                 <h2 class="p-svc__name">スプリンクラー設備の点検・整備</h2>
@@ -845,7 +878,7 @@ h1, h2, h3,
         </div>
 
         <!-- SERVICE 10 -->
-        <div class="p-svc">
+        <div class="p-svc" id="service-10">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 10</span>
                 <h2 class="p-svc__name">避難設備・避難器具の点検・整備</h2>
@@ -874,7 +907,7 @@ h1, h2, h3,
         </div>
 
         <!-- SERVICE 11 -->
-        <div class="p-svc">
+        <div class="p-svc" id="service-11">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 11</span>
                 <h2 class="p-svc__name">民泊（住宅宿泊事業）の消防設備点検・整備</h2>
@@ -903,7 +936,7 @@ h1, h2, h3,
         </div>
 
         <!-- SERVICE 12 -->
-        <div class="p-svc">
+        <div class="p-svc" id="service-12">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 12</span>
                 <h2 class="p-svc__name">ガス系消火設備の点検</h2>
@@ -932,7 +965,7 @@ h1, h2, h3,
         </div>
 
         <!-- SERVICE 13 -->
-        <div class="p-svc">
+        <div class="p-svc" id="service-13">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 13</span>
                 <h2 class="p-svc__name">消防署の立入検査の立会い・是正対応</h2>
@@ -961,7 +994,7 @@ h1, h2, h3,
         </div>
 
         <!-- SERVICE 14 -->
-        <div class="p-svc">
+        <div class="p-svc" id="service-14">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 14</span>
                 <h2 class="p-svc__name">消防訓練・防火管理の実務サポート</h2>
@@ -990,7 +1023,7 @@ h1, h2, h3,
         </div>
 
         <!-- SERVICE 15 -->
-        <div class="p-svc">
+        <div class="p-svc" id="service-15">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 15</span>
                 <h2 class="p-svc__name">福祉施設向けの消防設備点検・整備</h2>
@@ -1019,7 +1052,7 @@ h1, h2, h3,
         </div>
 
         <!-- SERVICE 16 -->
-        <div class="p-svc">
+        <div class="p-svc" id="service-16">
             <div class="p-svc__head">
                 <span class="p-svc__num">SERVICE 16</span>
                 <h2 class="p-svc__name">飲食店・厨房向けの消防設備点検</h2>
