@@ -10,7 +10,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;600;700;800&display=swap" rel="stylesheet">
     <meta name="description" content="東京都北区の株式会社上田は、消防設備士（全類）が東京23区の消防設備点検（消火器・自動火災報知設備・スプリンクラー設備・避難はしご・救助袋など）と、点検票の作成、不良箇所の改修まで一括で対応します。マンション・事務所・店舗の管理会社様、オーナー様へ。">
     <link rel="canonical" href="https://uedakai.com/">
     <meta property="og:type" content="website">
@@ -72,18 +72,18 @@ ul { list-style: none; }
    デザイントークン
 ============================================================ */
 :root {
-    --black:     #2a2f4a;      /* ネイビー */
-    --black-dark: #1d2238;     /* ホバー・ヘッダー文字 */
-    --gray-900:  #0e1117;      /* ヒーロー背景（深い黒） */
-    --gray-700:  #4b5563;
-    --gray-500:  #9ca3af;
-    --gray-300:  #d1d5db;
-    --gray-100:  #f3f4f6;
-    --gray-50:   #f9fafb;
+    --black:     #1d1d1f;      /* ネイビー */
+    --black-dark: #121214;     /* ホバー・ヘッダー文字 */
+    --gray-900:  #161617;      /* ヒーロー背景（深い黒） */
+    --gray-700:  #4f4a44;
+    --gray-500:  #a39e93;
+    --gray-300:  #ddd6c9;
+    --gray-100:  #f4f1ea;
+    --gray-50:   #faf7f1;
     --white:     #ffffff;
-    --accent:    #c0392b;      /* 深い赤 — アクションのみ */
-    --accent-hv: #a93226;
-    --border:    #e5e7eb;
+    --accent:    #D7261E;      /* 深い赤 — アクションのみ */
+    --accent-hv: #B01E16;
+    --border:    #e6e0d3;
     --max-w:     1080px;
     --r:         2px;
 }
@@ -271,17 +271,16 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     overflow: hidden;
-    background: var(--gray-900);
+    background: linear-gradient(100deg, #171310 0%, #292019 58%, #171310 100%);
 }
 .p-hero__bg {
     position: absolute;
     inset: 0;
     background-image:
-        url('https://images.unsplash.com/photo-1549240944-d805191e700d?auto=format&fit=crop&q=60&w=1400');
+        url('images/blog/blue-sky-apartments.jpg');
     background-size: cover;
-    background-position: center top;
-    opacity: 0.45;
-    filter: grayscale(30%);
+    background-position: center 30%;
+    opacity: 0.52;
 }
 .p-hero__inner {
     position: relative;
@@ -296,10 +295,10 @@ ul { list-style: none; }
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.2em;
-    color: var(--gray-300);
+    color: #ece5d3;
     text-transform: uppercase;
     margin-bottom: 20px;
-    border-left: 3px solid var(--gray-300);
+    border-left: 3px solid #D7261E;
     padding-left: 10px;
 }
 .p-hero__title {
@@ -312,7 +311,7 @@ ul { list-style: none; }
 }
 .p-hero__title em {
     font-style: normal;
-    border-bottom: 3px solid var(--white);
+    border-bottom: 3px solid #D7261E;
     padding-bottom: 2px;
 }
 .p-hero__desc {
@@ -968,17 +967,73 @@ ul { list-style: none; }
 .p-arch-note { margin-top: 28px; padding: 18px 20px; border-left: 4px solid var(--black); background: var(--gray-50, #f6f7f9); font-size: 0.9rem; line-height: 1.85; color: var(--gray-700); }
 </style>
     <style>
-/* ブランドロゴ（2026-10 採用） */
-.l-header__logo { display: flex; align-items: center; }
-.l-header__logo .l-header__brand { height: 36px; width: auto; display: block; }
-.l-footer__brand { display: inline-block; margin-bottom: 24px; }
-.l-footer__brand img { height: 32px; width: auto; display: block; }
-.l-header { box-shadow: inset 0 -3px 0 #1F3A5F; }
-@media (max-width: 768px) {
-    .l-header__logo .l-header__brand { height: 26px; }
-    .l-footer__brand img { height: 26px; }
+/* ============================================================
+   案A「信頼の正統派」デザイン層（2026-11 改訂）
+   書体：しっぽり明朝B1＝見出し ／ Noto Sans JP＝本文 ／ Archivo＝英数字
+   色：ロゴの黒と赤（#D7261E）を起点に、温かいオフホワイトで統一
+============================================================ */
+:root {
+    --font-serif: 'Shippori Mincho B1', 'Hiragino Mincho ProN', 'YuMincho', 'Yu Mincho', serif;
+    --font-latin: 'Archivo', 'Noto Sans JP', sans-serif;
+    --paper: #fdfcf9;
 }
-    </style>
+body { background-color: var(--paper); }
+::selection { background: #D7261E; color: #fff; }
+
+/* ロゴ（実物SVG） */
+.l-header__logo { display: flex; align-items: center; }
+.l-header__logo .l-header__brand { height: 38px; width: auto; display: block; }
+.l-footer__brand { display: inline-block; margin-bottom: 26px; }
+.l-footer__brand img { height: 34px; width: auto; display: block; }
+@media (max-width: 768px) {
+    .l-header__logo .l-header__brand { height: 27px; }
+    .l-footer__brand img { height: 27px; }
+}
+
+/* ヘッダー（全ページ共通の姿） */
+.l-header { position: sticky; top: 0; z-index: 900; background: #ffffff; height: 64px; display: flex; align-items: center; padding: 0; box-shadow: inset 0 -3px 0 #1d1d1f; }
+.l-header__inner { max-width: var(--max-w, 1080px); margin: 0 auto; padding: 0 5%; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+.l-nav__list { display: flex; align-items: center; gap: 2px; }
+.l-nav__item a { display: block; padding: 8px 12px; font-size: 0.85rem; font-weight: 500; color: #4f4a44; letter-spacing: 0.02em; border-radius: 2px; transition: color 0.15s; }
+.l-nav__item a:hover { color: #1d1d1f; }
+.l-nav__item.is-active a { color: #1d1d1f; font-weight: 700; box-shadow: inset 0 -2px 0 #D7261E; }
+.l-nav__item--cta a { background: #D7261E; color: #ffffff; padding: 8px 16px; }
+.l-nav__item--cta a:hover { background: #B01E16; color: #ffffff; }
+.l-nav__item--tel a { font-family: var(--font-latin); font-weight: 700; letter-spacing: 0.05em; color: #1d1d1f; }
+@media (max-width: 1180px) and (min-width: 861px) { .l-nav__item--tel { display: none; } }
+.l-nav__toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
+.l-nav__toggle span { display: block; width: 22px; height: 2px; background: #1d1d1f; transition: 0.25s; transform-origin: center; }
+.l-nav__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.l-nav__toggle.is-open span:nth-child(2) { opacity: 0; }
+.l-nav__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 860px) {
+    .l-nav__toggle { display: flex; }
+    .l-nav__list { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #ffffff; border-bottom: 1px solid #e6e0d3; flex-direction: column; align-items: stretch; padding: 12px 0; z-index: 800; gap: 0; }
+    .l-nav__list.is-open { display: flex; }
+    .l-nav__item a { padding: 12px 5%; border-radius: 0; font-size: 0.9rem; white-space: nowrap; }
+    .l-nav__item--cta { margin: 8px 5% 4px; }
+    .l-nav__item--cta a { text-align: center; border-radius: 2px; }
+}
+
+/* 見出し：明朝で組み、英字サブと数字はArchivo */
+h1, h2, h3,
+.c-heading, .p-page-header h1, .p-hero__title,
+.p-cta-inner h2, .p-cta__title, .p-line-section h2, .p-line__title {
+    font-family: var(--font-serif);
+    letter-spacing: 0.045em;
+}
+.c-heading--sub, .p-hero__label, .p-kpi__num, .p-service__num, .p-maker__num,
+.p-blog-card__date, .service-num, .p-hero__tel a {
+    font-family: var(--font-latin);
+}
+.c-heading--num { color: #D7261E; margin-right: 12px; letter-spacing: 0.12em; }
+
+/* 下層ページヘッダー：ロゴの赤の縦罫 */
+.p-page-header__inner { border-left: 3px solid #D7261E; padding-left: 22px; }
+
+/* フッター：黒地・赤の上罫・白ロゴ */
+.l-footer { border-top: 3px solid #D7261E; }
+</style>
 </head>
 <body>
 
@@ -1001,6 +1056,7 @@ ul { list-style: none; }
                 <li class="l-nav__item"><a href="faq.html">FAQ</a></li>
                 <li class="l-nav__item"><a href="blog.html">コラム</a></li>
                 <li class="l-nav__item"><a href="company.html">会社概要</a></li>
+                <li class="l-nav__item l-nav__item--tel"><a href="tel:09075515324">090-7551-5324</a></li>
                 <li class="l-nav__item l-nav__item--cta"><a href="contact.html">お問い合わせ</a></li>
             </ul>
         </nav>
@@ -1058,7 +1114,7 @@ ul { list-style: none; }
 <section class="u-section">
     <div class="u-container">
         <h2 class="c-heading">
-            <span class="c-heading--sub">Pain Points</span>
+            <span class="c-heading--sub"><span class="c-heading--num">01</span>Pain Points</span>
             こんなお困りごとはありませんか
         </h2>
         <div class="p-issue__grid">
@@ -1099,7 +1155,7 @@ ul { list-style: none; }
 <section class="u-section u-bg-gray">
     <div class="u-container">
         <h2 class="c-heading">
-            <span class="c-heading--sub">Legal Inspection</span>
+            <span class="c-heading--sub"><span class="c-heading--num">02</span>Legal Inspection</span>
             消防設備点検は、法律で定められた義務です
         </h2>
         <p class="p-law__lead">消防用設備等を設置している建物の関係者（所有者・管理者・占有者）は、定期的に点検を行い、その結果を消防署へ報告しなければなりません（消防法 <span class="u-ib">第17条の3の3</span>）。</p>
@@ -1148,7 +1204,7 @@ ul { list-style: none; }
 <section class="u-section" id="services">
     <div class="u-container">
         <h2 class="c-heading">
-            <span class="c-heading--sub">Services</span>
+            <span class="c-heading--sub"><span class="c-heading--num">03</span>Services</span>
             防災事業
         </h2>
         <p style="margin-top:14px; font-size:0.9rem; color:var(--gray-700);">対応エリアは東京23区内が中心です（23区外は交通費・出張費を加算して対応）。<br>点検は原則2名体制で伺います。</p>
@@ -1246,7 +1302,7 @@ ul { list-style: none; }
 <section class="u-section u-bg-gray">
     <div class="u-container">
         <h2 class="c-heading">
-            <span class="c-heading--sub">Field Photos</span>
+            <span class="c-heading--sub"><span class="c-heading--num">04</span>Field Photos</span>
             点検の現場から
         </h2>
         <div class="p-photo__grid">
@@ -1325,7 +1381,7 @@ ul { list-style: none; }
     <div class="u-container">
         <p class="p-maker-chip">メーカー様・発注元様向けのご案内</p>
         <h2 class="c-heading">
-            <span class="c-heading--sub">For Manufacturers</span>
+            <span class="c-heading--sub"><span class="c-heading--num">05</span>For Manufacturers</span>
             メーカー様からの<span class="u-ib">メンテナンス事業</span>
         </h2>
         <p style="margin-top:14px; font-size:0.9rem; color:var(--gray-700);">防災事業のほかに、設備メーカー様からの指定に基づき、以下の保守・点検にも対応しています。</p>
@@ -1387,7 +1443,7 @@ ul { list-style: none; }
 <section class="u-section u-bg-gray">
     <div class="u-container">
         <h2 class="c-heading">
-            <span class="c-heading--sub">Service Area</span>
+            <span class="c-heading--sub"><span class="c-heading--num">06</span>Service Area</span>
             対応エリア
         </h2>
         <div class="p-area__inner">

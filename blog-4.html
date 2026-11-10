@@ -37,7 +37,7 @@
     }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;600;700;800&display=swap" rel="stylesheet">
     <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -50,10 +50,10 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 :root {
-    --black: #2a2f4a; --black-dark: #1d2238; --gray-900: #0e1117;
-    --gray-700: #4b5563; --gray-500: #9ca3af; --gray-300: #d1d5db;
-    --gray-100: #f3f4f6; --gray-50: #f9fafb; --white: #ffffff;
-    --accent: #c0392b; --accent-hv: #a93226; --border: #e5e7eb;
+    --black: #1d1d1f; --black-dark: #121214; --gray-900: #161617;
+    --gray-700: #4f4a44; --gray-500: #a39e93; --gray-300: #ddd6c9;
+    --gray-100: #f4f1ea; --gray-50: #faf7f1; --white: #ffffff;
+    --accent: #D7261E; --accent-hv: #B01E16; --border: #e6e0d3;
     --max-w: 1080px; --r: 2px;
 }
 .u-container { max-width: var(--max-w); margin: 0 auto; padding: 0 5%; }
@@ -220,17 +220,73 @@ ul { list-style: none; }
 .l-footer__info p + p { margin-top: 4px; }
 </style>
     <style>
-/* ブランドロゴ（2026-10 採用） */
-.l-header__logo { display: flex; align-items: center; }
-.l-header__logo .l-header__brand { height: 36px; width: auto; display: block; }
-.l-footer__brand { display: inline-block; margin-bottom: 24px; }
-.l-footer__brand img { height: 32px; width: auto; display: block; }
-.l-header { box-shadow: inset 0 -3px 0 #1F3A5F; }
-@media (max-width: 768px) {
-    .l-header__logo .l-header__brand { height: 26px; }
-    .l-footer__brand img { height: 26px; }
+/* ============================================================
+   案A「信頼の正統派」デザイン層（2026-11 改訂）
+   書体：しっぽり明朝B1＝見出し ／ Noto Sans JP＝本文 ／ Archivo＝英数字
+   色：ロゴの黒と赤（#D7261E）を起点に、温かいオフホワイトで統一
+============================================================ */
+:root {
+    --font-serif: 'Shippori Mincho B1', 'Hiragino Mincho ProN', 'YuMincho', 'Yu Mincho', serif;
+    --font-latin: 'Archivo', 'Noto Sans JP', sans-serif;
+    --paper: #fdfcf9;
 }
-    </style>
+body { background-color: var(--paper); }
+::selection { background: #D7261E; color: #fff; }
+
+/* ロゴ（実物SVG） */
+.l-header__logo { display: flex; align-items: center; }
+.l-header__logo .l-header__brand { height: 38px; width: auto; display: block; }
+.l-footer__brand { display: inline-block; margin-bottom: 26px; }
+.l-footer__brand img { height: 34px; width: auto; display: block; }
+@media (max-width: 768px) {
+    .l-header__logo .l-header__brand { height: 27px; }
+    .l-footer__brand img { height: 27px; }
+}
+
+/* ヘッダー（全ページ共通の姿） */
+.l-header { position: sticky; top: 0; z-index: 900; background: #ffffff; height: 64px; display: flex; align-items: center; padding: 0; box-shadow: inset 0 -3px 0 #1d1d1f; }
+.l-header__inner { max-width: var(--max-w, 1080px); margin: 0 auto; padding: 0 5%; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+.l-nav__list { display: flex; align-items: center; gap: 2px; }
+.l-nav__item a { display: block; padding: 8px 12px; font-size: 0.85rem; font-weight: 500; color: #4f4a44; letter-spacing: 0.02em; border-radius: 2px; transition: color 0.15s; }
+.l-nav__item a:hover { color: #1d1d1f; }
+.l-nav__item.is-active a { color: #1d1d1f; font-weight: 700; box-shadow: inset 0 -2px 0 #D7261E; }
+.l-nav__item--cta a { background: #D7261E; color: #ffffff; padding: 8px 16px; }
+.l-nav__item--cta a:hover { background: #B01E16; color: #ffffff; }
+.l-nav__item--tel a { font-family: var(--font-latin); font-weight: 700; letter-spacing: 0.05em; color: #1d1d1f; }
+@media (max-width: 1180px) and (min-width: 861px) { .l-nav__item--tel { display: none; } }
+.l-nav__toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
+.l-nav__toggle span { display: block; width: 22px; height: 2px; background: #1d1d1f; transition: 0.25s; transform-origin: center; }
+.l-nav__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.l-nav__toggle.is-open span:nth-child(2) { opacity: 0; }
+.l-nav__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 860px) {
+    .l-nav__toggle { display: flex; }
+    .l-nav__list { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #ffffff; border-bottom: 1px solid #e6e0d3; flex-direction: column; align-items: stretch; padding: 12px 0; z-index: 800; gap: 0; }
+    .l-nav__list.is-open { display: flex; }
+    .l-nav__item a { padding: 12px 5%; border-radius: 0; font-size: 0.9rem; white-space: nowrap; }
+    .l-nav__item--cta { margin: 8px 5% 4px; }
+    .l-nav__item--cta a { text-align: center; border-radius: 2px; }
+}
+
+/* 見出し：明朝で組み、英字サブと数字はArchivo */
+h1, h2, h3,
+.c-heading, .p-page-header h1, .p-hero__title,
+.p-cta-inner h2, .p-cta__title, .p-line-section h2, .p-line__title {
+    font-family: var(--font-serif);
+    letter-spacing: 0.045em;
+}
+.c-heading--sub, .p-hero__label, .p-kpi__num, .p-service__num, .p-maker__num,
+.p-blog-card__date, .service-num, .p-hero__tel a {
+    font-family: var(--font-latin);
+}
+.c-heading--num { color: #D7261E; margin-right: 12px; letter-spacing: 0.12em; }
+
+/* 下層ページヘッダー：ロゴの赤の縦罫 */
+.p-page-header__inner { border-left: 3px solid #D7261E; padding-left: 22px; }
+
+/* フッター：黒地・赤の上罫・白ロゴ */
+.l-footer { border-top: 3px solid #D7261E; }
+</style>
 </head>
 <body>
 
@@ -250,6 +306,7 @@ ul { list-style: none; }
                 <li class="l-nav__item"><a href="faq.html">FAQ</a></li>
                 <li class="l-nav__item is-active"><a href="blog.html">コラム</a></li>
                 <li class="l-nav__item"><a href="company.html">会社概要</a></li>
+                <li class="l-nav__item l-nav__item--tel"><a href="tel:09075515324">090-7551-5324</a></li>
                 <li class="l-nav__item l-nav__item--cta"><a href="contact.html">お問い合わせ</a></li>
             </ul>
         </nav>
