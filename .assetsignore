@@ -4,4 +4,4 @@
 wrangler.jsonc
 wrangler.toml
 node_modules
-brand
+/brand/
