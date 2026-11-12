@@ -387,9 +387,9 @@ body { background-color: var(--paper); }
 .l-header { position: sticky; top: 0; z-index: 900; background: #ffffff; height: 64px; display: flex; align-items: center; padding: 0; box-shadow: inset 0 -3px 0 #1d1d1f; }
 .l-header__inner { max-width: var(--max-w, 1080px); margin: 0 auto; padding: 0 5%; width: 100%; display: flex; align-items: center; justify-content: space-between; }
 .l-nav__list { display: flex; align-items: center; gap: 2px; }
-.l-nav__item a { display: block; padding: 8px 12px; font-size: 0.85rem; font-weight: 500; color: #4f4a44; letter-spacing: 0.02em; border-radius: 2px; transition: color 0.15s; }
-.l-nav__item a:hover { color: #1d1d1f; }
-.l-nav__item.is-active a { color: #1d1d1f; font-weight: 700; box-shadow: inset 0 -2px 0 #D7261E; }
+.l-nav__item a, .l-nav__subbtn { display: block; padding: 8px 12px; font-size: 0.85rem; font-weight: 500; color: #4f4a44; letter-spacing: 0.02em; border-radius: 2px; transition: color 0.15s; }
+.l-nav__item a:hover, .l-nav__subbtn:hover { color: #1d1d1f; }
+.l-nav__item.is-active a, .l-nav__item.is-active .l-nav__subbtn { color: #1d1d1f; font-weight: 700; box-shadow: inset 0 -2px 0 #D7261E; }
 .l-nav__item--cta a { background: #D7261E; color: #ffffff; padding: 8px 16px; }
 .l-nav__item--cta a:hover { background: #B01E16; color: #ffffff; }
 .l-nav__item--tel a { font-family: var(--font-latin); font-weight: 700; letter-spacing: 0.05em; color: #1d1d1f; }
@@ -403,7 +403,7 @@ body { background-color: var(--paper); }
     .l-nav__toggle { display: flex; }
     .l-nav__list { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #ffffff; border-bottom: 1px solid #e6e0d3; flex-direction: column; align-items: stretch; padding: 12px 0; z-index: 800; gap: 0; }
     .l-nav__list.is-open { display: flex; }
-    .l-nav__item a { padding: 12px 5%; border-radius: 0; font-size: 0.9rem; white-space: nowrap; }
+    .l-nav__item a, .l-nav__subbtn { padding: 12px 5%; border-radius: 0; font-size: 0.9rem; white-space: nowrap; }
     .l-nav__item--cta { margin: 8px 5% 4px; }
     .l-nav__item--cta a { text-align: center; border-radius: 2px; }
 }
@@ -430,7 +430,8 @@ h1, h2, h3,
 <style>
 .l-nav__item.has-sub{position:relative;}
 .l-nav__sub{list-style:none;margin:0;padding:8px 0;position:absolute;top:100%;left:0;background:#fff;min-width:216px;box-shadow:0 12px 28px rgba(0,0,0,.16);border-top:3px solid #D7261E;display:none;z-index:950;}
-.l-nav__item.has-sub:hover .l-nav__sub,.l-nav__item.has-sub:focus-within .l-nav__sub{display:block;}
+.l-nav__item.has-sub:hover .l-nav__sub,.l-nav__item.has-sub:focus-within .l-nav__sub,.l-nav__item.has-sub.is-open .l-nav__sub{display:block;}
+.l-nav__subbtn{background:none;border:0;font-family:inherit;cursor:pointer;width:100%;text-align:left;}
 .l-nav__sub li{margin:0;}
 .l-nav__sub li a{display:block;padding:9px 18px;font-size:.88rem;white-space:nowrap;}
 .l-nav__sub li a:hover{background:#f4f6fb;}
@@ -452,7 +453,7 @@ h1, h2, h3,
                 <span></span><span></span><span></span>
             </button>
             <ul class="l-nav__list" id="navMenu" role="menubar">
-                <li class="l-nav__item has-sub"><a href="services.html">事業内容</a><ul class="l-nav__sub"><li><a href="services.html">防災事業</a></li><li><a href="maker.html">メンテナンス事業</a></li><li><a href="ohaka.html">お墓参り事業</a></li><li><a href="ending-note.html">エンディングノート事業</a></li></ul></li>
+                <li class="l-nav__item has-sub"><button type="button" class="l-nav__subbtn" aria-haspopup="true" aria-expanded="false">事業内容</button><ul class="l-nav__sub"><li><a href="services.html">防災事業</a></li><li><a href="maker.html">メンテナンス事業</a></li><li><a href="ohaka.html">お墓参り事業</a></li><li><a href="ending-note.html">エンディングノート事業</a></li></ul></li>
                 <li class="l-nav__item"><a href="case.html">対応実績</a></li>
                 <li class="l-nav__item"><a href="area.html">対応エリア</a></li>
                 <li class="l-nav__item is-active"><a href="faq.html">FAQ</a></li>
@@ -602,5 +603,22 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
 <script src="/js/budoux-ja.js" defer></script>
+
+<script>
+document.querySelectorAll('.l-nav__subbtn').forEach(function(b){
+  b.addEventListener('click', function(e){
+    e.stopPropagation();
+    var li = b.closest('.l-nav__item');
+    var open = li.classList.toggle('is-open');
+    b.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+});
+document.addEventListener('click', function(){
+  document.querySelectorAll('.l-nav__item.has-sub.is-open').forEach(function(li){
+    li.classList.remove('is-open');
+    var b = li.querySelector('.l-nav__subbtn'); if (b) b.setAttribute('aria-expanded','false');
+  });
+});
+</script>
 </body>
 </html>
