@@ -54,6 +54,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://uedakai.com/blog-2</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uedakai.com/blog-3</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uedakai.com/blog-4</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uedakai.com/blog-5</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://uedakai.com/company</loc>
     <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
