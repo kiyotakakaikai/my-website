@@ -1,197 +1,1265 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>エンディングノート講習｜株式会社上田</title>
-<meta name="description" content="株式会社上田のエンディングノート講習。「もしものとき」に家族が困らないための、ノートの書き方講習です。個人向け開催のほか、寺院・地域の集まり・管理組合への出張講習も承ります。東京都北区を中心に開催。">
-<link rel="canonical" href="https://uedakai.com/ending-note">
-<meta property="og:type" content="website">
-<meta property="og:title" content="エンディングノート講習｜株式会社上田">
-<meta property="og:description" content="もしものとき、家族が困らないために。エンディングノートの書き方講習は株式会社上田へ。">
-<meta property="og:image" content="https://uedakai.com/images/site/og-image.jpg">
-<meta property="og:url" content="https://uedakai.com/ending-note">
-<meta property="og:locale" content="ja_JP">
-<style>
-:root{
-  --ink:#1d1d1f; --paper:#faf7f1; --card:#ffffff;
-  --line:#e6dfcf; --navy:#262c49; --red:#d7261e; --gray:#5c6066;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>エンディングノート講習｜株式会社上田</title>
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="株式会社上田のエンディングノート講習。「もしものとき」に家族が困らないための、ノートの書き方講習です。個人向け開催のほか、寺院・地域の集まり・管理組合への出張講習も承ります。東京都北区を中心に開催。">
+    <link rel="canonical" href="https://uedakai.com/ending-note">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="エンディングノート講習｜株式会社上田">
+    <meta property="og:description" content="もしものとき、家族が困らないために。エンディングノートの書き方講習は株式会社上田へ。">
+    <meta property="og:image" content="https://uedakai.com/images/site/og-image.jpg">
+    <meta property="og:url" content="https://uedakai.com/ending-note">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BWY1S0RKH2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BWY1S0RKH2');
+    </script>
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "株式会社上田",
+      "url": "https://uedakai.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "北区",
+        "addressRegion": "東京都",
+        "addressCountry": "JP"
+      },
+      "areaServed": "東京都23区",
+      "knowsAbout": ["消防設備点検", "消火器点検", "自動火災報知設備", "消防設備の改修", "着工届"],
+      "description": "消防設備士（全類）が、東京23区の消防設備点検から点検票の作成、不良箇所の改修まで一括で対応します。"
+    }
+    </script>
+    <style>
+/* ============================================================
+   CSS リセット & ベース
+============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #1a1a1a;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    word-break: auto-phrase;
+    overflow-wrap: anywhere;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho",serif;color:var(--ink);background:var(--paper);line-height:1.9}
-.draft-banner{background:var(--red);color:#fff;text-align:center;font-weight:700;padding:10px 16px;font-size:.9rem;font-family:sans-serif}
-.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
-header.site{background:var(--card);border-bottom:3px solid var(--ink)}
-header.site .wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 20px}
-.logo{font-size:1.5rem;font-weight:700;letter-spacing:.14em;font-family:sans-serif}
-.logo .dot{color:var(--red)}
-.logo small{display:block;font-size:.7rem;letter-spacing:.2em;color:var(--gray)}
-nav.main a{margin-left:22px;color:var(--ink);text-decoration:none;font-size:.92rem}
-nav.main a:hover{text-decoration:underline}
-.hero{background:var(--navy);color:#fff;padding:74px 0 66px}
-.hero .kicker{font-family:sans-serif;font-size:.78rem;letter-spacing:.26em;color:#c3c9dd;margin-bottom:16px}
-.hero h1{font-size:2.1rem;line-height:1.55;font-weight:700;margin-bottom:18px}
-.hero p{max-width:700px;color:#e7eaf3;font-size:1.02rem}
-.hero .cta{margin-top:30px}
-.btn{display:inline-block;background:var(--red);color:#fff;padding:13px 30px;border-radius:4px;text-decoration:none;font-family:sans-serif;font-weight:700;font-size:.95rem}
-.btn.sub{background:transparent;color:#fff;border:1px solid #fff;margin-left:12px}
-section{padding:62px 0}
-section.alt{background:#f3efe3}
-h2{font-size:1.55rem;margin-bottom:8px}
-h2 .en{display:block;font-family:sans-serif;font-size:.72rem;letter-spacing:.24em;color:var(--red);margin-bottom:8px}
-.lead{color:#45413a;max-width:720px;margin-bottom:30px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px}
-.card h3{font-size:1.06rem;margin-bottom:10px}
-.card p{font-size:.93rem;color:#45413a}
-.card .price{margin-top:12px;font-family:sans-serif;font-weight:700}
-ul.list{line-height:2.05;padding-left:1.2em}
-ul.list li{margin-bottom:4px}
-table.price{width:100%;border-collapse:collapse;background:var(--card);margin-top:10px}
-table.price th,table.price td{border:1px solid var(--line);padding:14px 16px;text-align:left;vertical-align:top;font-size:.95rem}
-table.price th{background:#f8f4ea;width:40%}
-.note{font-size:.85rem;color:#6b675e;margin-top:12px;font-family:sans-serif}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
-.step{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px}
-.step .num{font-family:sans-serif;font-weight:700;color:var(--red);font-size:.82rem;letter-spacing:.14em}
-.step h3{font-size:1rem;margin:8px 0}
-.step p{font-size:.9rem;color:#45413a}
-.seminar{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--navy);border-radius:6px;padding:28px}
-.seminar h3{font-size:1.2rem;margin-bottom:10px}
-.seminar p{color:#45413a;font-size:.95rem}
-dl.faq dt{font-weight:700;margin-top:20px}
-dl.faq dd{margin:6px 0 0;color:#45413a}
-.contact-box{background:var(--navy);color:#fff;border-radius:8px;padding:34px;text-align:center}
-.contact-box h2{color:#fff}
-.contact-box p{color:#e7eaf3}
-.contact-box .ph{font-family:sans-serif;font-size:1.45rem;font-weight:700;letter-spacing:.06em;margin:14px 0 4px}
-footer.site{border-top:1px solid var(--line);padding:30px 0;font-size:.85rem;color:#6b675e;font-family:sans-serif}
-@media(max-width:820px){
-  .grid,.steps{grid-template-columns:1fr}
-  .hero h1{font-size:1.55rem}
-  nav.main{display:none}
-  .btn.sub{margin-left:0;margin-top:10px}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+/* ============================================================
+   デザイントークン
+============================================================ */
+:root {
+    --black:     #1d1d1f;      /* ネイビー */
+    --black-dark: #121214;     /* ホバー・ヘッダー文字 */
+    --gray-900:  #161617;      /* ヒーロー背景（深い黒） */
+    --gray-700:  #4f4a44;
+    --gray-500:  #a39e93;
+    --gray-300:  #ddd6c9;
+    --gray-100:  #f4f1ea;
+    --gray-50:   #faf7f1;
+    --white:     #ffffff;
+    --accent:    #D7261E;      /* 深い赤 — アクションのみ */
+    --accent-hv: #B01E16;
+    --border:    #e6e0d3;
+    --max-w:     1080px;
+    --r:         2px;
+}
+
+/* ============================================================
+   ユーティリティ
+============================================================ */
+.u-container { max-width: var(--max-w); margin: 0 auto; padding: 0 5%; }
+.u-section    { padding: 80px 0; }
+.u-section--sm{ padding: 56px 0; }
+.u-bg-gray    { background: var(--gray-50); }
+.u-text-center{ text-align: center; }
+
+/* ============================================================
+   見出し共通
+============================================================ */
+.c-heading {
+    font-size: clamp(1.4rem, 3vw, 1.75rem);
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+}
+.c-heading--sub {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--gray-500);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.c-heading::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--black);
+    margin-top: 16px;
+}
+/* ヘッダー文字色は濃い葵色 */
+.l-header__logo-name,
+.l-nav__item a { color: var(--black-dark); }
+.c-heading.is-center::after { margin-left: auto; margin-right: auto; }
+
+/* ============================================================
+   ボタン
+============================================================ */
+.c-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 28px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border-radius: var(--r);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    text-decoration: none;
+    border: 2px solid transparent;
+    line-height: 1;
+}
+.c-btn--primary {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+}
+.c-btn--primary:hover { background: var(--black-dark); border-color: var(--black-dark); }
+.c-btn--outline {
+    background: transparent;
+    color: var(--white);
+    border-color: rgba(255,255,255,0.7);
+}
+.c-btn--outline:hover { background: rgba(255,255,255,0.12); }
+.c-btn--accent {
+    background: var(--accent);
+    color: var(--white);
+    border-color: var(--accent);
+}
+.c-btn--accent:hover { background: var(--accent-hv); border-color: var(--accent-hv); }
+
+/* ============================================================
+   ヘッダー
+============================================================ */
+.l-header {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+.l-header__inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.l-header__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+.l-header__logo-img {
+    height: 40px;
+    width: auto;
+}
+.l-header__logo-text { display: flex; flex-direction: column; }
+.l-header__logo-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+}
+.l-header__logo-en {
+    font-size: 0.65rem;
+    color: var(--gray-500);
+    letter-spacing: 0.1em;
+    margin-top: 2px;
+}
+
+/* PC ナビ */
+.l-nav__list {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.l-nav__item a {
+    display: block;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    letter-spacing: 0.02em;
+    transition: color 0.15s;
+    border-radius: var(--r);
+}
+.l-nav__item a:hover { color: var(--black); }
+.l-nav__item.is-active a { color: var(--black); font-weight: 700; }
+.l-nav__item--cta a {
+    background: var(--accent);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: var(--r);
+}
+.l-nav__item--cta a:hover { background: var(--accent-hv); color: var(--white); }
+
+/* ハンバーガー */
+.l-nav__toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    flex-direction: column;
+    gap: 5px;
+}
+.l-nav__toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--black);
+    transition: 0.25s;
+    transform-origin: center;
+}
+.l-nav__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.l-nav__toggle.is-open span:nth-child(2) { opacity: 0; }
+.l-nav__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ============================================================
+   ヒーロー
+============================================================ */
+.p-hero {
+    position: relative;
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(100deg, #171310 0%, #292019 58%, #171310 100%);
+}
+.p-hero__bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        url('images/blog/blue-sky-apartments.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    opacity: 0.52;
+}
+.p-hero__inner {
+    position: relative;
+    z-index: 1;
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 80px 5%;
+    width: 100%;
+}
+.p-hero__label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #ece5d3;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-left: 3px solid #D7261E;
+    padding-left: 10px;
+}
+.p-hero__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+}
+.p-hero__title em {
+    font-style: normal;
+    border-bottom: 3px solid #D7261E;
+    padding-bottom: 2px;
+}
+.p-hero__desc {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.9;
+    max-width: 540px;
+    margin-bottom: 36px;
+}
+.p-hero__btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ============================================================
+   数字バー
+============================================================ */
+.p-kpi {
+    background: var(--black);   /* 葵色バー */
+    padding: 0;
+}
+.p-kpi__inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+.p-kpi__item {
+    padding: 32px 24px;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+.p-kpi__num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+.p-kpi__num sup { font-size: 0.9rem; vertical-align: super; }
+.p-kpi__label {
+    font-size: 0.78rem;
+    color: var(--gray-500);
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+}
+.p-kpi__note {
+    font-size: 0.65rem;
+    color: var(--gray-500);
+    margin-top: 4px;
+    display: block;
+}
+
+/* ============================================================
+   課題セクション
+============================================================ */
+.p-issue__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+    margin-top: 48px;
+}
+.p-issue__card {
+    background: var(--white);
+    padding: 32px 28px;
+}
+.p-issue__card-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+.p-issue__card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+.p-issue__list li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    line-height: 1.6;
+}
+.p-issue__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 1px;
+    background: var(--gray-500);
+}
+
+/* ============================================================
+   サービスセクション
+============================================================ */
+.p-service__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+.p-service__card {
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 28px 22px;
+    transition: box-shadow 0.2s;
+}
+.p-service__card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+.p-service__num {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--gray-500);
+    margin-bottom: 10px;
+}
+.p-service__name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 14px;
+    line-height: 1.4;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 14px;
+}
+.p-service__desc {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+.p-service__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.p-service__tag {
+    font-size: 0.72rem;
+    background: var(--gray-100);
+    color: var(--gray-700);
+    padding: 4px 10px;
+    border-radius: 2px;
+    letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   強みセクション
+============================================================ */
+.p-strength { position: relative; }
+.p-strength__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-top: 48px;
+}
+.p-strength__img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: var(--r);
+    filter: grayscale(20%);
+}
+.p-strength__list { display: flex; flex-direction: column; gap: 28px; }
+.p-strength__item { display: flex; gap: 20px; }
+.p-strength__item-num {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--gray-500);
+    letter-spacing: 0.05em;
+    border-radius: 50%;
+    margin-top: 2px;
+}
+.p-strength__item-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+.p-strength__item-body {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    line-height: 1.75;
+}
+
+/* ============================================================
+   フロー（ステップ）
+============================================================ */
+.p-flow__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 48px;
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+}
+.p-flow__step {
+    padding: 28px 24px;
+    background: var(--white);
+    border-right: 1px solid var(--border);
+    position: relative;
+}
+.p-flow__step:last-child { border-right: none; }
+.p-flow__step::after {
+    content: '→';
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: var(--gray-300);
+    z-index: 1;
+}
+.p-flow__step:last-child::after { display: none; }
+.p-flow__step-num {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--gray-500);
+    letter-spacing: 0.14em;
+    margin-bottom: 10px;
+}
+.p-flow__step-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+.p-flow__step-body {
+    font-size: 0.8rem;
+    color: var(--gray-700);
+    line-height: 1.65;
+}
+
+/* ============================================================
+   比較テーブル
+============================================================ */
+.p-compare { margin-top: 48px; }
+.p-compare table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+.p-compare thead th {
+    padding: 14px 20px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    background: var(--black);   /* 葵色テーブルヘッダー */
+    color: var(--white);
+}
+.p-compare thead th:first-child { width: 22%; }
+.p-compare tbody tr { border-bottom: 1px solid var(--border); }
+.p-compare tbody tr:last-child { border-bottom: none; }
+.p-compare tbody td {
+    padding: 18px 20px;
+    vertical-align: top;
+    line-height: 1.6;
+}
+.p-compare tbody td:first-child {
+    font-weight: 700;
+    background: var(--gray-50);
+    color: var(--black);
+    font-size: 0.85rem;
+}
+.p-compare tbody td:nth-child(2) { color: var(--gray-700); }
+.p-compare tbody td:nth-child(3) { font-weight: 700; color: var(--black); background: rgba(0,0,0,0.015); }
+.p-compare__wrap {
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+}
+
+/* ============================================================
+   エリア
+============================================================ */
+.p-area__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 48px;
+}
+.p-area__map {
+    background: var(--gray-100);
+    border-radius: var(--r);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    position: relative;
+}
+/* SVG 地図（簡易版）*/
+.p-area__svg { width: 100%; height: 100%; }
+.p-area__list { display: flex; flex-direction: column; gap: 16px; }
+.p-area__item { display: flex; gap: 16px; align-items: flex-start; }
+.p-area__badge {
+    flex-shrink: 0;
+    background: var(--black);
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+    margin-top: 2px;
+}
+.p-area__item-body { font-size: 0.875rem; color: var(--gray-700); line-height: 1.65; }
+.p-area__item-title { font-weight: 700; color: var(--black); margin-bottom: 4px; }
+
+/* ============================================================
+   CTA バナー
+============================================================ */
+.p-cta {
+    background: var(--black);
+    padding: 64px 5%;
+    text-align: center;
+}
+.p-cta__title {
+    font-size: clamp(1.3rem, 3vw, 1.75rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+.p-cta__desc {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 32px;
+    line-height: 1.8;
+}
+.p-cta__btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* ============================================================
+   LINE セクション
+============================================================ */
+.p-line {
+    padding: 48px 5%;
+    background: var(--gray-50);
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+.p-line__title { font-size: 1.1rem; font-weight: 700; color: var(--black); margin-bottom: 10px; }
+.p-line__desc { font-size: 0.875rem; color: var(--gray-700); margin-bottom: 22px; line-height: 1.7; }
+.p-line__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #06C755;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 13px 28px;
+    border-radius: var(--r);
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.p-line__btn:hover { background: #05a847; }
+.p-line__icon { width: 22px; height: 22px; }
+
+/* ============================================================
+   フッター
+============================================================ */
+.l-footer {
+    background: var(--black-dark);
+    padding: 32px 5%;
+    text-align: center;
+}
+.l-footer__nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+.l-footer__nav a {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    padding: 4px 10px;
+    transition: color 0.15s;
+}
+.l-footer__nav a:hover { color: rgba(255,255,255,0.9); }
+.l-footer__copy {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+}
+
+/* ============================================================
+   フローティング LINE
+============================================================ */
+.floating-line {
+    position: fixed;
+    right: 20px;
+    bottom: 24px;
+    background: #06C755;
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 12px 18px;
+    border-radius: 40px;
+    z-index: 9999;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    transition: background 0.2s;
+    text-decoration: none;
+}
+.floating-line:hover { background: #05a847; }
+
+/* ============================================================
+   モバイル固定 CTA バー
+============================================================ */
+.mobile-cta-bar { display: none; }
+
+/* ============================================================
+   レスポンシブ
+============================================================ */
+@media (max-width: 900px) {
+    .p-service__grid { grid-template-columns: 1fr 1fr; }
+    .p-flow__steps { grid-template-columns: 1fr 1fr; }
+    .p-flow__step:nth-child(2) { border-right: none; }
+    .p-flow__step:nth-child(2)::after { display: none; }
+    .p-flow__step:nth-child(3) { border-right: 1px solid var(--border); }
+    .p-flow__step:nth-child(3)::after { display: block; }
+    .p-strength__grid { grid-template-columns: 1fr; }
+    .p-strength__img { order: -1; }
+    .p-area__inner { grid-template-columns: 1fr; }
+    .p-issue__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    /* ナビ */
+    .l-nav__toggle { display: flex; }
+    .l-nav__list {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        padding: 12px 0;
+        z-index: 800;
+        gap: 0;
+    }
+    .l-nav__list.is-open { display: flex; }
+    .l-nav__list { align-items: stretch; }
+    .l-nav__item a { white-space: nowrap; }
+    .l-nav__item a { padding: 12px 5%; border-radius: 0; font-size: 0.9rem; }
+    .l-nav__item--cta { margin: 8px 5% 4px; }
+    .l-nav__item--cta a { text-align: center; border-radius: var(--r); }
+    .l-header { position: sticky; }
+
+    /* モバイル固定バー */
+    .mobile-cta-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9000;
+        box-shadow: 0 -2px 12px rgba(0,0,0,0.12);
+    }
+    .mobile-cta-bar a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 8px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--white);
+        min-height: 52px;
+        padding-bottom: env(safe-area-inset-bottom, 14px);
+    }
+    .mobile-cta-bar .cta-tel  { background: var(--black); }
+    .mobile-cta-bar .cta-line { background: #06C755; }
+    .mobile-cta-bar .cta-form { background: var(--accent); }
+    body { padding-bottom: calc(52px + env(safe-area-inset-bottom, 0)); }
+    .floating-line { display: none; }
+
+    /* セクション */
+    .u-section { padding: 56px 0; }
+    .p-hero { min-height: 460px; }
+    .p-hero__title { font-size: 1.75rem; }
+    .p-kpi__inner { grid-template-columns: 1fr; }
+    .p-kpi__item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .p-kpi__item:last-child { border-bottom: none; }
+    .p-service__grid { grid-template-columns: 1fr; }
+    .p-flow__steps { grid-template-columns: 1fr; }
+    .p-flow__step { border-right: none; border-bottom: 1px solid var(--border); }
+    .p-flow__step:last-child { border-bottom: none; }
+    .p-flow__step::after { content: '↓'; right: auto; left: 24px; top: auto; bottom: -16px; transform: none; }
+    .p-flow__step:last-child::after { display: none; }
+    .p-compare table thead { display: none; }
+    .p-compare table, .p-compare tbody, .p-compare tr, .p-compare td { display: block; width: 100%; }
+    .p-compare tbody tr { border: none; margin-bottom: 12px; background: var(--white); border-radius: var(--r); overflow: hidden; border: 1px solid var(--border); }
+    .p-compare tbody td { border-bottom: 1px solid var(--border); padding: 12px 16px; }
+    .p-compare tbody td:last-child { border-bottom: none; }
+    .p-compare tbody td::before { content: attr(data-label); display: block; font-size: 0.7rem; font-weight: 700; color: var(--gray-500); margin-bottom: 4px; letter-spacing: 0.05em; }
+    .p-compare tbody td:first-child { background: var(--gray-50); }
+    .p-cta__btns { flex-direction: column; align-items: center; }
+    .c-btn { width: 100%; max-width: 320px; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .p-hero__btns .c-btn { width: 100%; justify-content: center; }
+    .l-footer__nav { gap: 0; }
+    .l-footer__nav a { font-size: 0.75rem; }
+}
+
+/* ============================================================
+   消防メイン化で追加したスタイル
+============================================================ */
+.p-hero__badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.p-hero__badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 5px 12px;
+    border-radius: var(--r);
+    letter-spacing: 0.04em;
+}
+.p-kpi__num--sm { font-size: 1.4rem; letter-spacing: -0.01em; }
+
+/* 法定点検 */
+.p-law__lead { margin-top: 14px; font-size: 0.9rem; color: var(--gray-700); }
+.p-law__note { margin-top: 12px; font-size: 0.75rem; color: var(--gray-500); }
+
+/* 料金 */
+.p-price__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 48px;
+    align-items: start;
+}
+.p-price__table { width: 100%; border-collapse: collapse; font-size: 0.9rem; border: 1px solid var(--border); }
+.p-price__table th, .p-price__table td { padding: 16px 20px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; line-height: 1.6; }
+.p-price__table th { background: var(--gray-50); font-weight: 700; color: var(--black); width: 58%; font-size: 0.85rem; }
+.p-price__table td { font-weight: 700; color: var(--black); }
+.p-price__note { margin-top: 12px; font-size: 0.75rem; color: var(--gray-500); line-height: 1.7; }
+.p-check li {
+    position: relative;
+    padding: 0 0 14px 26px;
+    font-size: 0.9rem;
+    color: var(--gray-700);
+    line-height: 1.7;
+}
+.p-check li::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 7px;
+    width: 12px;
+    height: 7px;
+    border-left: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    transform: rotate(-45deg);
+}
+.p-sub-heading { font-size: 1rem; font-weight: 700; color: var(--black); margin-bottom: 16px; }
+
+/* メーカー様からのメンテナンス事業（サブ） */
+.p-maker {
+    margin-top: 40px;
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    background: var(--white);
+}
+.p-maker__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.p-maker__item {
+    padding: 24px 20px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+.p-maker__item:nth-child(4n) { border-right: none; }
+.p-maker__item:nth-last-child(-n+4) { border-bottom: none; }
+.p-maker__num { font-size: 0.7rem; font-weight: 700; color: var(--gray-500); letter-spacing: 0.14em; margin-bottom: 8px; }
+.p-maker__name { font-size: 0.95rem; font-weight: 700; color: var(--black); line-height: 1.4; margin-bottom: 6px; }
+.p-maker__desc { font-size: 0.78rem; color: var(--gray-700); line-height: 1.6; }
+.p-maker__notice {
+    border-top: 1px solid var(--border);
+    padding: 16px 20px;
+    font-size: 0.8rem;
+    color: var(--gray-700);
+    background: var(--gray-50);
+    line-height: 1.7;
+}
+.p-maker__notice strong { color: var(--black); }
+
+.p-flow__steps--5 { grid-template-columns: repeat(5, 1fr); }
+
+@media (max-width: 900px) {
+    .p-maker__list { grid-template-columns: 1fr 1fr; }
+    .p-maker__item { border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); }
+    .p-maker__item:nth-child(2n) { border-right: none; }
+    .p-maker__item:nth-last-child(-n+4) { border-bottom: 1px solid var(--border); }
+    .p-maker__item:nth-last-child(-n+2) { border-bottom: none; }
+    .p-price__grid { grid-template-columns: 1fr; }
+    .p-flow__steps--5 { grid-template-columns: 1fr; }
+    .p-flow__steps--5 .p-flow__step { border-right: none; border-bottom: 1px solid var(--border); }
+    .p-flow__steps--5 .p-flow__step::after { content: '↓'; display: block; right: auto; left: 24px; top: auto; bottom: -16px; transform: none; }
+    .p-flow__steps--5 .p-flow__step:last-child::after { display: none; }
+}
+@media (max-width: 768px) {
+    .p-maker__list { grid-template-columns: 1fr; }
+    .p-maker__item, .p-maker__item:nth-last-child(-n+2) { border-right: none; border-bottom: 1px solid var(--border); }
+    .p-maker__item:last-child { border-bottom: none; }
+}
+
+/* 点検の現場から（写真） */
+.p-photo__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+.p-photo__item { margin: 0; }
+.p-photo__img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--r); background: var(--gray-100); }
+.p-photo__cap { margin-top: 10px; font-size: 0.82rem; color: var(--gray-700); line-height: 1.6; }
+@media (max-width: 900px) { .p-photo__grid { grid-template-columns: 1fr 1fr; } }
+    .u-ib { display: inline-block; }
+
+/* メーカー様向けセクションの区切り */
+.p-for-maker { background: #eef1f5; border-top: 4px solid #8a93a6; }
+.p-fire.p-for-maker { padding: 40px 24px; border-radius: 8px; }
+.p-maker-chip { display: inline-block; font-size: 0.75rem; font-weight: 700; color: #fff; background: #5b6478; padding: 4px 10px; border-radius: 3px; margin-bottom: 14px; letter-spacing: 0.05em; }
+.p-maker-guide { margin-top: 14px; font-size: 0.82rem; color: var(--gray-700); line-height: 1.7; }
+.p-maker-guide a { text-decoration: underline; }
+
+.p-hero__tel { margin-top: 18px; font-size: 0.9rem; color: rgba(255,255,255,0.85); }
+.p-hero__tel a { color: #fff; font-weight: 700; font-size: 1.15rem; letter-spacing: 0.04em; text-decoration: underline; text-underline-offset: 3px; }
+.p-hero__tel-note { display: block; margin-top: 4px; font-size: 0.72rem; color: rgba(255,255,255,0.6); }
+
+.l-footer__info { margin: 20px auto 16px; max-width: 640px; padding: 0 16px; text-align: center; font-size: 0.75rem; line-height: 1.8; color: rgba(255,255,255,0.6); }
+.l-footer__info p + p { margin-top: 4px; }
+.p-arch-note { margin-top: 28px; padding: 18px 20px; border-left: 4px solid var(--black); background: var(--gray-50, #f6f7f9); font-size: 0.9rem; line-height: 1.85; color: var(--gray-700); }
+</style>
+    <style>
+/* ============================================================
+   案A「信頼の正統派」デザイン層（2026-11 改訂）
+   書体：しっぽり明朝B1＝見出し ／ Noto Sans JP＝本文 ／ Archivo＝英数字
+   色：ロゴの黒と赤（#D7261E）を起点に、温かいオフホワイトで統一
+============================================================ */
+:root {
+    --font-serif: 'Shippori Mincho B1', 'Hiragino Mincho ProN', 'YuMincho', 'Yu Mincho', serif;
+    --font-latin: 'Archivo', 'Noto Sans JP', sans-serif;
+    --paper: #fdfcf9;
+}
+body { background-color: var(--paper); }
+::selection { background: #D7261E; color: #fff; }
+
+/* ロゴ（実物SVG） */
+.l-header__logo { display: flex; align-items: center; }
+.l-header__logo .l-header__brand { height: 38px; width: auto; display: block; }
+.l-footer__brand { display: inline-block; margin-bottom: 26px; }
+.l-footer__brand img { height: 34px; width: auto; display: block; }
+@media (max-width: 768px) {
+    .l-header__logo .l-header__brand { height: 27px; }
+    .l-footer__brand img { height: 27px; }
+}
+
+/* ヘッダー（全ページ共通の姿） */
+.l-header { position: sticky; top: 0; z-index: 900; background: #ffffff; height: 64px; display: flex; align-items: center; padding: 0; box-shadow: inset 0 -3px 0 #1d1d1f; }
+.l-header__inner { max-width: var(--max-w, 1080px); margin: 0 auto; padding: 0 5%; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+.l-nav__list { display: flex; align-items: center; gap: 2px; }
+.l-nav__item a { display: block; padding: 8px 12px; font-size: 0.85rem; font-weight: 500; color: #4f4a44; letter-spacing: 0.02em; border-radius: 2px; transition: color 0.15s; }
+.l-nav__item a:hover { color: #1d1d1f; }
+.l-nav__item.is-active a { color: #1d1d1f; font-weight: 700; box-shadow: inset 0 -2px 0 #D7261E; }
+.l-nav__item--cta a { background: #D7261E; color: #ffffff; padding: 8px 16px; }
+.l-nav__item--cta a:hover { background: #B01E16; color: #ffffff; }
+.l-nav__item--tel a { font-family: var(--font-latin); font-weight: 700; letter-spacing: 0.05em; color: #1d1d1f; }
+@media (max-width: 1180px) and (min-width: 861px) { .l-nav__item--tel { display: none; } }
+.l-nav__toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
+.l-nav__toggle span { display: block; width: 22px; height: 2px; background: #1d1d1f; transition: 0.25s; transform-origin: center; }
+.l-nav__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.l-nav__toggle.is-open span:nth-child(2) { opacity: 0; }
+.l-nav__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 860px) {
+    .l-nav__toggle { display: flex; }
+    .l-nav__list { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #ffffff; border-bottom: 1px solid #e6e0d3; flex-direction: column; align-items: stretch; padding: 12px 0; z-index: 800; gap: 0; }
+    .l-nav__list.is-open { display: flex; }
+    .l-nav__item a { padding: 12px 5%; border-radius: 0; font-size: 0.9rem; white-space: nowrap; }
+    .l-nav__item--cta { margin: 8px 5% 4px; }
+    .l-nav__item--cta a { text-align: center; border-radius: 2px; }
+}
+
+/* 見出し：明朝で組み、英字サブと数字はArchivo */
+h1, h2, h3,
+.c-heading, .p-page-header h1, .p-hero__title,
+.p-cta-inner h2, .p-cta__title, .p-line-section h2, .p-line__title {
+    font-family: var(--font-serif);
+    letter-spacing: 0.045em;
+}
+.c-heading--sub, .p-hero__label, .p-kpi__num, .p-service__num, .p-maker__num,
+.p-blog-card__date, .service-num, .p-hero__tel a {
+    font-family: var(--font-latin);
+}
+.c-heading--num { color: #D7261E; margin-right: 12px; letter-spacing: 0.12em; }
+
+/* 下層ページヘッダー：ロゴの赤の縦罫 */
+.p-page-header__inner { border-left: 3px solid #D7261E; padding-left: 22px; }
+
+/* フッター：黒地・赤の上罫・白ロゴ */
+.l-footer { border-top: 3px solid #D7261E; }
+</style>
+
+<style>
+.d-hero{background:#262c49;color:#fff;padding:56px 0 48px}
+.d-hero .d-kicker{font-size:.8rem;letter-spacing:.18em;color:#c9cede;margin-bottom:12px}
+.d-hero h1{font-size:2rem;line-height:1.4;margin:0 0 14px}
+.d-hero p{color:#e6e8f0;line-height:1.9;margin:0;max-width:720px}
+.d-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.d-card{border:1px solid #e3ddcf;background:#fff;padding:20px;border-radius:6px}
+.d-card h3{margin:0 0 10px;font-size:1.02rem}
+.d-card p{margin:0;line-height:1.85;font-size:.92rem;color:#444}
+.d-list{line-height:2.0;margin:14px 0 0;padding-left:1.2em}
+table.d-table{width:100%;border-collapse:collapse;margin-top:22px;background:#fff}
+table.d-table th,table.d-table td{border:1px solid #ddd5c3;padding:13px 14px;text-align:left;vertical-align:top;line-height:1.7}
+table.d-table th{background:#faf7f1;width:38%;font-weight:700}
+.d-price{font-weight:700;white-space:nowrap}
+.d-note{font-size:.85rem;color:#666;margin-top:10px;line-height:1.8}
+.d-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}
+.d-step{background:#fff;border:1px solid #e3ddcf;border-radius:6px;padding:18px}
+.d-step .d-num{font-weight:700;color:#b3261e;font-size:.85rem;letter-spacing:.1em}
+.d-step h3{margin:8px 0;font-size:1rem}
+.d-step p{margin:0;font-size:.9rem;line-height:1.8;color:#444}
+.d-faq{margin-top:22px}
+.d-faq dt{font-weight:700;margin-top:18px}
+.d-faq dd{margin:6px 0 0;line-height:1.9;color:#444}
+@media(max-width:820px){.d-grid,.d-steps{grid-template-columns:1fr}.d-hero h1{font-size:1.55rem}}
+</style>
+<style>
+.l-nav__item.has-sub{position:relative;}
+.l-nav__sub{list-style:none;margin:0;padding:8px 0;position:absolute;top:100%;left:0;background:#fff;min-width:216px;box-shadow:0 12px 28px rgba(0,0,0,.16);border-top:3px solid #D7261E;display:none;z-index:950;}
+.l-nav__item.has-sub:hover .l-nav__sub,.l-nav__item.has-sub:focus-within .l-nav__sub{display:block;}
+.l-nav__sub li{margin:0;}
+.l-nav__sub li a{display:block;padding:9px 18px;font-size:.88rem;white-space:nowrap;}
+.l-nav__sub li a:hover{background:#f4f6fb;}
+@media (max-width:860px){
+.l-nav__sub{position:static;display:block;box-shadow:none;border-top:none;background:transparent;padding:2px 0 8px 20px;min-width:0;}
+.l-nav__sub li a{padding:8px 0;font-size:.95rem;}
 }
 </style>
 </head>
 <body>
 
-<header class="site">
-<div class="wrap">
-<div class="logo">UEDA<span class="dot">.</span><small>株式会社上田 ― エンディングノート講習</small></div>
-<nav class="main">
-<a href="#about">ノートについて</a>
-<a href="#learn">講習の内容</a>
-<a href="#format">開催の形</a>
-<a href="#faq">よくある質問</a>
-<a href="#contact">お申し込み</a>
-</nav>
-</div>
+<!-- ========================================================
+     ヘッダー
+======================================================== -->
+<header class="l-header">
+    <div class="l-header__inner">
+        <a class="l-header__logo" href="index.html">
+            <img src="images/brand/logo-header-color.svg" alt="株式会社上田" class="l-header__brand" width="215" height="36" loading="eager" fetchpriority="high">
+        </a>
+        <nav>
+            <button class="l-nav__toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="l-nav__list" id="navMenu">
+                <li class="l-nav__item has-sub"><a href="services.html">事業内容</a><ul class="l-nav__sub"><li><a href="services.html">防災事業</a></li><li><a href="maker.html">メンテナンス事業</a></li><li><a href="ohaka.html">お墓参り事業</a></li><li><a href="ending-note.html">エンディングノート事業</a></li></ul></li>
+                <li class="l-nav__item"><a href="case.html">対応実績</a></li>
+                <li class="l-nav__item"><a href="area.html">対応エリア</a></li>
+                <li class="l-nav__item"><a href="faq.html">FAQ</a></li>
+                <li class="l-nav__item"><a href="blog.html">コラム</a></li>
+                <li class="l-nav__item"><a href="company.html">会社概要</a></li>
+                <li class="l-nav__item l-nav__item--cta"><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<div class="hero">
-<div class="wrap">
-<p class="kicker">ENDING NOTE SEMINAR</p>
-<h1>もしものとき、<br>家族が困らないために。</h1>
-<p>エンディングノートは、大切な情報と自分の希望を家族に残すためのノートです。株式会社上田は、消防設備の点検で「もしもへの備え」に向き合ってきた会社として、ノートの書き方講習を行っています。防災も終活も、備えは「元気なうちに」が原則です。</p>
-<div class="cta">
-<a class="btn" href="#format">開催の形を見る</a>
-<a class="btn sub" href="#contact">申し込む・相談する</a>
-</div>
-</div>
-</div>
-
-<section id="about">
-<div class="wrap">
-<h2><span class="en">ABOUT</span>エンディングノートに書くこと</h2>
-<p class="lead">書く内容は、大きく6つです。全部を一度に書く必要はありません。講習では、どこから手をつければよいかをお伝えします。</p>
-<div class="grid">
-<div class="card"><h3>自分のこと</h3><p>生年月日や本籍、かかりつけ医や持病など、いざというときに家族が必要とする基本情報。</p></div>
-<div class="card"><h3>財産と契約のこと</h3><p>預貯金や保険、年金、不動産、契約中のサービスの所在。金額ではなく「どこに何があるか」を残します。</p></div>
-<div class="card"><h3>医療・介護の希望</h3><p>延命治療や介護についての自分の考え。家族が判断に迷わないための、大切な記録です。</p></div>
-<div class="card"><h3>葬儀・お墓の希望</h3><p>葬儀の形や規模、お墓をどうするか（継ぐ・墓じまい・永代供養など）の希望を書いておきます。</p></div>
-<div class="card"><h3>デジタル情報のこと</h3><p>スマートフォンやパソコン、利用中のネットサービスの一覧。解約や手続きで家族が最初に困る部分です。</p></div>
-<div class="card"><h3>大切な人への言葉</h3><p>感謝や伝えたいことを、自分の言葉で。形式にとらわれず書けるのが、遺言書と違うノートの良さです。</p></div>
-</div>
-<p class="note">※ エンディングノート自体に法的な効力はありません。財産の分け方などを正式に残したい場合は、遺言書が必要です。講習では、その違いと専門家への相談の進め方もご案内します。</p>
-</div>
+<main>
+<section class="d-hero">
+  <div class="u-container">
+    <p class="d-kicker">ENDING NOTE SEMINAR</p>
+    <h1>エンディングノート講習</h1>
+    <p>もしものとき、家族が困らないために。<br>
+    株式会社上田は、消防設備の点検で「もしもへの備え」に向き合ってきた会社として、エンディングノートの書き方講習を行っています。防災も終活も、備えは「元気なうちに」が原則です。</p>
+  </div>
 </section>
 
-<section id="learn" class="alt">
-<div class="wrap">
-<h2><span class="en">CURRICULUM</span>講習で学べること</h2>
-<ul class="list">
-<li>エンディングノートと遺言書の違い（効力・向いている内容・費用）</li>
-<li>書く順番と、無理なく書き進めるコツ（最初は「所在の一覧」だけでも十分です）</li>
-<li>家族に残すと助かる情報、残し方に注意がいる情報（暗証番号の扱いなど）</li>
-<li>お墓・葬儀の希望の書き方と、家族との話し合いの進め方</li>
-<li>書いたノートの保管場所と、見直しのタイミング（年1回、誕生日など）</li>
-</ul>
-<p class="note">講習の中で、商品やサービスの営業は行いません。ご希望の方にのみ、別途ご案内します。</p>
-<h2 style="margin-top:44px;"><span class="en">FOR WHOM</span>こんな方に</h2>
-<div class="grid">
-<div class="card"><h3>60代・70代のご本人</h3><p>「そろそろ整理を始めたいが、何から手をつければ」と思っている方に。</p></div>
-<div class="card"><h3>親のことが心配な子ども世代</h3><p>親に切り出しにくい話題だからこそ、講習という形なら一緒に参加できます。</p></div>
-<div class="card"><h3>ご夫婦で</h3><p>お互いの希望を知っておくことが、いちばんの備えになります。二人での参加も歓迎です。</p></div>
-</div>
-</div>
+<section class="u-section">
+  <div class="u-container">
+    <h2 class="c-heading"><span class="c-heading--sub">About</span>エンディングノートに書くこと</h2>
+    <p style="line-height:1.9;margin-bottom:20px;">書く内容は、大きく6つです。全部を一度に書く必要はありません。講習では、どこから手をつければよいかをお伝えします。</p>
+    <div class="d-grid">
+      <div class="d-card"><h3>自分のこと</h3><p>生年月日や本籍、かかりつけ医や持病など、いざというときに家族が必要とする基本情報。</p></div>
+      <div class="d-card"><h3>財産と契約のこと</h3><p>預貯金や保険、年金、不動産、契約中のサービスの所在。金額ではなく「どこに何があるか」を残します。</p></div>
+      <div class="d-card"><h3>医療・介護の希望</h3><p>延命治療や介護についての自分の考え。家族が判断に迷わないための、大切な記録です。</p></div>
+      <div class="d-card"><h3>葬儀・お墓の希望</h3><p>葬儀の形や規模、お墓をどうするか（継ぐ・墓じまい・永代供養など）の希望を書いておきます。</p></div>
+      <div class="d-card"><h3>デジタル情報のこと</h3><p>スマートフォンやパソコン、利用中のネットサービスの一覧。解約や手続きで家族が最初に困る部分です。</p></div>
+      <div class="d-card"><h3>大切な人への言葉</h3><p>感謝や伝えたいことを、自分の言葉で。形式にとらわれず書けるのが、遺言書と違うノートの良さです。</p></div>
+    </div>
+    <p class="d-note">※ エンディングノート自体に法的な効力はありません。財産の分け方などを正式に残したい場合は、遺言書が必要です。講習では、その違いと専門家への相談の進め方もご案内します。</p>
+  </div>
 </section>
 
-<section>
-<div class="wrap">
-<h2><span class="en">LECTURER</span>講師について</h2>
-<p class="lead">講師は、株式会社上田の<strong>上田</strong>が務めます。前職の冠婚葬祭の仕事の中で、エンディングノート講習を<strong>100回</strong>実施し、<strong>累計1,500名</strong>の方々にご参加いただきました。参加者の皆さまからは好評をいただいています。「終活」という言葉の重さを和らげ、家族のための情報整理として前向きに取り組める進め方をお伝えします。また、ファイナンシャルプランナーの資格も持ち、預貯金・保険・年金など、お金まわりの情報の残し方も含めてお伝えします。</p>
-</div>
+<section class="u-section u-bg-gray">
+  <div class="u-container">
+    <h2 class="c-heading"><span class="c-heading--sub">Curriculum</span>講習で学べること</h2>
+    <ul class="d-list">
+      <li>エンディングノートと遺言書の違い（効力・向いている内容・費用）</li>
+      <li>書く順番と、無理なく書き進めるコツ（最初は「所在の一覧」だけでも十分です）</li>
+      <li>家族に残すと助かる情報、残し方に注意がいる情報（暗証番号の扱いなど）</li>
+      <li>お墓・葬儀の希望の書き方と、家族との話し合いの進め方</li>
+      <li>書いたノートの保管場所と、見直しのタイミング（年1回、誕生日など）</li>
+    </ul>
+    <p class="d-note">講習の中で、商品やサービスの営業は行いません。ご希望の方にのみ、別途ご案内します。</p>
+    <h2 class="c-heading" style="margin-top:44px;"><span class="c-heading--sub">For Whom</span>こんな方に</h2>
+    <div class="d-grid">
+      <div class="d-card"><h3>60代・70代のご本人</h3><p>「そろそろ整理を始めたいが、何から手をつければ」と思っている方に。</p></div>
+      <div class="d-card"><h3>親のことが心配な子ども世代</h3><p>親に切り出しにくい話題だからこそ、講習という形なら一緒に参加できます。</p></div>
+      <div class="d-card"><h3>ご夫婦で</h3><p>お互いの希望を知っておくことが、いちばんの備えになります。二人での参加も歓迎です。</p></div>
+    </div>
+  </div>
 </section>
 
-<section id="format">
-<div class="wrap">
-<h2><span class="en">FORMAT</span>開催の形</h2>
-<table class="price">
-<tr><th>個人向け講習</th><td>東京都北区を中心に、<strong>不定期</strong>で開催します。<strong>最低参加者3名様</strong>から開催します。日程は決まり次第、このページでご案内します。</td></tr>
-<tr><th>出張講習（共催）</th><td>寺院・自治会・老人会・マンション管理組合・企業など、集まりの場へ伺います。<strong>20名様以上の団体</strong>を対象とします。形式は主催者と相談のうえ決めます。遠方の場合は、交通費の実費をいただきます。</td></tr>
-<tr><th>時間</th><td>90分（質疑応答を含みます）</td></tr>
-<tr><th>参加費</th><td>資料代 1,500円（エンディングノートの冊子つき。共催の場合は、主催者の形式に合わせます）</td></tr>
-<tr><th>持ち物</th><td>筆記用具のみ。ノートはお手持ちのものでも、当日ご案内するものでも構いません</td></tr>
-</table>
-<p class="note">※ お申し込みが3名に満たない場合は、開催を見送り、お申し込みの方へ個別にご連絡します。</p>
-</div>
+<section class="u-section">
+  <div class="u-container">
+    <h2 class="c-heading"><span class="c-heading--sub">Lecturer</span>講師について</h2>
+    <p style="line-height:1.9;">講師は、株式会社上田の上田が務めます。前職の冠婚葬祭の仕事の中で、エンディングノート講習を<strong>100回</strong>実施し、<strong>累計1,500名</strong>の方々にご参加いただきました。参加者の皆さまからは好評をいただいています。「終活」という言葉の重さを和らげ、家族のための情報整理として前向きに取り組める進め方をお伝えします。また、ファイナンシャルプランナーの資格も持ち、預貯金・保険・年金など、お金まわりの情報の残し方も含めてお伝えします。</p>
+  </div>
 </section>
 
-<section id="faq" class="alt">
-<div class="wrap">
-<h2><span class="en">FAQ</span>よくあるご質問</h2>
-<dl class="faq">
-<dt>法律の相談もできますか？</dt>
-<dd>講習は「ノートの書き方の案内」までです。相続や遺言など法律に関わる個別のご相談は、弁護士・行政書士などの専門家をご案内します。</dd>
-<dt>ノートは用意されていますか？</dt>
-<dd>資料代（1,500円）にエンディングノートの冊子が含まれていますので、手ぶらでご参加いただけます。すでにノートをお持ちの方は、そちらをご持参いただいても構いません。</dd>
-<dt>親を連れて参加してもいいですか？</dt>
-<dd>はい。ご家族での参加を歓迎します。「終活」という言葉に抵抗がある方も、「家族のための情報整理」として参加される方が多いです。</dd>
-<dt>出張講習の相談はどうすればいいですか？</dt>
-<dd>お問い合わせから、主催者名とおおよその人数・希望時期をお聞かせください。団体は20名様以上を対象としています。内容と進め方をご相談のうえ決めます。</dd>
-</dl>
-</div>
+<section class="u-section u-bg-gray">
+  <div class="u-container">
+    <h2 class="c-heading"><span class="c-heading--sub">Format</span>開催の形</h2>
+    <table class="d-table">
+      <tr><th>個人向け講習</th><td>東京都北区を中心に、<strong>不定期</strong>で開催します。<strong>最低参加者3名様</strong>から開催します。日程は決まり次第、このページでご案内します。</td></tr>
+      <tr><th>出張講習（共催）</th><td>寺院・自治会・老人会・マンション管理組合・企業など、集まりの場へ伺います。<strong>20名様以上の団体</strong>を対象とします。形式は主催者と相談のうえ決めます。遠方の場合は、交通費の実費をいただきます。</td></tr>
+      <tr><th>時間</th><td>90分（質疑応答を含みます）</td></tr>
+      <tr><th>参加費</th><td>資料代 1,500円（エンディングノートの冊子つき。共催の場合は、主催者の形式に合わせます）</td></tr>
+      <tr><th>持ち物</th><td>筆記用具のみ。ノートは資料代に含まれています</td></tr>
+    </table>
+    <p class="d-note">※ お申し込みが3名に満たない場合は、開催を見送り、お申し込みの方へ個別にご連絡します。</p>
+  </div>
 </section>
 
-<section id="contact" style="padding-top:0;">
-<div class="wrap">
-<div class="contact-box">
-<h2>お申し込み・ご相談</h2>
-<p>個人向け講習のお申し込み、出張講習のご相談は、こちらから。</p>
-      <p style="margin:20px 0 10px;"><a class="btn" href="https://uedakai.com/contact?type=ending">お問い合わせフォームから申し込む</a></p>
-      <p>株式会社上田（東京都北区）／ フォームのお問い合わせ種別で「エンディングノート講習のご相談」をお選びください</p>
-</div>
-</div>
+<section class="u-section">
+  <div class="u-container">
+    <h2 class="c-heading"><span class="c-heading--sub">FAQ</span>よくあるご質問</h2>
+    <dl class="d-faq">
+      <dt>法律の相談もできますか？</dt>
+      <dd>講習は「ノートの書き方の案内」までです。相続や遺言など法律に関わる個別のご相談は、弁護士・行政書士などの専門家をご案内します。</dd>
+      <dt>ノートは用意されていますか？</dt>
+      <dd>資料代（1,500円）にエンディングノートの冊子が含まれていますので、手ぶらでご参加いただけます。すでにノートをお持ちの方は、そちらをご持参いただいても構いません。</dd>
+      <dt>親を連れて参加してもいいですか？</dt>
+      <dd>はい。ご家族での参加を歓迎します。「終活」という言葉に抵抗がある方も、「家族のための情報整理」として参加される方が多いです。</dd>
+      <dt>出張講習の相談はどうすればいいですか？</dt>
+      <dd>お問い合わせから、主催者名とおおよその人数・希望時期をお聞かせください。団体は20名様以上を対象としています。内容と進め方をご相談のうえ決めます。</dd>
+    </dl>
+  </div>
 </section>
 
-<footer class="site">
-<div class="wrap">
-<p>株式会社上田 ― 東京都北区</p>
-    <p>事業のご案内：<a href="https://uedakai.com/services" style="color:inherit;text-decoration:underline;">防災事業</a>／<a href="https://uedakai.com/maker" style="color:inherit;text-decoration:underline;">メンテナンス事業</a>／<a href="https://uedakai.com/ohaka" style="color:inherit;text-decoration:underline;">お墓参り事業</a>／<a href="https://uedakai.com/ending-note" style="color:inherit;text-decoration:underline;">エンディングノート事業</a></p>
-<p>消防設備点検の株式会社上田が行う、地域のご家庭向けの終活講習です。本業のご案内は uedakai.com をご覧ください。</p>
-</div>
+<section class="p-cta">
+  <div class="u-container">
+    <h2 class="p-cta__title">エンディングノート講習の<br>お申し込み・ご相談はこちら</h2>
+    <p class="p-cta__desc">個人向け講習のお申し込み、出張講習のご相談をお受けしています。<br>お問い合わせ種別で「エンディングノート講習のご相談」をお選びください。</p>
+    <div class="p-cta__btns">
+      <a href="contact.html?type=ending" class="c-btn c-btn--accent">お申し込み・ご相談はこちら</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="l-footer">
+    <a href="index.html" class="l-footer__brand"><img src="images/brand/logo-header-white.svg" alt="株式会社上田" width="191" height="32" loading="lazy"></a>
+    <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+        <a href="services.html">防災事業</a><a href="maker.html">メンテナンス事業</a><a href="ohaka.html">お墓参り事業</a><a href="ending-note.html">エンディングノート事業</a>
+        <a href="area.html">対応エリア</a>
+        <a href="case.html">対応実績</a>
+        <a href="faq.html">FAQ</a>
+        <a href="blog.html">コラム</a>
+        <a href="company.html">会社概要</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+    </nav>
+    <div class="l-footer__info">
+        <p>株式会社上田　所在地：東京都北区</p>
+        <p>事業内容：消防設備点検・消火器点検・自動火災報知設備の点検・不良箇所の改修（防災事業）<br>メーカー様からのメンテナンス事業</p>
+    </div>
+    <p class="l-footer__copy">&copy; 株式会社上田</p>
 </footer>
 
+<!-- フローティング LINE -->
+<a class="floating-line" href="https://page.line.me/ovt4298c" target="_blank" rel="noopener">公式LINE</a>
+
+<!-- モバイル固定 CTA バー -->
+<div class="mobile-cta-bar" role="navigation" aria-label="クイックアクセス">
+    <a class="cta-tel" href="tel:09075515324">電話で相談</a>
+    <a class="cta-line" href="https://page.line.me/ovt4298c" target="_blank" rel="noopener">公式LINE</a>
+    <a class="cta-form" href="contact.html">お問い合わせ</a>
+</div>
+
+<script>
+(function() {
+    const toggle = document.getElementById('navToggle');
+    const menu   = document.getElementById('navMenu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', function() {
+        const isOpen = menu.classList.toggle('is-open');
+        toggle.classList.toggle('is-open', isOpen);
+        toggle.setAttribute('aria-expanded', isOpen);
+    });
+    // メニュー外クリックで閉じる
+    document.addEventListener('click', function(e) {
+        if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.remove('is-open');
+            toggle.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+})();
+</script>
+
+<script>
+// GA4 コンバージョン計測
+document.addEventListener('DOMContentLoaded', function(){
+    // 電話クリック
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(el){
+        el.addEventListener('click', function(){
+            gtag('event', 'conversion_tel', { event_category: 'contact', event_label: 'tel_click' });
+        });
+    });
+    // LINEクリック
+    document.querySelectorAll('a[href*="line.me"]').forEach(function(el){
+        el.addEventListener('click', function(){
+            gtag('event', 'conversion_line', { event_category: 'contact', event_label: 'line_click' });
+        });
+    });
+});
+</script>
+<script src="/js/budoux-ja.js" defer></script>
 </body>
 </html>
