@@ -582,6 +582,10 @@ h1, h2, h3,
                                     お墓参り・お墓の見守りのご相談
                                 </label>
                                 <label class="p-radio-label">
+                                    <input type="radio" name="type" value="エンディングノート講習のご相談">
+                                    エンディングノート講習のご相談
+                                </label>
+                                <label class="p-radio-label">
                                     <input type="radio" name="type" value="その他">
                                     その他
                                 </label>
@@ -661,6 +665,10 @@ document.addEventListener('DOMContentLoaded', function(){
         const m = document.querySelector('input[name="type"][value="メーカー様からのメンテナンス事業のご依頼"]');
         if(m) m.checked = true;
     }
+    if(params.get('type') === 'ending'){
+        const en = document.querySelector('input[name="type"][value="エンディングノート講習のご相談"]');
+        if(en) en.checked = true;
+    }
     if(params.get('type') === 'ohaka'){
         const o = document.querySelector('input[name="type"][value="お墓参り・お墓の見守りのご相談"]');
         if(o) o.checked = true;
@@ -673,12 +681,13 @@ document.addEventListener('DOMContentLoaded', function(){
     function applyCompanyRule(){
         const sel = document.querySelector('input[name="type"]:checked');
         const isGrave = sel && sel.value === 'お墓参り・お墓の見守りのご相談';
+        const isEnding = sel && sel.value === 'エンディングノート講習のご相談';
         if(!companyGroup || !companyInput) return;
-        if(isGrave){
+        if(isGrave || isEnding){
             companyGroup.style.display = 'none';
             companyInput.required = false;
             companyInput.value = '';
-            if(messageInput) messageInput.setAttribute('placeholder', '墓地の場所（霊園・寺院名）、お墓の数、今の気がかりをご記入ください。');
+            if(messageInput) messageInput.setAttribute('placeholder', isGrave ? '墓地の場所（霊園・寺院名）、お墓の数、今の気がかりをご記入ください。' : '参加の形（個人向け／出張講習のご相談）、おおよその人数、ご希望の時期をご記入ください。');
         } else {
             companyGroup.style.display = '';
             companyInput.required = true;
