@@ -578,12 +578,16 @@ h1, h2, h3,
                                     協力会社への応募・登録
                                 </label>
                                 <label class="p-radio-label">
+                                    <input type="radio" name="type" value="お墓参り・お墓の見守りのご相談">
+                                    お墓参り・お墓の見守りのご相談
+                                </label>
+                                <label class="p-radio-label">
                                     <input type="radio" name="type" value="その他">
                                     その他
                                 </label>
                             </div>
                         </div>
-                        <div class="p-form-group">
+                        <div class="p-form-group" id="companyGroup">
                             <label class="p-form-label">貴社名 <span class="p-form-required">必須</span></label>
                             <input type="text" name="company" placeholder="例：株式会社〇〇〇〇" required>
                         </div>
@@ -657,6 +661,30 @@ document.addEventListener('DOMContentLoaded', function(){
         const m = document.querySelector('input[name="type"][value="メーカー様からのメンテナンス事業のご依頼"]');
         if(m) m.checked = true;
     }
+    if(params.get('type') === 'ohaka'){
+        const o = document.querySelector('input[name="type"][value="お墓参り・お墓の見守りのご相談"]');
+        if(o) o.checked = true;
+    }
+    // 種別が「お墓参り・お墓の見守り」のときは、貴社名の欄を隠して必須を外す（個人のお客様向け）
+    const companyGroup = document.getElementById('companyGroup');
+    const companyInput = companyGroup ? companyGroup.querySelector('input[name="company"]') : null;
+    function applyCompanyRule(){
+        const sel = document.querySelector('input[name="type"]:checked');
+        const isGrave = sel && sel.value === 'お墓参り・お墓の見守りのご相談';
+        if(!companyGroup || !companyInput) return;
+        if(isGrave){
+            companyGroup.style.display = 'none';
+            companyInput.required = false;
+            companyInput.value = '';
+        } else {
+            companyGroup.style.display = '';
+            companyInput.required = true;
+        }
+    }
+    document.querySelectorAll('input[name="type"]').forEach(function(r){
+        r.addEventListener('change', applyCompanyRule);
+    });
+    applyCompanyRule();
     if(params.get('type') === 'build'){
         // ラジオボタンを「フィールドサービス体制の構築のご相談」に自動選択
         // 選択肢が非表示のときは何もしない（既定の選択のまま）
