@@ -295,6 +295,18 @@ h1, h2, h3,
 .p-blog-card__head-title{font-family:var(--font-serif);font-size:17px;font-weight:600;line-height:1.55;margin:12px 0 0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .p-blog-card__head-brand{margin-top:auto;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.65)}
 </style>
+<style>
+.l-nav__item.has-sub{position:relative;}
+.l-nav__sub{list-style:none;margin:0;padding:8px 0;position:absolute;top:100%;left:0;background:#fff;min-width:216px;box-shadow:0 12px 28px rgba(0,0,0,.16);border-top:3px solid #D7261E;display:none;z-index:950;}
+.l-nav__item.has-sub:hover .l-nav__sub,.l-nav__item.has-sub:focus-within .l-nav__sub{display:block;}
+.l-nav__sub li{margin:0;}
+.l-nav__sub li a{display:block;padding:9px 18px;font-size:.88rem;white-space:nowrap;}
+.l-nav__sub li a:hover{background:#f4f6fb;}
+@media (max-width:860px){
+.l-nav__sub{position:static;display:block;box-shadow:none;border-top:none;background:transparent;padding:2px 0 8px 20px;min-width:0;}
+.l-nav__sub li a{padding:8px 0;font-size:.95rem;}
+}
+</style>
 </head>
 <body>
 
@@ -308,7 +320,7 @@ h1, h2, h3,
                 <span></span><span></span><span></span>
             </button>
             <ul class="l-nav__list" id="navMenu" role="menubar">
-                <li class="l-nav__item"><a href="services.html">事業内容</a></li>
+                <li class="l-nav__item has-sub"><a href="services.html">事業内容</a><ul class="l-nav__sub"><li><a href="services.html">防災事業</a></li><li><a href="maker.html">メンテナンス事業</a></li><li><a href="ohaka.html">お墓参り事業</a></li><li><a href="ending-note.html">エンディングノート事業</a></li></ul></li>
                 <li class="l-nav__item"><a href="case.html">対応実績</a></li>
                 <li class="l-nav__item"><a href="area.html">対応エリア</a></li>
                 <li class="l-nav__item"><a href="faq.html">FAQ</a></li>
@@ -1017,7 +1029,7 @@ h1, h2, h3,
 <footer class="l-footer">
     <a href="index.html" class="l-footer__brand"><img src="images/brand/logo-header-white.svg" alt="株式会社上田" width="191" height="32" loading="lazy"></a>
     <nav class="l-footer__nav">
-        <a href="services.html">事業内容</a>
+        <a href="services.html">防災事業</a><a href="maker.html">メンテナンス事業</a><a href="ohaka.html">お墓参り事業</a><a href="ending-note.html">エンディングノート事業</a>
         <a href="area.html">対応エリア</a>
         <a href="case.html">対応実績</a>
         <a href="faq.html">FAQ</a>
