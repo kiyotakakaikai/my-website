@@ -666,6 +666,8 @@ document.addEventListener('DOMContentLoaded', function(){
         if(o) o.checked = true;
     }
     // 種別が「お墓参り・お墓の見守り」のときは、貴社名の欄を隠して必須を外す（個人のお客様向け）
+    const messageInput = document.querySelector('textarea[name="message"]');
+    const defaultMessagePh = messageInput ? messageInput.getAttribute('placeholder') : '';
     const companyGroup = document.getElementById('companyGroup');
     const companyInput = companyGroup ? companyGroup.querySelector('input[name="company"]') : null;
     function applyCompanyRule(){
@@ -676,9 +678,11 @@ document.addEventListener('DOMContentLoaded', function(){
             companyGroup.style.display = 'none';
             companyInput.required = false;
             companyInput.value = '';
+            if(messageInput) messageInput.setAttribute('placeholder', '墓地の場所（霊園・寺院名）、お墓の数、今の気がかりをご記入ください。');
         } else {
             companyGroup.style.display = '';
             companyInput.required = true;
+            if(messageInput) messageInput.setAttribute('placeholder', defaultMessagePh);
         }
     }
     document.querySelectorAll('input[name="type"]').forEach(function(r){
