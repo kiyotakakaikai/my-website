@@ -69,7 +69,25 @@
         margin:0;background:var(--paper);color:var(--ink);
         font-family:var(--font-text);font-size:17px;font-weight:400;
         letter-spacing:0;line-height:1.47;
+        word-break:auto-phrase;line-break:strict;
         -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+      }
+      /* Japanese line breaks: keep phrases together, balance lead lines, avoid orphan last lines */
+      .lede,.sec-lede,.d-lede,.detail h2,.sec-head,.faq-item h4{text-wrap:balance;}
+      p{text-wrap:pretty;}
+      /* Lead kept on a single line where the viewport is wide enough */
+      @media(min-width:1024px){
+        .detail .lede.lede-1line{max-width:none;white-space:nowrap;font-size:20px;}
+      }
+      /* FAQ cross-reference notes: keep the link phrase unbroken on wide screens */
+      @media(min-width:768px){
+        .d-lede.faq-note a{white-space:nowrap;}
+      }
+      /* Lead kept on exactly two lines where the viewport is wide enough */
+      .br-wide{display:none;}
+      @media(min-width:768px){
+        .br-wide{display:inline;}
+        .detail .lede.lede-2line{max-width:740px;font-size:20px;}
       }
       img{display:block;max-width:100%;}
       a{color:var(--link);text-decoration:none;}
@@ -440,8 +458,8 @@
                   <span class="hc-tag">コラムより ― 防災：消火器の格納箱</span>
                 </div>
                 <div class="hc-slide">
-                  <img src="assets/col-laundry-store.jpg" alt="コインランドリーの店内" loading="lazy" />
-                  <span class="hc-tag">コラムより ― メンテナンス：コインランドリー</span>
+                  <img src="assets/col-laundry-maintenance.jpg" alt="業務用洗濯機の保守作業" loading="lazy" />
+                  <span class="hc-tag">コラムより ― メンテナンス：業務用ランドリー</span>
                 </div>
                 <div class="hc-slide">
                   <img src="assets/ohaka-removal-cropped.jpg" alt="墓石の撤去・改修作業の様子" loading="lazy" />
@@ -516,7 +534,8 @@
                 </span>
               </a>
 
-              <a class="tile text-only" href="#about" data-route="about">
+              <a class="tile" href="#about" data-route="about">
+                <span class="tile-media"><img src="assets/about-office.jpg" alt="机と椅子が並ぶオフィスの室内" loading="lazy" /></span>
                 <span class="tile-body">
                   <h3>会社概要</h3>
                   <p>東京都北区を拠点に、4つの事業を行っています。</p>
@@ -724,7 +743,7 @@
         <section class="detail wrap">
           <a class="back-link" href="#top" data-route="top">トップへ戻る</a>
           <h2>メーカーの現場を、支える</h2>
-          <p class="lede">メーカー様・発注元様のご指定に基づき、各種設備の保守・点検・修理・一次対応を行います。</p>
+          <p class="lede lede-1line">メーカー様・発注元様のご指定に基づき、各種設備の保守・点検・修理・一次対応を行います。</p>
           <figure class="detail-photo">
             <img src="assets/col-solar-rooftop-panels.jpg" alt="屋根に並ぶ太陽光パネル" />
             <figcaption>屋根上の太陽光発電設備。竣工検査・年次点検に対応します。</figcaption>
@@ -793,7 +812,7 @@
 
           <div class="d-sec">
             <h3>よくあるご質問</h3>
-            <p class="d-lede">メンテナンスに関するよくあるご質問は、<a href="#faq" data-route="faq" data-target="faq-maintenance">よくある質問ページの「メンテナンス」欄</a>にまとめています。</p>
+            <p class="d-lede faq-note">メンテナンスに関するよくあるご質問は、<a href="#faq" data-route="faq" data-target="faq-maintenance">よくある質問ページの「メンテナンス」欄</a>にまとめています。</p>
           </div>
 
           <div class="detail-cta">
@@ -878,7 +897,7 @@
 
           <div class="d-sec">
             <h3>よくあるご質問</h3>
-            <p class="d-lede">お墓の見守り・清掃に関するよくあるご質問は、<a href="#faq" data-route="faq" data-target="faq-ohaka">よくある質問ページの「お墓の見守り・清掃」欄</a>にまとめています。</p>
+            <p class="d-lede faq-note">お墓の見守り・清掃に関するよくあるご質問は、<a href="#faq" data-route="faq" data-target="faq-ohaka">よくある質問ページの「お墓の見守り・清掃」欄</a>にまとめています。</p>
           </div>
 
           <div class="detail-cta">
@@ -893,6 +912,10 @@
           <a class="back-link" href="#top" data-route="top">トップへ戻る</a>
           <h2>エンディングノート講習</h2>
           <p class="lede">「いつか書こう」を、「今日書けた」に変える90分です。</p>
+          <figure class="detail-photo">
+            <img src="assets/ending-desk.jpg" alt="木の机に置かれたノートと万年筆、インク瓶" />
+            <figcaption>ノートと万年筆。講習では、冊子に実際に書き込みながら進めます。</figcaption>
+          </figure>
           <div class="detail-body">
             <p>冠婚葬祭業界での経験を持つ講師が、エンディングノートの冊子を使いながら、無理のない書き方をお伝えします。講師はファイナンシャルプランナーの資格も持ち、お金の項目も含めて実務目線で解説します。</p>
             <p>「何から書けばいいか分からない」という声に応える講習です。90分の中で、実際に手を動かしながら書き進めます。</p>
@@ -944,7 +967,7 @@
 
           <div class="d-sec">
             <h3>よくあるご質問</h3>
-            <p class="d-lede">エンディングノート講習に関するよくあるご質問は、<a href="#faq" data-route="faq" data-target="faq-ending">よくある質問ページの「エンディングノート講習」欄</a>にまとめています。</p>
+            <p class="d-lede faq-note">エンディングノート講習に関するよくあるご質問は、<a href="#faq" data-route="faq" data-target="faq-ending">よくある質問ページの「エンディングノート講習」欄</a>にまとめています。</p>
           </div>
 
           <div class="detail-cta" style="justify-content:center;text-align:center;">
@@ -958,7 +981,7 @@
         <section class="detail wrap">
           <a class="back-link" href="#top" data-route="top">トップへ戻る</a>
           <h2>会社概要</h2>
-          <p class="lede">現場を知る人間が、誠実に動く。東京都北区を拠点に、どの事業でも「現場に伺い、状態を確認し、報告する」進め方を大切にしています。</p>
+          <p class="lede lede-2line">現場を知る人間が、誠実に動く。東京都北区を拠点に、どの事業でも<br class="br-wide" />「現場に伺い、状態を確認し、報告する」進め方を大切にしています。</p>
           <dl class="kv">
             <div class="kv-row"><dt>会社名</dt><dd>株式会社上田</dd></div>
             <div class="kv-row"><dt>代表者</dt><dd>上田聖子</dd></div>
@@ -998,36 +1021,6 @@
             </ul>
           </div>
 
-          <div class="d-sec">
-            <h3>事業概要</h3>
-            <div class="duo">
-              <div class="mini-card">
-                <h4>防災</h4>
-                <p>消防設備点検・消火器点検。点検から改修まで一括対応。</p>
-                <p style="margin-top:10px;"><a class="arrow-link" href="#bousai" data-route="bousai">詳しく見る</a></p>
-              </div>
-              <div class="mini-card">
-                <h4>メンテナンス</h4>
-                <p>メーカー製品の保守・点検・検査を、現場で支えます。</p>
-                <p style="margin-top:10px;"><a class="arrow-link" href="#maintenance" data-route="maintenance">詳しく見る</a></p>
-              </div>
-              <div class="mini-card">
-                <h4>お墓の見守り・清掃</h4>
-                <p>行けない日のお墓参りを、代わりに。</p>
-                <p style="margin-top:10px;"><a class="arrow-link" href="#ohaka" data-route="ohaka">詳しく見る</a></p>
-              </div>
-              <div class="mini-card">
-                <h4>エンディングノート講習</h4>
-                <p>100回・累計1,500名が参加した、90分の講習。</p>
-                <p style="margin-top:10px;"><a class="arrow-link" href="#ending" data-route="ending">詳しく見る</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="detail-cta">
-            <a class="btn" href="#contact" data-route="contact">お問い合わせ</a>
-            <a class="arrow-link" href="#top" data-route="top">事業一覧へ</a>
-          </div>
         </section>
       </div>
 
@@ -1108,9 +1101,9 @@
           </div>
 
           <div class="d-sec">
-            <h3>お電話でのご相談</h3>
-            <p class="d-lede">お急ぎの場合は、お電話でも承ります。<br /><a class="num" href="tel:09075515324" style="font-size:21px;font-weight:600;">090-7551-5324</a></p>
-            <p class="fine-note">営業目的の電話は固くお断りしております。</p>
+            <h3 style="text-align:center;">お電話でのご相談</h3>
+            <p class="d-lede" style="text-align:center;margin-left:auto;margin-right:auto;">お急ぎの場合は、お電話でも承ります。<br /><a class="num" href="tel:09075515324" style="font-size:21px;font-weight:600;">090-7551-5324</a></p>
+            <p class="fine-note" style="text-align:center;margin-left:auto;margin-right:auto;">営業目的の電話は固くお断りしております。</p>
           </div>
         </section>
       </div>
@@ -9136,6 +9129,8 @@
     //   偏らないよう各事業から選ぶ
     // ・同じ写真は1回の表示で二度出さない（重複は除いて選ぶ）
     // ・顔が写っている写真、メーカー名や家名が読み取れる写真はプールに入れない
+    // ・モザイク（ぼかし）処理が入った写真もプールに入れない。使うのは顔なしの
+    //   写真か、トリミングで顔を外した写真のみとする
     // ・エンディングノート講習は、タイルで使用中の ending-note.jpg とは別の
     //   未使用・顔なし写真（col-ending-note-pen.jpg：明るい机上の冊子と万年筆、
     //   眼鏡なし・別構図）をプールに入れて4事業をそろえる
@@ -9144,7 +9139,7 @@
       if(!track){ return; }
       var MAIN_PAGE_PHOTOS={
         'assets/hero-fire.jpg':1,'assets/delivery.jpg':1,'assets/grave.jpg':1,
-        'assets/grave-flowers.jpg':1,'assets/ending-note.jpg':1,'assets/tokyo.jpg':1,
+        'assets/grave-flowers.jpg':1,'assets/ending-note.jpg':1,'assets/ending-desk.jpg':1,'assets/tokyo.jpg':1,
         'assets/service-area-map.png':1,'assets/logo.svg':1,'assets/seminar.jpg':1,
         'assets/solar-inspection.jpg':1,'assets/maint-intercom.jpg':1,
         'assets/maint-coffee.jpg':1,'assets/maint-denchu.jpg':1,'assets/maint-robot.png':1,
@@ -9172,7 +9167,6 @@
         {g:'bousai',src:'assets/col-rooftop-fire-extinguisher-box.jpg',alt:'屋上に設置された消火器の格納箱',tag:'コラムより ― 防災：屋上の消火器格納箱'},
         {g:'bousai',src:'assets/col-fire-alarm-call-point.jpg',alt:'火災発信機と表示灯',tag:'コラムより ― 防災：火災発信機'},
         {g:'bousai',src:'assets/col-emergency-broadcast.jpg',alt:'非常放送設備の操作部',tag:'コラムより ― 防災：非常放送設備'},
-        {g:'maint',src:'assets/col-laundry-store.jpg',alt:'コインランドリーの店内',tag:'コラムより ― メンテナンス：コインランドリー'},
         {g:'maint',src:'assets/col-laundry-maintenance.jpg',alt:'業務用洗濯機の保守作業',tag:'コラムより ― メンテナンス：業務用ランドリー'},
         {g:'maint',src:'assets/col-powder-unit-solar-top.jpg',alt:'太陽光パネルの表面',tag:'コラムより ― メンテナンス：太陽光パネル'},
         {g:'maint',src:'assets/col-delivery-box-lockers.jpg',alt:'宅配ボックスの扉の接写',tag:'コラムより ― メンテナンス：宅配ボックス'},
