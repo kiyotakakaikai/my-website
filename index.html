@@ -10802,7 +10802,7 @@
             }
           }
         }
-        /* ---- Contact form: company-field rule (submission is a native POST to Formspree) ---- */
+        /* ---- Contact form: company-field rule + in-page AJAX submission to Formspree ---- */
         (function(){
           var form=document.getElementById('contactForm');
           if(!form){ return; }
@@ -10838,17 +10838,44 @@
           for(var i=0;i<radios.length;i++){ radios[i].addEventListener('change', applyCompanyRule); }
           applyCompanyRule();
 
-          /* Submission intentionally uses the form's native POST to Formspree
-             (action/method attributes), the same method as the previous site.
-             The Formspree endpoint for this form requires reCAPTCHA verification,
-             which Formspree serves on its own page after a native POST.
-             An AJAX/fetch submission carries no reCAPTCHA token, so Formspree
-             rejects it with HTTP 400 "Please complete the reCAPTCHA" — that was
-             the cause of the in-page "送信できませんでした" failures. Do not
-             reintroduce a fetch-based submit handler for this form. */
+          /* In-page AJAX submission to Formspree: no page transition.
+             Formspree's CAPTCHA requirement for this endpoint has been
+             disabled, so a fetch submission without a reCAPTCHA token is
+             accepted. On success the form is swapped for the in-page
+             completion panel; on failure an in-page error is shown. */
           var btn=document.getElementById('submitBtn');
-          form.addEventListener('submit', function(){
+          var status=document.getElementById('formStatus');
+          var done=document.getElementById('formDone');
+          function showError(){
+            if(status){
+              status.textContent='送信できませんでした。時間をおいて再度お試しいただくか、お電話または公式LINEでご連絡ください。';
+              status.className='form-status show err';
+            }
+            if(btn){ btn.disabled=false; btn.textContent='入力内容を送信する'; }
+          }
+          form.addEventListener('submit', function(e){
+            e.preventDefault();
+            if(btn && btn.disabled){ return; }
             if(btn){ btn.disabled=true; btn.textContent='送信中…'; }
+            if(status){ status.className='form-status'; status.textContent=''; }
+            fetch(form.action, {
+              method:'POST',
+              body:new FormData(form),
+              headers:{'Accept':'application/json'}
+            }).then(function(res){
+              if(res.ok){
+                form.style.display='none';
+                if(done){
+                  done.classList.add('show');
+                  done.focus();
+                  done.scrollIntoView({block:'nearest'});
+                }
+              }else{
+                showError();
+              }
+            }).catch(function(){
+              showError();
+            });
           });
         })();
 
