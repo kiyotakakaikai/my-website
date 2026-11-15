@@ -75,9 +75,14 @@
       /* Japanese line breaks: keep phrases together, balance lead lines, avoid orphan last lines */
       .lede,.sec-lede,.d-lede,.detail h2,.sec-head,.faq-item h4{text-wrap:balance;}
       p{text-wrap:pretty;}
+      /* Phrase unit: never breaks inside, at any width (line breaks only between units) */
+      .keep{white-space:nowrap;}
       /* Lead kept on a single line where the viewport is wide enough */
       @media(min-width:1024px){
         .detail .lede.lede-1line{max-width:none;white-space:nowrap;font-size:20px;}
+        .detail .d-lede.d-lede-1line{max-width:none;white-space:nowrap;font-size:16px;}
+        .detail .fine-note.note-1line{white-space:nowrap;}
+        .detail.grid2>.d-sec.span2{grid-column:1/-1;}
       }
       /* FAQ cross-reference notes: keep the link phrase unbroken on wide screens */
       @media(min-width:768px){
@@ -589,7 +594,7 @@
         <section class="band white" id="area">
           <div class="wrap">
             <h2 class="sec-head">対応エリア</h2>
-            <p class="sec-lede">本社は東京都北区。防災は東京23区（濃い色）が中心です。</p>
+            <p class="sec-lede">防災は東京23区（濃い色）が中心です。</p>
             <div class="area-grid">
               <figure class="area-map">
                 <img src="assets/service-area-map.png" alt="対応エリアマップ。東京23区（濃い色）が防災事業の対応エリア。本社は東京都北区" width="1240" height="1080" />
@@ -699,12 +704,12 @@
               <li>飲食店・厨房の点検</li>
               <li>点検会社様への応援（1日単位・土曜可）</li>
             </ul>
-            <p class="fine-note">建築基準法の定期報告や用途変更のご相談は、提携する一級建築士をご紹介します。現地調査への立会いや日程調整も承ります。</p>
+            <p class="fine-note note-1line">建築基準法の定期報告や用途変更のご相談は、提携する一級建築士をご紹介します。現地調査への立会いや日程調整も承ります。</p>
           </div>
 
-          <div class="d-sec">
+          <div class="d-sec span2">
             <h3>法定点検の周期</h3>
-            <p class="d-lede">消防用設備等を設置している建物の関係者には、定期点検と消防署への報告が義務づけられています（消防法 第17条の3の3）。</p>
+            <p class="d-lede d-lede-1line">消防用設備等を設置している建物の関係者には、定期点検と消防署への報告が義務づけられています（消防法 第17条の3の3）。</p>
             <dl class="kv">
               <div class="kv-row"><dt>機器点検</dt><dd>6か月に1回 — 設備の外観・機能を確認する点検</dd></div>
               <div class="kv-row"><dt>総合点検</dt><dd>1年に1回 — 設備を作動させ、総合的な機能を確認する点検</dd></div>
@@ -873,8 +878,8 @@
             <figcaption>お参りの際は花をお供えし、清掃前後の様子を写真でご報告します。</figcaption>
           </figure>
           <div class="detail-body">
-            <p>遠方にお墓がある、体調の都合で足を運べない——そんなときのために、お墓の見守りと清掃を行います。宗派を問わずご利用いただけます。</p>
-            <p>洗浄は、石材の性質に配慮した方法で行います。石の種類や状態に合わない洗い方は、かえって墓石を傷めることがあるため、状態を見てから進め方を決めます。</p>
+            <p><span class="keep">遠方にお墓がある、</span><span class="keep">体調の都合で</span><span class="keep">足を運べない——</span><br class="br-wide" /><span class="keep">そんなときのために、</span><span class="keep">お墓の見守りと</span><span class="keep">清掃を行います。</span><br class="br-wide" /><span class="keep">宗派を問わず</span><span class="keep">ご利用いただけます。</span></p>
+            <p><span class="keep">洗浄は、</span><span class="keep">石材の性質に配慮した</span><span class="keep">方法で行います。</span><br class="br-wide" /><span class="keep">石の種類や状態に</span><span class="keep">合わない洗い方は、</span><br class="br-wide" /><span class="keep">かえって墓石を</span><span class="keep">傷めることがあるため、</span><br class="br-wide" /><span class="keep">状態を見てから</span><span class="keep">進め方を決めます。</span></p>
           </div>
 
           <div class="d-sec">
@@ -957,8 +962,8 @@
             <figcaption>ノートと万年筆。講習では、冊子に実際に書き込みながら進めます。</figcaption>
           </figure>
           <div class="detail-body">
-            <p>冠婚葬祭業界での経験を持つ講師が、エンディングノートの冊子を使いながら、無理のない書き方をお伝えします。講師はファイナンシャルプランナーの資格も持ち、お金の項目も含めて実務目線で解説します。</p>
-            <p>「何から書けばいいか分からない」という声に応える講習です。90分の中で、実際に手を動かしながら書き進めます。</p>
+            <p>冠婚葬祭業界での経験を持つ講師が、<br class="br-wide" />エンディングノートの冊子を使いながら、<br class="br-wide" />無理のない書き方をお伝えします。<br class="br-wide" />講師はファイナンシャルプランナーの資格も持ち、<br class="br-wide" />お金の項目も含めて実務目線で解説します。</p>
+            <p>「何から書けばいいか分からない」<br class="br-wide" />という声に応える講習です。<br class="br-wide" />90分の中で、実際に手を動かしながら書き進めます。</p>
           </div>
           <div class="stat-row">
             <div class="stat"><div class="n num">100回</div><div class="l">これまでの講演回数</div></div>
@@ -1069,7 +1074,7 @@
           <h2>まずは、ご相談を</h2>
           <p class="lede lede-1line">点検の時期が分からない、見積もりだけでも見たい。そんな段階からで構いません。</p>
           <div class="detail-body">
-            <p>ご相談は、下のフォームまたは公式LINEから承ります（24時間受付・翌営業日対応）。内容が文章で残る形でのご相談にご協力ください。<span class="one-line">お急ぎの場合のお電話は、このページの下部に記載しています。</span></p>
+            <p>ご相談は、下のフォームまたは公式LINEから承ります（24時間受付・翌営業日対応）。<br class="br-wide" />内容が文章で残る形でのご相談にご協力ください。<br class="br-wide" /><span class="one-line">お急ぎの場合のお電話は、このページの下部に記載しています。</span></p>
           </div>
 
           <div class="d-sec">
