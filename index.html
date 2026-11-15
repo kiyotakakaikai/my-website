@@ -10802,7 +10802,7 @@
             }
           }
         }
-        /* ---- Contact form: company-field rule + in-page submission ---- */
+        /* ---- Contact form: company-field rule (submission is a native POST to Formspree) ---- */
         (function(){
           var form=document.getElementById('contactForm');
           if(!form){ return; }
@@ -10838,42 +10838,17 @@
           for(var i=0;i<radios.length;i++){ radios[i].addEventListener('change', applyCompanyRule); }
           applyCompanyRule();
 
+          /* Submission intentionally uses the form's native POST to Formspree
+             (action/method attributes), the same method as the previous site.
+             The Formspree endpoint for this form requires reCAPTCHA verification,
+             which Formspree serves on its own page after a native POST.
+             An AJAX/fetch submission carries no reCAPTCHA token, so Formspree
+             rejects it with HTTP 400 "Please complete the reCAPTCHA" — that was
+             the cause of the in-page "送信できませんでした" failures. Do not
+             reintroduce a fetch-based submit handler for this form. */
           var btn=document.getElementById('submitBtn');
-          var status=document.getElementById('formStatus');
-          var done=document.getElementById('formDone');
-          function showStatus(kind, text){
-            status.className='form-status show '+kind;
-            status.textContent=text;
-          }
-          form.addEventListener('submit', function(e){
-            e.preventDefault();
-            if(!form.checkValidity()){ form.reportValidity(); return; }
-            btn.disabled=true;
-            btn.textContent='送信中…';
-            status.className='form-status';
-            status.textContent='';
-            fetch(form.getAttribute('action'), {
-              method:'POST',
-              body:new FormData(form),
-              headers:{'Accept':'application/json'}
-            }).then(function(res){
-              if(res.ok){
-                form.style.display='none';
-                done.classList.add('show');
-                done.focus();
-                done.scrollIntoView();
-              }else{
-                return res.json().then(function(j){
-                  throw new Error((j && j.error) ? j.error : '');
-                }).catch(function(err){
-                  throw err;
-                });
-              }
-            }).catch(function(){
-              btn.disabled=false;
-              btn.textContent='入力内容を送信する';
-              showStatus('err','送信できませんでした。時間をおいて再度お試しいただくか、お電話（090-7551-5324）または公式LINEでご連絡ください。');
-            });
+          form.addEventListener('submit', function(){
+            if(btn){ btn.disabled=true; btn.textContent='送信中…'; }
           });
         })();
 
