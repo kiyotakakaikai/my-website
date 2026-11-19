@@ -459,6 +459,83 @@
       .partner-cta .btn{flex:none;}
       @media(max-width:640px){.partner-cta{padding:24px 22px;}.partner-cta .btn{width:100%;text-align:center;}}
 
+      /* ---------- Mitsumori (structured estimate request / Zehitomo-style intake) ---------- */
+      .intake-band{background:var(--ink);color:#fff;border-radius:28px;padding:36px 40px;display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;}
+      @media(max-width:820px){.intake-band{grid-template-columns:1fr;padding:28px 24px;}}
+      .intake-band h3{font-family:var(--font-display);font-weight:700;font-size:30px;line-height:1.2;margin:0 0 10px;color:#fff;}
+      .intake-band p{color:rgba(255,255,255,.82);margin:0 0 20px;font-size:16px;line-height:1.65;}
+      .intake-band .btn{background:#fff;color:var(--ink);}
+      .intake-band .btn:hover{background:var(--wash);}
+      .intake-steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;}
+      .intake-steps li{background:rgba(255,255,255,.1);border-radius:16px;padding:14px 18px;font-size:15px;line-height:1.5;}
+      .intake-steps li b{display:block;font-size:16px;}
+      .intake-steps li span{color:rgba(255,255,255,.75);font-size:14px;}
+      .mitsu-layout{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:28px;align-items:start;margin-top:8px;}
+      @media(max-width:960px){.mitsu-layout{grid-template-columns:1fr;}}
+      .mitsu-form{background:var(--canvas);border-radius:28px;padding:32px 34px;}
+      @media(max-width:640px){.mitsu-form{padding:24px 20px;}}
+      .mitsu-group{margin-bottom:30px;}
+      .mitsu-group:last-of-type{margin-bottom:0;}
+      .mitsu-label{display:block;font-weight:700;font-size:16px;margin-bottom:6px;}
+      .mitsu-label .req{margin-left:8px;}
+      .mitsu-help{font-size:14px;color:var(--mid);margin:0 0 12px;line-height:1.55;}
+      .chip-list{display:flex;flex-wrap:wrap;gap:9px;}
+      .chip{position:relative;cursor:pointer;}
+      .chip input{position:absolute;opacity:0;width:1px;height:1px;overflow:hidden;}
+      .chip span{display:inline-block;background:var(--paper);border:1.5px solid var(--hairline);border-radius:999px;padding:10px 18px;font-size:15px;line-height:1.3;color:var(--ink);}
+      .chip:hover span{border-color:var(--mid);}
+      .chip input:focus-visible + span{outline:2px solid var(--blue);outline-offset:2px;}
+      .chip input:checked + span{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600;}
+      .mitsu-form input[type="text"],.mitsu-form input[type="email"],.mitsu-form select,.mitsu-form textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--hairline);border-radius:12px;padding:12px 14px;appearance:none;-webkit-appearance:none;}
+      .mitsu-form textarea{min-height:110px;resize:vertical;line-height:1.6;}
+      .mitsu-form input:focus,.mitsu-form select:focus,.mitsu-form textarea:focus{outline:2px solid var(--blue);outline-offset:0;border-color:var(--blue);}
+      .mitsu-form ::placeholder{color:#aeaeb2;}
+      .mitsu-2col{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+      @media(max-width:640px){.mitsu-2col{grid-template-columns:1fr;}}
+      .order-card{background:var(--paper);border:1px solid var(--hairline);border-top:6px solid var(--blue);border-radius:18px;overflow:hidden;position:sticky;top:64px;}
+      @media(max-width:960px){.order-card{position:static;}}
+      .order-card-head{padding:20px 22px 14px;}
+      .order-card-head h4{font-family:var(--font-display);font-weight:700;font-size:21px;line-height:1.25;margin:0 0 6px;}
+      .order-card-head p{font-size:13px;color:var(--mid);margin:0;}
+      .order-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--hairline);}
+      .order-cell{padding:14px 18px;border-bottom:1px solid var(--hairline);}
+      .order-cell:nth-child(odd){border-right:1px solid var(--hairline);}
+      .order-cell.full{grid-column:1/-1;border-right:0;}
+      .order-cell .q{font-size:12px;color:var(--mid);line-height:1.45;margin:0 0 5px;}
+      .order-cell .a{font-size:16px;font-weight:600;line-height:1.45;margin:0;word-break:break-word;}
+      .order-cell .a.empty{color:#aeaeb2;font-weight:400;}
+      .order-cell .a ul{margin:4px 0 0;padding-left:18px;}
+      .order-cell .a li{font-size:15px;margin-bottom:2px;}
+      .order-est{padding:18px 22px;background:var(--canvas);}
+      .order-est .label{font-size:12px;font-weight:700;color:var(--mid);margin:0 0 4px;}
+      .order-est .amount{font-family:var(--font-num);font-weight:700;font-size:26px;line-height:1.2;margin:0;font-variant-numeric:lining-nums tabular-nums;}
+      .order-est .note{font-size:13px;color:var(--mid);line-height:1.6;margin:8px 0 0;}
+      .order-foot{padding:14px 22px;font-size:13px;color:var(--mid);line-height:1.6;}
+      .est-breakdown{margin:14px 0 0;border-top:1px solid var(--hairline);padding-top:12px;}
+      .est-row{display:flex;justify-content:space-between;gap:16px;padding:5px 0;font-size:14px;line-height:1.5;}
+      .est-row .k{color:var(--deep);}
+      .est-row .v{font-family:var(--font-num);font-weight:600;white-space:nowrap;font-variant-numeric:lining-nums tabular-nums;}
+      .est-row.buffer .k,.est-row.buffer .v{color:var(--ember);}
+      .est-row.total{border-top:1px solid var(--hairline);margin-top:8px;padding-top:10px;}
+      .est-row.total .k{font-weight:700;color:var(--ink);}
+      .est-row.total .v{font-size:17px;}
+      .menu-group{margin-top:16px;}
+      .menu-group[hidden]{display:none;}
+      .menu-list{display:flex;flex-direction:column;gap:8px;}
+      .menu-item{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border:1.5px solid var(--hairline);border-radius:14px;padding:13px 15px;cursor:pointer;}
+      .menu-item:hover{border-color:var(--mid);}
+      .menu-item input{margin-top:3px;accent-color:var(--blue);width:18px;height:18px;flex:none;}
+      .menu-item .mt{font-weight:600;font-size:15px;line-height:1.45;display:block;}
+      .menu-item .md{font-size:13px;color:var(--mid);line-height:1.55;display:block;margin-top:2px;}
+      .menu-item .mp{font-family:var(--font-num);font-weight:700;font-size:15px;white-space:nowrap;margin-left:auto;font-variant-numeric:lining-nums tabular-nums;}
+      .menu-item:has(input:checked){border-color:var(--blue);background:#eef5ff;}
+      @media(max-width:640px){.menu-item{flex-wrap:wrap;}.menu-item .mp{margin-left:30px;}}
+      .mitsu-done{display:none;background:#e6f4ea;border-radius:28px;padding:32px 34px;margin-top:28px;}
+      .mitsu-done.show{display:block;}
+      .mitsu-done h4{font-family:var(--font-display);font-weight:600;font-size:24px;margin:0 0 10px;}
+      .mitsu-done p{color:var(--deep);margin:0 0 12px;font-size:16px;line-height:1.65;}
+      .top-intake{margin-top:44px;text-align:left;}
+
       /* ---------- Contact page: centered column so the page does not sit to the left ---------- */
       #view-contact h2{margin-left:auto;margin-right:auto;text-align:center;}
       #view-contact .lede{margin-left:auto;margin-right:auto;text-align:center;}
@@ -524,6 +601,7 @@
           <a href="#column" data-route="column">コラム</a>
           <a href="#faq" data-route="faq">よくある質問</a>
           <a href="#about" data-route="about">会社概要</a>
+          <a href="#mitsumori" data-route="mitsumori" style="color:var(--blue);font-weight:700;">見積もり依頼</a>
         </nav>
         <a class="nav-cta" href="#contact" data-route="contact">お問い合わせ</a>
         <button class="burger" id="burger" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button>
@@ -538,6 +616,7 @@
         <a href="#faq" data-route="faq">よくある質問</a>
         <a href="#about" data-route="about">会社概要</a>
         <a href="#privacy" data-route="privacy">プライバシーポリシー</a>
+        <a href="#mitsumori" data-route="mitsumori">見積もり依頼（消防設備点検）</a>
         <a href="#contact" data-route="contact">お問い合わせ</a>
       </div>
     </header>
@@ -550,6 +629,11 @@
         <section class="hero wrap">
           <h1>安心は、<br />点検から</h1>
           <p class="sub">消防設備全般を中心に、以下の事業を展開しております。</p>
+          <div class="cta-row">
+            <a class="btn big" href="#mitsumori" data-route="mitsumori">見積もりを依頼する（無料）</a>
+            <a class="arrow-link" href="#bousai" data-route="bousai">消防設備点検の流れ</a>
+          </div>
+          <p style="font-size:14px;color:var(--mid);margin:0 auto 36px;max-width:560px;">用途・台数・時期を選ぶだけ。電話なしで、メール／LINEで完結します。</p>
           <figure class="hero-carousel" id="heroCarousel" aria-label="事業に関連した写真のスライド">
             <div class="hc-viewport">
               <div class="hc-track" id="hcTrack">
@@ -603,7 +687,7 @@
                 <span class="tile-body">
                   <h3>防災</h3>
                   <p>消防設備点検を含めた全般業務を、消防設備士（全類）が点検から点検票まで一括対応します<br />お見積もり無料<br />土曜日対応可能<br />東京23区内</p>
-                  <span class="tile-more">料金・対応エリアを見る</span>
+                  <span class="tile-more">対応エリア・流れを見る</span>
                 </span>
               </a>
 
@@ -642,6 +726,24 @@
                   <span class="tile-more">会社情報を見る</span>
                 </span>
               </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="band white" style="padding-top:0;">
+          <div class="wrap">
+            <div class="intake-band">
+              <div>
+                <h3>選ぶだけで、<br />見積もり依頼が届く形に</h3>
+                <p>建物の用途・対象設備・台数・希望時期を選ぶだけで、見積もりに必要な情報がそろいます。対象は、継続的な定期点検をご希望の管理会社様・オーナー様が中心です。</p>
+                <a class="btn" href="#mitsumori" data-route="mitsumori">見積もり依頼フォームへ</a>
+                <p style="margin:14px 0 0;font-size:13px;">お見積もり無料 ／ 北区周辺が中心・東京23区内まで ／ 年間契約・定期点検が中心 ／ 土曜日対応可能</p>
+              </div>
+              <ol class="intake-steps">
+                <li><b>1. 選ぶ</b><span>法人・個人、建物の用途、依頼内容、希望時期、台数、対象設備</span></li>
+                <li><b>2. 送る</b><span>所在地（区）と連絡先を入力して送信。電話は不要です</span></li>
+                <li><b>3. 見積もりが届く</b><span>内容を確認し、翌営業日を目安にメールでご連絡します</span></li>
+              </ol>
             </div>
           </div>
         </section>
@@ -685,7 +787,8 @@
         <section class="band white">
           <div class="wrap closing">
             <h2>まずは、<br />ご相談を</h2>
-            <a class="btn big" href="#contact" data-route="contact">お問い合わせ</a>
+            <a class="btn big" href="#mitsumori" data-route="mitsumori">見積もりを依頼する</a>
+            <p class="tel-line">文章でのご相談は <a href="#contact" data-route="contact">お問い合わせフォーム</a> からも承ります</p>
           </div>
         </section>
 
@@ -705,6 +808,20 @@
             <p>消防設備点検は、法律で定められた義務であると同時に、建物を使う人の命を守る仕事です。上田では、<strong>消防設備士（全類）</strong>が、点検、報告書の作成、不備の改修までを一括で対応します。そのため、「指摘されたけれど、直し方が分からない」ということが起きません。</p>
             <p>マンション、オフィス、店舗、工場、福祉施設など、さまざまな建物に対応しています。東京23区を中心に、規模を問わずご相談いただけます。点検は<strong>原則2名体制</strong>で伺い、結果は写真で記録します。</p>
           </div>
+          </div>
+
+          <div class="d-sec span2" style="margin-top:36px;">
+            <div class="intake-band">
+              <div>
+                <h3>見積もり依頼は、選ぶだけ</h3>
+                <p>用途・台数・時期・対象設備を選ぶだけで、見積もりに必要な情報がそろいます。お見積もりは、内容を確認のうえメールでご案内します。</p>
+                <a class="btn" href="#mitsumori" data-route="mitsumori">見積もり依頼フォームへ</a>
+              </div>
+              <ol class="intake-steps">
+                <li><b>所要時間の目安：約2分</b><span>分かる項目だけでも送信できます（台数・設備は「分からない」でも可）</span></li>
+                <li><b>電話なしで完結</b><span>ご連絡はメールまたは公式LINE。返信は翌営業日を目安にお送りします</span></li>
+              </ol>
+            </div>
           </div>
 
           <div class="d-sec">
@@ -774,35 +891,10 @@
           </div>
 
           <div class="d-sec" id="bousai-price">
-            <h3>料金の目安</h3>
-            <div class="price-list" style="margin-top:0;">
-              <div class="price-row">
-                <span class="name">消火器点検・スポット<span class="desc">10本まで・1回</span></span>
-                <span class="amount num">16,500円<small>〜</small></span>
-              </div>
-              <div class="price-row">
-                <span class="name">消火器点検・年間契約<span class="desc">10本まで・年2回（1回あたり15,000円）</span></span>
-                <span class="amount num">30,000円<small>〜</small></span>
-              </div>
-              <div class="price-row">
-                <span class="name">消火器点検（11本目以降）<span class="desc">1本につき</span></span>
-                <span class="amount num">1,000円</span>
-              </div>
-              <div class="price-row">
-                <span class="name">消防用設備点検・年間契約<span class="desc">小規模な共同住宅など・年2回（1回あたり15,000円〜）</span></span>
-                <span class="amount num">30,000円<small>〜</small></span>
-              </div>
-              <div class="price-row">
-                <span class="name">中・大規模の建物<span class="desc">自動火災報知設備・スプリンクラー設備など</span></span>
-                <span class="amount" style="font-size:20px;">現地確認のうえお見積り</span>
-              </div>
-              <div class="price-row">
-                <span class="name">不良箇所の改修・消火器の交換</span>
-                <span class="amount" style="font-size:20px;">別途お見積り</span>
-              </div>
-            </div>
-            <p class="fine-note">料金例：消火器15本のスポット点検は、16,500円＋1,000円×5本＝21,500円〜です。点検料金には点検票（点検結果総括表・点検者一覧表を含む）の作成を含みます。</p>
-            <p class="fine-note note-1line" style="margin-top:4px;">金額は建物の用途・規模・点検内容により決まります。正式な金額はお見積りにてご案内します。</p>
+            <h3>料金について</h3>
+            <p class="d-lede">料金はサイト上には掲載していません。建物の用途・規模・設備の内容を確認のうえ、お見積もりをメールでご案内します。</p>
+            <p class="fine-note">点検料金には点検票（点検結果総括表・点検者一覧表を含む）の作成を含みます。中・大規模の建物や、不良箇所の改修・消火器の交換は、現地確認のうえお見積もりします。工事の機器・部品の本体代も、現地で型番と数量を確認してからお見積もりに含めます。</p>
+            <p class="fine-note" style="margin-top:4px;">見積もり依頼フォームから用途・台数・時期・対象設備をお送りください。詳細は現地確認後、翌営業日を目安にメールでお見積もりをご連絡します。</p>
           </div>
 
           <div class="d-sec">
@@ -864,7 +956,8 @@
           </div>
 
           <div class="detail-cta">
-            <a class="btn" href="#contact" data-route="contact">点検のご相談</a>
+            <a class="btn" href="#mitsumori" data-route="mitsumori">見積もりを依頼する</a>
+            <a class="arrow-link" href="#contact" data-route="contact">文章で相談する</a>
           </div>
         </section>
       </div>
@@ -1176,6 +1269,336 @@
             </ul>
           </div>
 
+        </section>
+      </div>
+
+      <!-- ================= Mitsumori: structured estimate request (受け皿) ================= -->
+      <div class="view" id="view-mitsumori">
+        <section class="detail wrap">
+          <a class="back-link" href="#bousai" data-route="bousai">防災のページへ戻る</a>
+          <h2>消防設備点検<br />見積もり依頼</h2>
+          <p class="lede">選ぶだけで、見積もりに必要な情報がそろいます。金額はサイト上には表示せず、内容を確認のうえ、お見積もりをメールでご案内します。詳細は現地確認後、あらためてメールでご案内します。継続的な定期点検を前提に、北区周辺を中心に東京23区内で対応します。</p>
+
+          <ul class="field-list" style="margin-bottom:36px;">
+            <li>お見積もり無料</li>
+            <li>お見積もりはメールでご案内</li>
+            <li>中心エリア：北区・板橋区・豊島区・文京区・荒川区・足立区</li>
+            <li>対応は東京23区内まで</li>
+            <li>年間契約・定期点検が中心</li>
+            <li>電話なし／メール・LINEで完結</li>
+          </ul>
+
+          <div class="mitsu-layout">
+            <form class="mitsu-form" id="mitsumoriForm" action="https://formspree.io/f/xqevlkop" method="POST">
+              <input type="hidden" name="_subject" id="mfSubject" value="【見積もり依頼】消防設備点検（ホームページ）" />
+              <input type="hidden" name="source" value="見積もり依頼フォーム（ゼヒトモ式・構造化）" />
+              <input type="hidden" name="auto_estimate_total" id="mfEstTotal" value="" />
+              <input type="hidden" name="auto_estimate_breakdown" id="mfEstBreakdown" value="" />
+              <input type="hidden" name="selected_menu" id="mfSelectedMenu" value="" />
+
+              <div class="mitsu-group">
+                <span class="mitsu-label">1. ご依頼主の区分<span class="req">必須</span></span>
+                <p class="mitsu-help">法人・個人をお選びください。</p>
+                <div class="chip-list" role="radiogroup" aria-label="ご依頼主の区分">
+                  <label class="chip"><input type="radio" name="client_type" value="法人" checked /><span>法人</span></label>
+                  <label class="chip"><input type="radio" name="client_type" value="個人・個人事業主" /><span>個人・個人事業主</span></label>
+                </div>
+              </div>
+
+              <div class="mitsu-group">
+                <span class="mitsu-label">2. 建物との立場<span class="req">必須</span></span>
+                <p class="mitsu-help">継続してお付き合いできる管理の窓口の方からのご依頼を中心に承ります。</p>
+                <div class="chip-list" role="radiogroup" aria-label="建物との立場">
+                  <label class="chip"><input type="radio" name="role" value="管理会社" checked /><span>管理会社</span></label>
+                  <label class="chip"><input type="radio" name="role" value="建物オーナー" /><span>建物オーナー</span></label>
+                  <label class="chip"><input type="radio" name="role" value="店舗・施設の管理責任者" /><span>店舗・施設の管理責任者</span></label>
+                  <label class="chip"><input type="radio" name="role" value="その他（管理に関わる方）" /><span>その他（管理に関わる方）</span></label>
+                </div>
+              </div>
+
+              <div class="mitsu-group">
+                <span class="mitsu-label">3. 希望する進め方<span class="req">必須</span></span>
+                <p class="mitsu-help">単発の価格比較ではなく、点検時期の管理まで含めた継続取引を前提としています。</p>
+                <div class="chip-list" role="radiogroup" aria-label="希望する進め方">
+                  <label class="chip"><input type="radio" name="engagement" value="年間契約で定期点検を任せたい" checked /><span>年間契約で定期点検を任せたい</span></label>
+                  <label class="chip"><input type="radio" name="engagement" value="まずは1回試して、継続を検討したい" /><span>まずは1回試して、継続を検討したい</span></label>
+                  <label class="chip"><input type="radio" name="engagement" value="複数物件をまとめて相談したい" /><span>複数物件をまとめて相談したい</span></label>
+                  <label class="chip"><input type="radio" name="engagement" value="相談して決めたい" /><span>相談して決めたい</span></label>
+                </div>
+                <div style="margin-top:16px;">
+                  <label class="mitsu-label" for="mf-prop-count" style="font-size:15px;">管理・関係している物件数</label>
+                  <select id="mf-prop-count" name="property_count">
+                    <option value="1物件" selected>1物件</option>
+                    <option value="2〜5物件">2〜5物件</option>
+                    <option value="6〜10物件">6〜10物件</option>
+                    <option value="11物件以上">11物件以上</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mitsu-group">
+                <span class="mitsu-label">4. 点検／工事のメニューを選んでください<span class="req">必須</span></span>
+                <p class="mitsu-help">区分を選ぶとメニューが切り替わります。金額はサイト上には表示しません。内容を確認のうえ、お見積もりをメールでご案内します。</p>
+                <div class="chip-list" role="radiogroup" aria-label="点検か工事か">
+                  <label class="chip"><input type="radio" name="request_type" value="点検" checked /><span>点検メニュー</span></label>
+                  <label class="chip"><input type="radio" name="request_type" value="工事（改修・交換）" /><span>工事メニュー（改修・交換）</span></label>
+                </div>
+
+                <div class="menu-group" id="menuInspectGroup">
+                  <div class="menu-list" role="radiogroup" aria-label="点検メニュー">
+                    <label class="menu-item"><input type="radio" name="inspect_menu" value="消火器点検・スポット（10本まで・1回）" data-base="16500" data-visits="1" data-kind="ext-spot" checked /><span><span class="mt">消火器点検・スポット</span><span class="md">10本まで・1回。点検票の作成を含みます。</span></span></label>
+                    <label class="menu-item"><input type="radio" name="inspect_menu" value="消火器点検・年間契約（10本まで・年2回）" data-base="30000" data-visits="2" data-kind="ext-annual" /><span><span class="mt">消火器点検・年間契約</span><span class="md">10本まで・年2回（機器点検＋総合点検）。</span></span></label>
+                    <label class="menu-item"><input type="radio" name="inspect_menu" value="消防用設備点検・スポット（小規模・1回）" data-base="16500" data-visits="1" data-kind="general-spot" /><span><span class="mt">消防用設備点検・スポット</span><span class="md">小規模な共同住宅など・1回。消火器以外の設備を含む場合のメニューです。</span></span></label>
+                    <label class="menu-item"><input type="radio" name="inspect_menu" value="消防用設備点検・年間契約（小規模・年2回）" data-base="30000" data-visits="2" data-kind="general-annual" /><span><span class="mt">消防用設備点検・年間契約</span><span class="md">小規模な共同住宅など・年2回。</span></span></label>
+                    <label class="menu-item"><input type="radio" name="inspect_menu" value="消防用設備点検・中／大規模" data-base="15000" data-visits="1" data-kind="general-large" /><span><span class="mt">中・大規模の建物の点検</span><span class="md">自動火災報知設備・スプリンクラー設備など。詳細は現地確認後、お見積もりをメールでご案内します。</span></span></label>
+                  </div>
+                </div>
+
+                <div class="menu-group" id="menuWorkGroup" hidden>
+                  <p class="mitsu-help" style="margin-top:4px;">工事の詳細は現地確認後、お見積もりをメールでご案内します。交換する機器・部品の本体代も、現地で型番と数量を確認してからお見積もりに含めます。</p>
+                  <div class="menu-list" role="radiogroup" aria-label="工事メニュー">
+                    <label class="menu-item"><input type="radio" name="work_menu" value="工事：消火器の交換・新規設置" data-base="15000" data-visits="1" data-kind="work" checked /><span><span class="mt">消火器の交換・新規設置</span><span class="md">消火器本体代を含め、詳細は現地確認後にお見積もりをメールでご案内します。</span></span></label>
+                    <label class="menu-item"><input type="radio" name="work_menu" value="工事：感知器・受信機まわりの交換・改修" data-base="15000" data-visits="1" data-kind="work" /><span><span class="mt">感知器・受信機まわりの交換・改修</span><span class="md">部品代を含め、詳細は現地確認後にお見積もりをメールでご案内します。</span></span></label>
+                    <label class="menu-item"><input type="radio" name="work_menu" value="工事：誘導灯・非常照明の交換" data-base="15000" data-visits="1" data-kind="work" /><span><span class="mt">誘導灯・非常照明の交換</span><span class="md">器具本体代を含め、詳細は現地確認後にお見積もりをメールでご案内します。</span></span></label>
+                    <label class="menu-item"><input type="radio" name="work_menu" value="工事：屋内消火栓・スプリンクラー等の改修" data-base="15000" data-visits="1" data-kind="work" /><span><span class="mt">屋内消火栓・スプリンクラー等の改修</span><span class="md">部材代と工事範囲を含め、詳細は現地確認後にお見積もりをメールでご案内します。</span></span></label>
+                    <label class="menu-item"><input type="radio" name="work_menu" value="工事：その他の不良箇所の改修" data-base="15000" data-visits="1" data-kind="work" /><span><span class="mt">その他の不良箇所の改修</span><span class="md">点検で見つかった不良箇所の改修。範囲を含め、詳細は現地確認後にお見積もりをメールでご案内します。</span></span></label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mitsu-group">
+                <span class="mitsu-label">5. 建物の用途を教えてください<span class="req">必須</span></span>
+                <div class="chip-list" role="radiogroup" aria-label="建物の用途">
+                  <label class="chip"><input type="radio" name="building_use" value="共同住宅・マンション" checked /><span>共同住宅・マンション</span></label>
+                  <label class="chip"><input type="radio" name="building_use" value="飲食店・宿泊施設" /><span>飲食店・宿泊施設</span></label>
+                  <label class="chip"><input type="radio" name="building_use" value="店舗・物販" /><span>店舗・物販</span></label>
+                  <label class="chip"><input type="radio" name="building_use" value="事務所・オフィス" /><span>事務所・オフィス</span></label>
+                  <label class="chip"><input type="radio" name="building_use" value="工場・倉庫" /><span>工場・倉庫</span></label>
+                  <label class="chip"><input type="radio" name="building_use" value="福祉・医療施設" /><span>福祉・医療施設</span></label>
+                  <label class="chip"><input type="radio" name="building_use" value="その他" /><span>その他</span></label>
+                </div>
+              </div>
+
+              <div class="mitsu-group">
+                <span class="mitsu-label">6. ご希望の実施時期はいつ頃ですか？<span class="req">必須</span></span>
+                <div class="chip-list" role="radiogroup" aria-label="希望時期">
+                  <label class="chip"><input type="radio" name="timing" value="1ヶ月以内" checked /><span>1ヶ月以内</span></label>
+                  <label class="chip"><input type="radio" name="timing" value="2〜3ヶ月以内" /><span>2〜3ヶ月以内</span></label>
+                  <label class="chip"><input type="radio" name="timing" value="定期スケジュールに合わせて相談" /><span>定期スケジュールに合わせて相談</span></label>
+                  <label class="chip"><input type="radio" name="timing" value="できるだけ早く" /><span>できるだけ早く</span></label>
+                </div>
+                <div style="margin-top:16px;">
+                  <label class="mitsu-label" for="mf-last" style="font-size:15px;">前回の点検・消防署への報告</label>
+                  <select id="mf-last" name="last_inspection">
+                    <option value="半年以内" selected>半年以内</option>
+                    <option value="1年以内">1年以内</option>
+                    <option value="1年以上前">1年以上前</option>
+                    <option value="分からない・記録なし">分からない・記録なし</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mitsu-group">
+                <span class="mitsu-label">7. 対象の設備はおおよそ何台（本）ありますか？<span class="req">必須</span></span>
+                <div class="chip-list" role="radiogroup" aria-label="対象設備の台数">
+                  <label class="chip"><input type="radio" name="count_range" value="1〜5台" checked /><span>1〜5台</span></label>
+                  <label class="chip"><input type="radio" name="count_range" value="6〜10台" /><span>6〜10台</span></label>
+                  <label class="chip"><input type="radio" name="count_range" value="11〜20台" /><span>11〜20台</span></label>
+                  <label class="chip"><input type="radio" name="count_range" value="21台以上" /><span>21台以上</span></label>
+                  <label class="chip"><input type="radio" name="count_range" value="分からない" /><span>分からない</span></label>
+                </div>
+              </div>
+
+              <div class="mitsu-group">
+                <span class="mitsu-label">8. 点検・設置の対象となる設備はどれですか？（複数選択可）<span class="req">必須</span></span>
+                <div class="chip-list" aria-label="対象設備">
+                  <label class="chip"><input type="checkbox" name="equipments" value="消火器" checked /><span>消火器</span></label>
+                  <label class="chip"><input type="checkbox" name="equipments" value="自動火災報知設備（感知器・受信機）" /><span>自動火災報知設備（感知器・受信機）</span></label>
+                  <label class="chip"><input type="checkbox" name="equipments" value="誘導灯・非常照明" /><span>誘導灯・非常照明</span></label>
+                  <label class="chip"><input type="checkbox" name="equipments" value="屋内消火栓" /><span>屋内消火栓</span></label>
+                  <label class="chip"><input type="checkbox" name="equipments" value="スプリンクラー" /><span>スプリンクラー</span></label>
+                  <label class="chip"><input type="checkbox" name="equipments" value="避難器具" /><span>避難器具</span></label>
+                  <label class="chip"><input type="checkbox" name="equipments" value="その他・分からない" /><span>その他・分からない</span></label>
+                </div>
+              </div>
+
+              <div class="mitsu-group">
+                <span class="mitsu-label">9. 建物の所在地<span class="req">必須</span></span>
+                <p class="mitsu-help">対応は東京23区内までです。中心エリア（北区周辺）は日程調整がしやすく、再点検にも素早く対応できます。</p>
+                <div class="mitsu-2col">
+                  <div>
+                    <label class="mitsu-label" for="mf-ward" style="font-size:15px;">区</label>
+                    <select id="mf-ward" name="ward" required>
+                      <optgroup label="中心エリア（北区周辺）">
+                        <option value="北区" selected>北区</option>
+                        <option value="板橋区">板橋区</option>
+                        <option value="豊島区">豊島区</option>
+                        <option value="文京区">文京区</option>
+                        <option value="荒川区">荒川区</option>
+                        <option value="足立区">足立区</option>
+                      </optgroup>
+                      <optgroup label="その他の東京23区">
+                        <option value="千代田区">千代田区</option>
+                        <option value="中央区">中央区</option>
+                        <option value="港区">港区</option>
+                        <option value="新宿区">新宿区</option>
+                        <option value="台東区">台東区</option>
+                        <option value="墨田区">墨田区</option>
+                        <option value="江東区">江東区</option>
+                        <option value="品川区">品川区</option>
+                        <option value="目黒区">目黒区</option>
+                        <option value="大田区">大田区</option>
+                        <option value="世田谷区">世田谷区</option>
+                        <option value="渋谷区">渋谷区</option>
+                        <option value="中野区">中野区</option>
+                        <option value="杉並区">杉並区</option>
+                        <option value="練馬区">練馬区</option>
+                        <option value="葛飾区">葛飾区</option>
+                        <option value="江戸川区">江戸川区</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="mitsu-label" for="mf-address" style="font-size:15px;">町名以降（任意・後からでも可）</label>
+                    <input type="text" id="mf-address" name="address_detail" placeholder="例：赤羽1丁目" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="mitsu-group">
+                <span class="mitsu-label">10. ご連絡先<span class="req">必須</span></span>
+                <div class="mitsu-2col">
+                  <div id="mfCompanyGroup">
+                    <label class="mitsu-label" for="mf-company" style="font-size:15px;">会社名・屋号・団体名</label>
+                    <input type="text" id="mf-company" name="company" placeholder="例：株式会社〇〇管理" />
+                  </div>
+                  <div>
+                    <label class="mitsu-label" for="mf-name" style="font-size:15px;">ご担当者名</label>
+                    <input type="text" id="mf-name" name="name" placeholder="例：上田 太郎" required />
+                  </div>
+                </div>
+                <div style="margin-top:14px;">
+                  <label class="mitsu-label" for="mf-email" style="font-size:15px;">メールアドレス</label>
+                  <input type="email" id="mf-email" name="email" placeholder="例：example@company.com" required />
+                </div>
+                <div style="margin-top:16px;">
+                  <span class="mitsu-label" style="font-size:15px;">希望する連絡方法</span>
+                  <div class="chip-list" role="radiogroup" aria-label="希望する連絡方法">
+                    <label class="chip"><input type="radio" name="contact_pref" value="メール" checked /><span>メール</span></label>
+                    <label class="chip"><input type="radio" name="contact_pref" value="公式LINE" /><span>公式LINE</span></label>
+                    <label class="chip"><input type="radio" name="contact_pref" value="どちらでも可" /><span>どちらでも可</span></label>
+                  </div>
+                </div>
+                <div style="margin-top:16px;">
+                  <label class="mitsu-label" for="mf-message" style="font-size:15px;">補足（任意）</label>
+                  <textarea id="mf-message" name="message" placeholder="建物の階数・戸数、現在の点検業者や困っていることなど、分かる範囲でご記入ください。"></textarea>
+                </div>
+              </div>
+
+              <div class="privacy-row">
+                <input type="checkbox" id="mfAreaCheck" required />
+                <label for="mfAreaCheck">建物の所在地は東京23区内です。また、営業・売り込み目的の送信ではありません。</label>
+              </div>
+              <div class="privacy-row" style="margin-top:0;">
+                <input type="checkbox" id="mfPrivacyCheck" required />
+                <label for="mfPrivacyCheck"><a href="#privacy" data-route="privacy">プライバシーポリシー</a>の内容に同意する</label>
+              </div>
+
+              <button type="submit" class="btn submit-btn" id="mfSubmitBtn" style="width:100%;border:0;cursor:pointer;font:inherit;">この内容で見積もりを依頼する</button>
+              <p class="fine-note" style="margin-top:12px;">送信しただけでは発注にはなりません。内容を確認のうえ、対応可否とお見積もりを、翌営業日を目安にメールでご連絡します。詳細は現地確認後、あらためてメールでご案内します。ご返信は info@uedakai.com からお送りします。</p>
+              <div class="form-status" id="mfStatus" role="status" aria-live="polite"></div>
+            </form>
+
+            <aside aria-label="依頼内容の確認">
+              <div class="order-card">
+                <div class="order-card-head">
+                  <h4>消防用設備・用品・保守点検</h4>
+                  <p>入力内容が、そのまま依頼カードになります</p>
+                </div>
+                <div class="order-grid">
+                  <div class="order-cell"><p class="q">法人・個人をご選択ください</p><p class="a" id="oc-client">法人</p></div>
+                  <div class="order-cell"><p class="q">どのような依頼内容ですか？</p><p class="a" id="oc-request">点検</p></div>
+                  <div class="order-cell full"><p class="q">選択したメニュー</p><p class="a" id="oc-menu">消火器点検・スポット（10本まで・1回）</p></div>
+                  <div class="order-cell"><p class="q">建物との立場</p><p class="a" id="oc-role">管理会社</p></div>
+                  <div class="order-cell"><p class="q">希望する進め方</p><p class="a" id="oc-engagement">年間契約で定期点検を任せたい</p></div>
+                  <div class="order-cell"><p class="q">建物の用途を教えてください</p><p class="a" id="oc-use">共同住宅・マンション</p></div>
+                  <div class="order-cell"><p class="q">ご希望の実施時期はいつ頃ですか？</p><p class="a" id="oc-timing">1ヶ月以内</p></div>
+                  <div class="order-cell"><p class="q">対象の設備はおおよそ何台（本）ありますか？</p><p class="a" id="oc-count">1〜5台</p></div>
+                  <div class="order-cell"><p class="q">点検・設置の対象となる設備はどれですか？（複数選択可）</p><div class="a" id="oc-equip"><ul><li>消火器</li></ul></div></div>
+                  <div class="order-cell full"><p class="q">所在地</p><p class="a" id="oc-place">東京都北区</p></div>
+                </div>
+                <div class="order-est">
+                  <p class="label">お見積もりについて</p>
+                  <p class="amount" style="font-size:20px;">お見積もりはメールでご案内します</p>
+                  <p class="note">金額はサイト上には表示していません。送信いただいた内容を確認のうえ、翌営業日を目安にメールでお見積もりをお送りします。詳細は現地確認後、あらためてメールでご案内します。</p>
+                </div>
+                <div class="order-foot">中心エリア（北区周辺）は優先して日程調整します。その他の23区も対応しますが、時期によってはお待ちいただく場合があります。</div>
+              </div>
+            </aside>
+          </div>
+
+          <div class="mitsu-done" id="mfDone" tabindex="-1">
+            <h4>見積もり依頼を受け付けました</h4>
+            <p id="mfDoneAmount" style="font-weight:700;color:var(--ink);">内容を受け付けました。お見積もりは、内容を確認のうえメールでご案内します。詳細は現地確認後、あらためてメールでご案内します。</p>
+            <p>ありがとうございます。内容を確認のうえ、対応可否と次の手順を、翌営業日を目安にご入力のメールアドレスへご連絡します。</p>
+            <p>継続取引をご希望の場合は、初回の点検結果をもとに、年間の点検スケジュールと報告期限の管理方法もあわせてご提案します。</p>
+            <p style="margin-bottom:0;"><a class="btn line" href="https://page.line.me/ovt4298c" target="_blank" rel="noopener">公式LINEでも連絡する</a></p>
+          </div>
+
+          <div class="d-sec span2">
+            <h3>対象となる方</h3>
+            <div class="duo">
+              <div class="mini-card">
+                <h4>このような方からのご依頼を中心に承ります</h4>
+                <p>東京23区内の建物を管理する管理会社様、オーナー様、店舗・施設の管理責任者様。複数物件の窓口をまとめたい方、点検時期や報告期限の管理まで任せたい方を想定しています。</p>
+              </div>
+              <div class="mini-card">
+                <h4>継続取引でできること</h4>
+                <p>機器点検（6か月ごと）と総合点検（1年ごと）の年間スケジュール化、報告期限が近づいた際のお知らせ、不良箇所の改修までの一括対応。担当窓口を1社にまとめることで、毎回の手配の手間がなくなります。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-sec span2">
+            <h3>お受けしていないご依頼</h3>
+            <p class="d-lede">対象を絞ることで、対応エリア内の定期点検に集中しています。次のご依頼は承っておりません。</p>
+            <ul class="recommend">
+              <li>個人の戸建て住宅の点検</li>
+              <li>東京23区外の建物（交通費をいただいても、継続対応の対象外です）</li>
+              <li>夜間・緊急出動のみのご依頼</li>
+              <li>他社が点検した点検票への名義貸しや、書類のみの作成</li>
+              <li>営業・売り込み目的のお問い合わせ</li>
+            </ul>
+            <p class="fine-note">判断に迷う場合は、まずはこのフォームでお送りください。対応できない場合は、その旨と理由をご連絡します。</p>
+          </div>
+
+          <div class="d-sec">
+            <h3>依頼後の流れ</h3>
+            <ol class="steps">
+              <li><div><b>内容の確認とご連絡</b><span>入力内容を確認し、対応可否と見積もりの進め方をメールでご連絡します（翌営業日目安）。</span></div></li>
+              <li><div><b>お見積り</b><span>設備の内容を確認し、お見積りをメールでご提示します。詳細は現地確認後、あらためてメールでご案内します。お見積りは無料です。</span></div></li>
+              <li><div><b>初回の点検</b><span>事前に日程を告知し、原則2名体制で点検します。結果は写真で記録します。</span></div></li>
+              <li><div><b>継続のご提案</b><span>点検票のお渡しとあわせて、年間スケジュールと次回時期のご案内をします。不良箇所があれば改修もご提案します。</span></div></li>
+            </ol>
+          </div>
+
+          <div class="d-sec">
+            <h3>よくあるご質問</h3>
+            <div class="faq">
+              <div class="faq-item"><h4>見積もりは本当に無料ですか？</h4><p>はい。入力内容と必要に応じた現地確認をもとにお見積りします。送信しただけでは発注にはならず、費用も発生しません。</p></div>
+              <div class="faq-item"><h4>見積もりはどのように届きますか？</h4><p>金額はサイト上には表示していません。フォームの内容を確認のうえ、翌営業日を目安に、ご入力のメールアドレスへお見積もりをお送りします。詳細は現地確認後、あらためてメールでご案内します。</p></div>
+              <div class="faq-item"><h4>現地確認が必要なのはなぜですか？</h4><p>配線の状態や機器の型番・数量など、現地を見なければ分からないことがあるためです。そのため詳細は現地確認後、メールでお見積もりとしてご案内します。</p></div>
+              <div class="faq-item"><h4>工事の見積もりに機器本体代は含まれますか？</h4><p>消火器や感知器、誘導灯などの本体・部品代は、現地で型番と数量を確認してからお見積もりに含めます。詳細は現地確認後、メールでご案内します。</p></div>
+              <div class="faq-item"><h4>北区以外でも依頼できますか？</h4><p>東京23区内であれば対応します。中心は北区とその周辺（板橋区・豊島区・文京区・荒川区・足立区）で、このエリアは日程調整がしやすくなっています。23区外は継続対応の対象外です。</p></div>
+              <div class="faq-item"><h4>単発の点検だけでも頼めますか？</h4><p>まずは1回お試しいただくことは可能です。ただし、継続的な定期点検を前提としたご依頼を優先しています。価格のみの比較を目的としたご依頼には、対応できない場合があります。</p></div>
+              <div class="faq-item"><h4>広告や紹介料は料金に含まれますか？</h4><p>このフォームは当社が直接受け付ける窓口です。仲介手数料や紹介料はかかりません。</p></div>
+            </div>
+          </div>
+
+          <div class="detail-cta">
+            <a class="btn" href="#bousai" data-route="bousai">対応設備を見る</a>
+            <a class="arrow-link" href="#contact" data-route="contact">文章で相談する（お問い合わせ）</a>
+          </div>
         </section>
       </div>
 
@@ -14152,8 +14575,9 @@
               <li><a href="#bousai" data-route="bousai" data-target="bousai-tenken">消防設備点検</a></li>
               <li><a href="#bousai" data-route="bousai" data-target="bousai-shokaki">消火器点検</a></li>
               <li><a href="#bousai" data-route="bousai" data-target="bousai-kaishu">改修工事</a></li>
-              <li><a href="#bousai" data-route="bousai" data-target="bousai-price">料金の目安</a></li>
+              <li><a href="#bousai" data-route="bousai" data-target="bousai-price">料金について</a></li>
               <li><a href="#bousai" data-route="bousai" data-target="bousai-check">点検時期の簡易チェック</a></li>
+              <li><a href="#mitsumori" data-route="mitsumori">見積もり依頼フォーム</a></li>
             </ul>
           </div>
           <div>
@@ -14217,7 +14641,7 @@
           burger.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
 
-        var ROUTES=['top','bousai','maintenance','ohaka','ending','about','contact','column','col-1','col-2','col-3','col-4','col-5','col-6','col-7','col-8','col-9','col-10','col-11','col-12','col-13','col-14','col-15','col-16','col-17','col-18','col-19','col-20','col-21','col-22','col-23','col-24','col-25','col-26','col-27','col-28','col-29','col-30','col-31','col-32','col-33','col-34','col-35','col-36','col-37','col-38','col-39','col-40','col-41','col-42','col-43','col-44','col-45','col-46','col-47','col-48','col-49','col-50','col-51','col-52','col-53','col-54','col-55','col-56','col-57','col-58','col-59','col-60','col-61','col-62','col-63','col-64','col-65','col-66','col-67','col-68','col-69','col-70','col-71','col-72','col-73','col-74','col-75','col-76','col-77','col-78','col-79','col-80','col-81','col-82','col-83','col-84','col-85','col-86','col-87','col-88','col-89','col-90','col-91','col-92','col-93','col-94','col-95','col-96','col-97','col-98','col-99','col-100','col-101','col-102','col-103','col-104','col-105','col-106','col-107','col-108','col-109','col-110','col-111','col-112','col-113','col-114','col-115','col-116','col-117','col-118','col-119','col-120','col-121','col-122','col-123','col-124','col-125','col-126','col-127','col-128','col-129','col-130','col-131','col-132','col-133','col-134','col-135','col-136','col-137','col-138','col-139','col-140','col-141','col-142','col-143','col-144','col-145','col-146','col-147','col-148','col-149','col-150','col-151','col-152','col-153','col-154','col-155','col-156','col-157','col-158','col-159','col-160','col-161','col-162','col-163','col-164','col-165','col-166','col-167','col-168','col-169','col-170','col-171','col-172','col-173','col-174','col-175','col-176','col-177','col-178','col-179','col-180','col-181','col-182','col-183','col-184','col-185','col-186','col-187','col-188','col-189','col-190','col-191','col-192','col-193','col-194','col-195','col-196','col-197','col-198','col-199','col-200','col-201','col-202','col-203','col-204','col-205','col-206','col-207','col-208','col-209','col-210','col-211','col-212','col-213','col-214','col-215','col-216','col-217','col-218','col-219','col-220','col-221','col-222','col-223','col-224','col-225','col-226','col-227','col-228','col-229','col-230','col-231','col-232','col-233','col-234','col-235','col-236','col-237','col-238','col-239','col-240','col-241','col-242','col-243','col-244','col-245','col-246','col-247','col-248','col-249','col-250','col-251','col-252','col-253','col-254','col-255','col-256','col-257','col-258','col-259','col-260','col-261','col-262','col-263','col-264','col-265','col-266','col-267','col-268','col-269','col-270','col-271','col-272','col-273','col-274','col-275','col-276','col-277','col-278','col-279','col-280','col-281','col-282','col-283','col-284','col-285','col-286','col-287','col-288','col-289','col-290','col-291','col-292','col-293','col-294','col-295','col-296','col-297','col-298','col-299','report','faq','privacy'];
+        var ROUTES=['top','bousai','maintenance','ohaka','ending','about','contact','column','col-1','col-2','col-3','col-4','col-5','col-6','col-7','col-8','col-9','col-10','col-11','col-12','col-13','col-14','col-15','col-16','col-17','col-18','col-19','col-20','col-21','col-22','col-23','col-24','col-25','col-26','col-27','col-28','col-29','col-30','col-31','col-32','col-33','col-34','col-35','col-36','col-37','col-38','col-39','col-40','col-41','col-42','col-43','col-44','col-45','col-46','col-47','col-48','col-49','col-50','col-51','col-52','col-53','col-54','col-55','col-56','col-57','col-58','col-59','col-60','col-61','col-62','col-63','col-64','col-65','col-66','col-67','col-68','col-69','col-70','col-71','col-72','col-73','col-74','col-75','col-76','col-77','col-78','col-79','col-80','col-81','col-82','col-83','col-84','col-85','col-86','col-87','col-88','col-89','col-90','col-91','col-92','col-93','col-94','col-95','col-96','col-97','col-98','col-99','col-100','col-101','col-102','col-103','col-104','col-105','col-106','col-107','col-108','col-109','col-110','col-111','col-112','col-113','col-114','col-115','col-116','col-117','col-118','col-119','col-120','col-121','col-122','col-123','col-124','col-125','col-126','col-127','col-128','col-129','col-130','col-131','col-132','col-133','col-134','col-135','col-136','col-137','col-138','col-139','col-140','col-141','col-142','col-143','col-144','col-145','col-146','col-147','col-148','col-149','col-150','col-151','col-152','col-153','col-154','col-155','col-156','col-157','col-158','col-159','col-160','col-161','col-162','col-163','col-164','col-165','col-166','col-167','col-168','col-169','col-170','col-171','col-172','col-173','col-174','col-175','col-176','col-177','col-178','col-179','col-180','col-181','col-182','col-183','col-184','col-185','col-186','col-187','col-188','col-189','col-190','col-191','col-192','col-193','col-194','col-195','col-196','col-197','col-198','col-199','col-200','col-201','col-202','col-203','col-204','col-205','col-206','col-207','col-208','col-209','col-210','col-211','col-212','col-213','col-214','col-215','col-216','col-217','col-218','col-219','col-220','col-221','col-222','col-223','col-224','col-225','col-226','col-227','col-228','col-229','col-230','col-231','col-232','col-233','col-234','col-235','col-236','col-237','col-238','col-239','col-240','col-241','col-242','col-243','col-244','col-245','col-246','col-247','col-248','col-249','col-250','col-251','col-252','col-253','col-254','col-255','col-256','col-257','col-258','col-259','col-260','col-261','col-262','col-263','col-264','col-265','col-266','col-267','col-268','col-269','col-270','col-271','col-272','col-273','col-274','col-275','col-276','col-277','col-278','col-279','col-280','col-281','col-282','col-283','col-284','col-285','col-286','col-287','col-288','col-289','col-290','col-291','col-292','col-293','col-294','col-295','col-296','col-297','col-298','col-299','report','faq','privacy','mitsumori'];
         function routeFromHash(){
           var h=(window.location.hash||'').replace('#','').replace('/','');
           if(h==='services'||h===''){ return 'top'; }
@@ -14234,7 +14658,8 @@
           'column':'コラム | 株式会社上田',
           'report':'点検結果報告書の提出のご案内 | 株式会社上田',
           'faq':'よくある質問 | 株式会社上田',
-          'privacy':'プライバシーポリシー | 株式会社上田'
+          'privacy':'プライバシーポリシー | 株式会社上田',
+          'mitsumori':'消防設備点検 見積もり依頼（東京23区・北区中心） | 株式会社上田'
         };
         function show(route){
           for(var i=0;i<ROUTES.length;i++){
@@ -14503,6 +14928,117 @@
             resizeTimer=setTimeout(render, 150);
           });
           render();
+        })();
+
+        /* ---- Mitsumori: live order-card preview + estimate hint + submission ---- */
+        (function(){
+          var form=document.getElementById('mitsumoriForm');
+          if(!form){ return; }
+          var CENTRAL={'北区':1,'板橋区':1,'豊島区':1,'文京区':1,'荒川区':1,'足立区':1};
+          function val(name){ var el=form.querySelector('input[name="'+name+'"]:checked'); return el ? el.value : ''; }
+          function checkedList(name){ var els=form.querySelectorAll('input[name="'+name+'"]:checked'); var out=[]; for(var i=0;i<els.length;i++){ out.push(els[i].value); } return out; }
+          function setText(id, txt){ var el=document.getElementById(id); if(el){ el.textContent=txt || '—'; } }
+          var TRAVEL_PER_VISIT=15000;
+          var BUFFER_RATE=0.20;
+          function yen(n){ return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ',')+'円'; }
+          function currentMenu(){
+            var isWork=val('request_type').indexOf('工事')===0;
+            var name=isWork?'work_menu':'inspect_menu';
+            var el=form.querySelector('input[name="'+name+'"]:checked');
+            if(!el){ return null; }
+            return { label:el.value, base:parseInt(el.getAttribute('data-base'),10)||0, visits:parseInt(el.getAttribute('data-visits'),10)||1, kind:el.getAttribute('data-kind')||'', isWork:isWork };
+          }
+          var lastEstimate=null;
+          function estimate(){
+            /* 金額はサイト上に表示しない。ここでの計算は社内通知メール専用（hidden項目） */
+            var menu=currentMenu();
+            if(!menu){ return; }
+            setText('oc-menu', menu.label);
+            var count=val('count_range');
+            var extraPerVisit=0, extraNote='';
+            if(menu.kind==='ext-spot'||menu.kind==='ext-annual'){
+              if(count==='11〜20台'){ extraPerVisit=5000; extraNote='消火器は15本として計算しています（10本まで基本料金＋11本目以降1本1,000円×5本）。'; }
+              else if(count==='21台以上'){ extraPerVisit=20000; extraNote='消火器は30本として計算しています（10本まで基本料金＋11本目以降1本1,000円×20本）。本数が確定したら再計算します。'; }
+              else if(count==='分からない'){ extraNote='消火器の本数が分からないため、10本までで計算しています。本数が確定したら再計算します。'; }
+            }
+            var menuTotal=menu.base + extraPerVisit*menu.visits;
+            var travelTotal=TRAVEL_PER_VISIT*menu.visits;
+            var subtotal=menuTotal+travelTotal;
+            var buffer=Math.round(subtotal*BUFFER_RATE);
+            var total=subtotal+buffer;
+            var unitLabel=menu.visits===2?'／年':'';
+            var breakdown='メニュー：'+menu.label+'／メニュー料金：'+yen(menuTotal)+'／移動費（北区から一律・1回15,000円×'+menu.visits+'回）：'+yen(travelTotal)+'／小計：'+yen(subtotal)+'／現地調整分（全体の20％）：'+yen(buffer)+'／社内目安：'+yen(total)+'〜'+unitLabel+(extraNote?'／備考：'+extraNote:'');
+            lastEstimate={ total:yen(total)+'〜'+unitLabel, breakdown:breakdown, menu:menu.label };
+            var hTotal=document.getElementById('mfEstTotal'); if(hTotal){ hTotal.value=lastEstimate.total; }
+            var hBd=document.getElementById('mfEstBreakdown'); if(hBd){ hBd.value=breakdown; }
+            var hMenu=document.getElementById('mfSelectedMenu'); if(hMenu){ hMenu.value=menu.label; }
+            var subj=document.getElementById('mfSubject'); if(subj){ subj.value='【見積もり依頼】'+(menu.isWork?'工事':'点検')+'／社内目安 '+lastEstimate.total+'（ホームページ）'; }
+          }
+          function update(){
+            setText('oc-client', val('client_type'));
+            setText('oc-request', val('request_type'));
+            var isWork=val('request_type').indexOf('工事')===0;
+            var gI=document.getElementById('menuInspectGroup');
+            var gW=document.getElementById('menuWorkGroup');
+            if(gI){ gI.hidden=isWork; }
+            if(gW){ gW.hidden=!isWork; }
+            setText('oc-role', val('role'));
+            setText('oc-engagement', val('engagement'));
+            setText('oc-use', val('building_use'));
+            setText('oc-timing', val('timing'));
+            setText('oc-count', val('count_range'));
+            var equip=checkedList('equipments');
+            var eqEl=document.getElementById('oc-equip');
+            if(eqEl){
+              if(!equip.length){ eqEl.innerHTML='<span class="empty">未選択</span>'; eqEl.classList.add('empty'); }
+              else { eqEl.classList.remove('empty'); eqEl.innerHTML=''; var ul=document.createElement('ul'); equip.forEach(function(v){ var li2=document.createElement('li'); li2.textContent=v; ul.appendChild(li2); }); eqEl.appendChild(ul); }
+            }
+            var wardEl=document.getElementById('mf-ward');
+            var addrEl=document.getElementById('mf-address');
+            var ward=wardEl ? wardEl.value : '';
+            var place='東京都'+ward+(addrEl && addrEl.value ? ' '+addrEl.value : '');
+            if(ward && CENTRAL[ward]){ place+='（中心エリア）'; }
+            setText('oc-place', place);
+            var compGroup=document.getElementById('mfCompanyGroup');
+            var compInput=document.getElementById('mf-company');
+            if(compGroup && compInput){
+              if(val('client_type')==='法人'){ compGroup.style.display=''; compInput.required=true; }
+              else { compGroup.style.display=''; compInput.required=false; }
+            }
+            estimate();
+          }
+          var inputs=form.querySelectorAll('input, select, textarea');
+          for(var i=0;i<inputs.length;i++){ inputs[i].addEventListener('change', update); inputs[i].addEventListener('input', update); }
+          update();
+          var btn=document.getElementById('mfSubmitBtn');
+          var status=document.getElementById('mfStatus');
+          var done=document.getElementById('mfDone');
+          form.addEventListener('submit', function(e){
+            e.preventDefault();
+            if(btn && btn.disabled){ return; }
+            var equip=checkedList('equipments');
+            if(!equip.length){
+              if(status){ status.textContent='対象となる設備を1つ以上お選びください（分からない場合は「その他・分からない」をお選びください）。'; status.className='form-status show err'; }
+              return;
+            }
+            estimate();
+            if(btn){ btn.disabled=true; btn.textContent='送信中…'; }
+            if(status){ status.className='form-status'; status.textContent=''; }
+            fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} }).then(function(res){
+              if(res.ok){
+                form.style.display='none';
+                var doneAmt=document.getElementById('mfDoneAmount');
+                if(doneAmt){ doneAmt.textContent='内容を受け付けました。お見積もりは、内容を確認のうえメールでご案内します。詳細は現地確認後、あらためてメールでご案内します。'; }
+                if(done){ done.classList.add('show'); done.focus(); done.scrollIntoView({block:'nearest'}); }
+              }else{
+                if(status){ status.textContent='送信できませんでした。時間をおいて再度お試しいただくか、お問い合わせフォームまたは公式LINEでご連絡ください。'; status.className='form-status show err'; }
+                if(btn){ btn.disabled=false; btn.textContent='この内容で見積もりを依頼する'; }
+              }
+            }).catch(function(){
+              if(status){ status.textContent='送信できませんでした。時間をおいて再度お試しいただくか、お問い合わせフォームまたは公式LINEでご連絡ください。'; status.className='form-status show err'; }
+              if(btn){ btn.disabled=false; btn.textContent='この内容で見積もりを依頼する'; }
+            });
+          });
         })();
 
         window.addEventListener('hashchange', apply);
