@@ -580,23 +580,42 @@
       .legal{font-size:12px;line-height:1.33;color:var(--mid);border-top:1px solid var(--hairline);padding-top:20px;}
       .legal p{margin:0 0 8px;}
 
+      /* ---------- Trouble blocks / related columns / soudan ---------- */
+      .trouble{background:var(--canvas);border-radius:28px;padding:32px 36px;}
+      @media(max-width:640px){.trouble{padding:26px 22px;}}
+      .trouble-list{list-style:none;margin:0 0 16px;padding:0;max-width:820px;}
+      .trouble-list li{padding:11px 0 11px 30px;position:relative;font-size:16px;line-height:1.55;}
+      .trouble-list li + li{border-top:1px solid var(--hairline);}
+      .trouble-list li::before{content:"";position:absolute;left:2px;top:20px;width:9px;height:9px;border-radius:50%;background:var(--blue);}
+      .simple .trouble-list li{font-size:18px;}
+      .trouble-note{font-size:15px;color:var(--mid);margin:0;max-width:720px;line-height:1.65;}
+      .trouble-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:22px;}
+      .btn.ghost{background:var(--paper);color:var(--link);border:1.5px solid var(--hairline);}
+      .btn.ghost:hover{background:var(--paper);border-color:var(--mid);text-decoration:none;}
+      @media(min-width:1024px){
+        #view-ohaka .detail.has-trouble>.detail-photo,#view-ending .detail.has-trouble>.detail-photo{grid-row:4;}
+        #view-ohaka .detail.has-trouble>.detail-body,#view-ending .detail.has-trouble>.detail-body{grid-row:4;}
+      }
+      .rel-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+      @media(max-width:820px){.rel-grid{grid-template-columns:1fr;}}
+      .rel-group{background:var(--canvas);border-radius:28px;padding:26px 28px;}
+      .rel-group h4{font-family:var(--font-display);font-weight:600;font-size:19px;line-height:1.25;margin:0 0 6px;}
+      .rel-list{list-style:none;margin:0;padding:0;}
+      .rel-list li{padding:10px 0;}
+      .rel-list li + li{border-top:1px solid var(--hairline);}
+      .rel-list a{color:var(--ink);font-size:15px;line-height:1.55;display:block;}
+      .rel-list a:hover{color:var(--link);text-decoration:none;}
+      .rel-list a::after{content:" ›";color:var(--link);}
+      .cform select{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--hairline);border-radius:12px;padding:12px 14px;appearance:none;-webkit-appearance:none;}
+      .cform select:focus{outline:2px solid var(--blue);outline-offset:0;border-color:var(--blue);}
+
       /* ---------- Mobile side margins ---------- */
       @media(max-width:767px){
         .wrap{padding:0 28px;}
         .gnav-in{padding:0 28px;}
         .mobile-menu{padding-left:28px;padding-right:28px;}
       }
-    .rel-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-.rel-group{background:var(--canvas);border-radius:28px;padding:26px 28px;}
-.rel-group h4{font-family:var(--font-display);font-weight:600;font-size:19px;line-height:1.25;margin:0 0 6px;}
-.rel-list{list-style:none;margin:0;padding:0;}
-.rel-list li{padding:10px 0;}
-.rel-list li + li{border-top:1px solid var(--hairline);}
-.rel-list a{color:var(--ink);font-size:15px;line-height:1.55;display:block;}
-.rel-list a:hover{color:var(--link);text-decoration:none;}
-.rel-list a::after{content:" ›";color:var(--link);}
-@media (max-width:820px){.rel-grid{grid-template-columns:1fr}}
-</style>
+    </style>
   </head>
   <body>
 
@@ -627,6 +646,8 @@
         <a href="#about" data-route="about">会社概要</a>
         <a href="#privacy" data-route="privacy">プライバシーポリシー</a>
         <a href="#mitsumori" data-route="mitsumori">見積もり依頼（消防設備点検）</a>
+        <a href="#soudan" data-route="soudan">まずは相談（決めなくていい相談）</a>
+        <a href="#partner" data-route="partner">協力会社様募集</a>
         <a href="#contact" data-route="contact">お問い合わせ</a>
       </div>
     </header>
@@ -809,6 +830,21 @@
         <section class="detail wrap grid2">
           <h2>点検で終わらせない、防災</h2>
           <p class="lede lede-1line">消防設備点検・消火器点検が本業です。点検から点検票の作成、不良箇所の改修まで、消防設備士（全類）が一括で対応します。</p>
+          <div class="d-sec span2 trouble" style="margin-top:8px;">
+            <h3>こんなお困りごとはありませんか</h3>
+            <ul class="trouble-list">
+              <li>消防署や管理会社から点検の案内が来たが、何をすればいいか分からない</li>
+              <li>点検を管理会社や業者に任せきりで、内容も金額も分からないままになっている</li>
+              <li>消火器の使用期限や本数の管理ができておらず、期限切れがないか不安</li>
+              <li>前回の点検・消防署への報告がいつだったか、記録が残っていない</li>
+              <li>点検や立入検査で不良を指摘されたが、改修まで頼める業者がいない</li>
+            </ul>
+            <p class="trouble-note">当てはまるものがあれば、点検を頼むかどうか決めていなくても構いません。まずは状況の整理からご相談ください。内容が固まっている場合は、見積もり依頼フォームからお送りいただけます。</p>
+            <div class="trouble-actions">
+              <a class="btn" href="#soudan" data-route="soudan" data-soudan-from="防災ページの困りごとブロック">まずは相談する</a>
+              <a class="btn ghost" href="#mitsumori" data-route="mitsumori">見積もりを依頼する</a>
+            </div>
+          </div>
           <div class="detail-intro">
           <figure class="detail-photo">
             <img src="assets/col-indoor-hydrant.jpg" alt="屋内消火栓とホース格納箱" />
@@ -1004,7 +1040,19 @@
               </div>
             </div>
           </div>
-<div class="detail-cta">
+
+          <div class="d-sec span2">
+            <h3>協力会社様募集</h3>
+            <div class="partner-cta" style="margin-top:0;">
+              <div>
+                <h4>消防設備点検・改修にご協力いただける会社様・個人事業主様へ</h4>
+                <p>東京23区（中心は北区周辺）の消防設備点検・改修に対応してくださる協力会社様を募集しています。対応可能エリアや保有資格を、応募フォームからお聞かせください。</p>
+              </div>
+              <a class="btn" href="#partner" data-route="partner">協力会社様募集を見る</a>
+            </div>
+          </div>
+
+          <div class="detail-cta">
             <a class="btn" href="#mitsumori" data-route="mitsumori">見積もりを依頼する</a>
             <a class="arrow-link" href="#contact" data-route="contact">文章で相談する</a>
           </div>
@@ -1016,6 +1064,21 @@
         <section class="detail wrap grid2">
           <h2>メーカーの現場を、支える</h2>
           <p class="lede lede-1line">メーカー様・発注元様のご指定に基づき、各種設備の保守・点検・修理・一次対応を行います。</p>
+          <div class="d-sec span2 trouble" style="margin-top:8px;">
+            <h3>こんなお困りごとはありませんか</h3>
+            <ul class="trouble-list">
+              <li>現場対応の担い手が不足し、対応エリアや件数をカバーしきれない</li>
+              <li>一次対応や不具合の切り分けを任せられる、現場のパートナーがいない</li>
+              <li>点検・修理の報告の形式や粒度が、担当者や協力会社ごとにばらついている</li>
+              <li>繁忙期だけ件数が増え、自社体制だけでは回らなくなる</li>
+              <li>試行対応から始められる委託先を探しているが、進め方が分からない</li>
+            </ul>
+            <p class="trouble-note">メーカー様・発注元様向けのご相談です。対応可否を決める前段階のご相談でも構いません。まずは対象製品・エリア・想定件数をお聞かせください。</p>
+            <div class="trouble-actions">
+              <a class="btn" href="#soudan" data-route="soudan" data-soudan-from="メンテナンスページの困りごとブロック">まずは相談する</a>
+              <a class="btn ghost" href="#mitsumori" data-route="mitsumori">見積もりを依頼する</a>
+            </div>
+          </div>
           <div class="detail-intro">
           <figure class="detail-photo">
             <img src="assets/col-solar-rooftop-panels.jpg" alt="屋根に並ぶ太陽光パネル" />
@@ -1085,7 +1148,7 @@
           </div>
 
           <div class="d-sec span2" id="maint-partner">
-            <h3>協力会社募集</h3>
+            <h3>協力会社様募集</h3>
             <p class="d-lede">メーカー様の保守・点検・修理などの現場業務を、一緒に担っていただける協力会社を募集しています。</p>
             <div class="duo">
               <div class="mini-card">
@@ -1157,7 +1220,8 @@
               </div>
             </div>
           </div>
-<div class="detail-cta">
+
+          <div class="detail-cta">
             <a class="btn" href="#contact" data-route="contact">メーカー様のお問い合わせ</a>
           </div>
         </section>
@@ -1165,9 +1229,24 @@
 
       <!-- ================= Detail: Ohaka (個人向け・シンプル) ================= -->
       <div class="view" id="view-ohaka">
-        <section class="detail wrap simple grid2">
+        <section class="detail wrap simple grid2 has-trouble">
           <h2>行けない日の、お墓参りを</h2>
           <p class="lede">お墓の見守りと清掃を代行します。作業の様子は写真でご報告します。</p>
+          <div class="d-sec span2 trouble" style="margin-top:8px;">
+            <h3>こんなお困りごとはありませんか</h3>
+            <ul class="trouble-list">
+              <li>遠方に住んでいて、なかなかお墓参りに行けない</li>
+              <li>足腰が不安で、墓地まで行くことが負担になってきた</li>
+              <li>お墓の今の状態（傾き・汚れ・雑草）がどうなっているか分からない</li>
+              <li>親からお墓を引き継いだが、何から手をつければいいか分からない</li>
+              <li>法事やお彼岸の前に、お墓を整えておきたい</li>
+            </ul>
+            <p class="trouble-note">頼むかどうか決めていなくても構いません。お墓の場所と気になっている点だけでも、まずはご相談ください。</p>
+            <div class="trouble-actions">
+              <a class="btn" href="#soudan" data-route="soudan" data-soudan-from="お墓ページの困りごとブロック">まずは相談する</a>
+              <a class="btn ghost" href="#mitsumori" data-route="mitsumori">見積もりを依頼する</a>
+            </div>
+          </div>
           <figure class="detail-photo">
             <img src="assets/grave-flowers.jpg" alt="色とりどりの花が供えられた墓石" />
             <figcaption>お参りの際は花をお供えし、清掃前後の様子を写真でご報告します。</figcaption>
@@ -1283,7 +1362,8 @@
               </div>
             </div>
           </div>
-<div class="detail-cta">
+
+          <div class="detail-cta">
             <a class="btn" href="#contact" data-route="contact">お墓のご相談</a>
           </div>
         </section>
@@ -1291,9 +1371,24 @@
 
       <!-- ================= Detail: Ending note (個人向け・シンプル) ================= -->
       <div class="view" id="view-ending">
-        <section class="detail wrap simple grid2">
+        <section class="detail wrap simple grid2 has-trouble">
           <h2>エンディングノート講習</h2>
           <p class="lede">「いつか書こう」を、「今日書けた」に変える90分です。</p>
+          <div class="d-sec span2 trouble" style="margin-top:8px;">
+            <h3>こんなお困りごとはありませんか</h3>
+            <ul class="trouble-list">
+              <li>エンディングノートを用意したまま、書き始められないでいる</li>
+              <li>何から書けばいいか、書く順番が分からない</li>
+              <li>銀行口座や契約の所在を、家族が分かる形で残しておきたい</li>
+              <li>パスワードや暗証番号を、そのまま書いてよいのか不安がある</li>
+              <li>遺言書との違いが分からず、手が止まっている</li>
+            </ul>
+            <p class="trouble-note">講習への参加を決めていなくても構いません。書き方や進め方についてのご相談からでも大丈夫です。</p>
+            <div class="trouble-actions">
+              <a class="btn" href="#soudan" data-route="soudan" data-soudan-from="エンディングノートページの困りごとブロック">まずは相談する</a>
+              <a class="btn ghost" href="#mitsumori" data-route="mitsumori">見積もりを依頼する</a>
+            </div>
+          </div>
           <figure class="detail-photo">
             <img src="assets/ending-desk.jpg" alt="木の机に置かれたノートと万年筆、インク瓶" />
             <figcaption>ノートと万年筆。講習では、冊子に実際に書き込みながら進めます。</figcaption>
@@ -1352,14 +1447,7 @@
             <p class="d-lede faq-note">エンディングノート講習に関するよくあるご質問は、<a href="#faq" data-route="faq" data-target="faq-ending">よくある質問ページの「エンディングノート講習」欄</a>にまとめています。</p>
           </div>
 
-          <div class="detail-cta" style="justify-content:center;text-align:center;">
-            <a class="btn" href="#contact" data-route="contact">講習のご相談</a>
-          </div>
-        </section>
-      </div>
-
-      <!-- ================= Detail: About ================= -->
-      <div class="view"<div class="d-sec span2">
+          <div class="d-sec span2">
             <h3>困りごと別の関連コラム</h3>
             <p class="d-lede">エンディングノートのコラムを、テーマごとにまとめました。すべてのコラムは<a href="#column" data-route="column" data-colfilter="ending">コラム一覧（エンディングノート）</a>からご覧いただけます。</p>
             <div class="rel-grid">
@@ -1397,7 +1485,15 @@
               </div>
             </div>
           </div>
- id="view-about">
+
+          <div class="detail-cta" style="justify-content:center;text-align:center;">
+            <a class="btn" href="#contact" data-route="contact">講習のご相談</a>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= Detail: About ================= -->
+      <div class="view" id="view-about">
         <section class="detail wrap grid2">
           <h2>会社概要</h2>
           <p class="lede lede-2line"><span class="line-unit">現場を知る人間が、誠実に動く。東京都北区を拠点に、どの事業でも</span><br class="br-wide" /><span class="line-unit">「現場に伺い、状態を確認し、報告する」進め方を大切にしています。</span></p>
@@ -1438,6 +1534,12 @@
               <li>FP技能士</li>
               <li>遺品整理士</li>
             </ul>
+          </div>
+
+          <div class="d-sec">
+            <h3>協力会社様募集</h3>
+            <p class="d-lede">東京23区の消防設備点検・改修にご協力いただける協力会社様・個人事業主様を募集しています。</p>
+            <p><a class="btn" href="#partner" data-route="partner">協力会社様募集を見る</a></p>
           </div>
 
         </section>
@@ -1774,6 +1876,260 @@
         </section>
       </div>
 
+      <!-- ================= Soudan: light consultation (決めなくていい相談) ================= -->
+      <div class="view" id="view-soudan">
+        <section class="detail wrap">
+          <a class="back-link" href="#bousai" data-route="bousai">防災のページへ戻る</a>
+          <h2>決めなくていい、<br />相談</h2>
+          <p class="lede">点検が必要かどうか分からない、時期や範囲を決める前の段階のご相談を受ける窓口です。発注を前提とした見積もり依頼とは別に、分かる範囲だけでもお送りいただけます。</p>
+
+          <ul class="field-list" style="margin-bottom:36px;">
+            <li>相談は無料</li>
+            <li>発注前提ではありません</li>
+            <li>返信は3日以内</li>
+            <li>電話なし／メールで完結</li>
+            <li>対象は東京23区内</li>
+          </ul>
+
+          <form class="cform" id="soudanForm" action="https://formspree.io/f/xqevlkop" method="POST">
+            <input type="hidden" name="_subject" value="【まずは相談】ホームページ（決めなくていい相談）" />
+            <input type="hidden" name="inquiry_kind" value="まずは相談（決めなくていい相談）" />
+            <input type="hidden" name="source" value="まずは相談フォーム" />
+            <input type="hidden" name="consult_source" id="sdSource" value="まずは相談ページ（直接）" />
+
+            <div class="cform-group">
+              <span class="cform-label" id="sdRoleLabel">お立場<span class="req">必須</span></span>
+              <div class="chip-list" role="radiogroup" aria-labelledby="sdRoleLabel">
+                <label class="chip"><input type="radio" name="role" value="管理会社" checked /><span>管理会社</span></label>
+                <label class="chip"><input type="radio" name="role" value="オーナー" /><span>オーナー</span></label>
+                <label class="chip"><input type="radio" name="role" value="施設管理責任者" /><span>施設管理責任者</span></label>
+                <label class="chip"><input type="radio" name="role" value="その他" /><span>その他</span></label>
+              </div>
+            </div>
+
+            <div class="cform-group">
+              <label class="cform-label" for="sd-ward">建物のエリア<span class="req">必須</span></label>
+              <select id="sd-ward" name="ward" required>
+                <optgroup label="中心エリア（北区周辺）">
+                  <option value="北区" selected>北区</option>
+                  <option value="板橋区">板橋区</option>
+                  <option value="豊島区">豊島区</option>
+                  <option value="文京区">文京区</option>
+                  <option value="荒川区">荒川区</option>
+                  <option value="足立区">足立区</option>
+                </optgroup>
+                <optgroup label="その他の東京23区">
+                  <option value="千代田区">千代田区</option>
+                  <option value="中央区">中央区</option>
+                  <option value="港区">港区</option>
+                  <option value="新宿区">新宿区</option>
+                  <option value="台東区">台東区</option>
+                  <option value="墨田区">墨田区</option>
+                  <option value="江東区">江東区</option>
+                  <option value="品川区">品川区</option>
+                  <option value="目黒区">目黒区</option>
+                  <option value="大田区">大田区</option>
+                  <option value="世田谷区">世田谷区</option>
+                  <option value="渋谷区">渋谷区</option>
+                  <option value="中野区">中野区</option>
+                  <option value="杉並区">杉並区</option>
+                  <option value="練馬区">練馬区</option>
+                  <option value="葛飾区">葛飾区</option>
+                  <option value="江戸川区">江戸川区</option>
+                </optgroup>
+                <optgroup label="その他">
+                  <option value="まだ決まっていない・分からない">まだ決まっていない・分からない</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="cform-group">
+              <label class="cform-label" for="sd-message">ご相談内容<span class="req">必須</span></label>
+              <textarea id="sd-message" name="message" placeholder="例：点検の案内が来たが、何をすればいいか分からない。前回の点検がいつだったか記録がない。消火器の期限が切れていないか心配。分かる範囲でご記入ください。" required></textarea>
+            </div>
+
+            <div class="cform-group">
+              <label class="cform-label" for="sd-company">会社名・団体名（任意）</label>
+              <input type="text" id="sd-company" name="company" placeholder="例：株式会社〇〇管理" />
+            </div>
+
+            <div class="cform-group">
+              <label class="cform-label" for="sd-name">お名前<span class="req">必須</span></label>
+              <input type="text" id="sd-name" name="name" placeholder="例：上田 太郎" required />
+            </div>
+
+            <div class="cform-group">
+              <label class="cform-label" for="sd-email">メールアドレス<span class="req">必須</span></label>
+              <input type="email" id="sd-email" name="email" placeholder="例：example@company.com" required />
+            </div>
+
+            <div class="privacy-row">
+              <input type="checkbox" id="sdPrivacyCheck" required />
+              <label for="sdPrivacyCheck"><a href="#privacy" data-route="privacy">プライバシーポリシー</a>の内容に同意する</label>
+            </div>
+
+            <button type="submit" class="btn submit-btn" id="sdSubmitBtn">この内容で相談する</button>
+            <p class="fine-note" style="margin-top:12px;">送信しただけでは発注にはなりません。内容を確認のうえ、3日以内にご入力のメールアドレスへご連絡します。ご返信は info@uedakai.com からお送りします。</p>
+            <div class="form-status" id="sdStatus" role="status" aria-live="polite"></div>
+          </form>
+
+          <div class="form-done" id="sdDone" tabindex="-1">
+            <h4>ご相談を受け付けました</h4>
+            <p>ありがとうございます。内容を確認のうえ、3日以内に、ご入力いただいたメールアドレスへご連絡します。ご返信は info@uedakai.com からお送りします。</p>
+            <p style="margin-bottom:0;">点検や見積もりが必要と分かった場合は、その時点で進め方をご案内します。ご相談だけで終えていただいても構いません。</p>
+          </div>
+
+          <div class="d-sec span2">
+            <h3>見積もり依頼との違い</h3>
+            <div class="duo">
+              <div class="mini-card">
+                <h4>まずは相談（このページ）</h4>
+                <p>点検が必要かどうか、時期や範囲が分からない段階のご相談です。分かる範囲だけお送りください。発注前提ではありません。</p>
+              </div>
+              <div class="mini-card">
+                <h4>見積もり依頼</h4>
+                <p>点検・工事の実施を前提に、用途・台数・時期・対象設備を選んで送るフォームです。内容を確認のうえ、お見積もりをメールでご案内します。</p>
+                <p style="margin-top:12px;"><a class="arrow-link" href="#mitsumori" data-route="mitsumori">見積もり依頼フォームへ</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-sec span2">
+            <h3>お受けしていないご依頼</h3>
+            <p class="d-lede">対象を絞ることで、対応エリア内の定期点検に集中しています。次のご依頼は承っておりません。</p>
+            <ul class="recommend">
+              <li>個人の戸建て住宅の点検</li>
+              <li>東京23区外の建物（継続対応の対象外です）</li>
+              <li>夜間・緊急出動のみのご依頼</li>
+              <li>他社が点検した点検票への名義貸しや、書類のみの作成</li>
+              <li>営業・売り込み目的のお問い合わせ</li>
+            </ul>
+            <p class="fine-note">判断に迷う場合は、まずはこのフォームでお送りください。対応できない場合は、その旨と理由をご連絡します。</p>
+          </div>
+
+          <div class="detail-cta">
+            <a class="btn" href="#mitsumori" data-route="mitsumori">見積もりを依頼する</a>
+            <a class="arrow-link" href="#contact" data-route="contact">お問い合わせフォームへ</a>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= Partner: 協力会社様募集 ================= -->
+      <div class="view" id="view-partner">
+        <section class="detail wrap">
+          <a class="back-link" href="#bousai" data-route="bousai">防災のページへ戻る</a>
+          <h2>協力会社様募集</h2>
+          <p class="lede">株式会社上田と一緒に、東京23区の消防設備点検・改修に対応してくださる協力会社様・個人事業主様を募集しています。</p>
+
+          <ul class="field-list" style="margin-bottom:36px;">
+            <li>対象は会社様・個人事業主様</li>
+            <li>対応エリアは東京23区（中心は北区周辺）</li>
+            <li>返信は3日以内</li>
+            <li>電話なし／メールで完結</li>
+          </ul>
+
+          <div class="d-sec" style="margin-top:0;">
+            <h3>募集の背景</h3>
+            <p class="d-lede">消防設備点検・改修のご依頼に対応するため、現場を一緒に担っていただける協力会社様を募集しています。点検の件数や改修のご相談が増えるなかで、対応エリア内のご依頼にきちんと応えられる体制を、協力会社様と一緒につくっていきたいと考えています。</p>
+          </div>
+
+          <div class="d-sec">
+            <h3>協力いただきたい業務</h3>
+            <div class="duo">
+              <div class="mini-card">
+                <h4>消防設備点検</h4>
+                <p>消防設備・消火器の点検業務です。建物の用途や規模に応じて、点検の実施から点検票の作成までご協力いただく場合があります。</p>
+              </div>
+              <div class="mini-card">
+                <h4>改修工事の応援</h4>
+                <p>点検で見つかった不良箇所の改修工事の応援です。感知器や消火器の交換、設備の是正など、内容に応じてご相談します。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-sec">
+            <h3>求める条件</h3>
+            <ul class="recommend">
+              <li>消防設備士などの資格をお持ちの方</li>
+              <li>点検結果の報告書の作成に対応できる方</li>
+              <li>東京23区内（中心は北区周辺）で対応できる方</li>
+              <li>会社様・個人事業主様のいずれも歓迎します</li>
+            </ul>
+            <p class="fine-note">資格の種類や対応できる範囲は、応募フォームの「保有資格」「メッセージ」欄でお聞かせください。すべてに当てはまらなくても、まずはご連絡ください。</p>
+          </div>
+
+          <div class="d-sec">
+            <h3>進め方</h3>
+            <ol class="steps">
+              <li><div><b>ご連絡</b><span>下の応募フォームから、対応可能エリアや保有資格をお送りください。</span></div></li>
+              <li><div><b>条件の確認</b><span>対応範囲や進め方など、条件をお互いに確認します。</span></div></li>
+              <li><div><b>協力の開始</b><span>条件が合えば、案件ごとにご相談しながら協力を開始します。</span></div></li>
+            </ol>
+          </div>
+
+          <div class="d-sec">
+            <h3>応募フォーム</h3>
+            <p class="d-lede">まずはご連絡ください。内容を確認のうえ、3日以内にご入力のメールアドレスへご連絡します。</p>
+
+            <form class="cform" id="partnerForm" action="https://formspree.io/f/xqevlkop" method="POST">
+              <input type="hidden" name="_subject" value="【協力会社様募集】ホームページからの応募" />
+              <input type="hidden" name="inquiry_kind" value="協力会社応募" />
+              <input type="hidden" name="source" value="協力会社様募集フォーム" />
+
+              <div class="cform-group">
+                <label class="cform-label" for="pt-company">会社名・屋号<span class="req">必須</span></label>
+                <input type="text" id="pt-company" name="company" placeholder="例：株式会社〇〇設備（個人事業主様は屋号）" required />
+              </div>
+
+              <div class="cform-group">
+                <label class="cform-label" for="pt-name">ご担当者名<span class="req">必須</span></label>
+                <input type="text" id="pt-name" name="name" placeholder="例：上田 太郎" required />
+              </div>
+
+              <div class="cform-group">
+                <label class="cform-label" for="pt-email">メールアドレス<span class="req">必須</span></label>
+                <input type="email" id="pt-email" name="email" placeholder="例：example@company.com" required />
+              </div>
+
+              <div class="cform-group">
+                <label class="cform-label" for="pt-area">対応可能エリア<span class="req">必須</span></label>
+                <input type="text" id="pt-area" name="area" placeholder="例：北区・板橋区・豊島区など、対応できる区をご記入ください" required />
+              </div>
+
+              <div class="cform-group">
+                <label class="cform-label" for="pt-license">保有資格</label>
+                <input type="text" id="pt-license" name="license" placeholder="例：消防設備士 甲種4類・乙種6類" />
+              </div>
+
+              <div class="cform-group">
+                <label class="cform-label" for="pt-message">メッセージ</label>
+                <textarea id="pt-message" name="message" placeholder="対応できる業務の範囲、報告書作成の可否、これまでのご経験など、分かる範囲でご記入ください。"></textarea>
+              </div>
+
+              <div class="privacy-row">
+                <input type="checkbox" id="ptPrivacyCheck" required />
+                <label for="ptPrivacyCheck"><a href="#privacy" data-route="privacy">プライバシーポリシー</a>の内容に同意する</label>
+              </div>
+
+              <button type="submit" class="btn submit-btn" id="ptSubmitBtn">この内容で応募する</button>
+              <p class="fine-note" style="margin-top:12px;">内容を確認のうえ、3日以内に、ご入力のメールアドレスへご連絡します。ご返信は info@uedakai.com からお送りします。</p>
+              <div class="form-status" id="ptStatus" role="status" aria-live="polite"></div>
+            </form>
+
+            <div class="form-done" id="ptDone" tabindex="-1">
+              <h4>ご応募を受け付けました</h4>
+              <p>ありがとうございます。内容を確認のうえ、3日以内に、ご入力いただいたメールアドレスへご連絡します。ご返信は info@uedakai.com からお送りします。</p>
+              <p style="margin-bottom:0;">条件の確認は、メールでのやり取りから始めます。</p>
+            </div>
+          </div>
+
+          <div class="detail-cta">
+            <a class="btn" href="#bousai" data-route="bousai">防災のページを見る</a>
+            <a class="arrow-link" href="#about" data-route="about">会社概要を見る</a>
+          </div>
+        </section>
+      </div>
+
       <!-- ================= Detail: Contact ================= -->
       <div class="view" id="view-contact">
         <section class="detail wrap">
@@ -1781,6 +2137,23 @@
           <p class="lede lede-1line">点検の時期が分からない、見積もりだけでも見たい。そんな段階からで構いません。</p>
           <div class="detail-body">
             <p>ご相談は、下のフォームまたは公式LINEから承ります（24時間受付・3日以内に返信）。<br class="br-wide" />内容が文章で残る形でのご相談にご協力ください。<br class="br-wide" /><span class="one-line">お急ぎの場合のお電話は、このページの下部に記載しています。</span></p>
+          </div>
+
+          <div class="d-sec">
+            <h3>まだ決めていない段階のご相談</h3>
+            <p class="d-lede">点検が必要かどうか分からない段階であれば、発注前提ではない「まずは相談」からお送りいただけます。内容が固まっている場合は、見積もり依頼フォームをご利用ください。</p>
+            <div class="duo">
+              <div class="mini-card" style="text-align:left;">
+                <h4>まずは相談する</h4>
+                <p>お立場・建物のエリア・ご相談内容だけの、軽い相談フォームです。返信は3日以内にメールでお送りします。</p>
+                <a class="btn" href="#soudan" data-route="soudan" data-soudan-from="お問い合わせページ">まずは相談する</a>
+              </div>
+              <div class="mini-card" style="text-align:left;">
+                <h4>見積もりを依頼する</h4>
+                <p>消防設備点検の実施を前提に、用途・台数・時期・対象設備を選んで送るフォームです。</p>
+                <a class="btn ghost" href="#mitsumori" data-route="mitsumori" style="border:1.5px solid var(--hairline);">見積もり依頼フォームへ</a>
+              </div>
+            </div>
           </div>
 
           <div class="d-sec">
@@ -15977,6 +16350,8 @@
               <li><a href="#bousai" data-route="bousai" data-target="bousai-price">料金について</a></li>
               <li><a href="#bousai" data-route="bousai" data-target="bousai-check">点検時期の簡易チェック</a></li>
               <li><a href="#mitsumori" data-route="mitsumori">見積もり依頼フォーム</a></li>
+              <li><a href="#soudan" data-route="soudan">まずは相談（決めなくていい相談）</a></li>
+              <li><a href="#partner" data-route="partner">協力会社様募集</a></li>
             </ul>
           </div>
           <div>
@@ -15985,7 +16360,7 @@
               <li><a href="#maintenance" data-route="maintenance" data-target="maint-services">対応領域</a></li>
               <li><a href="#maintenance" data-route="maintenance" data-target="maint-area">対応エリア</a></li>
               <li><a href="#maintenance" data-route="maintenance" data-target="maint-flow">進め方</a></li>
-              <li><a href="#maintenance" data-route="maintenance" data-target="maint-partner">協力会社募集</a></li>
+              <li><a href="#maintenance" data-route="maintenance" data-target="maint-partner">協力会社様募集</a></li>
             </ul>
           </div>
           <div>
@@ -16040,7 +16415,7 @@
           burger.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
 
-        var ROUTES=['top','bousai','maintenance','ohaka','ending','about','contact','column','col-1','col-2','col-3','col-4','col-5','col-6','col-7','col-8','col-9','col-10','col-11','col-12','col-13','col-14','col-15','col-16','col-17','col-18','col-19','col-20','col-21','col-22','col-23','col-24','col-25','col-26','col-27','col-28','col-29','col-30','col-31','col-32','col-33','col-34','col-35','col-36','col-37','col-38','col-39','col-40','col-41','col-42','col-43','col-44','col-45','col-46','col-47','col-48','col-49','col-50','col-51','col-52','col-53','col-54','col-55','col-56','col-57','col-58','col-59','col-60','col-61','col-62','col-63','col-64','col-65','col-66','col-67','col-68','col-69','col-70','col-71','col-72','col-73','col-74','col-75','col-76','col-77','col-78','col-79','col-80','col-81','col-82','col-83','col-84','col-85','col-86','col-87','col-88','col-89','col-90','col-91','col-92','col-93','col-94','col-95','col-96','col-97','col-98','col-99','col-100','col-101','col-102','col-103','col-104','col-105','col-106','col-107','col-108','col-109','col-110','col-111','col-112','col-113','col-114','col-115','col-116','col-117','col-118','col-119','col-120','col-121','col-122','col-123','col-124','col-125','col-126','col-127','col-128','col-129','col-130','col-131','col-132','col-133','col-134','col-135','col-136','col-137','col-138','col-139','col-140','col-141','col-142','col-143','col-144','col-145','col-146','col-147','col-148','col-149','col-150','col-151','col-152','col-153','col-154','col-155','col-156','col-157','col-158','col-159','col-160','col-161','col-162','col-163','col-164','col-165','col-166','col-167','col-168','col-169','col-170','col-171','col-172','col-173','col-174','col-175','col-176','col-177','col-178','col-179','col-180','col-181','col-182','col-183','col-184','col-185','col-186','col-187','col-188','col-189','col-190','col-191','col-192','col-193','col-194','col-195','col-196','col-197','col-198','col-199','col-200','col-201','col-202','col-203','col-204','col-205','col-206','col-207','col-208','col-209','col-210','col-211','col-212','col-213','col-214','col-215','col-216','col-217','col-218','col-219','col-220','col-221','col-222','col-223','col-224','col-225','col-226','col-227','col-228','col-229','col-230','col-231','col-232','col-233','col-234','col-235','col-236','col-237','col-238','col-239','col-240','col-241','col-242','col-243','col-244','col-245','col-246','col-247','col-248','col-249','col-250','col-251','col-252','col-253','col-254','col-255','col-256','col-257','col-258','col-259','col-260','col-261','col-262','col-263','col-264','col-265','col-266','col-267','col-268','col-269','col-270','col-271','col-272','col-273','col-274','col-275','col-276','col-277','col-278','col-279','col-280','col-281','col-282','col-283','col-284','col-285','col-286','col-287','col-288','col-289','col-290','col-291','col-292','col-293','col-294','col-295','col-296','col-297','col-298','col-299','report','faq','privacy','mitsumori'];
+        var ROUTES=['top','bousai','maintenance','ohaka','ending','about','contact','column','col-1','col-2','col-3','col-4','col-5','col-6','col-7','col-8','col-9','col-10','col-11','col-12','col-13','col-14','col-15','col-16','col-17','col-18','col-19','col-20','col-21','col-22','col-23','col-24','col-25','col-26','col-27','col-28','col-29','col-30','col-31','col-32','col-33','col-34','col-35','col-36','col-37','col-38','col-39','col-40','col-41','col-42','col-43','col-44','col-45','col-46','col-47','col-48','col-49','col-50','col-51','col-52','col-53','col-54','col-55','col-56','col-57','col-58','col-59','col-60','col-61','col-62','col-63','col-64','col-65','col-66','col-67','col-68','col-69','col-70','col-71','col-72','col-73','col-74','col-75','col-76','col-77','col-78','col-79','col-80','col-81','col-82','col-83','col-84','col-85','col-86','col-87','col-88','col-89','col-90','col-91','col-92','col-93','col-94','col-95','col-96','col-97','col-98','col-99','col-100','col-101','col-102','col-103','col-104','col-105','col-106','col-107','col-108','col-109','col-110','col-111','col-112','col-113','col-114','col-115','col-116','col-117','col-118','col-119','col-120','col-121','col-122','col-123','col-124','col-125','col-126','col-127','col-128','col-129','col-130','col-131','col-132','col-133','col-134','col-135','col-136','col-137','col-138','col-139','col-140','col-141','col-142','col-143','col-144','col-145','col-146','col-147','col-148','col-149','col-150','col-151','col-152','col-153','col-154','col-155','col-156','col-157','col-158','col-159','col-160','col-161','col-162','col-163','col-164','col-165','col-166','col-167','col-168','col-169','col-170','col-171','col-172','col-173','col-174','col-175','col-176','col-177','col-178','col-179','col-180','col-181','col-182','col-183','col-184','col-185','col-186','col-187','col-188','col-189','col-190','col-191','col-192','col-193','col-194','col-195','col-196','col-197','col-198','col-199','col-200','col-201','col-202','col-203','col-204','col-205','col-206','col-207','col-208','col-209','col-210','col-211','col-212','col-213','col-214','col-215','col-216','col-217','col-218','col-219','col-220','col-221','col-222','col-223','col-224','col-225','col-226','col-227','col-228','col-229','col-230','col-231','col-232','col-233','col-234','col-235','col-236','col-237','col-238','col-239','col-240','col-241','col-242','col-243','col-244','col-245','col-246','col-247','col-248','col-249','col-250','col-251','col-252','col-253','col-254','col-255','col-256','col-257','col-258','col-259','col-260','col-261','col-262','col-263','col-264','col-265','col-266','col-267','col-268','col-269','col-270','col-271','col-272','col-273','col-274','col-275','col-276','col-277','col-278','col-279','col-280','col-281','col-282','col-283','col-284','col-285','col-286','col-287','col-288','col-289','col-290','col-291','col-292','col-293','col-294','col-295','col-296','col-297','col-298','col-299','report','faq','privacy','mitsumori','soudan','partner'];
         function routeFromHash(){
           var h=(window.location.hash||'').replace('#','').replace('/','');
           if(h==='services'||h===''){ return 'top'; }
@@ -16058,7 +16433,8 @@
           'report':'点検結果報告書の提出のご案内 | 株式会社上田',
           'faq':'よくある質問 | 株式会社上田',
           'privacy':'プライバシーポリシー | 株式会社上田',
-          'mitsumori':'消防設備点検 見積もり依頼（東京23区・北区中心） | 株式会社上田'
+          'mitsumori':'消防設備点検 見積もり依頼（東京23区・北区中心） | 株式会社上田',
+          'soudan':'まずは相談（決めなくていい相談） | 株式会社上田'
         };
         function show(route){
           for(var i=0;i<ROUTES.length;i++){
@@ -16160,6 +16536,86 @@
               status.className='form-status show err';
             }
             if(btn){ btn.disabled=false; btn.textContent='入力内容を送信する'; }
+          }
+          form.addEventListener('submit', function(e){
+            e.preventDefault();
+            if(btn && btn.disabled){ return; }
+            if(btn){ btn.disabled=true; btn.textContent='送信中…'; }
+            if(status){ status.className='form-status'; status.textContent=''; }
+            fetch(form.action, {
+              method:'POST',
+              body:new FormData(form),
+              headers:{'Accept':'application/json'}
+            }).then(function(res){
+              if(res.ok){
+                form.style.display='none';
+                if(done){
+                  done.classList.add('show');
+                  done.focus();
+                  done.scrollIntoView({block:'nearest'});
+                }
+              }else{
+                showError();
+              }
+            }).catch(function(){
+              showError();
+            });
+          });
+        })();
+
+        /* ---- Soudan form: in-page AJAX submission to Formspree (same endpoint) ---- */
+        (function(){
+          var form=document.getElementById('soudanForm');
+          if(!form){ return; }
+          var btn=document.getElementById('sdSubmitBtn');
+          var status=document.getElementById('sdStatus');
+          var done=document.getElementById('sdDone');
+          function showError(){
+            if(status){
+              status.textContent='送信できませんでした。時間をおいて再度お試しいただくか、お問い合わせフォームまたは公式LINEでご連絡ください。';
+              status.className='form-status show err';
+            }
+            if(btn){ btn.disabled=false; btn.textContent='この内容で相談する'; }
+          }
+          form.addEventListener('submit', function(e){
+            e.preventDefault();
+            if(btn && btn.disabled){ return; }
+            if(btn){ btn.disabled=true; btn.textContent='送信中…'; }
+            if(status){ status.className='form-status'; status.textContent=''; }
+            fetch(form.action, {
+              method:'POST',
+              body:new FormData(form),
+              headers:{'Accept':'application/json'}
+            }).then(function(res){
+              if(res.ok){
+                form.style.display='none';
+                if(done){
+                  done.classList.add('show');
+                  done.focus();
+                  done.scrollIntoView({block:'nearest'});
+                }
+              }else{
+                showError();
+              }
+            }).catch(function(){
+              showError();
+            });
+          });
+        })();
+
+        /* ---- Partner form: in-page AJAX submission to Formspree (same endpoint) ---- */
+        (function(){
+          var form=document.getElementById('partnerForm');
+          if(!form){ return; }
+          var btn=document.getElementById('ptSubmitBtn');
+          var status=document.getElementById('ptStatus');
+          var done=document.getElementById('ptDone');
+          function showError(){
+            if(status){
+              status.textContent='送信できませんでした。時間をおいて再度お試しいただくか、お問い合わせフォームまたは公式LINEでご連絡ください。';
+              status.className='form-status show err';
+            }
+            if(btn){ btn.disabled=false; btn.textContent='この内容で応募する'; }
           }
           form.addEventListener('submit', function(e){
             e.preventDefault();
@@ -16450,6 +16906,11 @@
             e.preventDefault();
             pendingTarget=t.getAttribute('data-target')||null;
             pendingFilter=t.getAttribute('data-colfilter')||null;
+            var sf=t.getAttribute('data-soudan-from');
+            if(sf){
+              var srcInput=document.getElementById('sdSource');
+              if(srcInput){ srcInput.value=sf; }
+            }
             var ct=t.getAttribute('data-contact-type');
             if(ct){
               var radios=document.querySelectorAll('#contactForm input[name="type"]');
