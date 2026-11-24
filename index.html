@@ -2210,7 +2210,6 @@
                 <div class="radio-list" role="radiogroup" aria-labelledby="typeLabel">
                   <label class="radio-item"><input type="radio" name="type" value="消防設備点検・案件のご相談" checked />消防設備点検・案件のご相談</label>
                   <label class="radio-item"><input type="radio" name="type" value="メーカー様からのメンテナンス事業のご依頼" />メーカー様からのメンテナンス事業のご依頼</label>
-                  <label class="radio-item"><input type="radio" name="type" value="協力会社のご相談" />協力会社のご相談</label>
                   <label class="radio-item"><input type="radio" name="type" value="お墓参り・お墓の見守りのご相談" />お墓参り・お墓の見守りのご相談</label>
                   <label class="radio-item"><input type="radio" name="type" value="エンディングノート講習のご相談" />エンディングノート講習のご相談</label>
                   <label class="radio-item"><input type="radio" name="type" value="その他" />その他</label>
@@ -2252,7 +2251,7 @@
               <p>お問い合わせありがとうございます。内容を確認のうえ、3日以内に、ご入力いただいたメールアドレスへご連絡します。ご返信は info@uedakai.com からお送りします。</p>
             </div>
 
-            <p class="fine-note">種別で「お墓参り・お墓の見守りのご相談」「エンディングノート講習のご相談」を選ぶと、「貴社名」欄は表示されません。営業目的でのご連絡はお断りいたします。事業のご相談・協力会社のご相談・メーカー様からのご依頼のみ承ります。</p>
+            <p class="fine-note">種別で「お墓参り・お墓の見守りのご相談」「エンディングノート講習のご相談」を選ぶと、「貴社名」欄は表示されません。営業目的でのご連絡はお断りいたします。事業のご相談・メーカー様からのご依頼のみ承ります。協力会社様の応募は「<a href="#partner" data-route="partner">協力会社様募集</a>」ページからお願いいたします。</p>
             <p class="fine-note">ご不明な点は「<a href="#faq" data-route="faq">よくある質問</a>」もご覧ください。個人情報の取り扱いは「<a href="#privacy" data-route="privacy">プライバシーポリシー</a>」に定めています。</p>
           </div>
 
@@ -16956,15 +16955,23 @@
               if(srcInput){ srcInput.value=sf; }
             }
             var ct=t.getAttribute('data-contact-type');
+            if(ct==='協力会社のご相談'){
+              /* 協力会社様の応募窓口は専用ページ（#partner）に一本化したため、この種別プリセットは廃止。旧リンクが残っていても壊れず、専用ページへ案内する */
+              r='partner';
+              ct=null;
+            }
             if(ct){
               var radios=document.querySelectorAll('#contactForm input[name="type"]');
+              var matched=false;
               for(var ci=0;ci<radios.length;ci++){
                 if(radios[ci].value===ct){
                   radios[ci].checked=true;
+                  matched=true;
                   var ev=document.createEvent('HTMLEvents'); ev.initEvent('change', true, false); radios[ci].dispatchEvent(ev);
                   break;
                 }
               }
+              /* 対応する選択肢がない種別が来ても何もしない（フォームは既定の種別のまま） */
             }
             if(('#'+r)===(window.location.hash||'')){ apply(); }
             else{ window.location.hash=r; }
